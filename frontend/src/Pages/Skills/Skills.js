@@ -14,7 +14,7 @@ export function Skills() {
       <Content>
         <b>Login Required!</b>
         <p>
-          This page will show tables with TDF related skills comparing to your current skills with a
+          This page will show tables with Beancursion related skills comparing to your current skills with a
           color indicating the progres tier that skill is at.
         </p>
       </Content>
