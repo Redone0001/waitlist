@@ -35,14 +35,14 @@ function FitsDisplay({ tier, setTier = null }) {
             <Button active={tier === "Starter"} onClick={(evt) => setTier("Starter")}>
               Starter
             </Button>
-            <Button active={tier === "GOLDEN"} onClick={(evt) => setTier("GOLDEN")}>
-              GOLDEN
+            <Button active={tier === "Golden"} onClick={(evt) => setTier("Golden")}>
+              Golden
             </Button>
-            <Button active={tier === "STANDARD"} onClick={(evt) => setTier("STANDARD")}>
-              STANDARD
+            <Button active={tier === "Standard"} onClick={(evt) => setTier("Standard")}>
+              Standard
             </Button>
-            <Button active={tier === "OPTIMAL"} onClick={(evt) => setTier("OPTIMAL")}>
-              OPTIMAL
+            <Button active={tier === "Optimal"} onClick={(evt) => setTier("Optimal")}>
+              Optimal
             </Button>
           </InputGroup>
           <InputGroup>
@@ -60,12 +60,12 @@ function FitsDisplay({ tier, setTier = null }) {
       <ImplantOut />
       {tier === "Starter" ? (
         <Fitout data={fitData} tier="Starter" />
-      ) : tier === "Basic" ? (
-        <Fitout data={fitData} tier="Basic" />
-      ) : tier === "Advanced" ? (
-        <Fitout data={fitData} tier="Advanced" />
-      ) : tier === "Elite" ? (
-        <Fitout data={fitData} tier="Elite" />
+      ) : tier === "Golden" ? (
+        <Fitout data={fitData} tier="Golden" />
+      ) : tier === "Standard" ? (
+        <Fitout data={fitData} tier="Standard" />
+      ) : tier === "Optimal" ? (
+        <Fitout data={fitData} tier="Optimal" />
       ) : tier === "Other" ? (
         <Fitout data={fitData} tier="Other" />
       ) : tier === "Antigank" ? (
