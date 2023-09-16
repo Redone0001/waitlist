@@ -50,11 +50,6 @@ function FitsDisplay({ tier, setTier = null }) {
               Support
             </Button>
           </InputGroup>
-          <InputGroup>
-            <Button active={tier === "Antigank"} onClick={(evt) => setTier("Antigank")}>
-              Antigank
-            </Button>
-          </InputGroup>
         </Buttons>
       )}
       <ImplantOut />

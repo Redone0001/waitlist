@@ -149,10 +149,6 @@ export function Menu({ onChangeCharacter, theme, setTheme, sticker, setSticker }
                 </>
               )}
               <InputGroup fixed>
-                <Teamspeak />
-                <AButton title="Discord" href="https://discord.gg/YTysdbb">
-                  <FontAwesomeIcon icon={faDiscord} />
-                </AButton>
                 <EventNotifier />
                 <ThemeSelect
                   theme={theme}
