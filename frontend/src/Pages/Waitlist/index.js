@@ -171,6 +171,7 @@ export function Waitlist() {
 
   return (
     <>
+	<meta http-equiv="refresh" content="30">
       <Buttons>
         <InputGroup>
           <NavButton variant={myEntry ? null : "primary"} to={`/xup?wl=${waitlistId}`}>
