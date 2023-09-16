@@ -209,13 +209,17 @@ requirements:
 
   _booster: &booster # Booster skills: Only boosters need these
     EM Armor Compensation:
-      min: 5
+      min: 4
+      gold: 5
     Explosive Armor Compensation:
-      min: 5
+      min: 4
+      gold: 5
     Thermal Armor Compensation:
-      min: 5
+      min: 4
+      gold: 5
     Kinetic Armor Compensation:
-      min: 5
+      min: 4
+      gold: 5
     Armor Layering:
       min: 3
       elite: 4
@@ -411,9 +415,6 @@ requirements:
   _rigging:
     &rigging # Rigging skills: any ship with rigs that can be improved with rigging skills
     Armor Rigging:
-      min: 3
-      Elite: 4
-    Astronautics Rigging:
       min: 3
       Elite: 4
 
@@ -617,49 +618,8 @@ requirements:
     Cybernetics:
       min: 5
 
-  Oneiros:
-    <<: [*logistics]
-    Afterburner:
-      min: 4
-    Evasive Maneuvering:
-      min: 3
-    Fuel Conservation:
-      min: 4
-    Logistics Cruisers:
-      min: 5
-    Sensor Linking:
-      min: 3
-      elite: 4
-    Magnetometric Sensor Compensation:
-      elite: 4
-    Gallente Cruiser:
-      min: 5
-    Medium Drone Operation:
-      min: 1
-      elite: 5
-    CPU Management:
-      min: 3
-    Power Grid Management:
-      min: 5
-    Frequency Modulation:
-      elite: 4
-    Long Distance Jamming:
-      elite: 4
-    Drones:
-      min: 5
-
   Nestor:
     <<: [*logistics, *rigging]
-    EM Armor Compensation:
-      min: 5
-    Explosive Armor Compensation:
-      min: 5
-    Thermal Armor Compensation:
-      min: 5
-    Kinetic Armor Compensation:
-      min: 5
-    Advanced Target Management:
-      min: 5
     Amarr Battleship:
       min: 5
     Gallente Battleship:
@@ -712,7 +672,8 @@ requirements:
     Skirmish Command Specialist:
       min: 5
     Command Ships:
-      min: 5
+      min: 4
+      gold: 5
     Gallente Battlecruiser:
       min: 5
     Frequency Modulation:
@@ -739,7 +700,8 @@ requirements:
     Skirmish Command Specialist:
       min: 5
     Command Ships:
-      min: 5
+      min: 4
+      gold: 5
     Amarr Battlecruiser:
       min: 5
     Frequency Modulation:

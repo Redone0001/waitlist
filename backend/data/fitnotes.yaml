@@ -13,13 +13,13 @@ notes:
 
   # Ship specific notes
 
-  - name: TDF_ONI_HQ_BASIC
+  - name: Optimal SCS Nestor
     description: >
-      Skill exception: Logistics Cruiser 4
-  - name: TDF_GUARD_HQ_BASIC
+      This fit requires the RA-705 Implant & EM-805 Implant
+  - name: Optimal SCS Kronos
     description: >
-      This fit requires the EM-806 Implant & Energy Grid Upgrades 5.
-  - name: TDF_GUARD_HQ_ADVANCED
+      This fit requires the amulet mid grade or high grade Implant.
+  - name: Optimal SCS Paladin
     description: >
       Implant Required: EM-806
   - name: TDF_GUARD_HQ_ELITE
