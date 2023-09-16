@@ -7,7 +7,6 @@ import { InputGroup, Select, NavButton, AButton } from "../Components/Form";
 import { EventNotifier } from "../Components/Event";
 import { ThemeSelect } from "../Components/ThemeSelect";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDiscord, faTeamspeak } from "@fortawesome/free-brands-svg-icons";
 import { NavLinks, MobileNavButton, MobileNav } from "./Navigation";
 
 const NavBar = styled.div`
@@ -92,20 +91,6 @@ NavBar.Name = styled.div`
   }
 `;
 
-const Teamspeak = () => {
-  const authContext = useContext(AuthContext);
-
-  return (
-    <AButton
-      title="Join our Teamspeak Server"
-      href={`ts3server://t-d-f.one${
-        authContext?.current ? `?nickname=${authContext.current.name}` : ""
-      }`}
-    >
-      <FontAwesomeIcon icon={faTeamspeak} />
-    </AButton>
-  );
-};
 
 export function Menu({ onChangeCharacter, theme, setTheme, sticker, setSticker }) {
   const [isOpenMobileView, setOpenMobileView] = React.useState(false);
