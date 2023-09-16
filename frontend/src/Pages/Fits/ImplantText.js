@@ -18,19 +18,19 @@ export function ImplantTable({ type }) {
   var implants;
   if (type === "Hybrid") {
     implants = [
-      "High-grade Amulet Alpha",
-      "High-grade Amulet Beta",
-      "High-grade Amulet Gamma",
-      "High-grade Amulet Delta",
-      "High-grade Amulet Epsilon",
+      "Mid-grade Amulet Alpha",
+      "Mid-grade Amulet Beta",
+      "Mid-grade Amulet Gamma",
+      "Mid-grade Amulet Delta",
+      "Mid-grade Amulet Epsilon",
     ];
   } else {
     implants = [
-      "High-grade Ascendancy Alpha",
-      "High-grade Ascendancy Beta",
-      "High-grade Ascendancy Gamma",
-      "High-grade Ascendancy Delta",
-      "High-grade Ascendancy Epsilon",
+      "Mid-grade Ascendancy Alpha",
+      "Mid-grade Ascendancy Beta",
+      "Mid-grade Ascendancy Gamma",
+      "Mid-grade Ascendancy Delta",
+      "Mid-grade Ascendancy Epsilon",
     ];
   }
   return (
@@ -70,7 +70,7 @@ export function ImplantTable({ type }) {
               <Cell></Cell>
             ) : (
               <Cell>
-                <CopyImplantText toast={toastContext} item={"High-grade Ascendancy Omega"} /> if you
+                <CopyImplantText toast={toastContext} item={"Mid-grade Ascendancy Omega"} /> if you
                 have too much isk, increased warp speed.
               </Cell>
             )}
