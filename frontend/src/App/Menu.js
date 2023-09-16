@@ -1,12 +1,11 @@
-import React, { useContext } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../contexts";
 import logoImage from "./logo.png";
 import styled from "styled-components";
-import { InputGroup, Select, NavButton, AButton } from "../Components/Form";
+import { InputGroup, Select, NavButton } from "../Components/Form";
 import { EventNotifier } from "../Components/Event";
 import { ThemeSelect } from "../Components/ThemeSelect";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLinks, MobileNavButton, MobileNav } from "./Navigation";
 
 const NavBar = styled.div`
