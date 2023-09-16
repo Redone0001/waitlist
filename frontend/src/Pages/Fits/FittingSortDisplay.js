@@ -216,9 +216,9 @@ function ShipDisplay({ fit, id, note }) {
               <p>{fit.name}</p>
               <FitCard.Content.Badges>
                 {note ? <FontAwesomeIcon icon={faExclamationCircle} /> : null}
-                {fit.name.indexOf("HYBRID") !== -1 ? (
+                {fit.name.toLowerCase().includes("hybrid") ? (
                   <Shield color="red" letter="H" title="Hybrid Implants" />
-                ) : fit.name.indexOf("ASCENDANCY") !== -1 ? (
+                ) : fit.name.toLowerCase().includes("ascendancy") ? (
                   <Shield color="red" letter="W" title="Ascendancy Implants" />
                 ) : null}
               </FitCard.Content.Badges>
