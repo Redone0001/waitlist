@@ -4,13 +4,13 @@
 
 ## Policy
 
-TDF has great affordable starter fits. We will help you get spacerich & we have a SRP to make sure you keep that ship. After you have fully upgraded to elite, spend the isk any way you want.
+Beancursion has great affordable starter fits. We will help you get spacerich & we have a SRP to make sure you keep that ship. After you have fully upgraded to elite, spend the isk any way you want.
 
 **We expect all pilots to upgrade to Elite in a reasonable amount of time, which will involve upgrading the ship itself, but also your skills and implants. Until you are elite, you should expect to spend most of your earned money buying modules and skill injectors.**
 
 We have limits for the time you can spend in fleet while upgrading, but don’t treat these as targets. Upgrade as soon as you reasonably can, and you will stay well within the limits. Please also be aware, getting your elite badge on one ship should be your first priority, if your a new character we do not recommend trying lots of different ships as the upgrade limit is very streamlined. So consider carefully which ship you wish to fly.
 
-TDF works with a tier system. Pilots can be categorized as starter, basic, elite and elite gold. Your current status is determined by fit and lowest skill tier.
+Beancursion works with a tier system. Pilots can be categorized as starter, basic, elite and elite gold. Your current status is determined by fit and lowest skill tier.
 
 **You must reach the tier by the time limit set out in the table below:**
 
@@ -55,14 +55,14 @@ Once you have the basic fit ready to go, continue **training and injecting basic
 
 1. **Upgrade to [advanced fits](/fits?Tier=Advanced)**. Your skills will already be sufficient to fly the fits, so buy those new modules!
 
-2. **Get your implant set**. See TDF-IMPLANT1 mailing list in game or see [Fittings page](/fits). You will need cybernetics 5 trained to be able to plugin the hard wires. The recommended purchase order for the set is:
+2. **Get your implant set**. See [Fittings page](/fits). You will need cybernetics 5 trained to be able to plugin the hard wires. The recommended purchase order for the set is:
 
 - Slot 10 (6% damage Alpha) make sure you get the implant that corresponds to your gun type!
 - Slot 9 (6% damage ROF)
 - Slot 8 (6% capacitor capacity)
 - Slot 7 (6% tracking) Remember to buy the Ogdin's Eye as its usually cheaper on market than the MR-706.
 - Slot 6 (6% warpspeed)
-- Slots 1-5 Amulets OR Ascendancy
+- Slots 1-5 Amulets
 
 _(You can choose either Hybrid or Warp speed set, both are acceptable, however you must have slots 1-5 Amulets to fly the \_HYBRID fits)_
 

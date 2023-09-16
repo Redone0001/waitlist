@@ -19,12 +19,12 @@ const Small = styled.div`
 `;
 
 const TEMPLATES = {
-  "Use TDF-WL": {
-    content: 'Join the in-game channel "TDF-WL" to x-up for the fleet.',
+  "Use ingame chat": {
+    content: 'Join the in-game channel "Sansha Containment Service" to x-up for the fleet.',
     alert: false,
   },
-  "Gankers in Focus": {
-    content: "GANKERS ARE IN FOCUS! Stay docked and read the fleet MOTD for instructions.",
+  "Gate camp in Focus": {
+    content: "GATE CAMPER ARE IN FOCUS! Stay docked and read the fleet MOTD for instructions.",
     alert: true,
   },
 };
