@@ -5,21 +5,19 @@
 categories:
   - id: logi
     name: Logistics
-  - id: cqc
-    name: CQC
   - id: sniper
     name: Sniper
-  - id: bastion
-    name: Bastion
+  - id: DPS
+    name: DPS
   - id: starter
     name: Starter
+  -id : Links
+    name: Links
   - id: alt
     name: Alts
 
 rules:
   # Logi
-  - item: Oneiros
-    category: logi
   - item: Guardian
     category: logi
   - item: Nestor
@@ -31,10 +29,14 @@ rules:
   - item: Megathron
     category: starter
   - item: Vindicator
-    category: cqc
+    category: DPS
   - item: Paladin
     category: sniper
   - item: Nightmare
     category: sniper
   - item: Kronos
     category: cqc
+  - item: Eos
+    categories: Links
+  - item: Damnation
+    categories: Links
