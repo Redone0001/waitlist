@@ -5,8 +5,8 @@
 categories:
   - id: logi
     name: Logistics
-  - id: cqc
-    name: CQC
+  - id: DPS
+    name: DPS
   - id: sniper
     name: Sniper
   - id: bastion
@@ -31,10 +31,10 @@ rules:
   - item: Megathron
     category: starter
   - item: Vindicator
-    category: cqc
+    category: DPS
   - item: Paladin
     category: sniper
   - item: Nightmare
     category: sniper
   - item: Kronos
-    category: cqc
+    category: DPS
