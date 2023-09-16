@@ -40,3 +40,7 @@ rules:
     category: sniper
   - item: Kronos
     category: DPS
+  - item: Eos
+    category: links
+  - item: Damnation
+    category: links
