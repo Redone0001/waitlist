@@ -35,7 +35,7 @@ rules:
   - item: Nightmare
     category: sniper
   - item: Kronos
-    category: cqc
+    category: DPS
   - item: Eos
     categories: Links
   - item: Damnation
