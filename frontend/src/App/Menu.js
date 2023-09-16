@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../contexts";
 import logoImage from "./logo.png";
@@ -93,6 +93,15 @@ NavBar.Name = styled.div`
 
 export function Menu({ onChangeCharacter, theme, setTheme, sticker, setSticker }) {
   const [isOpenMobileView, setOpenMobileView] = React.useState(false);
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      window.location.reload();
+    }, 30000);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
   return (
     <AuthContext.Consumer>
       {(whoami) => (
