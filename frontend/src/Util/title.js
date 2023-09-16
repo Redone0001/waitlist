@@ -9,7 +9,7 @@ export function usePageTitle(suffix) {
 }
 
 export function replaceTitle(suffix) {
-  document.title = `TDF: ${suffix}`;
+  document.title = `Beancursion: ${suffix}`;
 }
 
 export function parseMarkdownTitle(data) {

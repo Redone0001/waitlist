@@ -93,15 +93,6 @@ NavBar.Name = styled.div`
 
 export function Menu({ onChangeCharacter, theme, setTheme, sticker, setSticker }) {
   const [isOpenMobileView, setOpenMobileView] = React.useState(false);
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      window.location.reload();
-    }, 30000);
-
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, []);
   return (
     <AuthContext.Consumer>
       {(whoami) => (
