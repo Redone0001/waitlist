@@ -187,10 +187,10 @@ impl<'a> FitChecker<'a> {
                 if fit.name.contains("STARTER") || fit.name.contains("NM_BASIC") {
                     2
                 } else {
-                    4
+                    2
                 }
             }
-            None => 4,
+            None => 2,
         };
 
         let have_comps = min(
