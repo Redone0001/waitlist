@@ -108,17 +108,21 @@ categories:
 requirements:
   _generic: &generic # Generic skills: everyone needs these
     EM Armor Compensation:
-      min: 4
-      elite: 5
+      min: 2
+      elite: 4
+      gold: 5
     Explosive Armor Compensation:
-      min: 4
-      elite: 5
+      min: 2
+      elite: 4
+      gold: 5
     Thermal Armor Compensation:
-      min: 4
-      elite: 5
+      min: 2
+      elite: 4
+      gold: 5
     Kinetic Armor Compensation:
-      min: 4
-      elite: 5
+      min: 2
+      elite: 4
+      gold: 5
     Armor Layering:
       min: 3
       elite: 4
@@ -658,21 +662,11 @@ requirements:
     Leadership:
       min: 5
     Wing Command:
-      min: 5
-    Fleet Command:
-      min: 4
+      min: 3
     Command Burst Specialist:
       min: 4
-    Armored Command:
-      min: 5
-    Armored Command Specialist:
-      min: 5
-    Skirmish Command:
-      min: 5
-    Skirmish Command Specialist:
-      min: 5
     Command Ships:
-      min: 4
+      min: 3
       gold: 5
     Gallente Battlecruiser:
       min: 5
@@ -686,21 +680,12 @@ requirements:
     Leadership:
       min: 5
     Wing Command:
-      min: 5
-    Fleet Command:
-      min: 4
+      min: 3
     Command Burst Specialist:
       min: 4
-    Information Command:
-      min: 5
-    Information Command Specialist:
-      min: 5
-    Skirmish Command:
-      min: 5
-    Skirmish Command Specialist:
-      min: 5
     Command Ships:
-      min: 4
+      min: 3
+      elite: 4
       gold: 5
     Amarr Battlecruiser:
       min: 5
