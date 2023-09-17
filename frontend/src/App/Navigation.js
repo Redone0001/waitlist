@@ -95,9 +95,7 @@ export function NavLinks({ whoami }) {
           </Links>
         </>
       )}
-      <Links exact to="/guide">
-        Guides
-      </Links>
+
       <Links exact to="/fits">
         Fits
       </Links>
