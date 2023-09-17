@@ -134,6 +134,8 @@ function ColumnWaitlist({ waitlist, onAction, fleetComposition, altCol }) {
       categoryIndex[category] = i;
     }
   });
+  console.log(categories);
+  console.log(categoryIndex);
   _.forEach(waitlist.waitlist, (entry) => {
     _.forEach(entry.fits, (fit) => {
       const categoryI = categoryIndex[altCol && fit.is_alt ? "Alts" : fit.category];
