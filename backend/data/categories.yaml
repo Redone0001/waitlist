@@ -41,6 +41,6 @@ rules:
   - item: Kronos
     category: DPS
   - item: Eos
-    category: alt
+    category: links
   - item: Damnation
-    category: alt
+    category: links
