@@ -583,7 +583,7 @@ requirements:
     Gallente Battleship:
       min: 3
     Large Hybrid Turret:
-      min: 4
+      min: 3
     Propulsion Jamming:
       min: 4
 

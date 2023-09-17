@@ -13,10 +13,10 @@ categories:
     name: Bastion
   - id: starter
     name: Starter
-  - id: alt
-    name: Alts
   - id: links
     name: Links
+  - id: alt
+    name: Alts
 
 rules:
   # Logi
