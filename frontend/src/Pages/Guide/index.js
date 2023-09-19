@@ -116,7 +116,7 @@ export function GuideIndex() {
       <PageTitle>Guides</PageTitle>
       <CardArray>
         <GuideCard slug="/guide/newbro" name="New-Bro guide" icon={faGraduationCap}>
-          Haven&apos;t flown with TDF yet? Read this first!
+          Haven&apos;t flown with Beancursion yet? Read this first!
         </GuideCard>
         <GuideCard slug="/guide/xup" name="First Fleet guide" icon={faSignInAlt}>
           What to do before joining your first fleet, how to join your first fleet, and how not to
@@ -129,7 +129,7 @@ export function GuideIndex() {
           What is my purpose? Learn the roles here.
         </GuideCard>
         <GuideCard slug="/guide/upgrade" name="Upgrading" icon={faLevelUpAlt}>
-          TDF expects you to upgrade. What is the policy and the recommended way to do it?
+          Beancursion expects you to upgrade. What is the policy and the recommended way to do it?
         </GuideCard>
         <GuideCard slug="/skills/plans" name="Skill Plans" icon={faBook}>
           Skill plans for anyone with doubts what to skill first.
@@ -153,9 +153,10 @@ export function GuideIndex() {
           this role!
         </GuideCard>
         <GuideCard slug="/guide/fctraining" name="Becoming an FC" icon={faUserGraduate}>
-          Do you want to join the TDF team?
+          Do you want to join the FC team?
         </GuideCard>
       </CardArray>
+      The guides are based on the guide of TDF, some image or text have been used from them. 
     </>
   );
 }

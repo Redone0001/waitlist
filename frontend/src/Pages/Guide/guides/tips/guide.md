@@ -6,7 +6,7 @@
 
 There are many items in eve that have variants with identical stats but different names. Saved fittings will just save what has been fitted. When looking at saved fittings be sure to check the market for module variants. The module stats are what matters not that the exact same module is used. Very often you can get the same fitting for less isk.
 
-You can see the difference in price of module variants using the compare tool. Drag and drop items into the Compare Tool or go to item variations and click compare. See the example below where lots of the various items we use in our fits could be bought cheaper for the same stats. Note that the highlighted Corelum A-Type Multispectrum Energized Membrane has lower statistics than its counter parts, this item is banned from TDF due to its lower resistances.
+You can see the difference in price of module variants using the compare tool. Drag and drop items into the Compare Tool or go to item variations and click compare. See the example below where lots of the various items we use in our fits could be bought cheaper for the same stats. Note that the highlighted Corelum A-Type Multispectrum Energized Membrane has lower statistics than its counter part.
 
 ![](comparetool.png)
 
@@ -31,7 +31,7 @@ Remapping can be beneficial for your slow training at any point in the game. It 
 
 ![](skillattrib.png)
 
-TDF do not recommend using neural Remapping if you have zero bonus neural remaps available. New players get three bonus remaps, these can be used to remap any time. After these three remaps have been used you are committed to an entire year with the attributes you set. Neural remaps are for accelerating a specific training queue or skill plan and they will hurt your training time if you deviate from that plan.
+Beancursion do not recommend using neural Remapping if you have zero bonus neural remaps available. New players get three bonus remaps, these can be used to remap any time. After these three remaps have been used you are committed to an entire year with the attributes you set. Neural remaps are for accelerating a specific training queue or skill plan and they will hurt your training time if you deviate from that plan.
 
 ![](remaps.png)
 
@@ -53,7 +53,7 @@ Cerebral accelerators can also be used to increase your attributes, reducing tra
 
 With the cybernetics skill at level 4 you will be capable of using a +4 learning clone. +4 learning implants can be bought from most non concord LP stores for 12 million isk and 12k LP. You can convert your concord LP to faction LP at any of these LP stores. A +4 learning clone is a good option if you are still in training skills.
 
-We recommend pilots to move to Warpspeed or Hybrid implant sets when reaching advanced fits. The implant sets have built in attribute bonuses alongside their inherent fleet bonus.
+We recommend pilots to move to Hybrid implant sets when reaching advanced fits. The implant sets have built in attribute bonuses alongside their inherent fleet bonus.
 
 See the benefits of a good learning clone below. Implants are plugged in on the left most example.
 
@@ -61,7 +61,7 @@ See the benefits of a good learning clone below. Implants are plugged in on the 
 
 ### Implant Sets
 
-You will need to purchase implant sets to obtain your Elite badge within TDF.
+You will need to purchase implant sets to obtain your Elite badge.
 
 ![](https://images.evetech.net/types/20499/icon) ![](https://images.evetech.net/types/20501/icon) ![](https://images.evetech.net/types/20507/icon) ![](https://images.evetech.net/types/20503/icon) ![](https://images.evetech.net/types/20505/icon) ![](https://images.evetech.net/types/3119/icon)
 
@@ -154,7 +154,6 @@ The [eve wiki](https://wiki.eveuniversity.org/Overheating) goes into detail on t
 ## Usefull Links
 
 - [Best place to buy abyssals!](https://mutaplasmid.space/appraisal/)
-- [Gank intel](https://eve-gatecheck.space/eve/)
 - [Tool for people who sell their LP themselves](https://www.fuzzwork.co.uk/lpstore/)
 - [Fit tool](https://github.com/pyfa-org/Pyfa/releases/)
 - [Skill plan tool](https://github.com/mgoeppner/evemon/releases/)

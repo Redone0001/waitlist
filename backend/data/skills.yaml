@@ -602,7 +602,8 @@ requirements:
     Fuel Conservation:
       min: 4
     Logistics Cruisers:
-      min: 5
+      min: 4
+      gold: 5
     Radar Sensor Compensation:
       elite: 4
     Amarr Cruiser:

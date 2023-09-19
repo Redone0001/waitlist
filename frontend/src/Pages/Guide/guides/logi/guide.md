@@ -150,31 +150,12 @@ For cap broadcasts run continuously while an Outuni is on grid, switching your c
 - Dump 5, decycle to 1 rep
 - 3 Cycles of cap unless target has outuni aggro
 
-### Oneiros
-
-![](https://images.evetech.net/types/11989/icon)
-
-When flying a onieros, one of the most important things to remember is that your speed is your tank! Always orbit a Nestor with your afterburner on.
-
-Your special role in the fleet is to provide remote tracking links to the DDD/HHH. If there is more than one oni in fleet, work together with your fellow oni to decide who will link which drone bunny's. The preferred setup when two or more onieros are in fleet is one oni for DDD, and the second oni links each of the three HHH's with one opti link each. Add the DDD/HHHs to your watchlist for faster locking on entering sites.
-
-All links go to DDD in a TCRC.
-
-Generally speaking, most DDD's will want 2 tracking/1 optimal link, while HHH's should get 1 optimal each. However some DDD's may want different links so liase with them to keep them effective. DDD/HHHs will be listed in the fleet MOTD.
-
-**Key Knowledge to remember:**
-
-- Optimal rep range of 58km
-- Falloff rep range of 74km
-- Maximum rep range of 88km
-- Dump 4, decycle to 1 rep
-- Links to DDD > HHH
 
 ## Sites
 
 ### Vanguards (VG)
 
-For all VG sites, lock all fleet members upon entering site, there will be a max of 12 pilots in fleet during VGs. If you do not have enough locks make sure to let the FC know ASAP! Logi cruisers will set up an orbit on the FC to reduce incoming damage. There is no need for Nestors to move in these sites.
+Logi cruisers will set up an orbit on the FC to reduce incoming damage. There is no need for Nestors to move in these sites.
 
 ### Assualts (AS)
 

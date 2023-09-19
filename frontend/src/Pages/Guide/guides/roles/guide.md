@@ -23,7 +23,7 @@ Roles will be listed in the fleet MOTD.
 
 ## DDD
 
-As DDD you will be responsible for killing frigates in all sites every wave, while challenging, DDD can be by far the most rewarding role, we recommend a high level of minmatar battleship, and to be fitted with 3 webifiers. While in this role you should recieve tracking links from (at minimum) your onieros logi, this will help to improve your tracking speed and optimal range for your guns, if you are not recieving links, speak up!
+As DDD you will be responsible for killing frigates in all sites every wave, while challenging, DDD can be by far the most rewarding role, we recommend a high level of minmatar battleship, and to be fitted with 3 webifiers. While in this role you should recieve tracking links from (at minimum) an eos (or get your own alt), this will help to improve your tracking speed and optimal range for your guns and locking speed, if you are not recieving links, speak up!
 
 ### General tips for DDD
 

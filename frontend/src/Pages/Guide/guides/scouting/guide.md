@@ -36,15 +36,6 @@ Put a J tag on the Kundalini Manifest, so FCs don't accidentally end the focus. 
 
 The FC will almost always want to go to the most favorable site, which is the site that gives the best ISK per hour. In order of preference this is TCRC, then NRF, then TPPH, and closer always takes preference if there are multiple sites of the same type. If we previously bounced from a site (tagged A), or another fleet did (tagged B), then this may be preferable to a site that's closer.
 
-### D-Scan
-
-The easiest way to find out information about the fleet in a site is the Directional Scanner (D-Scan). If you set it to a distance of 0.1 AU with a range of 360 degrees you will find information about who is in a site in all but the smallest incursion systems. The PVP tab can tell you who is in there, and the Drones tab can tell you whether they are about to leave (scan a few times, if drones disappear then they are about to warp).
-
-The Loot tab will tell you how many wrecks there are in a site. Look for the amount of wrecks but also specific types: a TPPH always spawns exactly 15 rats in the first room and 13 in the second room, with _Arnons_ marking the final wave of the last room. The other sites have variable spawns, but the NRF will only spawn _Outunis_ in the final wave. By looking at these wrecks you can quickly figure out the state of a site without having to be in it. Setting your DSCAN window to exactly 28 results will allow you to quickly discern if a fleet is in the 3rd room of a TPPH.
-
-![](dscansettings.png)
-
-Periodically uploading the PVP tab of the D-Scan to a site like [dscan.info](https://dscan.info) also creates valuable information for the FC to help with decisions around contesting sites.
 
 ## Preloading TCRCs
 
@@ -60,9 +51,6 @@ Preloading a TCRC is somewhat risky and you may lose your ship if you're not pay
 
 ![](tcrc-x.png)
 
-## Finding contests
-
-TDF likes contests, and it's the scout that creates the opportunities. If the _most favorable site_ has a fleet landing on it just before we're about to go there, make sure to let the FC know about it. If at all possible then also tell them which community it is, to make the decision easier.
 
 ## Timers
 
