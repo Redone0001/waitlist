@@ -27,19 +27,21 @@ Note: All images are shown as a top-down overview of each room/site with the tac
 
 ![](tpph_r1.png)
 
-Bastions:
+*Bastions*:
 
-- Turn left, burn towards outgate (K1 & S1), start with Scorch/Null, bastion as soon as you reach top speed, you should be roughly 1/3 through your burn when you bastion (see x), this lets you drift towards outgate while maintaining bastion. Paladins should use Conflag during bastion, Null for Kronos (unless all three battleships are within Void range).
+Paladin bastion **once** on land, then MJD toward the outgate. Burn back to get on (S1)
 
-Vindicator:
+Kronos turn left, burn to outgate (K1);  shoot Osti and Otouni while burning. 
+
+*Vindicator*:
 
 - Pick an Ostingele and burn to within Void range (V1) shooting Null along the way, web separate targets and call your webs, "drive-by" shoot these targets but use common sense, if fleet is slow, stay and shoot it with Void longer. If someone is already going for your target, pick one which does not have a Vindicator friend! Once your target reaches armor burn to outgate (V2).
 
-Nightmare:
+*Nightmare*:
 
 - Turn left, burn to outgate (S1), switch to Conflag where appropriate to apply max DPS.
 
-Logistics:
+*Logistics*:
 
 - Turn left, burn to outgate (L1).
 
@@ -49,7 +51,9 @@ Logistics:
 
 Bastions:
 
-- Start with Scorch/Null, burn towards outgate (K1 & S1), bastion as soon as you reach top speed (see x), drift towards outgate. Paladins switch to Conflag once Sansha in range, Null for Kronos entire room unless several targets in Void range.
+Paladin bastion **once** on land, use the amo based on the range of your target, then MJD toward the outgate. Burn back to get on (S1)
+
+Kronos burn to outgate (K1);  shoot Osti and Otouni while burning.
 
 Vindicator:
 
@@ -73,7 +77,7 @@ Bastions:
 
 Vindicator:
 
-- Webs are key to fast site times, you should pick a Romi or Ostingele and burn to within Void range (V1) shooting Null along the way, web separate targets and call your webs, "drive-by" shoot these targets, if someone is already going for your target, pick a different one. Anchoring for the next two waves is more important here so do not waste time and keep burning to your next anchor (V2) you need to be in position before the 2nd wave spawns. During 2nd wave spread your webs, call them, and as the wave is dying slowboat to your next anchor point (V3), when the 3rd wave spawns its the same process as the previous wave, spread webs, call them, slowboat anchor to your final point (V4) on the tower.
+- Webs are key to fast site times, you should pick a Romi or Ostingele and burn to within Void range (V1) shooting Null along the way, web separate targets and call your webs, "drive-by" shoot these targets, if someone is already going for your target, pick a different one. Anchoring for the next two waves is more important here so do not waste time and keep burning to your next anchor (V2) you need to be in position **before** the 2nd wave spawns. During 2nd wave spread your webs, call them, and as the wave is dying slowboat to your next anchor point (V3), when the 3rd wave spawns its the same process as the previous wave, spread webs, call them, slowboat anchor to your final point (V4) on the tower.
 
 Nightmare:
 
@@ -90,7 +94,7 @@ Logistics:
 Bastions:
 
 - Paladins one cycle bastion as soon as you land on beacon (S1) once bastion cycle ends jump forward to anchor (S2) and add about 15km elevation. When you land **burn back toward beacon 10km**. You are aiming to land between the 2nd and 3rd wave spawns for Conflag optimal range. Continue to bastion through 2nd and 3rd wave spawns shooting Conflag, once 3rd wave is nearly dead align to next anchor (S3) and add roughly another 15km elevation to align _(this is a good time to bring in drones!)_. Once final wave spawns shoot Intaki, then jump to anchor (S3), bastion until 4th wave is nearly dead and make sure to use Conflag, try to be out of bastion before the site finishes to ensure quick exit.
-- Kronos should burn toward first anchor (K1) once at max speed bastion one cycle (see x enroute to K1) once bastion ends continue toward (K1) to anchor for 2nd and 3rd wave, bastion through 2nd wave and aim to finish your bastion cycle midway or earlier through 3rd wave, allowing you time to burn to (K2) anchor for 4th wave. Being in position in 4th wave is more important than being in bastion during 3rd wave as Kronos will apply more damage in 4th wave than any other!
+- Kronos should burn toward first anchor (K1) once at max speed bastion one cycle ( confirm with FC, see x enroute to K1) once bastion ends continue toward (K1) to anchor for 2nd and 3rd wave, bastion through 2nd wave and aim to finish your bastion cycle midway or earlier through 3rd wave, allowing you time to burn to (K2) anchor for 4th wave. Being in position in 4th wave is more important than being in bastion during 3rd wave as Kronos will apply more damage in 4th wave than any other!
 
 Vindicator:
 
@@ -112,11 +116,11 @@ Due to the danger posed by this site, TCRC entrances and exits will be staged, *
 
 Bastions:
 
-- Once fleet enters site wait for the meatshield to confirm they have established full aggro, once confirmed bastion for one cycle only on the beacon (S1 & K1), shoot Deltoles in order then Outunis and align toward anchor point (S2 & K2). Once bastion cycle ends check you are correctly aligned toward the next anchor and are not likely to bump anyone, MJD to (S2 & K2) to land between the "bubbles" and the tower _"Remember Paladins must finish off Outuni before shooting tower"_. Once in position at (S2 & K2) bastion for one cycle and wait for the aggro to switch to a new target, once this happens you can freely bastion for two cycles until the next aggro switch "note however you cannot delay on cycles, so if unsure then only go for one cycle". Repeat the bastion process until tower pops. However, if the tower is half hull or less do not do anymore bastion cycles.
+- Once fleet enters site wait for the meatshield to confirm they have established full aggro, once confirmed paladin bastion for one cycle only on the beacon (S1), shoot Deltoles in order then Outunis and align toward anchor point (S2 & K2). Once bastion cycle ends for paladin and as soons as aggro is confirmed for kronos, check you are correctly aligned toward the next anchor and are not likely to bump anyone, MJD to (S2 & K2) to land between the "bubbles" and the tower _"Remember Paladins must finish off Outuni before shooting tower"_. Once in position at (S2 & K2), wait for an FC call to bastion then bastion for one cycle and wait for the aggro to switch to a new target, once this happens you can freely bastion for one cycle until the next aggro switch "note however you cannot delay on cycles, so if unsure then don't bastion and wait for fc instruction". Repeat the bastion process until tower pops. However, if the tower is half hull or less do not do anymore bastion cycles.
 
 Vindicator:
 
-- Once fleet enters site you should be sitting still and shooting Deltole and Outuni in order, once the Deltoles are dead you can start your align to the anchor (V2) ensuring that you wont bump anyone, once you confirm you're clear activate MJD to jump to the anchor. When you land press to Ctrl+Space to stop your ship then shoot the tower till it dies, web Schmaeels when they get in range.
+- Once fleet enters site you should be sitting still and shooting Deltole and Outuni in order, once the Deltoles are dead you burn to your anchor (V2) ensuring that you wont bump anyone, once you confirm you're clear activate MJD to jump to the anchor. When you land press to Ctrl+Space to stop your ship then shoot the tower till it dies, web Schmaeels when they get in range.
 
 Nightmare:
 

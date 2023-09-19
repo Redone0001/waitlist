@@ -6,22 +6,18 @@ Logi is what keeps our fleet alive. We depend on our logi to stay alive and so i
 
 _If logi fails, the fleet dies._
 
-We use three logistics ships. Oneiros, Guardian and Nestor. These ships all have a special role to play in the fleet as well as logistics.
+We use two logistics ships. Guardian and Nestor. These ships all have a special role to play in the fleet as well as logistics.
 
-![](https://images.evetech.net/types/11989/icon) ![](https://images.evetech.net/types/11987/icon) ![](https://images.evetech.net/types/33472/icon)
+ ![](https://images.evetech.net/types/11987/icon) ![](https://images.evetech.net/types/33472/icon)
 
-- Oneiros - Provides remote tracking links to DDD/HHH
 - Guardian - Provides capacitor to ships who need it.
 - Nestor - Refitting services and the main reps of the fleet.
 
-Starter Logi pilots should bring either a Guardian or Oneiros to fleet. Nestors are reserved for trusted logi pilots who hold a [Logi Specialist](/badges) badge on the website & teamspeak.
-
-Any cruiser pilot can train to become a trusted Logi pilot, see requirements section below.
+Starter Logi pilots should bring a Guardian. Nestors are reserved for veteran logi pilots.
 
 ### Terminology
 
 - Reps - These are the remote repair modules for sending repairs to other ships.
-- Links - Remote Tracking Computers or Remote Sensor Boosters provided by logi pilots to increase optimal ranges & tracking/locking speeds of targeted DPS pilots.
 - Cap - Remote Capacitor Transmitter used to give capacitor to pilots who need it.
 
 ## Upgrade Policy
@@ -36,7 +32,7 @@ Upgrading for logi is expected much the same as DPS.
 | Elite(Cruiser) |    150h    |
 | Elite(Nestor)  |    200h    |
 
-Logistics Specialist badge is the elite badge equivalent for logi. Pilots wishing to only fly cruiser are not expected to get a Nestor and L badge. You can stay in a cruiser if you wish to, but be aware DPS will be prioritised over you if the logi numbers are fulfilled. Should we have a surplus of cruisers in fleet it will be last in first out in favor of DPS ships as well.
+Nestor is the elite equivalent for logi. Pilots wishing to only fly cruiser are not expected to get a Nestor. You can stay in a cruiser if you wish to, but be aware DPS will be prioritised over you if the logi numbers are fulfilled. Should we have a surplus of cruisers in fleet it will be last in first out in favor of DPS ships as well.
 
 ## Requirements
 
@@ -44,13 +40,8 @@ Logistics Specialist badge is the elite badge equivalent for logi. Pilots wishin
 
 - **Basic skills are a minimum** You can not have any starter level skills for logi ships. Skill requirements can be found on your [skills page](/skills).
 
-- _Exception: **TDF_ONI_HQ_BASIC** (Logistics Cruiser 4 allowed)_
+- _Exception: New logi pilot  (Logistics Cruiser 4 allowed)_
 
-To obtain the Logi Specialist badge you will need three +1's from different FCs, and a minimum 20 hours in cruiser logi (we recommend 50 depending on pilot skill level). You also must have your skills for Nestor to elite before you can attain L badge. But you are permitted to fly TN (training nestor) while these skills are training.
-
-While flying Training Nestor you will be tested on Logi mechanics, requirements and your ability to see who has aggro via lasers and scram notifications.
-
-To get started simply purchase the Nestor fit, x-up with the fit on waitlist and inform the FC that you are hoping to get a spot in fleet as Training Nestor and they will add you to the list. TN spots are limited to 1 in fleet and are not guaranteed so please be patient.
 
 ## Fleet Mechanics
 
@@ -97,7 +88,7 @@ As a logi you should always try to follow lasers to see who is currently taking 
 
 ## Logi Guidance
 
-Upon entering a site, cruiser logi should immediately burn forward in all sites; if you immediately orbit a nestor you will most likely go backwards off the beacon, leaving you behind the rest of the fleet. Once the Nestors are close to their anchors, establish an orbit of **7.5km** on your Nestor of choice. You can do this by holding W and clicking on a Nestor in your watchlist. Make sure you have preset your orbit distance by right clicking on the orbit button on the overview and setting it to a predefined 7.5km. Orbit with your prop mod on always.
+Upon entering a site, cruiser logi should immediately burn forward in all sites; if you immediately orbit a nestor you will most likely go backwards off the beacon, leaving you behind the rest of the fleet. Once the Nestors are close to their anchors, establish an orbit of **5km** on your Nestor of choice. You can do this by holding W and clicking on a Nestor in your watchlist. Make sure you have preset your orbit distance by right clicking on the orbit button on the overview and setting it to a predefined 5km. Orbit with your prop mod on always.
 
 Nestors should burn directly to their anchors by using the Q align command in space.
 

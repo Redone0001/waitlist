@@ -2,9 +2,9 @@
 
 ---
 
-## Joining a TDF fleet
+## Joining a Beancursion fleet
 
-When the MOTD states that fleet is running you can x-up on the [TDF WAITLIST](/waitlist?wl=1) (requires login) with your ship fitting. Please join voice comms; [Teamspeak 3](https://www.teamspeak.com/en/) (server details are in **TDF-Official** MOTD in game) while you are waiting for your invite. Make sure you are no more than 2 jumps out when you x-up and wait for fleet invite. If you are more than 2 jumps out you will be dropped from the fleet and go to the back of the queue.
+When the MOTD states that fleet is running you can x-up on the [Beancursion WAITLIST](/waitlist?wl=1) (requires login) with your ship fitting. Please join voice comms; [Mumble](https://www.pandemic-horde.org/settings/mumble/join) while you are waiting for your invite. Make sure you are no more than 2 jumps out when you x-up and wait for fleet invite. If you are more than 2 jumps out you will be dropped from the fleet and go to the back of the queue.
 
 ## Using the Waitlist
 
@@ -16,16 +16,18 @@ Sign in on the waitlist with your eve account, login is done through CCP, thus w
 
 ![](pendingapproval.png)
 
-**Skills:** TDF will give out badges based on your progress. The **basic skills** are the skills required to get out of the starter squad which is limited to 4 - 5 people in fleet. See the [Badges Guide](/badges) section to know more about TDF's badges and progress system.
+**Skills:** Beancursion will give out badges based on your progress. The **basic skills** are the skills required to get out of the starter squad which is limited to 4 - 5 people in fleet. See the [Badges Guide](/badges) section to know more about Beancursion's badges and progress system.
 
 ## Entering Grid
 
-**If this is your very first time in a TDF fleet make sure to notify the FC. He/She will usually help you!** If not, once you have your fleet invite you can either join the fleet in the current site, by warping to the FC. Or wait at the next acceleration gate before the fleet arrives, by warping to the latest align to. If you are joining the fleet mid site, **you must warp to FC again**. If you are at the correct site you will be unable to warp and your ship will tell you it has the **natural phenomenon** error message. If you warp to the latest align to broadcast, you must wait for the fleet to arrive. Once you are at the correct site, ask for **gate status** or wait for FC to call the gate status.
+**If this is your very first time in a Beancursion fleet make sure to notify the FC. He/She will usually help you!** If not, once you have your fleet invite you can either join the fleet in the current site, by warping to the FC. Or wait at the next acceleration gate before the fleet arrives, by warping to the latest align to. If you are joining the fleet mid site, **you must warp to FC again**. If you are at the correct site you will be unable to warp and your ship will tell you it has the **natural phenomenon** error message. If you warp to the latest align to broadcast, you must wait for the fleet to arrive. Once you are at the correct site, ask for **gate status** or wait for FC to call the gate status.
 
 When you ask for gate status **do not say any colors**. There might be someone else waiting at a gate. If all they hear is "green" you might owe them a new ship.
 
-**RED** = Do not use any acceleration gates. Align and wait 10 seconds and ask for the status again.  
+**RED** = Do not use any acceleration gates. Align and wait 30 seconds and ask for the status again.  
 **GREEN** = Take the gate once you are sure you are at the correct site by warping to FC and checking for **natural phenomenon**.
+
+If you don't get an response, assume that the gate is red and wait 30sec before asking a gate status again.
 
 If you are unsure **ALWAYS** warp to the FC, if you at the correct site you will not move, if you at the wrong site you will warp to the correct one.
 
@@ -33,9 +35,8 @@ If you are unsure **ALWAYS** warp to the FC, if you at the correct site you will
 
 ## Ship Replacement Program
 
-Paying 15M ISK to the TDF SRP corporation (a link is provided in the fleet MOTD) covers your ship until the next server downtime. Simply right click the corporation and "Give Money." The cover is for FC and logi error. You are not covered for your own mistakes. Be sure to broadcast on time and make sure you are in the right place in the right site. The payout covers everything destroyed should you die (up to 7 Billion ISK). The fleet will pick up anything in your wreck and contract it to you. SRP is completely optional but strongly recommended.
+Paying 30M ISK to the Beancursion SRP corporation (a link is provided in the fleet MOTD) covers your ship until the next server downtime. Simply right click the corporation and "Give Money." The cover is for FC and logi error. You are not covered for your own mistakes. Be sure to broadcast on time and make sure you are in the right place in the right site. The payout covers everything destroyed should you die, make sure to have a correct fit. The fleet will pick up anything in your wreck and contract it to you. SRP is completely optional but strongly recommended.
 
-Pilots now have the option to pay 100mil ISK to SRP to cover yourself for an entire focus, pay it at the start of the focus if you are likely to forget to pay it each time you fly. Again this is optional.
 
 ![](paysrp.png)
 
@@ -62,7 +63,7 @@ Then **hold Q** which will draw a line from your ship to where you want to go. T
 
 ![](Qalign.png)
 
-**Logi:** Cruisers will orbit a Nestor a **7.5km** in the site to help speed tank. Nestors have specific anchor points in all sites and must use the Q align function to anchor correctly.
+**Logi:** Cruisers will orbit a Nestor a **5km** in the site to help speed tank. Nestors have specific anchor points in all sites and must use the Q align function to anchor correctly.
 
 **CQC & Snipers:** You will need to move your ship manually into position using Q align function to fly around.
 
@@ -87,7 +88,7 @@ Should you be assigned a role while in fleet use the [Roles guide](/guide/roles)
 
 At minimum your overview should have an extra column displaying tags so the fleet can focus fire, or to indicate if a target is X for don't shoot.
 
-- **CQC shoot numbers 1-9**
+- **DPS shoot numbers 1-9**
 - **Snipers shoot letters A-I**
 - **X is a safety tag**
 
@@ -103,11 +104,11 @@ Before the Sansha shoot you they must first lock onto you. This is indicated by 
 
 ## Disconnected
 
-**If you are disconnected you must not log back into the game**. Depending on the site you may warp back into the site out of range of logi, or in some cases in a site when fleet has already exited. Join Teamspeak first and ask FC if you can log back in. Only if you get the ok then you can log back into eve. Once you are back in the game, open the **TDF-Official** channel and type "X DC \[your ship type\]" so the FC can reinvite you to the fleet in the correct squad.
+**If you are disconnected you must not log back into the game**. Depending on the site you may warp back into the site out of range of logi, or in some cases in a site when fleet has already exited. Join comms first and ask FC if you can log back in. Only if you get the ok then you can log back into eve. Once you are back in the game, open the **Beancursion-Official** channel and type "X DC \[your ship type\]" so the FC can reinvite you to the fleet in the correct squad.
 
 ## The Big Three
 
-New players are going to make mistakes. TDF won't crucify you for it. But you might get yourself killed if you're not careful. The three most common mistakes for new pilots are the following: -
+New players are going to make mistakes. Beancursion won't crucify you for it. But you might get yourself killed if you're not careful. The three most common mistakes for new pilots are the following: -
 
 **Taking gate too early.** You're not Leeroy Jenkins, you're not taking the site on by yourself so you don't need to be the first one in. Some sites even have delayed entry where a solo ship may take the gate up to 30 seconds before everyone else. He's fitted for it, you are not. This also happens sometimes on TCRC _exit._ People hear the TCRC warp out and think it is the warp in for the next site. It's better if you are late than early and if in doubt, **ASK THE FC**.
 
@@ -117,7 +118,7 @@ New players are going to make mistakes. TDF won't crucify you for it. But you mi
 
 ## Still not sure?
 
-Just ask in fleet chat or over Teamspeak.
+Just ask in fleet chat or over Mumble.
 
 ## Keep reading
 

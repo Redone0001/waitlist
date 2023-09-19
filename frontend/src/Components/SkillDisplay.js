@@ -172,6 +172,9 @@ export function SkillDisplay({ characterId, ship, setShip = null, filterMin = fa
       {setShip != null && (
         <Buttons style={{ marginBottom: "1em" }}>
           <InputGroup>
+		  <Button active={ship === "Megatron"} onClick={(evt) => setShip("Megatron")}>
+              Megatron
+            </Button>
             <Button active={ship === "Vindicator"} onClick={(evt) => setShip("Vindicator")}>
               Vindicator
             </Button>
@@ -209,7 +212,7 @@ export function SkillDisplay({ characterId, ship, setShip = null, filterMin = fa
         <Badge variant="secondary">Elite</Badge> <Badge variant="success">Elite GOLD</Badge>
       </div>
       <SkillHeader>
-        {ship === "Nestor" || ship === "Guardian" || ship === "Oneiros" ? (
+        {ship === "Nestor" || ship === "Guardian" ? (
           <InfoNote>Basic tier skills are required for logistics.</InfoNote>
         ) : null}
       </SkillHeader>

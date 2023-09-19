@@ -1,10 +1,14 @@
+
+
+---
+
 # Becoming an FC
 
 ---
 
 ## Tryouts
 
-TDF is always looking for new FC's.
+Beancursion is always looking for new FC's.
 Is fleet down during your prime time? Want to fix that?
 
 There is no pressure to accept a T badge straight away. You can ask to voice and/or tag a few fleets, see if it's for you. All thats required is an L badge! You can ask any full FC to do a tryout, you can do up to five tryouts. All you need to know before starting a tryout is on this page, tagging order and shortcuts. You don't need to have tags completely memorized for the first fleet.
@@ -16,17 +20,16 @@ If you have any doubts or questions, ask any FC, FC Trainer or council.
 Advantages
 
 - There will always be a fleet _(from your perspective)_
-- You will get a shiny badge on discord
 - Spices incursions up, less boring routine
 - You can skip waitlist
-- You help TDF grow
+- You help Beancursion grow
 
 Disadvantages
 
-- Pilots will use anything you say against you (soundboards)
-- You will hear way too much german in backcomms
+- Pilots will use anything you say against you
+- You will get pings and trolled in discord
 
-To officially join the training program you need an **L tag** and a fully skilled **Primary booster** (no starter skills on waitlist). the HQ mailing list has an EOS fit. Ask any council or FC Trainer to join.
+To officially join the training program contact your favorite council member or FC Trainer to join.
 
 ## Training Program Stages
 
@@ -65,8 +68,8 @@ You can have this open on your phone in your tryouts and/or first trainee fleets
 
 #### Room 2
 
-- N : Romi, Deltole, Osti
-- L : Mara, Auga, Antem
+- N : Romi, Osti
+- L : Mara, Deltote, Auga, Antem
 
 #### Room 3
 
@@ -89,12 +92,12 @@ You can have this open on your phone in your tryouts and/or first trainee fleets
 
 **Wave 1**
 
-- N : Romi, Osti, Deltole
-- L : Mara, Uitra, Vylade
+- N : Romi, Osti, Uitra
+- L : Mara, Deltote, Vylade
 
 **Wave 2**
 
-- N : Uitra, Romi, Osti
+- N : Romi, Osti, Uitra
 - L : Antem, Yulai
 
 **Wave 3**
@@ -104,7 +107,7 @@ You can have this open on your phone in your tryouts and/or first trainee fleets
 
 **Wave 4**
 
-- N : Intaki, Outuni, Deltole, Osti
+- N : Intaki, Deltole, Outuni, Osti
 - L : Antem, Yulai
 
 ## TCRC

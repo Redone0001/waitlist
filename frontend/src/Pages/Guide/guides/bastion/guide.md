@@ -18,7 +18,7 @@ Pilot error is NOT COVERED under SRP. If you Bastion by mistake at the wrong tim
 
 ## General rules/requirements if you want SRP
 
-1.  **Auto repeat is off at all times.** (You are actively encouraged to use "CTRL+Left click" during TPPH & NRF)
+1.  **Auto repeat is off at all times.** (You are actively encouraged to use "CTRL+Left click" during TPPH)
 2.  **Bastion in lowest module row, NO SHORTCUT!**
 3.  All tank skills must be at basic level for your chosen ship or higher (check [skills page](/skills))
 4.  Pilots should broadcast for shield when in bastion and getting aggro, then armor broadcast once you come out of bastion. USE your voice!
@@ -34,7 +34,7 @@ Pilot error is NOT COVERED under SRP. If you Bastion by mistake at the wrong tim
 
 ![](moduletooltips.png)
 
-- Temporary Auto-Cycle - During TPPH's and NRF's we now allow pilots to "CTRL+Left click" their Bastion modules to maximise bastion time, this method of bastioning is a temporary auto-cycle and doesnt require the pilot to enable auto-cycle thus keeping your SRP intact. You will stay in bastion until you manually de-cycle, however the next time you click bastion it will still automatically de-cycle. Care should still be taken not to Bastion when you are out of position. See the [Anchoring Guide](/guide/anchoring) for specifics on positioning.
+- Temporary Auto-Cycle - During TPPH's we now allow pilots to "CTRL+Left click" their Bastion modules to maximise bastion time, this method of bastioning is a temporary auto-cycle and doesnt require the pilot to enable auto-cycle thus keeping your SRP intact. You will stay in bastion until you manually de-cycle, however the next time you click bastion it will still automatically de-cycle. Care should still be taken not to Bastion when you are out of position. See the [Anchoring Guide](/guide/anchoring) for specifics on positioning.
 
 - Kronos - As a Kronos pilot we encourage our pilots to bastion as much as possible to maximise their DPS and to help consolidate aggro. During TCRC's **IF YOU HOLD BASTION SPECIALIST BADGE** you should be pressing the bastion button until a switch occurs onto you. Switches occur every minute and bastion cycles are 60 seconds, so you can safely get one bastion cycle in between switches in your Kronos fit. Learning to watch lasers can make this process much easier. You should still take care not to over bastion with aggro.
 
@@ -46,7 +46,7 @@ Pilot error is NOT COVERED under SRP. If you Bastion by mistake at the wrong tim
 
 - **Split Aggro Entrance** - If on a normal TCRC entrance you accidentally get aggro instead of the meat shield make sure to check if you have enough capacitor to jump, and if not ask for battle cap. If you have the Outuni aggro you should have already broadcasted for capacitor. Nestors will be burning towards the tower the moment they enter site so do not get left behind. As a bastion pilot look after your fellow pilots and provide capacitor and battle reps as appropriate, it could be your ship that needs saving one day!
 
-- **MJD Cancel** - If you MJD and get bumped you can cycle your bastion module on to prevent the jump from happening, but be aware this will leave you in your current spot and in bastion, so stop shooting and do not pull aggro, you will have the full MJD cooldown timer and your bastion cycle time, our recomendation at this point is to burn with microwarpdrive as normal to anchor once your bastion cycle ends.
+- **MJD Cancel** - If you MJD and get bumped you can cycle your bastion module on to prevent the jump from happening, but be aware this will leave you in your current spot and in bastion, so stop shooting and do not pull aggro.
 
 - **MWD Trick** - You can give yourself an accelerated warp out using your MWD when nearing the end of bastion cycles. Align to your destination & once your bastion cycle is at 9 seconds or less cycle your MWD once (make sure to red cycle it!), when your bastion cycle ends initiate warp to next destination and when your MWD cycle ends you will in insta warp out.
 
