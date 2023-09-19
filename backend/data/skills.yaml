@@ -582,7 +582,7 @@ requirements:
       min: 3
       elite: 4
 
-  Megathron:
+  Megatron:
     <<: [*generic, *gunnery, *sideeffects, *rigging]
     Gallente Battleship:
       min: 3
