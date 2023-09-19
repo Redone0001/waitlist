@@ -189,15 +189,14 @@ function ShipDisplay({ fit, id, note }) {
             {fit.name.indexOf("HYBRID") !== -1 ? (
               <Note variant={"danger"}>
                 <p>
-                  HYBRID FIT! This fit requires at least Amulet 1 - 5. <br /> See implants above or
-                  mailing list: <b>TDF-Implant1</b>
+                  HYBRID FIT! This fit requires at least Amulet 1 - 5. <br /> See implants above 
                 </p>
               </Note>
             ) : fit.name.indexOf("ASCENDANCY") !== -1 ? (
               <Note variant={"danger"}>
                 <p>
                   ASCENDANCY FIT! This fit requires at least Ascendancy 1 - 5 & WS-618. <br /> See
-                  implants above or mailing list: <b>TDF-Implant1</b>
+                  implants above
                 </p>
               </Note>
             ) : null}
