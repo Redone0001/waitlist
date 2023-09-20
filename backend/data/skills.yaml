@@ -583,7 +583,7 @@ requirements:
       min: 3
       elite: 4
 
-  Megatron:
+  Megathron:
     <<: [*generic, *gunnery, *sideeffects, *rigging]
     Heavy Drone Operation:
       min: 3
