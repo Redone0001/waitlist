@@ -50,49 +50,49 @@ plans:
         tier: min
   - name: VINDICATOR ELITE PATH
     description: >
-      This skill plan will train you from starter Megathron in to the basic Vindi fit.
+      This skill plan will train to the basic Vindi fit with elite skill level
     plan:
       - type: skills
         from: Vindicator
         tier: elite
   - name: KRONOS ELITE PATH
     description: >
-      This skill plan will train you to standard Kronos
+      This skill plan will train you to standard Kronos with elite skill level
     plan:
       - type: skills
         from: Kronos
         tier: elite
   - name: PALADIN ELITE PATH
     description: >
-      This skill plan will train you to standard Paladin
+      This skill plan will train you to standard Paladin with elite skill level
     plan:
       - type: skills
         from: Paladin
         tier: elite
   - name: NIGHTMARE ELITE PATH
     description: >
-      This skill plan will train you to standard Nightmare
+      This skill plan will train you to standard Nightmare with elite skill level
     plan:
       - type: skills
         from: Nightmare
         tier: elite
   - name: GUARDIAN ELITE PATH
     description: >
-      This skill plan will train you to standard Guardian
+      This skill plan will train you to standard Guardian with elite skill level
     plan:
       - type: skills
         from: Guardian
         tier: elite
   - name: NESTOR ELITE PATH
     description: >
-      This skill plan will train you to standard Nestor
+      This skill plan will train you to standard Nestor with elite skill level
     plan:
       - type: skills
         from: Nestor
         tier: elite
   - name: ISHTAR ELITE PATH
     description: >
-      This skill plan will train you to standard Ishtar
+      This skill plan will train you to standard Ishtar with elite skill level
     plan:
       - type: skills
         from: Ishtar
