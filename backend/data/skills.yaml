@@ -585,6 +585,9 @@ requirements:
 
   Megatron:
     <<: [*generic, *gunnery, *sideeffects, *rigging]
+    Heavy Drone Operation:
+      min: 3
+      elite: 5
     Gallente Battleship:
       min: 3
     Large Hybrid Turret:
@@ -661,6 +664,9 @@ requirements:
 
   Eos:
     <<: [*booster]
+    Heavy Drone Operation:
+      min: 4
+      elite: 5
     Leadership:
       min: 5
     Wing Command:
@@ -679,6 +685,9 @@ requirements:
 
   Damnation:
     <<: [*booster]
+    Heavy Drone Operation:
+      min: 4
+      elite: 5
     Leadership:
       min: 5
     Wing Command:
