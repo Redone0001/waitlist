@@ -2,41 +2,6 @@
 
 ---
 
-An important fleet role is the **Scout**, which an FC can do themselves or delegate. Your job as a scout is to give the FC awareness of the other fleets in system, and to preload the TCRC sites so we can run them faster.
-
-Scouting is done from a second omega account (alt) in a ship that's optimized for (warp) speed. A good and cheap place to start is the Atron Scout at the bottom of this guide. It can be trained in about 15 minutes on a fresh character. A more expensive but even faster option is the Astero. However, please understand that losing scout ships is common, especially early on. Once you have been scouting for a while you will likely discover your own scout ship preference, which could involve interceptors or even a Pacifier.
-
-Scouting is a fairly advanced role that requires multiboxing, so don't try this before you have mastered flying your primary ship.
-
-## Finding sites
-
-First and foremost the job of a scout is to find the fleet a free site before the end of the previous site. You can let the FC know which sites are taken through beacon tags, so the FC can choose a next site. The common tag for "this site is taken" is **X**, though experienced scouts will use all of **X/Y/Z** to let the FC know which community is in each site.
-
-![](taggingsite.png)
-
-You can tag a site if you are in a **squad commander position**, by right-clicking the beacon, and picking the tag in the tag dropdown, but this is faster if you assign a hotkey (via the settings menu, Shortcuts tab, use the search in the top right).
-
-![](tagginghotkey.png)
-
-How you find the sites that are taken can depend on the number of fleets that are running:
-
-- If we are the only fleet in system, there should be no problem finding a free site. Put your scout on the _most favorable site_ to avoid surprises in case another fleet decides it's time to start a fleet.
-- If only one other fleet is running you can choose to follow them around, tagging their sites as they take them.
-- If two fleets are running you will find that most of the time there is only one clear site. Park your scout on the gate, and when a fleet goes in tag it. Once a new site spawns, warp to it, and repeat.
-
-When the fleet starts a new site the FC will tag the site **A**. Sometimes they forget this, so feel free to tag it yourself, or call them out on their mistake. This A tag will help you to quickly remember where the fleet is in relation to your scout. To see this tag you must refresh tags on your scout by either tagging a fresh site or tagging yourself.
-
-Sometimes a fleet will bounce, leaving a tagged site without a fleet in it. It is the scout's job to recognize the situation, and find out which site they bounced from. To tag a site that another fleet bounced from, use **B**, but leave the A tag to differentiate sites that we bounced from ourselves.
-
-Put a J tag on the Kundalini Manifest, so FCs don't accidentally end the focus. The same goes for other anomalies and sites that appear on the overview and aren't related to incursions.
-
-![](taggedexample.png)
-
-### Most favorable site
-
-The FC will almost always want to go to the most favorable site, which is the site that gives the best ISK per hour. In order of preference this is TCRC, then NRF, then TPPH, and closer always takes preference if there are multiple sites of the same type. If we previously bounced from a site (tagged A), or another fleet did (tagged B), then this may be preferable to a site that's closer.
-
-
 ## Preloading TCRCs
 
 The TCRC site is special in that it takes about half a minute for all Sansha rats to spawn. If a fleet goes in before everything has spawned then the aggression will be split, making the site less safe and creating more work for the logi.

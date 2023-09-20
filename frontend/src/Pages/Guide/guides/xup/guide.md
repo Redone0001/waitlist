@@ -104,7 +104,7 @@ Before the Sansha shoot you they must first lock onto you. This is indicated by 
 
 ## Disconnected
 
-**If you are disconnected you must not log back into the game**. Depending on the site you may warp back into the site out of range of logi, or in some cases in a site when fleet has already exited. Join comms first and ask FC if you can log back in. Only if you get the ok then you can log back into eve. Once you are back in the game, open the **Beancursion-Official** channel and type "X DC \[your ship type\]" so the FC can reinvite you to the fleet in the correct squad.
+**If you are disconnected you must not log back into the game**. Depending on the site you may warp back into the site out of range of logi, or in some cases in a site when fleet has already exited. Join comms first and ask FC if you can log back in. Only if you get the ok then you can log back into eve. Once you are back in the game, open the **Sansha Containment Service** channel and type "X DC \[your ship type\]" so the FC can reinvite you to the fleet in the correct squad.
 
 ## The Big Three
 

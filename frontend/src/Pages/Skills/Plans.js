@@ -38,7 +38,6 @@ function PlanDisplay({ authContext }) {
 
   const [plans] = useApi("/api/skills/plans");
   const [mySkills] = useApi(`/api/skills?character_id=${authContext.current.id}`);
-
   if (!plans || !mySkills) {
     return <em>Loading...</em>;
   }

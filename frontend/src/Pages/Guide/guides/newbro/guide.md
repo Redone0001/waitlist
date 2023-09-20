@@ -20,7 +20,7 @@ More logi specific requirements and guidance can be found in the [Logi guide](/g
 
 ## Joining SCS's Channel
 
-To find us in-game; join the chat channel **Sansha Containment Servicel**. You can do this by clicking the little plus button where your chat window is at the top. Then in the channels box type Sansha Containment Service and then click join.
+To find us in-game; join the chat channel **Sansha Containment Service**. You can do this by clicking the little plus button where your chat window is at the top. Then in the channels box type Sansha Containment Service and then click join.
 
 ![](joinchannel.png)
 

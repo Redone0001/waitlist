@@ -28,11 +28,10 @@ Upgrading for logi is expected much the same as DPS.
 
 |      Tier      | Time Limit |
 | :------------: | :--------: |
-|    Advanced    |    100h    |
-| Elite(Cruiser) |    150h    |
-| Elite(Nestor)  |    200h    |
+|  Standard (Guardian)  |    100h    |
+| Optimal(Nestor)  |    200h    |
 
-Nestor is the elite equivalent for logi. Pilots wishing to only fly cruiser are not expected to get a Nestor. You can stay in a cruiser if you wish to, but be aware DPS will be prioritised over you if the logi numbers are fulfilled. Should we have a surplus of cruisers in fleet it will be last in first out in favor of DPS ships as well.
+Nestor is the Optimal equivalent for logi. Pilots wishing to only fly cruiser are not expected to get a Nestor. You can stay in a cruiser if you wish to, but be aware DPS will be prioritised over you if the logi numbers are fulfilled. Should we have a surplus of cruisers in fleet it will be last in first out in favor of DPS ships as well.
 
 ## Requirements
 
