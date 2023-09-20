@@ -5,9 +5,6 @@ plans:
     plan:
       - type: skills
         from: Megatron
-        tier: min
-      - type: skills
-        from: Megatron
         tier: elite
   - name: VINDICATOR BASIC PATH
     description: >
@@ -18,17 +15,11 @@ plans:
         tier: min
       - type: skills
         from: Vindicator
-        tier: min
-      - type: skills
-        from: Vindicator
         tier: elite
   - name: KRONOS BASIC PATH
     description: >
       This skill plan will train you to standard Kronos
     plan:
-      - type: skills
-        from: Kronos
-        tier: min
       - type: skills
         from: Kronos
         tier: elite
@@ -38,17 +29,11 @@ plans:
     plan:
       - type: skills
         from: Paladin
-        tier: min
-      - type: skills
-        from: Paladin
         tier: elite
   - name: NIGHTMARE BASIC PATH
     description: >
       This skill plan will train you to standard Nightmare
     plan:
-      - type: skills
-        from: Nightmare
-        tier: min
       - type: skills
         from: Nightmare
         tier: elite
@@ -58,9 +43,6 @@ plans:
     plan:
       - type: skills
         from: Guardian
-        tier: min
-      - type: skills
-        from: Guardian
         tier: elite
   - name: NESTOR BASIC PATH
     description: >
@@ -68,17 +50,11 @@ plans:
     plan:
       - type: skills
         from: Nestor
-        tier: min
-      - type: skills
-        from: Nestor
         tier: elite
   - name: ISHTAR BASIC PATH
     description: >
       This skill plan will train you to standard Ishtar
     plan:
-      - type: skills
-        from: Ishtar
-        tier: min
       - type: skills
         from: Ishtar
         tier: elite
