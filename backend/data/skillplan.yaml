@@ -5,17 +5,8 @@ plans:
     plan:
       - type: tank
         from: starter
-      - type: fit
-        hull: Megathron
-        fit: Starter SCS Megathron
-      - type: fit
-        hull: Vindicator
-        fit: Starter SCS Vindicator
       - type: tank
         from: min
       - type: skills
         from: Vindicator
         tier: min
-      - type: fit
-        hull: Vindicator
-        fit: Standard SCS Vindicator
