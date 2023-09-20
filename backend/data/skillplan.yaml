@@ -7,10 +7,10 @@ plans:
         from: starter
       - type: fit
         hull: Megathron
-        fit: TDF_MEGA_STARTER
+        fit: Starter SCS Megathron
       - type: fit
         hull: Vindicator
-        fit: TDF_VINDI_STARTER
+        fit: Starter SCS Vindicator
       - type: tank
         from: min
       - type: skills
@@ -18,7 +18,7 @@ plans:
         tier: min
       - type: fit
         hull: Vindicator
-        fit: TDF_VINDI_BASIC
+        fit: Standard SCS Vindicator
 
   - name: NIGHTMARE BASIC PATH
     description: >
@@ -28,10 +28,10 @@ plans:
         from: starter
       - type: fit
         hull: Megathron
-        fit: TDF_MEGA_STARTER
+        fit: Starter SCS Megathron
       - type: fit
         hull: Nightmare
-        fit: TDF_NM_STARTER
+        fit: Starter SCS Nightmare
       - type: tank
         from: min
       - type: skills
@@ -39,7 +39,7 @@ plans:
         tier: min
       - type: fit
         hull: Nightmare
-        fit: TDF_NM_BASIC
+        fit: Standard SCS Nightmare
 
   - name: VINDICATOR ELITE PATH
     description: >
@@ -49,10 +49,10 @@ plans:
         from: starter
       - type: fit
         hull: Megathron
-        fit: TDF_MEGA_STARTER
+        fit: Starter SCS Megathron
       - type: fit
         hull: Vindicator
-        fit: TDF_VINDI_STARTER
+        fit: Starter SCS Vindicator
       - type: tank
         from: min
       - type: skills
@@ -60,19 +60,13 @@ plans:
         tier: min
       - type: fit
         hull: Vindicator
-        fit: TDF_VINDI_BASIC
-      - type: fit
-        hull: Vindicator
-        fit: TDF_VINDI_ADVANCED
+        fit: Standard SCS Vindicator
       - type: skill
         from: Cybernetics
         level: 5
       - type: fit
         hull: Vindicator
-        fit: TDF_VINDI_ELITE_HYBRID
-      - type: fit
-        hull: Vindicator
-        fit: TDF_VINDI_ELITE
+        fit: Optimal SCS Vindicator HYBRID
       - type: skills
         from: Vindicator
         tier: elite
@@ -85,10 +79,10 @@ plans:
         from: starter
       - type: fit
         hull: Megathron
-        fit: TDF_MEGA_STARTER
+        fit: Starter SCS Megathron
       - type: fit
         hull: Vindicator
-        fit: TDF_VINDI_STARTER
+        fit: Starter SCS Vindicator
       - type: tank
         from: min
       - type: skills
@@ -96,19 +90,19 @@ plans:
         tier: min
       - type: fit
         hull: Vindicator
-        fit: TDF_VINDI_BASIC
+        fit: Standard SCS Vindicator
       - type: skills
         from: Kronos
         tier: min
       - type: fit
         hull: Kronos
-        fit: TDF_KRONOS_ADVANCED
+        fit: Standard SCS Kronos
       - type: skill
         from: Cybernetics
         level: 5
       - type: fit
         hull: Kronos
-        fit: TDF_KRONOS_ELITE
+        fit: Optimal SCS Vindicator HYBRID
       - type: skills
         from: Kronos
         tier: elite
@@ -121,10 +115,10 @@ plans:
         from: starter
       - type: fit
         hull: Megathron
-        fit: TDF_MEGA_STARTER
+        fit: Starter SCS Megathron
       - type: fit
         hull: Nightmare
-        fit: TDF_NM_STARTER
+        fit: Starter SCS Nightmare
       - type: tank
         from: min
       - type: skills
@@ -132,19 +126,19 @@ plans:
         tier: min
       - type: fit
         hull: Nightmare
-        fit: TDF_NM_BASIC
+        fit: Standard SCS Nightmare
       - type: skills
         from: Paladin
         tier: min
       - type: fit
         hull: Paladin
-        fit: TDF_PALLY_ADVANCED
+        fit: Standard SCS Paladin
       - type: skill
         from: Cybernetics
         level: 5
       - type: fit
         hull: Paladin
-        fit: TDF_PALLY_ELITE
+        fit: Optimal SCS Paladin HYBRID
       - type: skills
         from: Paladin
         tier: elite
@@ -163,10 +157,7 @@ plans:
         tier: min
       - type: fit
         hull: Vindicator
-        fit: TDF_VINDI_ELITE_HYBRID
-      - type: fit
-        hull: Vindicator
-        fit: TDF_VINDI_ELITE
+        fit: Optimal SCS Vindicator HYBRID
       - type: skills
         from: Vindicator
         tier: elite
@@ -185,7 +176,7 @@ plans:
         tier: min
       - type: fit
         hull: Kronos
-        fit: TDF_KRONOS_ELITE
+        fit: Optimal SCS Vindicator HYBRID
       - type: skills
         from: Kronos
         tier: elite
@@ -204,7 +195,7 @@ plans:
         tier: min
       - type: fit
         hull: Paladin
-        fit: TDF_PALLY_ELITE
+        fit: Optimal SCS Paladin HYBRID
       - type: skills
         from: Paladin
         tier: elite
@@ -222,28 +213,6 @@ plans:
         hull: Oneiros
         fit: TDF_ONI_HQ_BASIC
 
-  - name: ONEIROS ELITE PATH
-    description: >
-      This skill plan trains you from basic through to elite Oneiros.
-    plan:
-      - type: tank
-        from: min
-      - type: skills
-        from: Oneiros
-        tier: min
-      - type: fit
-        hull: Oneiros
-        fit: TDF_ONI_HQ_BASIC
-      - type: fit
-        hull: Oneiros
-        fit: TDF_ONI_HQ_ADVANCED
-      - type: fit
-        hull: Oneiros
-        fit: TDF_ONI_HQ_ELITE
-      - type: skills
-        from: Oneiros
-        tier: elite
-
   - name: GUARDIAN BASIC
     description: >
       This skill plan trains you into the Guardian basic fit. Use this to get started in Guardian.
@@ -258,32 +227,7 @@ plans:
         tier: min
       - type: fit
         hull: Guardian
-        fit: TDF_GUARD_HQ_BASIC
-
-  - name: GUARDIAN ELITE PATH
-    description: >
-      This skill plan trains you from basic through to elite Guardian.
-    plan:
-      - type: tank
-        from: min
-      - type: skill
-        from: Cybernetics
-        level: 5
-      - type: skills
-        from: Guardian
-        tier: min
-      - type: fit
-        hull: Guardian
-        fit: TDF_GUARD_HQ_BASIC
-      - type: fit
-        hull: Guardian
-        fit: TDF_GUARD_HQ_ADVANCED
-      - type: fit
-        hull: Guardian
-        fit: TDF_GUARD_HQ_ELITE
-      - type: skills
-        from: Guardian
-        tier: elite
+        fit: Standard SCS Guardian
 
   - name: NESTOR ELITE
     description: >
@@ -299,10 +243,7 @@ plans:
         tier: min
       - type: fit
         hull: Nestor
-        fit: TDF_NESTOR_HQ_ELITE_HYBRID
-      - type: fit
-        hull: Nestor
-        fit: TDF_NESTOR_HQ_ELITE_ASCENDANCY
+        fit: Optimal SCS Nestor
       - type: skills
         from: Nestor
         tier: elite
@@ -321,7 +262,7 @@ plans:
         tier: min
       - type: fit
         hull: Eos
-        fit: TDF_EOS
+        fit: Standard SCS Eos Other
       - type: skills
         from: Eos
         tier: elite
@@ -340,7 +281,7 @@ plans:
         tier: min
       - type: fit
         hull: Damnation
-        fit: TDF_DAMNATION
+        fit: Standard SCS Damnation Other
       - type: skills
         from: Damnation
         tier: elite
@@ -356,31 +297,19 @@ plans:
         level: 5
       - type: fit
         hull: Vindicator
-        fit: TDF_VINDI_ELITE_HYBRID
+        fit: Optimal SCS Vindicator HYBRID
       - type: fit
         hull: Vindicator
-        fit: TDF_VINDI_ELITE
+        fit: Optimal SCS Vindicator HYBRID
       - type: fit
         hull: Kronos
-        fit: TDF_KRONOS_ELITE
+        fit: Optimal SCS Vindicator HYBRID
       - type: fit
         hull: Paladin
-        fit: TDF_PALLY_ELITE
-      - type: fit
-        hull: Nightmare
-        fit: TDF_NM_ADVANCED
-      - type: fit
-        hull: Oneiros
-        fit: TDF_ONI_HQ_ELITE
-      - type: fit
-        hull: Guardian
-        fit: TDF_GUARD_HQ_ELITE
+        fit: Optimal SCS Paladin HYBRID
       - type: fit
         hull: Nestor
-        fit: TDF_NESTOR_HQ_ELITE_HYBRID
-      - type: fit
-        hull: Nestor
-        fit: TDF_NESTOR_HQ_ELITE_ASCENDANCY
+        fit: Optimal SCS Nestor
 
       - type: skills
         from: Vindicator
@@ -406,10 +335,10 @@ plans:
 
       - type: fit
         hull: Eos
-        fit: TDF_EOS
+        fit: Standard SCS Eos Other
       - type: fit
         hull: Damnation
-        fit: TDF_DAMNATION
+        fit: Standard SCS Damnation Other
       - type: skills
         from: Eos
         tier: elite
