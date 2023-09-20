@@ -204,6 +204,15 @@ export function SkillDisplay({ characterId, ship, setShip = null, filterMin = fa
               Damnation
             </Button>
           </InputGroup>
+		  </InputGroup>
+          <InputGroup>
+            <Button active={ship === "Ishtar"} onClick={(evt) => setShip("Ishtar")}>
+              Ishtar
+            </Button>
+            <Button active={ship === "Dominix"} onClick={(evt) => setShip("Dominix")}>
+              Dominix
+            </Button>
+          </InputGroup>
         </Buttons>
       )}
 
