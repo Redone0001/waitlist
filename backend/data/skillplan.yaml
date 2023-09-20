@@ -3,10 +3,6 @@ plans:
     description: >
       This skill plan will train you from starter Megathron in to the basic Vindi fit.
     plan:
-      - type: tank
-        from: starter
-      - type: tank
-        from: min
       - type: skills
         from: Vindicator
         tier: min
