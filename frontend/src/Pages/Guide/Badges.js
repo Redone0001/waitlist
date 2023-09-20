@@ -65,9 +65,9 @@ export function BadgeData() {
     <>
       <Content style={{ marginBottom: "2em" }}>
         <h1>Badges</h1>
-		<p>
-		  <b>This page is still under review, read it for your general knowledge but the content is not yet adapted to the beancursion SIG. Contact Jakaja Cain on discord if you have any question/update)</b>
-		</p>
+        <p>
+          <b>This page is still under review, read it for your general knowledge but the content is not yet adapted to the beancursion SIG. Contact Jakaja Cain on discord if you have any question/update)</b>
+        </p>
         <h2>What are badges for?</h2>
         <p>
           {" "}
