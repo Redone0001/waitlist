@@ -1,8 +1,11 @@
 plans:
-  - name: MEGATRON BASIC PATH
+  - name: VINDICATOR BASIC PATH
     description: >
-      This skill plan will train you to starter Megathron
+      This skill plan will train you from starter Megathron in to the basic Vindi fit.
     plan:
       - type: skills
         from: Megatron
+        tier: min
+      - type: skills
+        from: Vindicator
         tier: min
