@@ -139,9 +139,9 @@ impl<'a> FitChecker<'a> {
 
     fn check_logi_implants(&mut self) {
         if (self.fit.hull == type_id!("Nestor") || self.fit.hull == type_id!("Guardian"))
-            && !self.pilot.implants.contains(&type_id!("% EM-806"))
+            && !self.pilot.implants.contains(&type_id!("% EM-805"))
         {
-            self.tags.insert("NO-EM-806");
+            self.tags.insert("NO-EM-805");
         }
     }
 

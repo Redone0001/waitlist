@@ -84,7 +84,7 @@ fn detect_slot7(hull: TypeID, implants: &[TypeID]) -> Option<()> {
 }
 
 fn detect_slot8(hull: TypeID, implants: &[TypeID]) -> Option<()> {
-    if implants.contains(&type_id!("% EM-806")) {
+    if implants.contains(&type_id!("% EM-805")) {
         Some(())
     } else if (implants.contains(&type_id!("Zor's Custom Navigation Hyper-Link"))
         || implants.contains(&type_id!("% MR-807")))
