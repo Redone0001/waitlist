@@ -91,7 +91,7 @@ You can use [Fuzzworks LP](https://www.fuzzwork.co.uk/lpstore/) to search for th
 
 ## Abyssal Modules
 
-Abyssal modules are great and can give you increased DPS, huge armor bonuses, or even help you go faster. Here at TDF we love pilots who invest, but they can be very expensive. Here are some tips to help you get the most for your isk.
+Abyssal modules are great and can give you increased DPS, huge armor bonuses, or even help you go faster. Here at Beancursion we love pilots who invest, but they can be very expensive. Here are some tips to help you get the most for your isk.
 
 ![](https://images.evetech.net/types/49726/icon) ![](https://images.evetech.net/types/47820/icon) ![](https://images.evetech.net/types/47702/icon) ![](https://images.evetech.net/types/47745/icon)
 
@@ -135,7 +135,7 @@ When it comes to your MWD, speed is key. We all want to go faster, however it sh
 
 ## Overheating Modules and slot layout
 
-Overheating allows a module to perform better (eg: more DPS for guns, more speed for MWDs) but comes at the cost of the module taking chance based damage and eventually burning out and shutting off completely. Each active module is connected to a "rack", overheating a module results in the rack building up heat thereby increasing the chance of receiving damage per cycle for each module connected to that rack. The longer you overheat a certain module the more damage it will sustain and cause to other modules in the same rack. We ask pilots to use heat alot in TDF so learning this mechanic will go a long way.
+Overheating allows a module to perform better (eg: more DPS for guns, more speed for MWDs) but comes at the cost of the module taking chance based damage and eventually burning out and shutting off completely. Each active module is connected to a "rack", overheating a module results in the rack building up heat thereby increasing the chance of receiving damage per cycle for each module connected to that rack. The longer you overheat a certain module the more damage it will sustain and cause to other modules in the same rack. We ask pilots to use heat alot in Beancursion so learning this mechanic will go a long way.
 
 ![](rackheat.png)
 

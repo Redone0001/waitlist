@@ -14,7 +14,7 @@ To get started in Beancursion all you need is to be able to **online ALL modules
 
 ### LOGI
 
-To fly logi with TDF you will need **basic tier skills as a minimum**, you also need to be able to **fully online all modules on your ship**. Any red starter skills must be trained before you can fly logi.
+To fly logi with Beancursion you will need **basic tier skills as a minimum**, you also need to be able to **fully online all modules on your ship**. Any red starter skills must be trained before you can fly logi.
 
 More logi specific requirements and guidance can be found in the [Logi guide](/guide/logi).
 
@@ -26,7 +26,7 @@ To find us in-game; join the chat channel **Sansha Containment Service**. You ca
 
 ## Reloading MOTD
 
-Message Of The Day (MOTD) is where you will find the most up to date information on all aspects of TDF. If you need to reload the MOTD left click the cog wheel in the top left corner of the chat window then left click "Reload MOTD." Read the MOTD every time you join the channel it will answer most common questions.
+Message Of The Day (MOTD) is where you will find the most up to date information on all aspects of Beancursion. If you need to reload the MOTD left click the cog wheel in the top left corner of the chat window then left click "Reload MOTD." Read the MOTD every time you join the channel it will answer most common questions.
 
 ![](reloadmotd.png)
 
