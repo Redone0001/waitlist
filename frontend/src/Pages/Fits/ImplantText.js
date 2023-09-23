@@ -132,7 +132,7 @@ function HardWires({ toastContext }) {
           <b>Slot 8</b>
         </Cell>
         <Cell>
-          <CopyImplantText toast={toastContext} item={"EM-806"} /> increased capacitor.
+          <CopyImplantText toast={toastContext} item={"EM-805"} /> increased capacitor.
         </Cell>
 
         <Cell>

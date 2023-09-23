@@ -35,7 +35,7 @@ Nestor is the Optimal equivalent for logi. Pilots wishing to only fly cruiser ar
 
 ## Requirements
 
-- The EM-806 Implant is required for all Nestors & Guardians.
+- The EM-805 Implant is required for all Nestors & Guardians.
 
 - **Basic skills are a minimum** You can not have any starter level skills for logi ships. Skill requirements can be found on your [skills page](/skills).
 
