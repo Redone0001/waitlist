@@ -436,7 +436,8 @@ requirements:
       min: 3
       elite: 4
     Large Energy Turret:
-      min: 5
+      min: 4
+      gold: 5
     Large Pulse Laser Specialization:
       elite: 4
     Remote Armor Repair Systems:
@@ -654,8 +655,6 @@ requirements:
       elite: 5
     Cybernetics:
       min: 5
-    Astronautics Rigging:
-      gold: 5
     Thermodynamics:
       min: 4
       elite: 5
