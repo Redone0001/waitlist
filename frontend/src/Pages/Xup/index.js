@@ -115,7 +115,7 @@ export function Xup() {
           <div>
             <label>
               <input type="checkbox" checked={alt} onChange={handleChange} />
-              This is an ALT ship (I already have a "main" ship in fleet)
+              This is an ALT ship (I already have a main ship in fleet)
             </label>
           </div>
 
