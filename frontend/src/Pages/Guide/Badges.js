@@ -115,7 +115,7 @@ export function BadgeData() {
             <br />
             <Content>
               <ul>
-			  
+              
                 <li>Hybrid implant set badge</li>
                 <li>Optimal fit</li>
                 <li>Elite skills or better for the applicable ship</li>
