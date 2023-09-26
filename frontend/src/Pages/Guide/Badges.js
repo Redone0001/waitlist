@@ -79,7 +79,7 @@ export function BadgeData() {
         </p>
 
         <p>
-          Badge assignment on teamspeak and on the website (for specialist badges) can be done by
+          Badge assignment on the website (for specialist badges) can be done by
           any FC.
         </p>
         <Title>Implant Badges</Title>
@@ -89,13 +89,13 @@ export function BadgeData() {
         <Title>Tier Badge</Title>
         <BadgeDisplay>
           <BadgeButton name="Starter Pilot" img={"./starter.png"}>
-            Pilot is new to TDF & Incursions. <br />
+            Pilot is new to Beancurison & Incursions. <br />
             To get rid of the starter tag you need to do the following:
             <br />
             <br />
             <Content>
               <ul>
-                <li>Basic fit or better</li>
+                <li>Standard fit or better</li>
                 <li>Basic tier skills or better for the applicable ship</li>
               </ul>
             </Content>
@@ -108,19 +108,20 @@ export function BadgeData() {
           <BadgeButton name="Elite" img={"./e.png"}>
             <b>Allows you to join elite fleets</b>
             <br />
-            This badge is a requirement in accordance with our upgrade policy
+            This badge 
             <br />
             Requirements to aquire the elite badge are:
             <br />
             <br />
             <Content>
               <ul>
-                <li>Hybrid or Ascendancy implant set badge</li>
-                <li>Elite fit matching your implant set</li>
+			  
+                <li>Hybrid implant set badge</li>
+                <li>Optimal fit</li>
                 <li>Elite skills or better for the applicable ship</li>
               </ul>
             </Content>
-            <InfoNote>You must be scanned by an FC to aquire the teamspeak badge</InfoNote>
+            <InfoNote>You must be scanned by an FC to aquire the badge</InfoNote>
             <br />
             <InputGroup>
               <NavButton to={`/skills`}>Check your skills</NavButton>
@@ -208,6 +209,32 @@ export function BadgeData() {
                   Abyssal webifiers with minimum: <br /> 14km optimal range <br />
                   64% velocity bonus reduction
                 </li>
+              </ul>
+            </Content>
+            <InfoNote>
+              Contact an FC to verify your abyssals and apply the badge on TS and on the website.
+              Badge can be viewed on pilot page.
+            </InfoNote>
+            <InfoNote variant="warning">
+              New web requirements from the 13th of November. Existing web specialists can continue to use their old webs beyond this date.
+            </InfoNote>
+          </BadgeButton>
+          <BadgeButton name="Multibox Specialist" img={"./wv.png"}>
+            <b>Allow you to get your own squad in fleet and access to special fit for you only</b>
+            <br />
+            This badge is optional
+            <br />
+            Requirements to get web specialist badge are: <br />
+            <br />
+            <Content>
+              <ul>
+                <li>Being able to multibox 10+ account in HQ fleet</li>
+                <li>All those account have the minimal skill for their ship</li>
+              </ul>
+              <br />The list of ship allowed for alt :<br />
+              <ul>
+                <li>Ishtar or Eos</li>
+                <li>Any standard / Optimal fit</li>
               </ul>
             </Content>
             <InfoNote>

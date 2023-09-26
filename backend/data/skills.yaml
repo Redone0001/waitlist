@@ -499,7 +499,7 @@ requirements:
       min: 3
       elite: 5
     Repair Drone Operation:
-      min: 1
+      min: 2
     Science:
       min: 3
       elite: 5
