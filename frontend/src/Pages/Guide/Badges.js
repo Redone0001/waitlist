@@ -121,7 +121,7 @@ export function BadgeData() {
                 <li>Elite skills or better for the applicable ship</li>
               </ul>
             </Content>
-            <InfoNote>You must be scanned by an FC to aquire the badge</InfoNote>
+            <InfoNote>You must be scanned by an FC to aquire the badge so reach to your favorite FC</InfoNote>
             <br />
             <InputGroup>
               <NavButton to={`/skills`}>Check your skills</NavButton>
@@ -146,7 +146,7 @@ export function BadgeData() {
         <Title>Specialist Badges</Title>
         <BadgeDisplay>
           <BadgeButton name="Logi Specialist" img={"./l.png"}>
-            <b>Permitted to fly Nestor Logistics</b>
+            <b>Show to FC that you are a trusted Logi</b>
             <br />
             Requirements to get logistics specialist badge are:
             <br />
@@ -154,8 +154,8 @@ export function BadgeData() {
             <Content>
               <ul>
                 <li>Elite skills for Nestor</li>
-                <li>Minimum of 20 hours in a logi cruiser</li>
-                <li>Complete the Nestor training where three full HQ FC +1&apos;s are required</li>
+                <li>Minimum of 20 hours in a logi</li>
+                <li>After you ask for your badge, FC will discuss and check your behaviour in fleet</li>
               </ul>
             </Content>
             <InfoNote>
@@ -165,7 +165,7 @@ export function BadgeData() {
             <br />
             <InputGroup>
               <NavButton to={`/skills?ship=Nestor`}>Check your skills</NavButton>
-              <NavButton to={`/pilot`}>Logged cruiser hours</NavButton>
+              <NavButton to={`/pilot`}>Logged Logi hours</NavButton>
             </InputGroup>
           </BadgeButton>
           <BadgeButton name="Bastion Specialist" img={"./bastion.png"}>
@@ -179,17 +179,12 @@ export function BadgeData() {
               <ul>
                 <li>Elite badge for a Bastion-capable ship</li>
                 <li>Marauders skill to level 5</li>
-                <li>Gun specialization to level 5</li>
-                <li>Abyssal damage modules with a minimum of 29% DPS bonus</li>
-                <li>
-                  Abyssal plate: <br />
-                  6k RAW armor HP for single plate fits <br />
-                  12k RAW combined armor HP on dual plate fits
-                </li>
+                <li>Gun specialization to level 4</li>
+                <li>Able to call when you can bastion</li>
               </ul>
             </Content>
             <InfoNote>
-              Contact an FC to verify your abyssals and apply the badge on TS and on the website.
+              Contact an FC to verify your calls and apply the badge on the website.
               Badge can be viewed on pilot page.
             </InfoNote>
           </BadgeButton>
@@ -203,20 +198,17 @@ export function BadgeData() {
             <Content>
               <ul>
                 <li>Elite badge pre-requisites for a Vindicator</li>
-                <li>Gallente Battleship skill level 5</li>
-                <li>Abyssal MWD with 560% velocity bonus</li>
+                <li>Gallente AND Minmatar Battleship skill level 5</li>
+                <liGood position in fleet on wave spawn</li>
                 <li>
-                  Abyssal webifiers with minimum: <br /> 14km optimal range <br />
+                  Abyssal webifier with minimum: <br /> 14km optimal range <br />
                   64% velocity bonus reduction
                 </li>
               </ul>
             </Content>
             <InfoNote>
-              Contact an FC to verify your abyssals and apply the badge on TS and on the website.
+              Contact an FC to verify your abyssals and apply the badge on the website.
               Badge can be viewed on pilot page.
-            </InfoNote>
-            <InfoNote variant="warning">
-              New web requirements from the 13th of November. Existing web specialists can continue to use their old webs beyond this date.
             </InfoNote>
           </BadgeButton>
           <BadgeButton name="Multibox Specialist" img={"./m.png"}>
@@ -238,7 +230,7 @@ export function BadgeData() {
               </ul>
             </Content>
             <InfoNote>
-              Contact an FC to verify and apply the badge on TS and on the website.
+              Contact an FC to verify and apply the badge on the website.
               Badge can be viewed on pilot page.
             </InfoNote>
           </BadgeButton>
@@ -246,57 +238,31 @@ export function BadgeData() {
         <Title>FC Badges</Title>
         <BadgeDisplay>
           <BadgeButton name="Training FC" img={"./trainee.png"}>
-            Permitted to use TDF comms to run fleets. Only allowed to take a fleet into sites with
+            Only allowed to take a fleet into sites with
             SRP cover provided an FC with the badge relevant to the site is in the fleet. <br />
             <br />
             <p style={{ marginBottom: "0.5em" }}>Find out more about becoming a trainee FC here:</p>
             <NavButton to={`/guide/fctraining`}>FC Training Program</NavButton>
           </BadgeButton>
-          <BadgeButton name="PHQ FC" img={"./hqp.png"}>
-            Permitted to use TDF comms to run fleets and to take a fleet into Headquarters, Assault
-            and Vanguard sites with SRP cover.
-            <br />
-            <br />
-            <InfoNote>Cannot take training nestors or do backseats for Trainee FC&apos;s</InfoNote>
-          </BadgeButton>
           <BadgeButton name="HQ FC" img={"./hq.png"}>
-            Permitted to use TDF comms to run fleets and to take a fleet into Headquarters, Assault
+            Permitted to run fleets and to take a fleet into Headquarters, Assault
             and Vanguard sites with SRP cover.
           </BadgeButton>
           <BadgeButton name="FC Trainer" img={"./trainer.png"}>
-            Permitted to use TDF comms to run fleets and to take a fleet into Headquarters, Assault
+            Permitted to run fleets and to take a fleet into Headquarters, Assault
             and Vanguard sites with SRP cover. <br />
             <br />
-            Can promote Trainee FC&apos;s to full FC tags and conduct van/bus fleets for
+            Can promote Trainee FC&apos;s to full FC tags and conduct validation fleets for
             trainee FC&apos;s.
           </BadgeButton>
           <BadgeButton name="Council" img={"./c.png"}>
-            Member of the TDF council, which makes decisions that impact the community. <br />
+            Member of the Beancursion council, which makes decisions that impact the SIG. <br />
             <br />
-            Permitted to use TDF comms to run fleets and to take a fleet into Headquarters, Assault
+            Permitted to run fleets and to take a fleet into Headquarters, Assault
             and Vanguard sites with SRP cover. <br />
             <br />
             Can promote Full FC&apos;s to FC Trainer and Trainee FC&apos;s to full FC tags and
-            conduct van/bus fleets for trainee FC&apos;s.
-          </BadgeButton>
-        </BadgeDisplay>
-        <Title>Other</Title>
-        <BadgeDisplay>
-          <BadgeButton name="Backchannel" img={"./b.png"}>
-            Pilot has access to the back comms on TeamSpeak.
-          </BadgeButton>
-          <BadgeButton name="Retired Logi" img={"./rl.png"}>
-            <b>Logi Specialist who had their badge revoked due to three months of inactivity.</b>
-            <br />
-            Requirements to reacquire logistics specialist badge are:
-            <br />
-            <br />
-            <Content>
-              <ul>
-                <li>Fit &amp; skills still being valid</li>
-                <li>One full HQ FC +1</li>
-              </ul>
-            </Content>
+            conduct validation fleets for trainee FC&apos;s.
           </BadgeButton>
         </BadgeDisplay>
       </Content>
