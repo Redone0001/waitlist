@@ -100,6 +100,7 @@ export const icons = {
     href: require("../Pages/Guide/badges/egold.png"),
     name: "Elite GOLD",
   },
+  MULTIBOX: {type: "shield", color: "dark", letter: "M", name: "Multibox"},
   STARTER: { type: "shield", color: "neutral", letter: "S", name: "Starter pilot" },
   UNKNOWN: { type: "shield", color: "neutral", letter: "?", name: null },
 };
