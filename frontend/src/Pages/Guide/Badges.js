@@ -199,7 +199,7 @@ export function BadgeData() {
               <ul>
                 <li>Elite badge pre-requisites for a Vindicator</li>
                 <li>Gallente AND Minmatar Battleship skill level 5</li>
-                <liGood position in fleet on wave spawn</li>
+                <li>Good position in fleet on wave spawn</li>
                 <li>
                   Abyssal webifier with minimum: <br /> 14km optimal range <br />
                   64% velocity bonus reduction
