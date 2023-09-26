@@ -219,7 +219,7 @@ export function BadgeData() {
               New web requirements from the 13th of November. Existing web specialists can continue to use their old webs beyond this date.
             </InfoNote>
           </BadgeButton>
-          <BadgeButton name="Multibox Specialist" img={"./wv.png"}>
+          <BadgeButton name="Multibox Specialist" img={"./m.png"}>
             <b>Allow you to get your own squad in fleet and access to special fit for you only</b>
             <br />
             This badge is optional
@@ -238,11 +238,8 @@ export function BadgeData() {
               </ul>
             </Content>
             <InfoNote>
-              Contact an FC to verify your abyssals and apply the badge on TS and on the website.
+              Contact an FC to verify and apply the badge on TS and on the website.
               Badge can be viewed on pilot page.
-            </InfoNote>
-            <InfoNote variant="warning">
-              New web requirements from the 13th of November. Existing web specialists can continue to use their old webs beyond this date.
             </InfoNote>
           </BadgeButton>
         </BadgeDisplay>
