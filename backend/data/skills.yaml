@@ -22,7 +22,7 @@ categories:
     - Large Hybrid Turret
     - Large Blaster Specialization
   Missile:
-    - Missile Laucher Operation
+    - Missile Launcher Operation
     - Rapid Launch
     - Missile Bombardment
     - Missile Projection
@@ -30,7 +30,7 @@ categories:
     - Torpedoes
     - Warhead Upgrades
     - Guided Missile Precision
-    - Torpedoes Specialization
+    - Torpedo Specialization
   Navigation:
     - Navigation
     - Spaceship Command
@@ -333,7 +333,7 @@ requirements:
       elite: 5
 
   _missile: &missile
-    Missile Laucher Operation:
+    Missile Launcher Operation:
       min: 3
       elite: 4
     Rapid Launch:
@@ -354,7 +354,7 @@ requirements:
       min: 3
       elite: 4
       gold: 5
-    Torpedoes Specialization:
+    Torpedo Specialization:
       gold: 5
     Warhead Upgrades:
       min: 3
@@ -771,7 +771,7 @@ requirements:
       min: 4
       elite: 5
   Rattlesnake:
-    <<: [*generic]
+    <<: [*generic] [*missile]
     Gallente Drone Specialization: 
       gold: 5
     Heavy Drone Operation:
