@@ -782,7 +782,7 @@ requirements:
       elite: 4
       gold: 5
     Caldari Battleship:
-      min:3
+      min: 3
     EM Armor Compensation:
       min: 4
       gold: 5
