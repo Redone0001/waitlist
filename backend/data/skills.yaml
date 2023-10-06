@@ -669,7 +669,7 @@ requirements:
     Energy Grid Upgrades:
       min: 4
     Cybernetics:
-      min: 5
+      min: 4
 
   Nestor:
     <<: [*logistics, *rigging]
