@@ -771,7 +771,7 @@ requirements:
       min: 4
       elite: 5
   Rattlesnake:
-    <<: [*generic] [*missile]
+    <<: [*generic, *missile]
     Gallente Drone Specialization: 
       gold: 5
     Heavy Drone Operation:
