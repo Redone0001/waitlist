@@ -21,6 +21,16 @@ categories:
     - Large Pulse Laser Specialization
     - Large Hybrid Turret
     - Large Blaster Specialization
+  Missile:
+    - Missile Laucher Operation
+    - Rapid Launch
+    - Missile Bombardment
+    - Missile Projection
+    - Target Navigation Prediction
+    - Torpedoes
+    - Warhead Upgrades
+    - Guided Missile Precision
+    - Torpedoes Specialization
   Navigation:
     - Navigation
     - Spaceship Command
@@ -321,6 +331,39 @@ requirements:
     Weapon Upgrades:
       min: 4
       elite: 5
+
+  _missile: &missile
+    Missile Laucher Operation:
+      min: 3
+      elite: 4
+    Rapid Launch:
+      min: 3
+      elite: 4
+      gold: 5
+    Missile Bombardment:
+      min: 3
+      elite: 4
+      gold: 5
+    Missile Projection:
+      min: 3
+      elite: 4
+    Target Navigation Prediction:
+      min: 3
+      elite: 4
+    Torpedoes:
+      min: 3
+      elite: 4
+      gold: 5
+    Torpedoes Specialization:
+      gold: 5
+    Warhead Upgrades:
+      min: 3
+      elite: 4
+      gold: 5
+    Guided Missile Precision:
+      min: 3
+      elite: 4
+    
 
   _logistics: &logistics # Logistics skills: all logi pilots need these
     EM Armor Compensation:
@@ -716,6 +759,42 @@ requirements:
     Heavy Drone Operation:
       min: 4
       elite: 5
+  Dominix:
+    <<: [*generic]
+    Gallente Drone Specialization: 
+      gold: 5
+    Gallente Battleship:
+      min: 3
+      elite: 4
+      gold: 5
+    Heavy Drone Operation:
+      min: 4
+      elite: 5
+  Rattlesnake:
+    <<: [*generic]
+    Gallente Drone Specialization: 
+      gold: 5
+    Heavy Drone Operation:
+      min: 4
+      elite: 5
+    Gallente Battleship:
+      min: 3
+      elite: 4
+      gold: 5
+    Caldari Battleship:
+      min:3
+    EM Armor Compensation:
+      min: 4
+      gold: 5
+    Explosive Armor Compensation:
+      min: 4
+      gold: 5
+    Thermal Armor Compensation:
+      min: 4
+      gold: 5
+    Kinetic Armor Compensation:
+      min: 4
+      gold: 5
   Dominix:
     <<: [*generic]
     Gallente Drone Specialization: 
