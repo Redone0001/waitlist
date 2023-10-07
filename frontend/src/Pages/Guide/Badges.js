@@ -201,7 +201,7 @@ export function BadgeData() {
               </ul>
             </Content>
             <InfoNote>
-              Contact an FC to verify your abyssals and apply the badge on the website.
+              Contact an FC to verify and apply the badge on the website.
               Badge can be viewed on pilot page.
             </InfoNote>
           </BadgeButton>
