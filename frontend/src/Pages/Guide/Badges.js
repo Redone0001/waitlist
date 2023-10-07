@@ -116,7 +116,6 @@ export function BadgeData() {
             <Content>
               <ul>
               
-                <li>Hybrid implant set badge</li>
                 <li>Optimal fit</li>
                 <li>Elite skills or better for the applicable ship</li>
               </ul>
@@ -155,6 +154,8 @@ export function BadgeData() {
               <ul>
                 <li>Elite skills for Nestor</li>
                 <li>Minimum of 20 hours in a logi</li>
+                <li>You need to be able to call out reps correctly</li>
+                <li>You need to know where to position the logi on every site</li>
                 <li>After you ask for your badge, FC will discuss and check your behaviour in fleet</li>
               </ul>
             </Content>
@@ -178,8 +179,8 @@ export function BadgeData() {
             <Content>
               <ul>
                 <li>Elite badge for a Bastion-capable ship</li>
-                <li>Marauders skill to level 5</li>
-                <li>Gun specialization to level 4</li>
+                <li>You know the position for you ship on every waves of every site</li>
+                <li>Minimum of 20 hour in a bastion ship</li>
                 <li>Able to call when you can bastion</li>
               </ul>
             </Content>
@@ -198,12 +199,9 @@ export function BadgeData() {
             <Content>
               <ul>
                 <li>Elite badge pre-requisites for a Vindicator</li>
-                <li>Gallente AND Minmatar Battleship skill level 5</li>
-                <li>Good position in fleet on wave spawn</li>
-                <li>
-                  Abyssal webifier with minimum: <br /> 14km optimal range <br />
-                  64% velocity bonus reduction
-                </li>
+                <li>Minmatar Battleship skill level 5</li>
+                <li>You know the position for you ship on every waves of every site</li>
+                <li>You know both the HHH and DDD role</li>
               </ul>
             </Content>
             <InfoNote>

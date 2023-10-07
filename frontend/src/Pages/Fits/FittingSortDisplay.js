@@ -192,10 +192,10 @@ function ShipDisplay({ fit, id, note }) {
                   HYBRID FIT! This fit requires at least Amulet 1 - 5. <br /> See implants above 
                 </p>
               </Note>
-            ) : fit.name.indexOf("ASCENDANCY") !== -1 ? (
+            ) : fit.name.indexOf("SAVIOR") !== -1 ? (
               <Note variant={"danger"}>
                 <p>
-                  ASCENDANCY FIT! This fit requires at least Ascendancy 1 - 5 & WS-618. <br /> See
+                  SAVIOR FIT! This fit requires at least Savior 1 - 5 & WS-618. <br /> See
                   implants above
                 </p>
               </Note>
@@ -217,8 +217,8 @@ function ShipDisplay({ fit, id, note }) {
                 {note ? <FontAwesomeIcon icon={faExclamationCircle} /> : null}
                 {fit.name.toLowerCase().includes("hybrid") ? (
                   <Shield color="red" letter="H" title="Hybrid Implants" />
-                ) : fit.name.toLowerCase().includes("ascendancy") ? (
-                  <Shield color="red" letter="W" title="Ascendancy Implants" />
+                ) : fit.name.toLowerCase().includes("Savior") ? (
+                  <Shield color="red" letter="W" title="Savior Implants" />
                 ) : null}
               </FitCard.Content.Badges>
             </FitCard.Content>
@@ -233,7 +233,7 @@ function ImplantOut() {
   return (
     <>
       <DisplayDOM style={{ justifyContent: "initial" }}>
-        <ImplantButton name="Ascendancy" img={wbadge} />
+        <ImplantButton name="Savior" img={wbadge} />
         <ImplantButton name="Hybrid" img={hbadge} />
       </DisplayDOM>
     </>

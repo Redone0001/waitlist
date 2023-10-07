@@ -26,11 +26,11 @@ export function ImplantTable({ type }) {
     ];
   } else {
     implants = [
-      "Mid-grade Ascendancy Alpha",
-      "Mid-grade Ascendancy Beta",
-      "Mid-grade Ascendancy Gamma",
-      "Mid-grade Ascendancy Delta",
-      "Mid-grade Ascendancy Epsilon",
+      "Mid-grade Savior Alpha",
+      "Mid-grade Savior Beta",
+      "Mid-grade Savior Gamma",
+      "Mid-grade Savior Delta",
+      "Mid-grade Savior Epsilon",
     ];
   }
   return (
@@ -70,7 +70,7 @@ export function ImplantTable({ type }) {
               <Cell></Cell>
             ) : (
               <Cell>
-                <CopyImplantText toast={toastContext} item={"Mid-grade Ascendancy Omega"} /> if you
+                <CopyImplantText toast={toastContext} item={"Mid-grade Savior Omega"} /> if you
                 have too much isk, increased warp speed.
               </Cell>
             )}
