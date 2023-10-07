@@ -159,10 +159,6 @@ export function BadgeData() {
                 <li>After you ask for your badge, FC will discuss and check your behaviour in fleet</li>
               </ul>
             </Content>
-            <InfoNote>
-              If you haven&apos;t acquired the badge yet, make sure to let the fc know you are a
-              Training Nestor!
-            </InfoNote>
             <br />
             <InputGroup>
               <NavButton to={`/skills?ship=Nestor`}>Check your skills</NavButton>
