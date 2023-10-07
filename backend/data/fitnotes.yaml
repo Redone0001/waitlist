@@ -7,9 +7,9 @@ notes:
   - name: Starter
     description: >
       These **DPS** ships are the only ones you can fly with all **Armor Compensation** skills at level 2, all others require at least 4. **Replace Tracking Computer II** with the **Micro Jump drive** when able.
-  - name: Antigank
+  - name: Support
     description: >
-      These fits are to be used in situations with active gankers. TDF-Official MOTD will notify you if these fits are to be used.
+      These fits are to be used for alts. Exception can be made for the command ship.
 
   # Ship specific notes
 
@@ -22,4 +22,10 @@ notes:
   - name: Optimal SCS Paladin HYBRID
     description: >
       This fit requires the amulet mid grade or high grade Implant.
+  - name: Alt Rattlesnake Other
+    description: >
+      This fit is only for alt of poeple with good marauder or optimal fit.
+  - name: Multibox Loki Other
+    description: >
+      This fit is only for multibox specialist
   
