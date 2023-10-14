@@ -63,11 +63,10 @@ export function ImplantTable({ type }) {
             <Cell>
               <b>Slot 6</b>
             </Cell>
-            <Cell>
-              <CopyImplantText toast={toastContext} item={"Mid-grade Amulet Omega"} /> increased warp speed.
-            </Cell>
             {type === "Hybrid" ? (
-              <Cell></Cell>
+              <Cell>
+              <CopyImplantText toast={toastContext} item={"Mid-grade Amulet Omega"} />
+            </Cell>
             ) : (
               <Cell>
                 <CopyImplantText toast={toastContext} item={"Mid-grade Savior Omega"} /> if you
