@@ -37,7 +37,7 @@ export function ImplantTable({ type }) {
     <>
       <InfoNote>
         {type === "Hybrid"
-          ? "Hybrid tagged fits require at least Amulet 1 - 5 to be flown."
+          ? "Hybrid tagged fits require at least Amulet 1 - 6 to be flown."
           : "Required for Elite badge on non implant specific ships."}
       </InfoNote>
 
@@ -64,14 +64,14 @@ export function ImplantTable({ type }) {
               <b>Slot 6</b>
             </Cell>
             <Cell>
-              <CopyImplantText toast={toastContext} item={"WS-618"} /> increased warp speed.
+              <CopyImplantText toast={toastContext} item={"Mid-grade Amulet Omega"} /> increased warp speed.
             </Cell>
             {type === "Hybrid" ? (
               <Cell></Cell>
             ) : (
               <Cell>
                 <CopyImplantText toast={toastContext} item={"Mid-grade Savior Omega"} /> if you
-                have too much isk, increased warp speed.
+                have too much isk.
               </Cell>
             )}
           </Row>
