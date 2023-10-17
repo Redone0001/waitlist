@@ -271,16 +271,15 @@ impl<'a> FitChecker<'a> {
             let set_tag = implantmatch::detect_base_set(self.pilot.implants).unwrap_or("");
             if set_tag != "SAVIOR" {
                 let mut implants_nok = "";
-                if doctrine_fit.name.contains("ASCENDANCY") && set_tag != "WARPSPEED" {
-                    implants_nok = "Ascendancy";
-                } else if doctrine_fit.name.contains("HYBRID") && set_tag != "AMULET" {
-                    let implants = [
-                        type_id!("Mid-grade Amulet Alpha"),
-                        type_id!("Mid-grade Amulet Beta"),
-                        type_id!("Mid-grade Amulet Delta"),
-                        type_id!("Mid-grade Amulet Epsilon"),
-                        type_id!("Mid-grade Amulet Gamma"),
-                    ];
+                if doctrine_fit.name.contains("HYBRID") && set_tag != "AMULET" {
+                    let implants:[(i32, i32); 6] = [
+                    (type_id!("Mid-grade Amulet Alpha"), type_id!("High-grade Amulet Alpha")),
+                    (type_id!("Mid-grade Amulet Beta"), type_id!("High-grade Amulet Beta")),
+                    (type_id!("Mid-grade Amulet Delta"), type_id!("High-grade Amulet Delta")),
+                    (type_id!("Mid-grade Amulet Epsilon"), type_id!("High-grade Amulet Epsilon")),
+                    (type_id!("Mid-grade Amulet Gamma"), type_id!("High-grade Amulet Gamma")),
+                    (type_id!("Mid-grade Amulet Omega"), type_id!("High-grade Amulet Omega")),
+					];
                     for implant in implants {
                         if !self.pilot.implants.contains(&implant) {
                             implants_nok = "Hybrid";
