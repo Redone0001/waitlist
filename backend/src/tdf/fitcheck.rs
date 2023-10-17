@@ -281,7 +281,7 @@ impl<'a> FitChecker<'a> {
                     (type_id!("Mid-grade Amulet Omega"), type_id!("High-grade Amulet Omega")),
 					];
                     for (implant, implant_high) in implants {
-                        if !self.pilot.implants.contains(&implant) || !self.pilot.implants.contains(&implant_high){
+                        if !self.pilot.implants.contains(&implant) && !self.pilot.implants.contains(&implant_high){
                             implants_nok = "Hybrid";
                         }
                     }
