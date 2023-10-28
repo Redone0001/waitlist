@@ -88,6 +88,7 @@ pub enum ESIScope {
     Skills_ReadSkills_v1,
     Clones_ReadImplants_v1,
     Search_v1,
+	Current_Location,
 }
 
 impl ESIScope {
@@ -101,6 +102,7 @@ impl ESIScope {
             Skills_ReadSkills_v1 => "esi-skills.read_skills.v1",
             Clones_ReadImplants_v1 => "esi-clones.read_implants.v1",
             Search_v1 => "esi-search.search_structures.v1",
+			Current_Location => "esi-location.read_location.v1",
         }
     }
 }

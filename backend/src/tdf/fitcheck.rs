@@ -31,6 +31,7 @@ pub struct PilotData<'a> {
     pub implants: &'a [TypeID],
     pub time_in_fleet: i64,
     pub skills: &'a Skills,
+	pub location: &'a Location,
     pub access_keys: &'a BTreeSet<String>,
 }
 
