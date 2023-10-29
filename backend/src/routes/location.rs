@@ -1,6 +1,7 @@
 use eve_data_core::TypeID;
 use rocket::serde::json::Json;
 use serde::Serialize;
+use std::collections::HashMap;
 
 use crate::{
     app::Application,
