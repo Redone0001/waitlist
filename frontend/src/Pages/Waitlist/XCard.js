@@ -197,7 +197,7 @@ function ShipDisplay({ fit, onAction }) {
                       </Button>
                     </Buttons>
                     <div>
-                      loc[0]
+					{loc[0]}
                     </div>
                 </>
               )}
