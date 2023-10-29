@@ -6,7 +6,7 @@ use std::sync::{Arc, RwLock};
 
 pub type TypeID = i32;
 pub type SkillLevel = i8;
-pub type TypeLoc = HashMap<i64, LocationData>
+pub type TypeLoc = HashMap<i64, LocationData>;
 
 #[derive(Debug)]
 struct LocationData {
