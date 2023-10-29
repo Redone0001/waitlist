@@ -21,7 +21,7 @@ async fn list_location(
 ) -> Result<Json<LocationResponse>, Madness> {
     authorize_character(app.get_db(), &account, character_id, None).await?;
 
-    let fetched = get_location(app, character_id).await?;
+    let fetched = location::get_location(app, character_id).await?;
     Ok(Json(LocationResponse { location: fetched }))
 }
 
