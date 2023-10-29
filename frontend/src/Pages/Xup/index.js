@@ -83,6 +83,7 @@ export function Xup() {
   const [alt, setAlt] = React.useState(false);
   const [implants] = useApi(`/api/implants?character_id=${authContext.current.id}`);
   const loc = useApi(`/api/location?character_id=${authContext.current.id}`);
+  console.log(loc)
 
   const handleChange = () => {
     setAlt(!alt);
