@@ -155,7 +155,7 @@ function ShipDisplay({ fit, onAction }) {
   const authContext = React.useContext(AuthContext);
   const toastContext = React.useContext(ToastContext);
   const [modalOpen, setModalOpen] = React.useState(false);
-  const loc = useApi(`/api/location?character_id=${fit.character.id}`)[0]
+  const { structure_id, solar_system_id } = useApi(`/api/location?character_id=${fit.character.id}`)[0].location
   console.log(loc)
   const namePrefix = fit.character ? `${fit.character.name}'s ` : "";
   if (fit.dna && fit.hull) {
@@ -198,8 +198,8 @@ function ShipDisplay({ fit, onAction }) {
                     </Buttons>
                     <div>
                       <ul>
-                        <li>Solar System ID: {loc.solar_system_id}</li>
-                        <li>Structure ID: {loc.structure_id}</li>
+                        <li>Solar System ID: {solar_system_id}</li>
+                        <li>Structure ID: {structure_id}</li>
                       </ul>
                     </div>
                 </>
