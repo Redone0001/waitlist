@@ -164,39 +164,41 @@ function ShipDisplay({ fit, onAction }) {
           <Modal open={true} setOpen={setModalOpen}>
             <Box>
               {authContext.access["waitlist-manage"] && (
-                <Buttons style={{ marginBlock: "1em", marginTop: "0px" }}>
-                  <Button
-                    variant="success"
-                    style={{ minWidth: "95px" }}
-                    onClick={(evt) => {
-                      setModalOpen(false);
-                      errorToaster(toastContext, approveFit(fit.id)).then(onAction);
-                    }}
-                  >
-                    Approve
-                  </Button>
+                <>
+                    <Buttons style={{ marginBlock: "1em", marginTop: "0px" }}>
+                      <Button
+                        variant="success"
+                        style={{ minWidth: "95px" }}
+                        onClick={(evt) => {
+                          setModalOpen(false);
+                          errorToaster(toastContext, approveFit(fit.id)).then(onAction);
+                        }}
+                      >
+                        Approve
+                      </Button>
 
-                  <Button
-                    variant="danger"
-                    style={{ minWidth: "95px" }}
-                    onClick={(evt) => {
-                      var rejectionReason = prompt(
-                        "Why is the fit being rejected? (Will be displayed to pilot)"
-                      );
-                      if (rejectionReason) {
-                        setModalOpen(false);
-                        errorToaster(toastContext, rejectFit(fit.id, rejectionReason)).then(
-                          onAction
-                        );
-                      }
-                    }}
-                  >
-                    Reject
-                  </Button>
-                </Buttons>
-                <div>
-                  {loc}
-                </div>
+                      <Button
+                        variant="danger"
+                        style={{ minWidth: "95px" }}
+                        onClick={(evt) => {
+                          var rejectionReason = prompt(
+                            "Why is the fit being rejected? (Will be displayed to pilot)"
+                          );
+                          if (rejectionReason) {
+                            setModalOpen(false);
+                            errorToaster(toastContext, rejectFit(fit.id, rejectionReason)).then(
+                              onAction
+                            );
+                          }
+                        }}
+                      >
+                        Reject
+                      </Button>
+                    </Buttons>
+                    <div>
+                      {loc}
+                    </div>
+                </>
               )}
 
               <FitDisplay fit={fit} />
