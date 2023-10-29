@@ -158,7 +158,6 @@ function ShipDisplay({ fit, onAction }) {
   const loc = useApi(`/api/location?character_id=${fit.character.id}`)[0]
   for (const key in loc){
       console.log(key);
-      console.log(loc.key)
   }
   console.log(loc)
   const namePrefix = fit.character ? `${fit.character.name}'s ` : "";
