@@ -165,7 +165,7 @@ function ShipDisplay({ fit, onAction }) {
           <Modal open={true} setOpen={setModalOpen}>
             <Box>
               {authContext.access["waitlist-manage"] && (
-                <>
+                <div>
                     <Buttons style={{ marginBlock: "1em", marginTop: "0px" }}>
                       <Button
                         variant="success"
@@ -199,7 +199,7 @@ function ShipDisplay({ fit, onAction }) {
                     <div>
                       {loc}
                     </div>
-                </>
+                </div>
               )}
 
               <FitDisplay fit={fit} />
