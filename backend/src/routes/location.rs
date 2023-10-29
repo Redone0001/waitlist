@@ -2,6 +2,12 @@ use eve_data_core::TypeID;
 use rocket::serde::json::Json;
 use serde::Serialize;
 
+use crate::{
+    app::Application,
+    core::auth::{authorize_character, AuthenticatedAccount},
+    util::madness::Madness,
+};
+
 #[derive(Serialize, Debug)]
 struct LocationResponse {
     location: Vec<TypeID>,
