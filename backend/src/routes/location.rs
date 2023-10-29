@@ -19,11 +19,11 @@ async fn list_location(
     app: &rocket::State<Application>,
     account: AuthenticatedAccount,
     character_id: i64,
-) -> Result<Json<LocationResponse>, Madness> {
+) -> Result<Json<HashMap<String, i64>>, Madness> {
     authorize_character(app.get_db(), &account, character_id, None).await?;
 
     let fetched = data::location::get_location(app, character_id).await?;
-    Ok(Json(LocationResponse { loc: fetched }))
+    Ok(Json(fetched))
 }
 
 pub fn routes() -> Vec<rocket::Route> {
