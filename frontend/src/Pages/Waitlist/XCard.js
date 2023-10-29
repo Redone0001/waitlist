@@ -360,6 +360,8 @@ function PilotInformation({ characterId, authContext, id }) {
   const [notes] = useApi(
     authContext.access["notes-view"] ? `/api/notes?character_id=${characterId}` : null
   );
+  const loc = useApi(`/api/location?character_id=${characterId}`)
+  console.log(loc)
   if (!notes)
     return (
       <NavLink to={"/pilot?character_id=" + id}>
