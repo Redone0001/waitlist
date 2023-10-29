@@ -24,7 +24,7 @@ async fn list_location(
     authorize_character(app.get_db(), &account, character_id, None).await?;
 
     let fetched = data::location::get_location(app, character_id).await?;
-    Ok(Json(LocationResponse { solar_system_id: fetched, structure_id: fetched }))
+    Ok(Json(LocationResponse { solar_system_id: i64, structure_id: i64 }))
 }
 
 pub fn routes() -> Vec<rocket::Route> {
