@@ -11,7 +11,8 @@ use crate::{
 
 #[derive(Serialize, Debug)]
 struct LocationResponse {
-    location: Vec<TypeID>,
+    solar_system_id: i64,
+    structure_id: i64,
 }
 
 #[get("/api/location?<character_id>")]
