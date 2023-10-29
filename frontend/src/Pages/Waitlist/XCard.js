@@ -160,7 +160,7 @@ function ShipDisplay({ fit, onAction }) {
       console.log(key);
   }
   console.log(loc)
-  console.log(loc.solar_system_id)
+  console.log(typeof loc)
   const namePrefix = fit.character ? `${fit.character.name}'s ` : "";
   if (fit.dna && fit.hull) {
     return (
