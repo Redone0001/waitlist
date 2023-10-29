@@ -161,7 +161,11 @@ function ShipDisplay({ fit, onAction }) {
   }
   console.log(loc)
   console.log(typeof loc)
-  console.log(loc.solar_system_id)
+  if (loc && loc.solar_system_id) {
+    console.log(loc.solar_system_id);
+  } else {
+    console.log("loc or loc.solar_system_id is null or undefined");
+  }
   const namePrefix = fit.character ? `${fit.character.name}'s ` : "";
   if (fit.dna && fit.hull) {
     return (
