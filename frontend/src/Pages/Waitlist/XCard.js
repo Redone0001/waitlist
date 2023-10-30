@@ -65,7 +65,18 @@ async function getSystemName(loc) {
     }
 
     const data = await response.json();
-    return data.name;
+    return await data.name;
+}
+
+async function display_solar_system(){
+  const loc = useApi(`/api/location?character_id=${fit.character.id}`)[0]
+  if (loc && loc.solar_system_id) {
+    console.log(loc.solar_system_id);
+    console.log(getSystemName(loc))
+  } else {
+    console.log("loc or loc.solar_system_id is null or undefined");
+  }
+  return <span>Solar System: {getSystemName(loc) || 'Loading ...'}</span>
 }
 
 async function rejectFit(id, review_comment) {
@@ -174,17 +185,10 @@ XCardDOM.ReviewComment = styled.div`
   color: ${(props) => props.theme.colors.secondary.text};
 `;
 
-async function ShipDisplay({ fit, onAction }) {
+ function ShipDisplay({ fit, onAction }) {
   const authContext = React.useContext(AuthContext);
   const toastContext = React.useContext(ToastContext);
   const [modalOpen, setModalOpen] = React.useState(false);
-  const loc = useApi(`/api/location?character_id=${fit.character.id}`)[0]
-  if (loc && loc.solar_system_id) {
-    console.log(loc.solar_system_id);
-    console.log(getSystemName(loc))
-  } else {
-    console.log("loc or loc.solar_system_id is null or undefined");
-  }
   const namePrefix = fit.character ? `${fit.character.name}'s ` : "";
   if (fit.dna && fit.hull) {
     return (
@@ -223,9 +227,8 @@ async function ShipDisplay({ fit, onAction }) {
                       >
                         Reject
                       </Button>
-                      {loc && loc.solar_system_id ? (
-                        <span>Solar System: {await getSystemName(loc) || 'Loading ...'}</span>
-                      ) : null}
+
+                      {display_solar_system()}
                       
                     </Buttons>
                 </>
