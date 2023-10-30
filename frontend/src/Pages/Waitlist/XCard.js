@@ -45,27 +45,35 @@ async function approveFit(id) {
   });
 }
 
-async function getSystemName(loc) {
-  if (loc === null){
-    return "bad loc"
+function getSystemName(loc, callback) {
+  if (loc === null) {
+    callback("bad loc", null);
+    return;
   }
-  const url_api = "https://esi.evetech.net/latest/universe/names/?datasource=tranquility"
-  console.log(JSON.stringify([ loc.solar_system_id ]))
-    const response = await fetch(url_api, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify([loc.solar_system_id]),
-    });
 
+  const url_api = "https://esi.evetech.net/latest/universe/names/?datasource=tranquility";
+  console.log(JSON.stringify([loc.solar_system_id]));
+
+  fetch(url_api, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify([loc.solar_system_id]),
+  })
+  .then(response => {
     if (!response.ok) {
       console.log(response);
       throw new Error('Network response was not ok');
     }
-
-    const data = await response.json();
-    return await data.name;
+    return response.json();
+  })
+  .then(data => {
+    callback(null, data[0].name);
+  })
+  .catch(error => {
+    callback(error, null);
+  });
 }
 
 async function rejectFit(id, review_comment) {
@@ -179,12 +187,20 @@ XCardDOM.ReviewComment = styled.div`
   const toastContext = React.useContext(ToastContext);
   const [modalOpen, setModalOpen] = React.useState(false);
   const loc = useApi(`/api/location?character_id=${fit.character.id}`)[0]
-  if (loc && loc.solar_system_id) {
-    console.log(loc.solar_system_id);
-    getSystemName(loc).then((value) => {console.log(value)})
-  } else {
-    console.log("loc or loc.solar_system_id is null or undefined");
-  }
+  const [systemName, setSystemName] = useState(""); // State to store the system name
+
+  useEffect(() => {
+    if (loc && loc.solar_system_id) {
+      (async () => {
+        try {
+          const name = await getSystemName(loc);
+          setSystemName(name);
+        } catch (error) {
+          console.error(error);
+        }
+      })();
+    }
+  }, [loc]);
   const namePrefix = fit.character ? `${fit.character.name}'s ` : "";
   if (fit.dna && fit.hull) {
     return (
@@ -225,7 +241,7 @@ XCardDOM.ReviewComment = styled.div`
                       </Button>
                       {loc && loc.solar_system_id ? (
                         <span>
-                          Solar System: Something
+                          Solar System: {systemName || 'Loading...'}
                         </span>
                       ) : null}
                       
