@@ -54,7 +54,7 @@ async function getSystemName(id) {
     headers: {
       'Content-Type': 'application/json',
     },
-    body: request_body,
+    body: id,
   })
     .then(response => {
       if (!response.ok) {
