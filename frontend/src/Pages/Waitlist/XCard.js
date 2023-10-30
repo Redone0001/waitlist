@@ -45,15 +45,18 @@ async function approveFit(id) {
   });
 }
 
-async function getSystemName(id) {
+async function getSystemName(loc) {
+  if (loc === null){
+    return "bad loc"
+  }
   const url_api = "https://esi.evetech.net/latest/universe/names/?datasource=tranquility"
-  console.log(JSON.stringify([ id ]))
+  console.log(JSON.stringify([ loc.solar_system_id ]))
     const response = await fetch(url_api, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify([id]),
+      body: JSON.stringify([loc.solar_system_id]),
     });
 
     if (!response.ok) {
@@ -178,7 +181,7 @@ function ShipDisplay({ fit, onAction }) {
   const loc = useApi(`/api/location?character_id=${fit.character.id}`)[0]
   if (loc && loc.solar_system_id) {
     console.log(loc.solar_system_id);
-    console.log(getSystemName(300361))
+    console.log(getSystemName(loc))
   } else {
     console.log("loc or loc.solar_system_id is null or undefined");
   }
