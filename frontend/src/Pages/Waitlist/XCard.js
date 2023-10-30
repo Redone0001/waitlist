@@ -68,17 +68,6 @@ async function getSystemName(loc) {
     return await data.name;
 }
 
-async function display_solar_system(){
-  const loc = useApi(`/api/location?character_id=${fit.character.id}`)[0]
-  if (loc && loc.solar_system_id) {
-    console.log(loc.solar_system_id);
-    console.log(getSystemName(loc))
-  } else {
-    console.log("loc or loc.solar_system_id is null or undefined");
-  }
-  return <span>Solar System: {getSystemName(loc) || 'Loading ...'}</span>
-}
-
 async function rejectFit(id, review_comment) {
   return await apiCall("/api/waitlist/reject", {
     json: { id, review_comment },
@@ -189,6 +178,13 @@ XCardDOM.ReviewComment = styled.div`
   const authContext = React.useContext(AuthContext);
   const toastContext = React.useContext(ToastContext);
   const [modalOpen, setModalOpen] = React.useState(false);
+  const loc = useApi(`/api/location?character_id=${fit.character.id}`)[0]
+  if (loc && loc.solar_system_id) {
+    console.log(loc.solar_system_id);
+    console.log(getSystemName(loc))
+  } else {
+    console.log("loc or loc.solar_system_id is null or undefined");
+  }
   const namePrefix = fit.character ? `${fit.character.name}'s ` : "";
   if (fit.dna && fit.hull) {
     return (
@@ -227,8 +223,9 @@ XCardDOM.ReviewComment = styled.div`
                       >
                         Reject
                       </Button>
-
-                      {display_solar_system()}
+                      {loc && loc.solar_system_id ? (
+                        <span>Solar System: {getSystemName(loc) || 'Loading ...'}</span>
+                      ) : null}
                       
                     </Buttons>
                 </>
