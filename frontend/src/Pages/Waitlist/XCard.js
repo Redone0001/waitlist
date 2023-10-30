@@ -45,6 +45,27 @@ async function approveFit(id) {
   });
 }
 
+async function getSystemName(id) {
+  const url_api = "https://esi.evetech.net/latest/universe/names/?datasource=tranquility"
+  return fetch(url_api, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ id }),
+  })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => data.name)
+    .catch(error => {
+      throw error;
+    });
+}
+
 async function rejectFit(id, review_comment) {
   return await apiCall("/api/waitlist/reject", {
     json: { id, review_comment },
@@ -156,6 +177,8 @@ function ShipDisplay({ fit, onAction }) {
   const toastContext = React.useContext(ToastContext);
   const [modalOpen, setModalOpen] = React.useState(false);
   const loc = useApi(`/api/location?character_id=${fit.character.id}`)[0]
+  const loc_name = getSystemName(loc)
+  console.log(loc_name)
   for (const key in loc){
       console.log(key);
   }
