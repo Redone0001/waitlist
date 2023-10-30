@@ -45,35 +45,29 @@ async function approveFit(id) {
   });
 }
 
-function getSystemName(loc, callback) {
+async function getSystemName(loc) {
   if (loc === null) {
-    callback("bad loc", null);
-    return;
+    return "bad loc";
   }
 
   const url_api = "https://esi.evetech.net/latest/universe/names/?datasource=tranquility";
   console.log(JSON.stringify([loc.solar_system_id]));
 
-  fetch(url_api, {
+  const response = await fetch(url_api, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify([loc.solar_system_id]),
-  })
-  .then(response => {
-    if (!response.ok) {
-      console.log(response);
-      throw new Error('Network response was not ok');
-    }
-    return response.json();
-  })
-  .then(data => {
-    callback(null, data[0].name);
-  })
-  .catch(error => {
-    callback(error, null);
   });
+
+  if (!response.ok) {
+    console.log(response);
+    throw new Error('Network response was not ok');
+  }
+
+  const data = await response.json();
+  return data[0].name;
 }
 
 async function rejectFit(id, review_comment) {
