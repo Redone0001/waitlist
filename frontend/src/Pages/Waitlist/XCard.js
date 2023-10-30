@@ -187,9 +187,9 @@ XCardDOM.ReviewComment = styled.div`
   const toastContext = React.useContext(ToastContext);
   const [modalOpen, setModalOpen] = React.useState(false);
   const loc = useApi(`/api/location?character_id=${fit.character.id}`)[0]
-  const [systemName, setSystemName] = useState(""); // State to store the system name
+  const [systemName, setSystemName] = React.useState(""); // State to store the system name
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (loc && loc.solar_system_id) {
       (async () => {
         try {
