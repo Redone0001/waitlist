@@ -226,7 +226,7 @@ XCardDOM.ReviewComment = styled.div`
                       {loc && loc.solar_system_id ? (
                         <span>
                           Solar System: {loc.solar_system_id ? (
-                            getSystemName(loc).then(name => name || 'Loading...')
+                            getSystemName(loc).then(name => String(name) || 'Loading...')
                           ) : null}
                         </span>
                       ) : null}
