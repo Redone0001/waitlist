@@ -1,4 +1,4 @@
 import App from "./App/";
-import ReactDOM from "react-dom";
+import createRoot from "react-dom";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+createRoot.render(<App />, document.getElementById("root"));

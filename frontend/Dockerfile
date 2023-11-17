@@ -1,4 +1,4 @@
-FROM node:16 AS build
+FROM node:18.14.1 AS build
 WORKDIR /app/frontend
 ADD package.json package-lock.json /app/frontend/
 RUN npm i
