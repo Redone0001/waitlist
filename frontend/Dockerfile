@@ -3,8 +3,8 @@ WORKDIR /app/frontend
 ADD package.json package-lock.json /app/frontend/
 RUN npm i
 # ADD archive-frontend.tar /app/frontend
-COPY src /app/frontend
-COPY public/ /app/frontend
+ADD src /app/frontend/src
+ADD public/ /app/frontend/public
 RUN npm run build
 
 FROM nginx:alpine
