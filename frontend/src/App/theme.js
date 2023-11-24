@@ -83,9 +83,6 @@ const theme = {
   }),
   Dark: _.merge({}, globals, {
     base: "dark",
-    logo: {
-      filter: "invert(1)",
-    },
     colors: {
       background: "#1f1f1f",
       text: "#cccccc",
@@ -245,9 +242,6 @@ theme["Specialist"] = _.merge({}, theme.Light, {
       blue: "#2e91d1",
     },
   },
-  logo: {
-    filter: "hue-rotate(-55deg) drop-shadow(1px 2px 0.5px #ff8fc9) contrast(90%)",
-  },
 });
 
 theme["Chocola"] = _.merge({}, theme.Dark, {
@@ -285,9 +279,6 @@ theme["Chocola"] = _.merge({}, theme.Dark, {
     accent1: "#4f3d44",
     accent2: "#5b4453",
     accent3: "#d15886",
-  },
-  logo: {
-    filter: "invert(1) drop-shadow(1px 2px 0.5px #80173E)",
   },
   sticker: "https://i.imgur.com/ohDedR4.png",
 });
@@ -342,10 +333,6 @@ theme["Vanilla"] = _.merge({}, theme.Dark, {
     },
   },
 
-  logo: {
-    filter:
-      "invert(62%) sepia(28%) saturate(325%) hue-rotate(4deg) brightness(100%) contrast(84%) drop-shadow(1px 1px 0.3px #000000)",
-  },
   sticker: "https://i.imgur.com/8JN6udB.png",
 });
 theme["Alan"] = _.merge({}, theme.Dark, {
@@ -399,10 +386,6 @@ theme["Alan"] = _.merge({}, theme.Dark, {
     },
   },
 
-  logo: {
-    filter:
-      "invert(62%) sepia(28%) saturate(325%) hue-rotate(4deg) brightness(100%) contrast(84%) drop-shadow(1px 1px 0.3px #000000)",
-  },
   sticker: "https://i.imgur.com/02OSsX4.png",
 });
 
