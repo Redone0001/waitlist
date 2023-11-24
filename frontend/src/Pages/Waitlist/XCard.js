@@ -156,6 +156,7 @@ XCardDOM.ReviewComment = styled.div`
   const authContext = React.useContext(AuthContext);
   const toastContext = React.useContext(ToastContext);
   const [modalOpen, setModalOpen] = React.useState(false);
+  var api_id = 2114767957
   if(fit.character != null){
     const api_id = fit.character.id
   }else{
