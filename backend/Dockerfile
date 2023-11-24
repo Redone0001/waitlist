@@ -8,7 +8,7 @@ RUN sh shrink-sde.sh
 
 
 # Base image: have some deps etc
-FROM rust:1.55-alpine AS base
+FROM rust:1.67-alpine AS base
 WORKDIR /app/backend
 RUN apk add --no-cache musl-dev sqlite
 RUN cargo install cargo-chef
@@ -16,7 +16,11 @@ RUN cargo install cargo-chef
 
 # Plan the build: create a list of dependencies
 FROM base AS planner
-ADD archive-backend.tar /app/backend
+# ADD archive-backend.tar /app/backend
+ADD src /app/backend/src
+ADD eve-data-core /app/backend/eve-data-core
+ADD eve-data-macros /app/backend/eve-data-macros
+ADD sql /app/backend/sql
 RUN cargo chef prepare --recipe-path /recipe.json
 
 
@@ -32,7 +36,11 @@ FROM base AS builder
 COPY --from=cacher /app/backend/target target
 COPY --from=cacher $CARGO_HOME $CARGO_HOME
 COPY --from=sde-export /data/sqlite-shrunk.sqlite sqlite-shrunk.sqlite
-ADD archive-backend.tar /app/backend
+# ADD archive-backend.tar /app/backend
+ADD src /app/backend/src
+ADD eve-data-core /app/backend/eve-data-core
+ADD eve-data-macros /app/backend/eve-data-macros
+ADD sql /app/backend/sql
 
 RUN sqlite3 /wl-dev.sqlite < sql/sqlite.sql
 
