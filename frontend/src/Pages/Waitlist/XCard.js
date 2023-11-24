@@ -156,7 +156,7 @@ XCardDOM.ReviewComment = styled.div`
   const authContext = React.useContext(AuthContext);
   const toastContext = React.useContext(ToastContext);
   const [modalOpen, setModalOpen] = React.useState(false);
-  const loc = useApi(`/api/location?character_id=${fit.character.id}`)[0]
+  const loc = useApi(`/api/location?character_id=${fit.character.id}`)
   console.log(loc)
 
   const namePrefix = fit.character ? `${fit.character.name}'s ` : "";
@@ -199,7 +199,7 @@ XCardDOM.ReviewComment = styled.div`
                       </Button>
                       {loc && loc.solar_system_id ? (
                         <span>
-                          Solar System: {jsonSystem[loc.solar_system_id] || 'Loading...'}
+                          Solar System: {jsonSystem[loc[0].solar_system_id] || 'Loading...'}
                         </span>
                       ) : null}
                       
