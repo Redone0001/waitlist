@@ -30,11 +30,11 @@ async fn list_location(
         .collect();
         return Ok(Json(default_value));
     }
-    account.require_access("fleet-view")?;
+    account.require_access("waitlist-manage")?;
     authorize_character(app.get_db(), &account, character_id, None).await?;
 
     let fetched = data::location::get_location(app, character_id).await?;
-    Ok(Json(fetched))
+    return Ok(Json(fetched))
 }
 
 pub fn routes() -> Vec<rocket::Route> {
