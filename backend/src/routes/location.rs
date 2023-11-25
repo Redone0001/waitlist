@@ -28,7 +28,7 @@ async fn list_location(
         .iter()
         .map(|(k, v)| (k.to_string(), v.as_i64().unwrap()))
         .collect();
-        return Ok(Json default_value);
+        return Ok(Json(default_value));
     }
     authorize_character(app.get_db(), &account, character_id, None).await?;
 
