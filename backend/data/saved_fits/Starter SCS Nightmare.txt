@@ -1,10 +1,11 @@
-[Nightmare, Nightmare]
-Tachyon Modulated Energy Beam I
-Tachyon Modulated Energy Beam I
-Tachyon Modulated Energy Beam I
-Tachyon Modulated Energy Beam I
-Drone Link Augmentor I
-Small Tractor Beam I
+[Nightmare, Starter Nightmare]
+
+Damage Control II
+Heat Sink II
+Heat Sink II
+Imperial Navy Multispectrum Energized Membrane
+Imperial Navy Multispectrum Energized Membrane
+1600mm Steel Plates II
 
 Tracking Computer II
 Tracking Computer II
@@ -14,26 +15,30 @@ Alumel-Wired Enduring Sensor Booster
 500MN Quad LiF Restrained Microwarpdrive
 Republic Fleet Large Cap Battery
 
-Damage Control II
-Heat Sink II
-Heat Sink II
-Imperial Navy Multispectrum Energized Membrane
-Imperial Navy Multispectrum Energized Membrane
-1600mm Steel Plates II
+Tachyon Modulated Energy Beam I
+Tachyon Modulated Energy Beam I
+Tachyon Modulated Energy Beam I
+Tachyon Modulated Energy Beam I
+Small Tractor Beam I
+Drone Link Augmentor I
 
 Large Explosive Armor Reinforcer I
+[Empty Rig slot]
 Large Energy Burst Aerator II
 
 
 Federation Navy Hammerhead x2
 Federation Navy Ogre x2
 
-True Sanshas Ultraviolet L x16
-True Sanshas Gamma L x16
+
 Imperial Navy Multifrequency L x32
+True Sanshas Gamma L x16
+True Sanshas Ultraviolet L x16
 Nanite Repair Paste x500
+Scan Resolution Script x2
+Targeting Range Script x2
 Optimal Range Script x4
 Tracking Speed Script x4
-Targeting Range Script x1
-Scan Resolution Script x1
-
+Synth Mindflood Booster x10
+Alumel-Wired Enduring Sensor Booster x1
+Tracking Computer II x1

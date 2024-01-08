@@ -1,25 +1,26 @@
-[Megathron, Megathron]
-Modal Mega Neutron Particle Accelerator I
-Modal Mega Neutron Particle Accelerator I
-Modal Mega Neutron Particle Accelerator I
-Modal Mega Neutron Particle Accelerator I
-Modal Mega Neutron Particle Accelerator I
-Modal Mega Neutron Particle Accelerator I
-Modal Mega Neutron Particle Accelerator I
-
-Stasis Webifier II
-Tracking Computer II
-Large Cap Battery II
-500MN Quad LiF Restrained Microwarpdrive
+[Megathron, Starter SCS Megathron]
 
 Damage Control II
-Magnetic Field Stabilizer II
-Magnetic Field Stabilizer II
-Magnetic Field Stabilizer II
 Imperial Navy Multispectrum Energized Membrane
 Imperial Navy Multispectrum Energized Membrane
+Magnetic Field Stabilizer II
+Magnetic Field Stabilizer II
+Magnetic Field Stabilizer II
 Centum C-Type Explosive Energized Membrane
 Imperial Navy 1600mm Steel Plates
+
+Large Cap Battery II
+500MN Quad LiF Restrained Microwarpdrive
+Tracking Computer II
+Stasis Webifier II
+
+Modal Mega Neutron Particle Accelerator I
+Modal Mega Neutron Particle Accelerator I
+Modal Mega Neutron Particle Accelerator I
+Modal Mega Neutron Particle Accelerator I
+Modal Mega Neutron Particle Accelerator I
+Modal Mega Neutron Particle Accelerator I
+Modal Mega Neutron Particle Accelerator I
 
 Large Kinetic Armor Reinforcer I
 Large Thermal Armor Reinforcer I
@@ -28,10 +29,12 @@ Large Trimark Armor Pump I
 
 Ogre II x3
 
-Tungsten Charge L x5000
+
 Caldari Navy Antimatter Charge L x8000
+Tungsten Charge L x5000
 Nanite Repair Paste x500
+Scan Resolution Script x2
 Optimal Range Script x2
 Tracking Speed Script x2
-Scan Resolution Script x2
-
+Sensor Booster II x1
+Tracking Computer II x1
