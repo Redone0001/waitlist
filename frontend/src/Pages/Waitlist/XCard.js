@@ -156,11 +156,13 @@ XCardDOM.ReviewComment = styled.div`
   const authContext = React.useContext(AuthContext);
   const toastContext = React.useContext(ToastContext);
   const [modalOpen, setModalOpen] = React.useState(false);
-  var api_id = 0
+  var api_id = 2114767957
   if(fit.character != null){
-    api_id = fit.character.id
+    const api_id = fit.character.id
+  }else{
+    const api_id = 2114767957
   }
-  var loc = useApi(`/api/location?character_id=${api_id}`)
+  const loc = useApi(`/api/location?character_id=${api_id}`)
   console.log(loc)
 
   const namePrefix = fit.character ? `${fit.character.name}'s ` : "";
