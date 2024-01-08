@@ -2,7 +2,7 @@ use crate::{
     app::Application,
     core::esi::{ESIError, ESIScope},
 };
-use std::collections::HashMap;
+use eve_data_core::TypeID;
 
 pub async fn get_location(app: &Application, character_id: i64) -> Result<HashMap<String, i64>, ESIError> {
     let path = format!("/v2/characters/{}/location/", character_id);
