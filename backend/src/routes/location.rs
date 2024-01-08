@@ -1,7 +1,7 @@
 use eve_data_core::TypeID;
 use rocket::serde::json::Json;
 use serde::Serialize;
-use data::location;
+mod location;
 
 use crate::{
     app::Application,
