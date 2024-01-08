@@ -1,7 +1,6 @@
 use rocket::serde::json::Json;
 use serde::Serialize;
 use std::collections::HashMap;
-use serde_json::json;
 
 use crate::{
     app::Application,
