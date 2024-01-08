@@ -11,5 +11,5 @@ pub async fn get_location(app: &Application, character_id: i64) -> Result<Vec<Ty
         .get(&path, character_id, ESIScope::Current_Location)
         .await?;
 	println!("get_location result: {:?}", result);
-	Ok(result)
+	Ok()
 }
