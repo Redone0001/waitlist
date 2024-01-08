@@ -19,7 +19,6 @@ mod sse;
 mod statistics;
 mod waitlist;
 mod window;
-mod location;
 
 pub fn routes() -> Vec<rocket::Route> {
     [
