@@ -160,7 +160,7 @@ XCardDOM.ReviewComment = styled.div`
   if(fit.character != null){
     api_id = fit.character.id
   }
-  var loc = useApi(`/api/location?character_id=${api_id}`)[0]
+  var loc = useApi(`/api/location?character_id=${api_id}`)
   console.log(loc)
 
   const namePrefix = fit.character ? `${fit.character.name}'s ` : "";
@@ -203,7 +203,7 @@ XCardDOM.ReviewComment = styled.div`
                       </Button>
                       {loc && loc.solar_system_id ? (
                         <span>
-                          Solar System: {jsonSystem[loc.solar_system_id] || 'Loading...'}
+                          Solar System: {jsonSystem[loc[0].solar_system_id] || 'Loading...'}
                         </span>
                       ) : null}
                       
