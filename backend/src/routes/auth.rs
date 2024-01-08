@@ -86,7 +86,6 @@ fn login_url(alt: bool, fc: bool, app: &rocket::State<app::Application>) -> Stri
         ESIScope::PublicData,
         ESIScope::Skills_ReadSkills_v1,
         ESIScope::Clones_ReadImplants_v1,
-		ESIScope::Current_Location,
     ];
     if fc {
         scopes.extend(vec![

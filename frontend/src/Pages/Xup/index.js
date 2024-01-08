@@ -82,7 +82,6 @@ export function Xup() {
   const [reviewOpen, setReviewOpen] = React.useState(false);
   const [alt, setAlt] = React.useState(false);
   const [implants] = useApi(`/api/implants?character_id=${authContext.current.id}`);
-  const location = useApi(`/api/location?character_id=${authContext.current.id}`);
 
   const handleChange = () => {
     setAlt(!alt);
@@ -156,9 +155,6 @@ export function Xup() {
               name={`${authContext.current.name}'s capsule`}
             />
           ) : null}
-        </Box>
-		<Box style={{ flex: 1 }}>
-          {location : null}
         </Box>
       </div>
     </>
