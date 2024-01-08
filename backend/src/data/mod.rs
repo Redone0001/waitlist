@@ -8,7 +8,6 @@ pub mod skills;
 pub mod tags;
 pub mod variations;
 pub mod yamlhelper;
-pub mod location;
 
 #[macro_export]
 macro_rules! last_insert_id {
