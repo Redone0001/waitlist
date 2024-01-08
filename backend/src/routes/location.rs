@@ -14,7 +14,7 @@ struct LocationResponse {
 }
 
 #[get("/api/location?<character_id>")]
-async fn list_location(
+async fn get_location(
     app: &rocket::State<Application>,
     account: AuthenticatedAccount,
     character_id: i64,
@@ -26,5 +26,5 @@ async fn list_location(
 }
 
 pub fn routes() -> Vec<rocket::Route> {
-    routes![list_location]
+    routes![get_location]
 }
