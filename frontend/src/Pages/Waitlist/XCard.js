@@ -47,7 +47,6 @@ async function approveFit(id) {
 
 async function getSystemName(id) {
   const url_api = "https://esi.evetech.net/latest/universe/names/?datasource=tranquility"
-  console.log("[${id}]")
   return fetch(url_api, {
     method: 'POST',
     headers: {
@@ -57,7 +56,6 @@ async function getSystemName(id) {
   })
     .then(response => {
       if (!response.ok) {
-        console.log(response)
         throw new Error('Network response was not ok');
       }
       return response.json();
