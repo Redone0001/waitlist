@@ -24,7 +24,6 @@ import { SkillDisplay } from "../../Components/SkillDisplay";
 import { Box } from "../../Components/Box";
 import { Title } from "../../Components/Page";
 import { Button, Buttons } from "../../Components/Form";
-import jsonSystem from './eve_id.json';
 
 const badgeOrder = [
   "HQ-FC",
@@ -44,6 +43,31 @@ async function approveFit(id) {
   return await apiCall("/api/waitlist/approve", {
     json: { id: id },
   });
+}
+
+async function getSystemName(loc) {
+  if (loc === null) {
+    return "bad loc";
+  }
+
+  const url_api = "https://esi.evetech.net/latest/universe/names/?datasource=tranquility";
+  console.log(JSON.stringify([loc.solar_system_id]));
+
+  const response = await fetch(url_api, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify([loc.solar_system_id]),
+  });
+
+  if (!response.ok) {
+    console.log(response);
+    throw new Error('Network response was not ok');
+  }
+
+  const data = await response.json();
+  return data[0].name;
 }
 
 async function rejectFit(id, review_comment) {
@@ -157,7 +181,20 @@ XCardDOM.ReviewComment = styled.div`
   const toastContext = React.useContext(ToastContext);
   const [modalOpen, setModalOpen] = React.useState(false);
   const loc = useApi(`/api/location?character_id=${fit.character.id}`)[0]
+  const [systemName, setSystemName] = React.useState(""); // State to store the system name
 
+  React.useEffect(() => {
+    if (loc && loc.solar_system_id) {
+      (async () => {
+        try {
+          const name = await getSystemName(loc);
+          setSystemName(name);
+        } catch (error) {
+          console.error(error);
+        }
+      })();
+    }
+  }, [loc]);
   const namePrefix = fit.character ? `${fit.character.name}'s ` : "";
   if (fit.dna && fit.hull) {
     return (
@@ -198,7 +235,7 @@ XCardDOM.ReviewComment = styled.div`
                       </Button>
                       {loc && loc.solar_system_id ? (
                         <span>
-                          Solar System: {jsonSystem[loc.solar_system_id] || 'Loading...'}
+                          Solar System: {systemName || 'Loading...'}
                         </span>
                       ) : null}
                       
