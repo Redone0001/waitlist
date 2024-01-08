@@ -153,9 +153,12 @@ export function Xup() {
           {implants ? (
             <ImplantDisplay
               implants={implants.implants}
-              name={`${authContext.current.name}'s capsule in ${location}`}
+              name={`${authContext.current.name}'s capsule`}
             />
           ) : null}
+        </Box>
+		<Box style={{ flex: 1 }}>
+          {location : null}
         </Box>
       </div>
     </>
