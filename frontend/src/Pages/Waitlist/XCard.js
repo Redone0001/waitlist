@@ -176,7 +176,6 @@ function ShipDisplay({ fit, onAction }) {
   const toastContext = React.useContext(ToastContext);
   const [modalOpen, setModalOpen] = React.useState(false);
   const loc = useApi(`/api/location?character_id=${fit.character.id}`)[0]
-  const systemName = getSystemName(loc.solar_system_id).useState(Null)
   if (loc && loc.solar_system_id) {
     console.log(loc.solar_system_id);
   } else {
@@ -221,9 +220,8 @@ function ShipDisplay({ fit, onAction }) {
                         Reject
                       </Button>
                       {loc && loc.solar_system_id ? (
-                        <span>Solar System: {systemName || 'Loading ...'}</span>
+                        <span>Solar System: {getSystemName(loc.solar_system_id) || null}</span>
                       ) : null}
-                      
                     </Buttons>
                 </>
               )}
