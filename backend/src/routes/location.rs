@@ -11,7 +11,8 @@ use crate::{
 
 #[derive(Serialize, Debug)]
 struct LocationResponse {
-    location: Vec<TypeID>,
+    solar_system_id: i64,
+    structure_id: i64,
 }
 
 #[get("/api/location?<character_id>")]
@@ -23,7 +24,9 @@ async fn list_location(
     authorize_character(app.get_db(), &account, character_id, None).await?;
 
     let fetched = data::location::get_location(app, character_id).await?;
-    Ok(Json(LocationResponse { location: fetched }))
+	let solar_system_id = fetched[0].solar_system_id;
+	let structure_id = fetched[0].structure_id;
+    Ok(Json(LocationResponse { solar_system_id, structure_id}))
 }
 
 pub fn routes() -> Vec<rocket::Route> {
