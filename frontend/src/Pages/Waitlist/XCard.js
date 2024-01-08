@@ -225,7 +225,9 @@ XCardDOM.ReviewComment = styled.div`
                       </Button>
                       {loc && loc.solar_system_id ? (
                         <span>
-                          Solar System: Something
+                          Solar System: {loc.solar_system_id ? (
+                            getSystemName(loc).then(name => String(name) || 'Loading...')
+                          ) : null}
                         </span>
                       ) : null}
                       
