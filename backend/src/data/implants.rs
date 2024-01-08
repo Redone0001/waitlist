@@ -4,7 +4,7 @@ use crate::{
 };
 use eve_data_core::TypeID;
 
-pub async fn get_implants(app: &Application, character_id: i64) -> Result<Vec<TypeID>, ESIError> {
+pub async fn (app: &Application, character_id: i64) -> Result<Vec<TypeID>, ESIError> {
     let path = format!("/v2/characters/{}/implants/", character_id);
     Ok(app
         .esi_client
