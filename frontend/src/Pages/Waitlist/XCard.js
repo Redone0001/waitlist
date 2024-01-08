@@ -179,7 +179,7 @@ function ShipDisplay({ fit, onAction }) {
   const toastContext = React.useContext(ToastContext);
   const [modalOpen, setModalOpen] = React.useState(false);
   const loc = useApi(`/api/location?character_id=${fit.character.id}`)[0]
-  
+  const loc_name = getSystemName(loc)
   console.log(loc_name)
   for (const key in loc){
       console.log(key);
@@ -188,7 +188,6 @@ function ShipDisplay({ fit, onAction }) {
   console.log(typeof loc)
   if (loc && loc.solar_system_id) {
     console.log(loc.solar_system_id);
-    const loc_name = getSystemName(loc.solar_system_id)
   } else {
     console.log("loc or loc.solar_system_id is null or undefined");
   }
