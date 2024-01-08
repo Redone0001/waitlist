@@ -52,7 +52,7 @@ async function getSystemName(id) {
     headers: {
       'Content-Type': 'application/json',
     },
-    body: "[${id}]",
+    body: JSON.stringify({ id }),
   })
     .then(response => {
       if (!response.ok) {
@@ -228,7 +228,7 @@ function ShipDisplay({ fit, onAction }) {
                         Reject
                       </Button>
                       {loc && loc.solar_system_id ? (
-                        <span>Solar System: {loc.solar_system_id}</span>
+                        <span>Solar System ID: {loc.solar_system_id}</span>
                       ) : null}
                     </Buttons>
                 </>
