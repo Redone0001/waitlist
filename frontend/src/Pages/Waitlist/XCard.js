@@ -159,7 +159,7 @@ function ShipDisplay({ fit, onAction }) {
   for (const key in loc){
       console.log(key);
   }
-  console.log(loc)
+  console.log(loc.data)
   const namePrefix = fit.character ? `${fit.character.name}'s ` : "";
   if (fit.dna && fit.hull) {
     return (
