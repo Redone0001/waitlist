@@ -47,7 +47,7 @@ async function approveFit(id) {
 
 async function getSystemName(id) {
   const url_api = "https://esi.evetech.net/latest/universe/names/?datasource=tranquility"
-  const request_body = '[' + id + ']'
+  const request_body = '[' + {id} + ']'
   console.log(request_body)
   return fetch(url_api, {
     method: 'POST',
