@@ -6,7 +6,7 @@ use crate::{
     app::Application,
     core::auth::{authorize_character, AuthenticatedAccount},
     util::madness::Madness,
-	route::location
+	data::location
 };
 
 #[derive(Serialize, Debug)]
