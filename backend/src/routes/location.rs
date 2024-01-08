@@ -1,4 +1,4 @@
-use eve_data_core::TypeID;
+use eve_data_core::TypeLoc;
 use rocket::serde::json::Json;
 use serde::Serialize;
 
@@ -11,7 +11,7 @@ use crate::{
 
 #[derive(Serialize, Debug)]
 struct LocationResponse {
-    location: Vec<TypeID>,
+    location: Vec<TypeLoc>,
 }
 
 #[get("/api/location?<character_id>")]
