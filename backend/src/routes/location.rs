@@ -5,7 +5,6 @@ use serde::Serialize;
 use crate::{
     app::Application,
     core::auth::{authorize_character, AuthenticatedAccount},
-	data::location
     util::madness::Madness,
 };
 
