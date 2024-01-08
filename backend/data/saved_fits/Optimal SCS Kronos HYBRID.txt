@@ -33,11 +33,10 @@ Medium Hull Maintenance Bot II x5
 
 Null L x10000
 Void L x25000
-Nanite Repair Paste x5000
+Nanite Repair Paste x1000
 ECCM Script x2
 Scan Resolution Script x2
-Targeting Range Script x2
 Optimal Range Script x3
 Tracking Speed Script x3
-Sensor Booster II x1
-Tracking Computer II x1
+Sentient Sensor Booster x1
+Federation Navy Tracking Computer x1

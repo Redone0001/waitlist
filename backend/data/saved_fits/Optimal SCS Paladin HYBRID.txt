@@ -33,10 +33,11 @@ Light Hull Maintenance Bot II x5
 
 Conflagration L x60
 Scorch L x60
-Imperial Navy Multifrequency L x4
+Imperial Navy Multifrequency L x40
 Nanite Repair Paste x1000
 Scan Resolution Script x1
 Targeting Range Script x1
 Optimal Range Script x3
 Tracking Speed Script x3
 Sensor Booster II x1
+Tracking Computer II x1

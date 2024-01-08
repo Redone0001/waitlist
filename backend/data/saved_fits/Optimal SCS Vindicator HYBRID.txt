@@ -33,3 +33,5 @@ Ogre II x5
 
 Null L x8000
 Void L x20000
+Optimal Range Script x1
+Tracking Speed Script x1

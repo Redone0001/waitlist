@@ -26,7 +26,6 @@ Large Trimark Armor Pump II
 Large Hybrid Burst Aerator II
 
 
-Hobgoblin II x5
 Hammerhead II x5
 Medium Hull Maintenance Bot II x5
 
@@ -34,7 +33,8 @@ Medium Hull Maintenance Bot II x5
 Null L x10000
 Void L x25000
 Nanite Repair Paste x1000
-Scan Resolution Script x1
+ECCM Script x2
+Scan Resolution Script x2
 Optimal Range Script x3
 Tracking Speed Script x3
 Sensor Booster II x1
