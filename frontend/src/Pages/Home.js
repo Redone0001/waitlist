@@ -11,6 +11,7 @@ export function Home() {
       </InputGroup>
       <Content>
         <h2>Welcome to The Beancursion</h2>
+
         <p>
           Hello fellow bean, we would like to introduce you to the SIG Beancursion. 
           We are a new-bro friendly group where all are welcome. We
