@@ -116,8 +116,7 @@ export function Xup() {
           <div>
             <label>
               <input type="checkbox" checked={alt} onChange={handleChange} />
-              This is an ALT ship (You need a main ship in fleet).
-			  Don't check this box if you fly logi or marauder on a alt.
+              This is an ALT ship (I already have a main ship in fleet)
             </label>
           </div>
 
@@ -154,7 +153,7 @@ export function Xup() {
           {implants ? (
             <ImplantDisplay
               implants={implants.implants}
-              name={`${authContext.current.name}'s capsule`}
+              name={`${authContext.current.name}'s capsule in ${location}`}
             />
           ) : null}
         </Box>
