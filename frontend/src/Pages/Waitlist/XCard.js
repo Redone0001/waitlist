@@ -158,8 +158,8 @@ XCardDOM.ReviewComment = styled.div`
   const [modalOpen, setModalOpen] = React.useState(false);
   if (fit.character != null){
     const loc = useApi(`/api/location?character_id=${fit.character.id}`)
-    console.log(loc)
   }
+  console.log(loc)
 
   const namePrefix = fit.character ? `${fit.character.name}'s ` : "";
   if (fit.dna && fit.hull) {
