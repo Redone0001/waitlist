@@ -224,7 +224,7 @@ function ShipDisplay({ fit, onAction }) {
                         Reject
                       </Button>
                       {loc && loc.solar_system_id ? (
-                        <span>Solar System: {systemName}</span>
+                        <span>Solar System: {loc.solar_system_id}</span>
                       ) : null}
                     </Buttons>
                 </>
