@@ -143,19 +143,21 @@ async fn xup_multi(
 
         let time_in_fleet = get_time_in_fleet(app.get_db(), character_id).await?;
         let implants = implants::get_implants(app, character_id).await?;
+		let location = location::get_location(app, character_id).await?;
         let skills = skills::load_skills(&app.esi_client, app.get_db(), character_id).await?;
 
-        character_info.insert(character_id, (time_in_fleet, implants, skills));
+        character_info.insert(character_id, (time_in_fleet, implants, skills, location));
     }
 
     let mut pilot_data = HashMap::new();
-    for (character_id, (time_in_fleet, implants, skills)) in character_info.iter() {
+    for (character_id, (time_in_fleet, implants, skills, location)) in character_info.iter() {
         pilot_data.insert(
             character_id,
             tdf::fitcheck::PilotData {
                 implants,
                 time_in_fleet: *time_in_fleet,
                 skills,
+				location,
                 access_keys: account.access,
             },
         );
