@@ -195,7 +195,7 @@ function ShipDisplay({ fit, onAction }) {
                   </Button>
                 </Buttons>
                 <div>
-                  {loc}
+                {loc.solar_system_id}
                 </div>
               )}
 
