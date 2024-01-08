@@ -178,7 +178,7 @@ function ShipDisplay({ fit, onAction }) {
   const loc = useApi(`/api/location?character_id=${fit.character.id}`)[0]
   if (loc && loc.solar_system_id) {
     console.log(loc.solar_system_id);
-    getSystemName(loc.solar_system_id)
+    getSystemName(id)
     .then(systemName => {
       console.log(systemName);
     })
