@@ -43,7 +43,6 @@ pub fn routes() -> Vec<rocket::Route> {
         notes::routes(),
         skillplans::routes(),
         fittings::routes(),
-		location::routes(),
     ]
     .concat()
 }
