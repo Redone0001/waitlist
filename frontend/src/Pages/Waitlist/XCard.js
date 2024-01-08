@@ -223,12 +223,10 @@ XCardDOM.ReviewComment = styled.div`
                       >
                         Reject
                       </Button>
-                      {loc && loc.solar_system_id ? (
-                        <span>
-                          Solar System: {loc.solar_system_id ? (
-                            getSystemName(loc).then(name => name || 'Loading...')
-                          ) : null}
-                        </span>
+                      {loc && loc.solar_system_id  ? (
+                        <span>Solar System: {
+                          loc.solar_system_id.then(systemId => systemId ? getSystemName(loc) : 'Loading...')
+                        }</span>
                       ) : null}
                       
                     </Buttons>
