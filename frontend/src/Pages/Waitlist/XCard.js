@@ -198,8 +198,8 @@ function ShipDisplay({ fit, onAction }) {
                     </Buttons>
                     <div>
                       <ul>
-                        <li>Solar System ID: {loc.solar_system_id}</li>
-                        <li>Structure ID: {loc.structure_id}</li>
+                        <li>Solar System ID: {locationData.solar_system_id}</li>
+                        <li>Structure ID: {locationData.structure_id}</li>
                       </ul>
                     </div>
                 </>
