@@ -48,25 +48,24 @@ async function approveFit(id) {
 async function getSystemName(id) {
   const url_api = "https://esi.evetech.net/latest/universe/names/?datasource=tranquility"
   console.log(JSON.stringify([ id ]))
-  try {
-    const response = await fetch(url_api, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify([id]),
+  return await fetch(url_api, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify([id]),
+  })
+    .then(response => {
+      if (!response.ok) {
+        console.log(response)
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => data.name)
+    .catch(error => {
+      throw error;
     });
-
-    if (!response.ok) {
-      console.log(response);
-      throw new Error('Network response was not ok');
-    }
-
-    const data = await response.json();
-    return data.name;
-  } catch (error) {
-    throw error;
-  }
 }
 
 async function rejectFit(id, review_comment) {
