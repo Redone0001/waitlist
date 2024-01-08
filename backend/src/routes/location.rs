@@ -1,4 +1,4 @@
-use eve_data_core::TypeID;
+use eve_data_core::String;
 use rocket::serde::json::Json;
 use serde::Serialize;
 
