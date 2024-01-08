@@ -82,7 +82,7 @@ export function Xup() {
   const [reviewOpen, setReviewOpen] = React.useState(false);
   const [alt, setAlt] = React.useState(false);
   const [implants] = useApi(`/api/implants?character_id=${authContext.current.id}`);
-  const loc = useApi(`/api/location?character_id=${authContext.current.id}`);
+  const location = useApi(`/api/location?character_id=${authContext.current.id}`);
 
   const handleChange = () => {
     setAlt(!alt);
@@ -116,7 +116,8 @@ export function Xup() {
           <div>
             <label>
               <input type="checkbox" checked={alt} onChange={handleChange} />
-              This is an ALT ship (You need a main ship in fleet).<\br>Don't check this box if you fly logi or marauder on a alt.
+              This is an ALT ship (You need a main ship in fleet).
+			  Don't check this box if you fly logi or marauder on a alt.
             </label>
           </div>
 
