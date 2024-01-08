@@ -116,7 +116,7 @@ export function Xup() {
           <div>
             <label>
               <input type="checkbox" checked={alt} onChange={handleChange} />
-              This is an ALT ship (You need a main ship in fleet). Do not check this box if you fly logi or marauder on a alt.
+              This is an ALT ship (You need a main ship in fleet). Don't check this box if you fly logi or marauder on a alt.
             </label>
           </div>
 
