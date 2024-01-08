@@ -194,9 +194,6 @@ function ShipDisplay({ fit, onAction }) {
                     Reject
                   </Button>
                 </Buttons>
-                <div>
-                {loc.solar_system_id}
-                </div>
               )}
 
               <FitDisplay fit={fit} />
