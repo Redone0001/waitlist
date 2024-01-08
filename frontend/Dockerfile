@@ -2,9 +2,7 @@ FROM node:18.14.1 AS build
 WORKDIR /app/frontend
 ADD package.json package-lock.json /app/frontend/
 RUN npm i
-# ADD archive-frontend.tar /app/frontend
-COPY src /app/frontend
-COPY public/ /app/frontend
+ADD archive-frontend.tar /app/frontend
 RUN npm run build
 
 FROM nginx:alpine
