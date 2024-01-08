@@ -179,7 +179,6 @@ function ShipDisplay({ fit, onAction }) {
   const systemName = getSystemName(loc.solar_system_id).useState(null)
   if (loc && loc.solar_system_id) {
     console.log(loc.solar_system_id);
-    console.log(systemName)
   } else {
     console.log("loc or loc.solar_system_id is null or undefined");
   }
