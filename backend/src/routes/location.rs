@@ -1,12 +1,12 @@
 use eve_data_core::TypeID;
 use rocket::serde::json::Json;
 use serde::Serialize;
+use data::location;
 
 use crate::{
     app::Application,
     core::auth::{authorize_character, AuthenticatedAccount},
     util::madness::Madness,
-	data::location
 };
 
 #[derive(Serialize, Debug)]
