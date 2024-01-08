@@ -3,7 +3,7 @@
 Drone Damage Amplifier II
 Drone Damage Amplifier II
 Drone Damage Amplifier II
-Drone Damage Amplifier II
+1600mm Steel Plates II
 Imperial Navy Multispectrum Energized Membrane
 Imperial Navy Multispectrum Energized Membrane
 Damage Control II
@@ -26,12 +26,12 @@ Large Explosive Armor Reinforcer I
 Large Trimark Armor Pump II
 
 
-Ogre II x5
-Ogre II x5
+Ogre II x10
 Garde II x5
 
 
 Nanite Repair Paste x1000
 Optimal Range Script x5
 Tracking Speed Script x5
+Drone Damage Amplifier II x1
 Omnidirectional Tracking Link II x5
