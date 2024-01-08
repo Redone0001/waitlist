@@ -189,7 +189,7 @@ function ShipDisplay({ fit, id, note }) {
             {fit.name.indexOf("HYBRID") !== -1 ? (
               <Note variant={"danger"}>
                 <p>
-                  HYBRID FIT! This fit requires at least Amulet 1 - 5. <br /> See implants above 
+                  HYBRID FIT! This fit requires at least Amulet 1 - 6. <br /> See implants above 
                 </p>
               </Note>
             ) : fit.name.indexOf("SAVIOR") !== -1 ? (
