@@ -1,12 +1,12 @@
 [Paladin, GOLDEN Paladin Refit]
 
-Centii A-Type Multispectrum Coating
+Imperial Navy Multispectrum Energized Membrane
 Imperial Navy 1600mm Steel Plates
 Imperial Navy Heat Sink
 Imperial Navy Heat Sink
-Imperial Navy Heat Sink
+Damage Control II
 Imperial Navy 1600mm Steel Plates
-Centii A-Type Multispectrum Coating
+Imperial Navy Multispectrum Energized Membrane
 
 500MN Quad LiF Restrained Microwarpdrive
 Large Micro Jump Drive
@@ -14,11 +14,9 @@ Tracking Computer II
 Tracking Computer II
 
 Mega Pulse Laser II
-Large Remote Armor Repairer II
 Mega Pulse Laser II
-Large Remote Armor Repairer II
 Mega Pulse Laser II
-Large Remote Armor Repairer II
+Medium Remote Armor Repairer II
 Bastion Module I
 Mega Pulse Laser II
 
