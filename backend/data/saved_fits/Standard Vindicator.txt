@@ -1,0 +1,39 @@
+[Vindicator, Standard Vindicator]
+
+Damage Control II
+Imperial Navy Multispectrum Energized Membrane
+Imperial Navy Multispectrum Energized Membrane
+Magnetic Field Stabilizer II
+Magnetic Field Stabilizer II
+Magnetic Field Stabilizer II
+Imperial Navy 1600mm Steel Plates
+
+Federation Navy 500MN Microwarpdrive
+Federation Navy Stasis Webifier
+Federation Navy Stasis Webifier
+Federation Navy Stasis Webifier
+Tracking Computer II
+
+Neutron Blaster Cannon II
+Neutron Blaster Cannon II
+Neutron Blaster Cannon II
+Neutron Blaster Cannon II
+Neutron Blaster Cannon II
+Neutron Blaster Cannon II
+Neutron Blaster Cannon II
+Neutron Blaster Cannon II
+
+Large Hybrid Locus Coordinator II
+Large Hybrid Discharge Elutriation II
+Large Explosive Armor Reinforcer I
+
+
+Ogre II x5
+
+
+Null L x5000
+Void L x15000
+Caldari Navy Antimatter Charge L x8000
+Nanite Repair Paste x1000
+Optimal Range Script x1
+Tracking Speed Script x1

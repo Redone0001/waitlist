@@ -18,6 +18,24 @@ pub struct DoctrineFit {
 fn load_fits() -> FitData {
     let mut fits = BTreeMap::new();
 
+    let folder_path = "./data/saved_fits/"
+
+    let entries = std::fs::read_dir(folder_path).unwrap();
+
+    for entry in entries {
+        let file_path = entry.unwrap().path();
+        let fit_name = file_path.file_stem().unwrap().to_string_lossy();
+        let fit_data = std::fs::read_to_string(&file_path).unwrap();
+        let fittings = from_eft(&fit_data).unwrap();
+        let parsed = fittings.first().unwrap();
+        fits.entry(parsed.hull)
+            .or_insert_with(Vec::new)
+            .push(DoctrineFit {
+                name: fit_name.to_string(),
+                fit: parsed,
+            });
+    }
+/* 
     let fit_data = std::fs::read_to_string("./data/fits.dat").expect("Could not load fits.dat");
     let fit_regex = Regex::new(r#"<a href="fitting:([0-9:;_]+)">([^<]+)</a>"#).unwrap();
 
@@ -32,7 +50,7 @@ fn load_fits() -> FitData {
                 fit: parsed,
             });
     }
-
+*/
     fits
 }
 

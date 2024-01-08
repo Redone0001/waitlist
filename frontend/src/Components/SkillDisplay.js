@@ -212,7 +212,7 @@ export function SkillDisplay({ characterId, ship, setShip = null, filterMin = fa
               Dominix
             </Button>
             <Button active={ship === "Rattlesnake"} onClick={(evt) => setShip("Rattlesnake")}>
-              Dominix
+              Rattlesnake
             </Button>
           </InputGroup>
         </Buttons>

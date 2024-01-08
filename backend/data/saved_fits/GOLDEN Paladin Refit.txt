@@ -1,0 +1,37 @@
+[Paladin, Paladin]
+Mega Pulse Laser II
+Mega Pulse Laser II
+Mega Pulse Laser II
+Mega Pulse Laser II
+Medium Remote Armor Repairer II
+Bastion Module I
+
+Tracking Computer II
+Tracking Computer II
+Large Micro Jump Drive
+500MN Quad LiF Restrained Microwarpdrive
+
+Damage Control II
+Heat Sink II
+Heat Sink II
+Heat Sink II
+Imperial Navy Multispectrum Energized Membrane
+Imperial Navy Multispectrum Energized Membrane
+Imperial Navy 1600mm Steel Plates
+
+Large Trimark Armor Pump I
+Large Energy Burst Aerator II
+
+
+Hobgoblin II x5
+Hornet EC-300 x5
+Light Hull Maintenance Bot II x5
+
+Conflagration L x60
+Scorch L x60
+Imperial Navy Multifrequency L x4
+Nanite Repair Paste x500
+Optimal Range Script x3
+Tracking Speed Script x3
+ECCM Script x1
+

@@ -1,0 +1,36 @@
+[Loki, SCS]
+
+Damage Control II
+Imperial Navy Multispectrum Energized Membrane
+Imperial Navy Explosive Energized Membrane
+Syndicate 1600mm Steel Plates
+Imperial Navy Multispectrum Energized Membrane
+
+True Sansha Stasis Webifier
+50MN Quad LiF Restrained Microwarpdrive
+Federation Navy Stasis Webifier
+Republic Fleet Target Painter
+Federation Navy Stasis Webifier
+
+250mm Light Artillery Cannon I
+Interdiction Nullifier II
+Skirmish Command Burst II
+[Empty High slot]
+[Empty High slot]
+Sisters Expanded Probe Launcher
+[Empty High slot]
+
+Medium Trimark Armor Pump II
+Medium Kinetic Armor Reinforcer II
+Medium Trimark Armor Pump II
+
+Loki Core - Immobility Drivers
+Loki Defensive - Augmented Durability
+Loki Offensive - Support Processor
+Loki Propulsion - Intercalated Nanofibers
+
+
+EMP S x5000
+Sisters Combat Scanner Probe x16
+Sisters Core Scanner Probe x8
+Interdiction Maneuvers Charge x3000

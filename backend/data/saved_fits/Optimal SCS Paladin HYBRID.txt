@@ -1,0 +1,42 @@
+[Paladin, Optimal Paladin]
+
+Centii A-Type Multispectrum Coating
+Imperial Navy 1600mm Steel Plates
+Imperial Navy Heat Sink
+Imperial Navy Heat Sink
+Imperial Navy Heat Sink
+Imperial Navy Heat Sink
+Centii A-Type Multispectrum Coating
+
+Federation Navy 500MN Microwarpdrive
+Large Micro Jump Drive
+Federation Navy Tracking Computer
+Federation Navy Tracking Computer
+
+Mega Pulse Laser II, Conflagration L
+Large Remote Armor Repairer II
+Mega Pulse Laser II, Conflagration L
+Large Remote Armor Repairer II
+Mega Pulse Laser II, Conflagration L
+Imperial Navy Large Remote Capacitor Transmitter
+Bastion Module I
+Mega Pulse Laser II, Conflagration L
+
+Large Energy Burst Aerator II
+Large Trimark Armor Pump II
+
+
+Hobgoblin II x5
+Hornet EC-300 x5
+Light Hull Maintenance Bot II x5
+
+
+Conflagration L x60
+Scorch L x60
+Imperial Navy Multifrequency L x4
+Nanite Repair Paste x1000
+Scan Resolution Script x1
+Targeting Range Script x1
+Optimal Range Script x3
+Tracking Speed Script x3
+Sensor Booster II x1

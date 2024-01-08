@@ -1,0 +1,45 @@
+[Vindicator, Optimal Vindicator]
+
+Damage Control II
+Centii A-Type Multispectrum Coating
+Centii A-Type Multispectrum Coating
+Federation Navy Magnetic Field Stabilizer
+Federation Navy Magnetic Field Stabilizer
+Federation Navy Magnetic Field Stabilizer
+Federation Navy Magnetic Field Stabilizer
+
+Federation Navy 500MN Microwarpdrive
+Federation Navy Tracking Computer
+Federation Navy Stasis Webifier
+Federation Navy Stasis Webifier
+Federation Navy Stasis Webifier
+
+Neutron Blaster Cannon II
+Neutron Blaster Cannon II
+Neutron Blaster Cannon II
+Neutron Blaster Cannon II
+Neutron Blaster Cannon II
+Neutron Blaster Cannon II
+Neutron Blaster Cannon II
+Neutron Blaster Cannon II
+
+Large Explosive Armor Reinforcer I
+Large Hybrid Burst Aerator II
+[Empty Rig slot]
+
+
+Ogre II x5
+
+
+Null L x8000
+Void L x20000
+Inherent Implants 'Squire' Capacitor Management EM-805 x1
+Eifyr and Co. 'Gunslinger' Motion Prediction MR-705 x1
+Inherent Implants 'Lancer' Gunnery RF-905 x1
+Zainou 'Deadeye' Large Hybrid Turret LH-1005 x1
+Mid-grade Amulet Alpha x1
+Mid-grade Amulet Beta x1
+Mid-grade Amulet Delta x1
+Mid-grade Amulet Epsilon x1
+Mid-grade Amulet Gamma x1
+Mid-grade Amulet Omega x1

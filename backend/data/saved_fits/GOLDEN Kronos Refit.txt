@@ -1,0 +1,38 @@
+[Kronos, Kronos]
+Neutron Blaster Cannon II
+Neutron Blaster Cannon II
+Neutron Blaster Cannon II
+Neutron Blaster Cannon II
+Large Remote Armor Repairer II
+Large Remote Armor Repairer II
+Bastion Module I
+
+Sensor Booster II
+Tracking Computer II
+Tracking Computer II
+Large Micro Jump Drive
+500MN Quad LiF Restrained Microwarpdrive
+
+Damage Control II
+Magnetic Field Stabilizer II
+Magnetic Field Stabilizer II
+Imperial Navy Multispectrum Energized Membrane
+Imperial Navy Multispectrum Energized Membrane
+Imperial Navy 1600mm Steel Plates
+Imperial Navy 1600mm Steel Plates
+
+Large Trimark Armor Pump I
+Large Hybrid Burst Aerator II
+
+
+Hobgoblin II x5
+Hammerhead II x5
+Medium Hull Maintenance Bot II x5
+
+Null L x5000
+Void L x15000
+Nanite Repair Paste x500
+Optimal Range Script x3
+Tracking Speed Script x3
+ECCM Script x1
+

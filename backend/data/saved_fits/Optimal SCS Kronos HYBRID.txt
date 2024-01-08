@@ -1,0 +1,43 @@
+[Kronos, Optimal Kronos]
+
+Centii A-Type Multispectrum Coating
+Federation Navy Magnetic Field Stabilizer
+Federation Navy Magnetic Field Stabilizer
+Federation Navy Magnetic Field Stabilizer
+Centii A-Type Multispectrum Coating
+Imperial Navy 1600mm Steel Plates
+Imperial Navy 1600mm Steel Plates
+
+Federation Navy 500MN Microwarpdrive
+Federation Navy Tracking Computer
+Federation Navy Tracking Computer
+Large Micro Jump Drive
+Sentient Sensor Booster
+
+Neutron Blaster Cannon II
+Neutron Blaster Cannon II
+Neutron Blaster Cannon II
+Neutron Blaster Cannon II
+Large Remote Armor Repairer II
+Bastion Module I
+Imperial Navy Large Remote Capacitor Transmitter
+
+Large Trimark Armor Pump II
+Large Hybrid Burst Aerator II
+
+
+Hobgoblin II x5
+Hammerhead II x5
+Medium Hull Maintenance Bot II x5
+
+
+Null L x10000
+Void L x25000
+Nanite Repair Paste x5000
+ECCM Script x2
+Scan Resolution Script x2
+Targeting Range Script x2
+Optimal Range Script x3
+Tracking Speed Script x3
+Sensor Booster II x1
+Tracking Computer II x1

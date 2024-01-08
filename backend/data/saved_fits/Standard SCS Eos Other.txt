@@ -1,0 +1,40 @@
+[Eos, Standard Eos]
+
+Damage Control II
+Centii A-Type Explosive Coating
+Centum C-Type Multispectrum Energized Membrane
+Federation Navy 1600mm Steel Plates
+Drone Damage Amplifier II
+Drone Damage Amplifier II
+Drone Damage Amplifier II
+
+50MN Y-T8 Compact Microwarpdrive
+Remote Sensor Booster II
+Remote Sensor Booster II
+Remote Sensor Booster II
+
+Armor Command Burst II
+Armor Command Burst II
+Armor Command Burst II
+[Empty High slot]
+[Empty High slot]
+
+Medium Command Processor I
+Medium Trimark Armor Pump II
+
+
+Ogre II x5
+Federation Navy Garde x5
+
+
+Armor Energizing Charge x3300
+Armor Reinforcement Charge x3300
+Rapid Repair Charge x3300
+Scan Resolution Script x2
+Evasive Maneuvers Charge x3000
+Interdiction Maneuvers Charge x3000
+Rapid Deployment Charge x3000
+Optimal Range Script x3
+Tracking Speed Script x3
+Skirmish Command Burst II x3
+Shadow Serpentis Remote Tracking Computer x3

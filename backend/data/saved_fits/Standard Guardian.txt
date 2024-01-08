@@ -1,0 +1,28 @@
+[Guardian, Standard Guardian]
+
+Federation Navy Multispectrum Coating
+Centum C-Type Thermal Energized Membrane
+Reactor Control Unit II
+Imperial Navy 800mm Steel Plates
+Capacitor Power Relay II
+
+Republic Fleet Large Cap Battery
+10MN Afterburner II
+
+Imperial Navy Large Remote Capacitor Transmitter
+Large Remote Armor Repairer II
+Large Remote Armor Repairer II
+Large Remote Armor Repairer II
+Centum C-Type Medium Remote Armor Repairer
+Centum C-Type Medium Remote Armor Repairer
+
+Medium Capacitor Control Circuit II
+Medium Ancillary Current Router II
+
+
+Hobgoblin II x5
+
+
+Nanite Repair Paste x153
+Standard Mindflood Booster x4
+Strong Mindflood Booster x1
