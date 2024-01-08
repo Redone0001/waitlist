@@ -11,7 +11,7 @@ use crate::{
 
 #[derive(Serialize, Debug)]
 struct LocationResponse {
-    data: HashMap<String, i64>,
+    location: HashMap<String, i64>,
 }
 
 #[get("/api/location?<character_id>")]
