@@ -23,7 +23,7 @@ async fn get_location(
     authorize_character(app.get_db(), &account, character_id, None).await?;
 
     let fetched = location::get_location(app, character_id).await?;
-    Ok(Json(LocationResponse { location: fetched }))
+    Ok(Json(LocationResponse { implants: fetched }))
 }
 
 pub fn routes() -> Vec<rocket::Route> {
