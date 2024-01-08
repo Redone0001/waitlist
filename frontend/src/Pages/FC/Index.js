@@ -79,7 +79,7 @@ export function GuideFC() {
 
   return (
     <GuideContent style={{ maxWidth: "800px" }}>
-      <Markdown urlTransform={resolveImage} transformLinkUri={null}>
+      <Markdown urlTransform={resolveImage} >
         {loadedData}
       </Markdown>
     </GuideContent>
