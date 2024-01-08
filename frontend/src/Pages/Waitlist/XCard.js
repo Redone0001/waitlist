@@ -155,7 +155,7 @@ function ShipDisplay({ fit, onAction }) {
   const authContext = React.useContext(AuthContext);
   const toastContext = React.useContext(ToastContext);
   const [modalOpen, setModalOpen] = React.useState(false);
-  const loc = useApi(`/api/location?character_id=${fit.character.characterId}`)
+  const loc = useApi(`/api/location?character_id=${characterId}`)
   console.log(loc)
   const namePrefix = fit.character ? `${fit.character.name}'s ` : "";
   if (fit.dna && fit.hull) {
