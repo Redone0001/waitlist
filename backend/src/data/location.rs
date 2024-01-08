@@ -2,9 +2,9 @@ use crate::{
     app::Application,
     core::esi::{ESIError, ESIScope},
 };
-use eve_data_core::TypeLoc;
+use eve_data_core::TypeID;
 
-pub async fn get_location(app: &Application, character_id: i64) -> Result<TypeLoc, ESIError> {
+pub async fn get_location(app: &Application, character_id: i64) -> Result<Vec<TypeID>, ESIError> {
     let path = format!("/v2/characters/{}/location/", character_id);
     let result = app
         .esi_client
