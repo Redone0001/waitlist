@@ -20,10 +20,6 @@ async fn list_location(
     account: AuthenticatedAccount,
     character_id: i64,
 ) -> Result<Json<HashMap<String, i64>>, Madness> {
-    if character_id == 0 {
-        let default_value = json!({"solar_system_id": 30005133});
-        return Ok(Json(default_value.as_object().unwrap().clone()));
-    }
     authorize_character(app.get_db(), &account, character_id, None).await?;
 
     let fetched = data::location::get_location(app, character_id).await?;
