@@ -22,6 +22,7 @@ Starter Logi pilots should bring a Guardian. Nestors are reserved for veteran lo
 
 ## Upgrade Policy
 
+This section is to be used as general knowledge, it's not enforced.
 Upgrading for logi is expected much the same as DPS.
 
 **You must reach the tier by the time limit set out in the table below:**

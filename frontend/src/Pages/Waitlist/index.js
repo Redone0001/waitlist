@@ -139,7 +139,7 @@ export function Waitlist() {
     // Redirect to wl=1 if we don't have one
     if (!waitlistId) {
       setQuery("wl", 1);
-      return null;
+      return () => {};
     }
   }, [waitlistId, setQuery]);
 
