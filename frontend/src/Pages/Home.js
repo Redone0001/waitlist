@@ -14,7 +14,7 @@ export function Home() {
 
         <p>
           Hello fellow bean, we would like to introduce you to the SIG Beancursion. 
-          We are a new-bro friendly group where all are welcome. We
+		  We are a new-bro friendly group where all are welcome. We
           have affordable starter fits, and we can help make you space rich, all we ask in return is
           you follow our upgrade policy to help the SIG excel and follow the rules!
         </p>
