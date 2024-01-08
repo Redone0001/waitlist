@@ -22,13 +22,8 @@ async fn list_location(
     character_id: i64,
 ) -> Result<Json<HashMap<String, i64>>, Madness> {
     if character_id == 0 {
-        let default_value: HashMap<std::string::String, i64> = json!({"solar_system_id": 30005133})
-        .as_object()
-        .unwrap()
-        .iter()
-        .map(|(k, v)| (k.to_string(), v.as_i64().unwrap()))
-        .collect();
-        return Ok(Json default_value);
+        let default_value = json!({"solar_system_id": 30005133});
+        return Ok(Json(default_value.as_object().unwrap().clone()));
     }
     authorize_character(app.get_db(), &account, character_id, None).await?;
 
