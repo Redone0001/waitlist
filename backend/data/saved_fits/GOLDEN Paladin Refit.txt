@@ -2,8 +2,8 @@
 
 Imperial Navy Multispectrum Energized Membrane
 Imperial Navy 1600mm Steel Plates
-Imperial Navy Heat Sink
-Imperial Navy Heat Sink
+Heat Sink II
+Heat Sink II
 Damage Control II
 Imperial Navy 1600mm Steel Plates
 Imperial Navy Multispectrum Energized Membrane
