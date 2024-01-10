@@ -74,8 +74,10 @@ function Link({ href, children, ...props }) {
 export function Markdown({ ...args }) {
   const headings = [];
 
-  const Heading = ({ children, level }) => {
-    const text = children[0];
+  const Heading = ({ children, ...props }) => {
+    const text = children;
+    const level = parseInt(props.node.tagName.replace("h", ""), 10);
+    console.log(props.node.tagName);
 
     let slug =
       `${text}`
