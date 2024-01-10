@@ -53,8 +53,7 @@ Beancursion works with a tier system. Pilots can be categorized as starter, stan
 
 Once you have the standard fit ready to go, continue **training and injecting standard skills** which will help your capacitor stability and the ability to keep up with the fleet. At this point you are no longer starter and will be placed in a normal squad, congratulations!
 
-**At this point we would like to thank you for upgrading, you can spend your isk as you see fit from this point on.**
-_Dont forget to ask an FC to scan you for your optimal badge so that you are eligible to join optimal fleets and reap the rewards of your hard work!_
+**At this point we would like to thank you for upgrading, you can spend your isk as you see fit from this point on.*
 
 ### Optimal
 
