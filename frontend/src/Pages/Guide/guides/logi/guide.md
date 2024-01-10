@@ -20,23 +20,9 @@ Starter Logi pilots should bring a Guardian. Nestors are reserved for veteran lo
 - Reps - These are the remote repair modules for sending repairs to other ships.
 - Cap - Remote Capacitor Transmitter used to give capacitor to pilots who need it.
 
-## Upgrade Policy
-
-This section is to be used as general knowledge, it's not enforced.
-Upgrading for logi is expected much the same as DPS.
-
-**You must reach the tier by the time limit set out in the table below:**
-
-|      Tier      | Time Limit |
-| :------------: | :--------: |
-|  Standard (Guardian)  |    100h    |
-| Optimal(Nestor)  |    200h    |
-
-Nestor is the Optimal equivalent for logi. Pilots wishing to only fly cruiser are not expected to get a Nestor. You can stay in a cruiser if you wish to, but be aware DPS will be prioritised over you if the logi numbers are fulfilled. Should we have a surplus of cruisers in fleet it will be last in first out in favor of DPS ships as well.
-
 ## Requirements
 
-- The EM-805 Implant is required for all Nestors & Guardians.
+- The EM-805 Implant is recommended for Guardians. RA-705 Implant & EM-805 Implant are both required for the nestor.
 
 - **Basic skills are a minimum** You can not have any starter level skills for logi ships. Skill requirements can be found on your [skills page](/skills).
 

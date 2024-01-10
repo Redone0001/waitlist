@@ -8,12 +8,13 @@
 4.  Active FCs voice has priority
 5.  Pilots must be in fleet comms and no other comms while in fleet
 6.  Pilots need to be able to understand simple commands, without a Translator
+7.  Pandemic Horde rules must be observed, this include and not limited to: leaking information, nsfw rule, ...
 
 Bans include, but are not limited to:
 
 - Working against Beancursion in general
 - Any kind of harassment (e.g. homophobic, racism)
-- Ganking, stealing or scamming of incursion runners
+- Stealing or scamming of incursion runners
 - Lying about your fit
 - Not upgrading within Policy requirements or attempting to bypass Policy (see Upgrading guide on website)
 - Actively downgrading
