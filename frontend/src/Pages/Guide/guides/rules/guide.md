@@ -2,6 +2,7 @@
 
 ---
 
+0. _**Don't be a dick**_
 1.  Racism & Harassment are not tolerated
 2.  Never harm the beancursion SIG on purpose
 3.  Pilots are expected to upgrade according to Upgrade Policy
