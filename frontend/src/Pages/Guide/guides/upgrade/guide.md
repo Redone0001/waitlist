@@ -22,7 +22,8 @@ Beancursion works with a tier system. Pilots can be categorized as starter, stan
 |      Optimal      |    \*\*    |
 
 \* We have the megatron as a very esay to get into ship, we ask you to upgrade this sonner than the other BS.
-\*\* Optimal is for beans that want to spent more money, it's not asked to upgrade to it but very much appriciated.
+
+\*\* Optimal is for beans that want to spent more money, it's not asked to upgrade to it but very much appreciated.
 
 ## Upgrade guidance for DPS
 
@@ -36,7 +37,7 @@ Beancursion works with a tier system. Pilots can be categorized as starter, stan
 3. If you are still in a Megathron get yourself a Vindi or Nightmare starter fit. **\*(You must be out of a megathron by 40 hours of fleet time)**.
 4. Past 60 hours in fleet its important to show progression in your upgrading, either via ship, skills, or fit.
 
-### standard
+### Standard
 
 1. **Upgrade to a [standard fit](/fits?Tier=standard)** as soon as you can, to do this train/inject armor compensation skills to level 4 first.
 2. **Tank and rig change to standard fit or better** (do this upgrade all at once!) All rigs and tank modules must be changed to match the standard fit or you will not be allowed to join fleet, **DO NOT TRY TO MIX AND MATCH**. These modules include:
@@ -55,7 +56,7 @@ Once you have the standard fit ready to go, continue **training and injecting st
 **At this point we would like to thank you for upgrading, you can spend your isk as you see fit from this point on.**
 _Dont forget to ask an FC to scan you for your optimal badge so that you are eligible to join optimal fleets and reap the rewards of your hard work!_
 
-### optimal
+### Optimal
 
 1. **Upgrade to [optimal fits](/fits?Tier=optimal)**. You do not need to have every skill at optimal level to fly the fit. You will need the mid-grade set to fly hybrid fit. Go buy those upgrades while still training/injecting the skills.
 
@@ -63,7 +64,7 @@ _Dont forget to ask an FC to scan you for your optimal badge so that you are eli
 
 3. This is a good time to get **abyssal modules**. [Mutaplasmid.space](https://mutaplasmid.space/) is a good website for finding contracts, but remember abyssals must be "better than faction". The [General tips](/guide/tips) guide gives advice on what to look for when purchasing abyssals.
 
-### optimal gold
+### Optimal gold
 
 1. Finally, once you have all skills to optimal gold for your ship get your **optimal gold** badge to show off your awesomeness. Just ask any FC who is not running the current fleet to check you meet the requirements. This is just a skill check on the site.
 
