@@ -50,6 +50,11 @@ function FitsDisplay({ tier, setTier = null }) {
               Support
             </Button>
           </InputGroup>
+          <InputGroup>
+            <Button active={tier === "VG"} onClick={(evt) => setTier("VG")}>
+              VG refit
+            </Button>
+          </InputGroup>
         </Buttons>
       )}
       <ImplantOut />
@@ -63,8 +68,8 @@ function FitsDisplay({ tier, setTier = null }) {
         <Fitout data={fitData} tier="Optimal" />
       ) : tier === "Other" ? (
         <Fitout data={fitData} tier="Other" />
-      ) : tier === "Antigank" ? (
-        <Fitout data={fitData} tier="Antigank" />
+      ) : tier === "VG" ? (
+        <Fitout data={fitData} tier="VG" />
       ) : null}
     </>
   );
