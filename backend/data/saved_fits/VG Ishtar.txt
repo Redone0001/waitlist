@@ -1,0 +1,34 @@
+[Ishtar, VG Ishtar]
+
+Drone Damage Amplifier II
+Drone Damage Amplifier II
+Drone Damage Amplifier II
+Imperial Navy Multispectrum Energized Membrane
+Assault Damage Control II
+1600mm Steel Plates II
+
+Omnidirectional Tracking Link II
+Omnidirectional Tracking Link II
+Omnidirectional Tracking Link II
+Omnidirectional Tracking Link II
+
+Drone Link Augmentor II
+[Empty High slot]
+[Empty High slot]
+[Empty High slot]
+
+Medium Trimark Armor Pump II
+Medium Explosive Armor Reinforcer II
+
+
+Hobgoblin II x5
+Ogre II x9
+Federation Navy Garde x5
+
+
+Optimal Range Script x4
+Tracking Speed Script x4
+Drone Navigation Computer II x2
+10MN Y-S8 Compact Afterburner x1
+50MN Y-T8 Compact Microwarpdrive x1
+Nanite Repair Paste x1000
