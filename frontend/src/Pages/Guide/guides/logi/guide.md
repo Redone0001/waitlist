@@ -92,7 +92,7 @@ You will need to learn to manage your locked targets as you learn the logi role.
 
 ![](heatreps.png)
 
-In an emergency, such as a late broadcast, you might find that as you lock the target they are already below 50% armor, in this situation cancel ALL running reps and apply them to the target. Overheat your reps a few cycles, **DO NOT BURN THEM OUT!** Once the pilot has reached 100% armor you may return to repping other targets. Always be ready to speak up on teamspeak in such situations and never be afraid to call for battlereps or more reps if needed. You could be what saves that persons ship!
+In an emergency, such as a late broadcast, you might find that as you lock the target they are already below 50% armor, in this situation cancel ALL running reps and apply them to the target. Overheat your reps a few cycles, **DO NOT BURN THEM OUT!** Once the pilot has reached 100% armor you may return to repping other targets. Always be ready to speak up on comms in such situations and never be afraid to call for battlereps or more reps if needed. You could be what saves that persons ship!
 
 ## Ships
 
@@ -155,7 +155,7 @@ Please use the [Anchoring guide](/guide/anchoring) for specifics on positioning 
 
 Usually there will be Damnation in fleet AKA meatshield which will sit in a pre-determined position to attempt to consolidate aggro on wave spawns, however pilots will often be arriving into the site late and making their way from the beacon. Keep an eye on these pilots and try to do your best to keep them alive, target broadcast as neccessary and if the pilots ship is still dipping ask for more reps. Nestors can burn toward aggro targets to get within their 29km optimal should it be neccessary but no more than one Nestor should ever need to burn back.
 
-The two major dangers to watch for are pilots jumping with aggro at the entry to a room/site, and or jumping from the beacon with aggro on a new wave spawn, often these pilots will be jumping without boosts or out of logi rep ranges. Its important to try your best to save these pilots either by overheating your prop mod, overheating your reps, or calling it out on Teamspeak.
+The two major dangers to watch for are pilots jumping with aggro at the entry to a room/site, and or jumping from the beacon with aggro on a new wave spawn, often these pilots will be jumping without boosts or out of logi rep ranges. Its important to try your best to save these pilots either by overheating your prop mod, overheating your reps, or calling it out on comms.
 
 ### True Creations Research Center (TCRC)
 
