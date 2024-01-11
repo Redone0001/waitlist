@@ -39,7 +39,7 @@ Beancursion works with a tier system. Pilots can be categorized as starter, stan
 
 ### Standard
 
-1. **Upgrade to a [standard fit](/fits?Tier=standard)** as soon as you can, to do this train/inject armor compensation skills to level 4 first.
+1. **Upgrade to a [standard fit](/fits?Tier=Standard)** as soon as you can, to do this train/inject armor compensation skills to level 4 first.
 2. **Tank and rig change to standard fit or better** (do this upgrade all at once!) All rigs and tank modules must be changed to match the standard fit or you will not be allowed to join fleet, **DO NOT TRY TO MIX AND MATCH**. These modules include:
 
 - Damage Control Units
@@ -57,7 +57,7 @@ Once you have the standard fit ready to go, continue **training and injecting st
 
 ### Optimal
 
-1. **Upgrade to [optimal fits](/fits?Tier=optimal)**. You do not need to have every skill at optimal level to fly the fit. You will need the mid-grade set to fly hybrid fit. Go buy those upgrades while still training/injecting the skills.
+1. **Upgrade to [optimal fits](/fits?Tier=Optimal)**. You do not need to have every skill at optimal level to fly the fit. You will need the mid-grade set to fly hybrid fit. Go buy those upgrades while still training/injecting the skills.
 
 2. Finish by getting all the **elite skills**. The order is up to you, but we recommend getting the skills that give the biggest damage increase first, and of course maximize your survivability by upgrading the tank skills.
 
