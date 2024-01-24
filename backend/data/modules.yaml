@@ -163,6 +163,7 @@ accept_t1: # Meta information missing, but luckily we can just match it naively
 identification: # Modules/groups we use to look at to figure out what we're flying
   - Damage Control II
   - 1600mm Steel Plates II
+  - Corpus X-Type Large Armor Repairer
   - Multispectrum Energized Membrane II
   - Large Explosive Armor Reinforcer I
   - Large Explosive Armor Reinforcer II
