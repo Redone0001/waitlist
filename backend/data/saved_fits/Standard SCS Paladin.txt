@@ -40,3 +40,6 @@ Optimal Range Script x3
 Tracking Speed Script x3
 Sensor Booster II x1
 Tracking Computer II x1
+Warp Core Stabilizer II x1
+Improved Cloaking Device II x1
+Inertial Stabilizers II x2
