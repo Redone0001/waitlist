@@ -100,7 +100,7 @@ export function Menu({ onChangeCharacter, theme, setTheme, sticker, setSticker }
           <NavBar.Header>
             <MobileNavButton isOpen={isOpenMobileView} setIsOpen={setOpenMobileView} />
             <NavBar.LogoLink to="/">
-              <NavBar.Logo src={logoImage} alt="The Ditanian Fleet" />
+              <NavBar.Logo src={logoImage} alt="The Beancursion Fleet" />
             </NavBar.LogoLink>
           </NavBar.Header>
           <NavBar.Menu>
