@@ -112,12 +112,6 @@ export function Xup() {
             value={eft}
             style={{ width: "100%", marginBottom: "1em" }}
           />
-          <div>
-            <label>
-              <input type="checkbox" checked={alt} onChange={handleChange} />
-              This is an ALT ship (I already have a main ship in fleet)
-            </label>
-          </div>
 
           <InputGroup>
             <Button static>{authContext.current.name}</Button>
