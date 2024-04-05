@@ -16,6 +16,9 @@ notes:
   - name: VG
     description: >
       These refits are not mandatory, you can do VG's in the normal fit, but are highly recommended if you regularly do VG sites.
+  - name: Golden
+    description: >
+      These are equivellant to starters and are ment as a easy refit from the Horde GOLDEN doctrine, same rules as starter fits apply.
 
   # Ship specific notes
 
