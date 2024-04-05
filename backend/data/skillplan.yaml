@@ -55,6 +55,20 @@ plans:
       - type: skills
         from: Ishtar
         tier: min
+  - name: ONEIROS BASIC PATH
+    description: >
+      This skill plan will train you to standard Oneiros
+    plan:
+      - type: skills
+        from: Oneiros
+        tier: min
+  - name: RATTLESNAKE BASIC PATH
+    description: >
+      This skill plan will train you to standard Rattlesnake
+    plan:
+      - type: skills
+        from: Rattlesnake
+        tier: min
   - name: MEGATHRON ELITE PATH
     description: >
       This skill plan will train you to Megathron fit with elite skill level.
@@ -110,4 +124,18 @@ plans:
     plan:
       - type: skills
         from: Ishtar
+        tier: elite
+  - name: ONEIROS BASIC PATH
+    description: >
+      This skill plan will train you to standard Oneiros with elite skill level.
+    plan:
+      - type: skills
+        from: Oneiros
+        tier: elite
+  - name: RATTLESNAKE BASIC PATH
+    description: >
+      This skill plan will train you to standard Rattlesnake with elite skill level.
+    plan:
+      - type: skills
+        from: Rattlesnake
         tier: elite
