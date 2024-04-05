@@ -45,6 +45,8 @@ rules:
   - item: Eos
     category: links
   - item: Damnation
-    category: links
+    category: alt
   - item: Ishtar
     category: ishtar
+  - item: Rattlesnake
+    category: alt
