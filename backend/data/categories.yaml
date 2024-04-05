@@ -15,6 +15,8 @@ categories:
     name: Starter
   - id: links
     name: Links
+  - id: ishtar
+    name: Ishtar
   - id: alt
     name: Alts
 
@@ -44,3 +46,5 @@ rules:
     category: links
   - item: Damnation
     category: links
+  - item: Ishtar
+    category: ishtar
