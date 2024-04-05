@@ -131,42 +131,28 @@ function Fitout({ data, tier }) {
       }
     }
   });
-  if (tier === "Other") {
-    return (
-      <>
-        <div>
-          <div style={{ padding: "1em 0 0.4em" }}>
-            <p>These ships are never used as main characters in fleet.</p>
-          </div>
-          <Title>Secondary Support Ships</Title>
-          <DisplayDOM>{dps}</DisplayDOM>
-        </div>
-      </>
-    );
-  } else {
-    return (
-      <>
-        <div>
-          <div style={{ padding: "1em 0 0.4em" }}>
-            {tier in notes ? <Markdown>{notes[tier]}</Markdown> : <br />}
-          </div>
-          {dps.length !== 0 && (
-            <>
-              <Title>DPS</Title>
-              <DisplayDOM>{dps}</DisplayDOM>
-            </>
-          )}
-          <br />
-          {logi.length !== 0 && (
-            <>
-              <Title>LOGISTICS</Title>
-              <DisplayDOM>{logi}</DisplayDOM>
-            </>
-          )}
-        </div>
-      </>
-    );
-  }
+return (
+  <>
+	<div>
+	  <div style={{ padding: "1em 0 0.4em" }}>
+		{tier in notes ? <Markdown>{notes[tier]}</Markdown> : <br />}
+	  </div>
+	  {dps.length !== 0 && (
+		<>
+		  <Title>DPS</Title>
+		  <DisplayDOM>{dps}</DisplayDOM>
+		</>
+	  )}
+	  <br />
+	  {logi.length !== 0 && (
+		<>
+		  <Title>LOGISTICS</Title>
+		  <DisplayDOM>{logi}</DisplayDOM>
+		</>
+	  )}
+	</div>
+  </>
+);
 }
 
 function ShipDisplay({ fit, id, note }) {
