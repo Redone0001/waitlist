@@ -710,6 +710,17 @@ requirements:
     Capacitor Systems Operation:
       min: 4
       elite: 5
+    Target Management:
+      min: 4
+      elite: 5
+    Advanced Target Management:
+      elite: 3
+    Long Range Targeting:
+      min: 4
+      elite: 5
+    Signature Analysis:
+      min: 4
+      elite: 5
 
   Nestor:
     <<: [*logistics, *rigging]
