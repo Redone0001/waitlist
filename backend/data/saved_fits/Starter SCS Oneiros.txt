@@ -1,0 +1,34 @@
+[Oneiros, Starter SCS Oneiros]
+
+Imperial Navy Explosive Energized Membrane
+Imperial Navy 800mm Steel Plates
+Imperial Navy Multispectrum Energized Membrane
+Damage Control II
+Imperial Navy EM Energized Membrane
+
+Federation Navy 10MN Afterburner
+Shadow Serpentis Remote Tracking Computer
+Shadow Serpentis Remote Tracking Computer
+Republic Fleet Large Cap Battery
+
+Large I-ax Enduring Remote Armor Repairer
+Large I-ax Enduring Remote Armor Repairer
+Large I-ax Enduring Remote Armor Repairer
+Large I-ax Enduring Remote Armor Repairer
+
+Medium Remote Repair Augmentor II
+Medium Ancillary Current Router II
+
+
+Hammerhead II x5
+
+
+Inherent Implants 'Squire' Capacitor Systems Operation EO-604
+Inherent Implants 'Noble' Remote Armor Repair Systems RA-704
+Eifyr and Co. 'Rogue' Fuel Conservation FC-804
+
+
+Nanite Repair Paste x1000
+Optimal Range Script x2
+Tracking Speed Script x2
+Standard Mindflood Booster x2
