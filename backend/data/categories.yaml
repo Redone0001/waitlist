@@ -17,6 +17,8 @@ categories:
     name: Links
   - id: ishtar
     name: Ishtar
+  - id: other
+    name: Alts
   - id: alt
     name: Alts
 
@@ -45,8 +47,8 @@ rules:
   - item: Eos
     category: links
   - item: Damnation
-    category: alt
+    category: other
   - item: Ishtar
     category: ishtar
   - item: Rattlesnake
-    category: alt
+    category: other
