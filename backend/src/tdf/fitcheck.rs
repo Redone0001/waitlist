@@ -138,10 +138,15 @@ impl<'a> FitChecker<'a> {
     }
 
     fn check_logi_implants(&mut self) {
-        if (self.fit.hull == type_id!("Nestor") || self.fit.hull == type_id!("Guardian"))
-            && !self.pilot.implants.contains(&type_id!("% EM-805"))
+        if (self.fit.hull == type_id!("Nestor"))
+            && (!self.pilot.implants.contains(&type_id!("% EM-805")) || !self.pilot.implants.contains(&type_id!("% EM-806")))
         {
             self.tags.insert("NO-EM-805");
+        }
+		if (self.fit.hull == type_id!("Oneiros"))
+            && (!self.pilot.implants.contains(&type_id!("% RA-704")) && !self.pilot.implants.contains(&type_id!("% FC-804")) && !self.pilot.implants.contains(&type_id!("% EO-604")))
+        {
+            self.tags.insert("Missing Oneiros implant");
         }
     }
 
