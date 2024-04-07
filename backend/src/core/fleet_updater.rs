@@ -154,8 +154,9 @@ impl FleetUpdater {
                         .await?;
                     } else {
                         sqlx::query!(
-                            "DELETE FROM waitlist_entry_fit WHERE entry_id=? AND is_alt = 0",
+                            "DELETE FROM waitlist_entry_fit WHERE entry_id=? AND character_id=? AND is_alt = 0",
                             record.entry_id
+                            record.character_id
                         )
                         .execute(&mut tx)
                         .await?;

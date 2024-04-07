@@ -311,7 +311,7 @@ function InviteButton({ fitId, fcId, onAction }) {
   const colours = {
     success: themeContext?.colors?.success?.color,
     failed: themeContext?.colors?.danger?.color,
-    // pending: themeContext?.colors?.primary?.color,
+    pending: themeContext?.colors?.primary?.color,
   };
 
   const onClick = async () => {
