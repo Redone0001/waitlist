@@ -8,7 +8,9 @@ import { usePageTitle } from "../../Util/title";
 export function NoteAll() {
     const [notes, setNotes] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [noteToDisplay, setNoteToDisplay] = useState('');
     const toastContext = React.useContext(ToastContext);
+
 
     useEffect(() => {
         const fetchNotes = async () => {
@@ -56,4 +58,4 @@ export function NoteAll() {
         </>
     );
 }
-}
+
