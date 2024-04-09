@@ -13,6 +13,7 @@ export function NoteAll() {
         const fetchData = async () => {
             try {
                 const data = await apiCall('/api/notes/all');
+				console.log(data)
                 setNotes(data.notes);
                 setLoading(false);
             } catch (error) {
@@ -28,7 +29,6 @@ export function NoteAll() {
         <>
             <PageTitle>All Notes</PageTitle>
             <div>
-                <h1>All Notes</h1>
                 {loading ? (
                     <p>Loading...</p>
                 ) : (
