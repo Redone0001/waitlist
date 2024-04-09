@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { apiCall} from "../../api";
+import { useApi} from "../../api";
 import { Button, InputGroup, Textarea } from "../../Components/Form";
 import { PageTitle } from "../../Components/Page";
 import { ToastContext } from "../../contexts";
@@ -8,17 +8,25 @@ import { usePageTitle } from "../../Util/title";
 export function NoteAll() {
     const [notes, setNotes] = useState([]);
     const [loading, setLoading] = useState(true);
+    
+    const [data, refreshFunction] = useApi('/api/notes/all');
 
     useEffect(() => {
-        const fetchData = async () => {
-			const data = await apiCall('/api/notes/all');
-			console.log(data)
-			setNotes(data.notes);
-			setLoading(false);
-        };
+        if (data) {
+            setNotes(data.notes);
+            setLoading(false);
+        }
+    }, [data]);
 
-        fetchData();
-    }, []);
+    useEffect(() => {
+        refreshFunction();
+    }, [refreshFunction]);
+
+    // Function to format date to display only the day in (yyyy-mm-dd) format
+    const formatDate = (timestamp) => {
+        const date = new Date(timestamp * 1000); // Convert UNIX timestamp to milliseconds
+        return date.toISOString().split('T')[0]; // Extract date part and format it
+    };
 
     return (
         <>
@@ -27,18 +35,31 @@ export function NoteAll() {
                 {loading ? (
                     <p>Loading...</p>
                 ) : (
-                    <ul>
-                        {notes.map((note, index) => (
-                            <li key={index}>
-                                <p><strong>Author:</strong> {note.author.name}</p>
-                                <p><strong>Logged At:</strong> {note.logged_at}</p>
-                                <p><strong>Note:</strong> {note.note}</p>
-                            </li>
-                        ))}
-                    </ul>
+                    <table style={{ borderCollapse: 'separate', borderSpacing: '0 10px', width: '100%' }}>
+                        <thead>
+                            <tr>
+                                <th style={{ border: '1px solid #ccc', padding: '10px' }}>Author</th>
+                                <th style={{ border: '1px solid #ccc', padding: '10px' }}>Date</th>
+                                <th style={{ border: '1px solid #ccc', padding: '10px' }}>Note</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {notes.slice().reverse().map((note, index) => (
+                                <React.Fragment key={index}>
+                                    <tr>
+                                        <td colSpan="3" style={{ borderTop: '1px solid #ccc' }}></td>
+                                    </tr>
+                                    <tr>
+                                        <td style={{ border: '1px solid #ccc', padding: '10px' }}>{note.author.name}</td>
+                                        <td style={{ border: '1px solid #ccc', padding: '10px' }}>{formatDate(note.logged_at)}</td>
+                                        <td style={{ border: '1px solid #ccc', padding: '10px' }}>{note.note}</td>
+                                    </tr>
+                                </React.Fragment>
+                            ))}
+                        </tbody>
+                    </table>
                 )}
             </div>
         </>
     );
 }
-
