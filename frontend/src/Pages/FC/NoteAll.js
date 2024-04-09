@@ -35,10 +35,10 @@ export function NoteAll() {
                 {loading ? (
                     <p>Loading...</p>
                 ) : (
-                    <table style={{ borderCollapse: 'separate', borderSpacing: '0 10px', width: '100%' }}>
+                    <table style={{ borderCollapse: 'collapse', borderSpacing: '0 10px', width: '100%' }}>
                         <thead>
                             <tr>
-                                <th style={{ border: '1px solid #ccc', padding: '10px' }}>Author</th>
+                                <th style={{ border: '1px solid #ccc', padding: '10px' }}>Idiot</th>
                                 <th style={{ border: '1px solid #ccc', padding: '10px' }}>Date</th>
                                 <th style={{ border: '1px solid #ccc', padding: '10px' }}>Note</th>
                             </tr>
@@ -46,9 +46,6 @@ export function NoteAll() {
                         <tbody>
                             {notes.slice().reverse().map((note, index) => (
                                 <React.Fragment key={index}>
-                                    <tr>
-                                        <td colSpan="3" style={{ borderTop: '1px solid #ccc' }}></td>
-                                    </tr>
                                     <tr>
                                         <td style={{ border: '1px solid #ccc', padding: '10px' }}>{note.author.name}</td>
                                         <td style={{ border: '1px solid #ccc', padding: '10px' }}>{formatDate(note.logged_at)}</td>
