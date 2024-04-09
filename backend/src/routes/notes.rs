@@ -53,6 +53,38 @@ async fn list_notes(
     Ok(Json(NotesList { notes }))
 }
 
+#[get("/api/notes/all")]
+async fn list_all_notes(
+    account: AuthenticatedAccount,
+    app: &rocket::State<app::Application>,
+) -> Result<Json<NotesList>, Madness> {
+    account.require_access("notes-view")?;
+
+    let notes_q = sqlx::query!(
+        "
+        SELECT author_id, author.name author_name, note, logged_at FROM character_note
+        JOIN `character` author ON author.id = author_id
+        "
+    )
+    .fetch_all(app.get_db())
+    .await?;
+    
+    let notes = notes_q
+        .into_iter()
+        .map(|note| NotesListNote {
+            author: Character {
+                id: note.author_id,
+                name: note.author_name,
+                corporation_id: None,
+            },
+            logged_at: note.logged_at,
+            note: note.note,
+        })
+        .collect();
+
+    Ok(Json(NotesList { notes }))
+}
+
 #[derive(Deserialize)]
 struct AddNoteInput {
     character_id: i64,

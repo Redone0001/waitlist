@@ -127,6 +127,9 @@ export function Routes() {
       <Route exact path="/fc/notes/add">
         <AuthenticatedRoute component={<NoteAdd />} access="notes-add" />
       </Route>
+	  <Route exact path="/fc/notes/all">
+        <AuthenticatedRoute component={<NoteAdd />} access="notes-add" />
+      </Route>
       <Route exact path="/fc/search">
         <AuthenticatedRoute component={<Search />} access="waitlist-tag:HQ-FC" />
       </Route>
