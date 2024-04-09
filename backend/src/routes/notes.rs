@@ -118,5 +118,5 @@ async fn add_note(
 }
 
 pub fn routes() -> Vec<rocket::Route> {
-    routes![list_notes, add_note]
+    routes![list_notes, list_all_notes, add_note]
 }
