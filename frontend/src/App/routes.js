@@ -13,6 +13,7 @@ import { Home } from "../Pages/Home";
 import { ISKh, ISKhCalc } from "../Pages/ISKh";
 import { Legal } from "../Pages/Legal";
 import { NoteAdd } from "../Pages/FC/NoteAdd";
+import { NoteAll } from "../Pages/FC/NoteAll";
 import { Pilot } from "../Pages/Pilot";
 import { Plans } from "../Pages/Skills/Plans";
 import { Search } from "../Pages/FC/Search";
