@@ -15,6 +15,7 @@ import {
   faUserShield,
   faBullhorn,
   faBan,
+  faClipboard,
 } from "@fortawesome/free-solid-svg-icons";
 import { replaceTitle, parseMarkdownTitle, usePageTitle } from "../../Util/title";
 
@@ -134,6 +135,9 @@ export function FCMenu() {
         {authContext && authContext.access["stats-view"] && (
           <GuideCard slug="stats" name="Statistics" icon={faChartLine} />
         )}
+		{authContext && authContext.access["waitlist-tag:HQ-FC"] && (
+          <GuideCard slug="notes/all" name="Note All" icon={faClipboard} />
+          )}
       </CardArray>
     </>
   );
