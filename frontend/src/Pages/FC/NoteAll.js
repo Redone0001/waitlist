@@ -11,15 +11,10 @@ export function NoteAll() {
 
     useEffect(() => {
         const fetchData = async () => {
-            try {
-                const data = await apiCall('/api/notes/all');
-				console.log(data)
-                setNotes(data.notes);
-                setLoading(false);
-            } catch (error) {
-                console.error('Error fetching notes:', error);
-                setLoading(false);
-            }
+			const data = await apiCall('/api/notes/all');
+			console.log(data)
+			setNotes(data.notes);
+			setLoading(false);
         };
 
         fetchData();
