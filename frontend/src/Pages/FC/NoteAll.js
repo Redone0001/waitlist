@@ -27,6 +27,10 @@ export function NoteAll() {
         fetchNotes();
     }, []);
 
+    const handleNoteSelection = (note) => {
+        setNoteToDisplay(note);
+    };
+
     return (
         <>
             <PageTitle>All Notes</PageTitle>
@@ -51,4 +55,5 @@ export function NoteAll() {
             </div>
         </>
     );
+}
 }
