@@ -62,8 +62,8 @@ async fn list_all_notes(
 
     let notes_q = sqlx::query!(
         "
-        SELECT author_id, author.name author_name, note, logged_at FROM character_note
-        JOIN `character` author ON author.id = author_id
+        SELECT character_id, character.name author_name, note, logged_at FROM character_note
+        JOIN `character` character ON character.id = character_id
         "
     )
     .fetch_all(app.get_db())
@@ -72,8 +72,8 @@ async fn list_all_notes(
     let notes = notes_q
         .into_iter()
         .map(|note| NotesListNote {
-            author: Character {
-                id: note.author_id,
+            character: Character {
+                id: note.character_id,
                 name: note.author_name,
                 corporation_id: None,
             },
