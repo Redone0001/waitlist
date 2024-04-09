@@ -5,7 +5,7 @@ import { PageTitle } from "../../Components/Page";
 import { ToastContext } from "../../contexts";
 import { usePageTitle } from "../../Util/title";
 
-function NoteAll() {
+export function NoteAll() {
     const [notes, setNotes] = useState([]);
     const [loading, setLoading] = useState(true);
     const toastContext = React.useContext(ToastContext);
@@ -52,5 +52,3 @@ function NoteAll() {
         </>
     );
 }
-
-export default NoteAll;
