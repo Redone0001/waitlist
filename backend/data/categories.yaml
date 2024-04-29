@@ -30,6 +30,8 @@ rules:
     category: logi
   - item: Nestor
     category: logi
+  - item: Basilisk
+    category: logi
   # Bastion
   - item: Bastion Module I
     category: bastion
@@ -52,3 +54,5 @@ rules:
     category: ishtar
   - item: Rattlesnake
     category: other
+  - item: Gila
+    category: DPS
