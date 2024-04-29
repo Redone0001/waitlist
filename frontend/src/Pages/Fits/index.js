@@ -55,6 +55,11 @@ function FitsDisplay({ tier, setTier = null }) {
               VG refit
             </Button>
           </InputGroup>
+          <InputGroup>
+            <Button active={tier === "Offensive"} onClick={(evt) => setTier("Offensive")}>
+              Offensive
+            </Button>
+          </InputGroup>
         </Buttons>
       )}
       <ImplantOut />
@@ -68,6 +73,8 @@ function FitsDisplay({ tier, setTier = null }) {
         <Fitout data={fitData} tier="Optimal" />
       ) : tier === "Other" ? (
         <Fitout data={fitData} tier="Other" />
+      ) : tier === "Offensive" ? (
+        <Fitout data={fitData} tier="Offensive" />
       ) : tier === "VG" ? (
         <Fitout data={fitData} tier="VG" />
       ) : null}

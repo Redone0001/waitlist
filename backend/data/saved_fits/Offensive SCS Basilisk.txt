@@ -1,0 +1,26 @@
+[Basilisk, Shield Fleet Basilisk]
+
+Damage Control II
+Reactor Control Unit II
+
+Multispectrum Shield Hardener II
+Caldari Navy Large Shield Extender
+10MN Monopropellant Enduring Afterburner
+Caldari Navy Large Shield Extender
+Pith B-Type EM Shield Hardener
+
+Large Murky Compact Remote Shield Booster
+Large Remote Capacitor Transmitter II
+Large Murky Compact Remote Shield Booster
+Large Remote Shield Booster II
+Large Remote Capacitor Transmitter II
+Large Remote Shield Booster II
+
+Medium Core Defense Field Extender II
+Medium Core Defense Field Extender II
+
+
+Warrior II x5
+
+
+Nanite Repair Paste x200
