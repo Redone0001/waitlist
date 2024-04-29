@@ -734,19 +734,14 @@ requirements:
       gold: 5
     Magnetometric Sensor Compensation:
       elite: 4
-    Gallente Cruiser:
+    Caldari Cruiser:
       min: 5
-    Medium Drone Operation:
-      min: 1
-      elite: 5
     CPU Management:
       min: 5
     Power Grid Management:
       min: 5
     Energy Grid Upgrades:
       min: 4
-    Cybernetics:
-      min: 3
     Capacitor Systems Operation:
       min: 4
       elite: 5
@@ -761,6 +756,18 @@ requirements:
     Signature Analysis:
       min: 4
       elite: 5
+    EM Shield Compensation:
+      min: 4
+      gold: 5
+    Explosive Shield Compensation:
+      min: 4
+      gold: 5
+    Thermal Shield Compensation:
+      min: 4
+      gold: 5
+    Kinetic Shield Compensation:
+      min: 4
+      gold: 5
 
   Nestor:
     <<: [*logistics, *rigging]
