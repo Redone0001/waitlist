@@ -224,7 +224,7 @@ requirements:
     Shield Operation:
       elite: 4
 
-  _generic_no_armor: &generic_no_armor # Generic skills: everyone needs these
+  _generic_offensive: &generic_offensive # Generic skills: everyone needs these
     Acceleration Control:
       min: 3
       elite: 4
@@ -245,14 +245,14 @@ requirements:
     Gallente Drone Specialization:
       elite: 4
     Drone Durability:
-      min: 3
-      elite: 4
+      min: 4
+      elite: 5
     Drone Navigation:
       min: 3
       elite: 4
     Drone Avionics:
-      min: 3
-      elite: 4
+      min: 4
+      elite: 5
     Advanced Drone Avionics:
       elite: 4
     Drone Interfacing:
@@ -265,14 +265,13 @@ requirements:
       elite: 4
       gold: 4
     Thermodynamics:
-      min: 3
+      min: 1
       elite: 4
     Capacitor Management:
       min: 4
       elite: 5
     CPU Management:
-      min: 4
-      elite: 5
+      min: 5
     Capacitor Systems Operation:
       min: 3
       elite: 5
@@ -301,9 +300,9 @@ requirements:
       elite: 5
       priority: 5
     Shield Management:
-      elite: 4
+      min: 4
     Shield Operation:
-      elite: 4
+      min: 4
 
   _booster: &booster # Booster skills: Only boosters need these
     EM Armor Compensation:
@@ -804,7 +803,7 @@ requirements:
       elite: 5
 
   Basilisk:
-    <<: [*generic_no_armor, *logistics]
+    <<: [*generic_offensive, *logistics]
     Afterburner:
       min: 4
     Evasive Maneuvering:
@@ -964,7 +963,7 @@ requirements:
       gold: 5
 
   Gila:
-    <<: [*generic_no_armor, *missile]
+    <<: [*generic_offensive, *missile]
     Afterburner:
       min: 4
     Gallente Drone Specialization: 
