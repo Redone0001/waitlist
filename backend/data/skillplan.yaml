@@ -139,7 +139,7 @@ plans:
       - type: skills
         from: Ishtar
         tier: elite
-  - name: ONEIROS Elite PATH
+  - name: ONEIROS ELITE PATH
     description: >
       This skill plan will train you to standard Oneiros with elite skill level.
     plan:
@@ -153,7 +153,7 @@ plans:
       - type: skills
         from: Rattlesnake
         tier: elite
-  - name: GILA Elite PATH
+  - name: GILA ELITE PATH
     description: >
       This skill plan will train you to standard Gila with elite skill level.
     plan:
