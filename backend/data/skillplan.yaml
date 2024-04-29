@@ -69,6 +69,20 @@ plans:
       - type: skills
         from: Rattlesnake
         tier: min
+  - name: GIAL BASIC PATH
+    description: >
+      This skill plan will train you to standard Gila
+    plan:
+      - type: skills
+        from: Gila
+        tier: min
+  - name: BASILISK BASIC PATH
+    description: >
+      This skill plan will train you to standard Basilisk
+    plan:
+      - type: skills
+        from: Basilisk
+        tier: min
   - name: MEGATHRON ELITE PATH
     description: >
       This skill plan will train you to Megathron fit with elite skill level.
@@ -125,17 +139,31 @@ plans:
       - type: skills
         from: Ishtar
         tier: elite
-  - name: ONEIROS BASIC PATH
+  - name: ONEIROS Elite PATH
     description: >
       This skill plan will train you to standard Oneiros with elite skill level.
     plan:
       - type: skills
         from: Oneiros
         tier: elite
-  - name: RATTLESNAKE BASIC PATH
+  - name: RATTLESNAKE ELITE PATH
     description: >
       This skill plan will train you to standard Rattlesnake with elite skill level.
     plan:
       - type: skills
         from: Rattlesnake
+        tier: elite
+  - name: GILA Elite PATH
+    description: >
+      This skill plan will train you to standard Gila with elite skill level.
+    plan:
+      - type: skills
+        from: Gila
+        tier: elite
+  - name: BASILISK ELITE PATH
+    description: >
+      This skill plan will train you to standard Basilisk with elite skill level.
+    plan:
+      - type: skills
+        from: Basilisk
         tier: elite
