@@ -1,0 +1,39 @@
+[Claymore, SCS offensive]
+
+Damage Control II
+Power Diagnostic System II
+Power Diagnostic System II
+Power Diagnostic System II
+
+100MN Monopropellant Enduring Afterburner
+Multispectrum Shield Hardener II
+Caldari Navy Large Shield Extender
+Caldari Navy Large Shield Extender
+Multispectrum Shield Hardener II
+Caldari Navy Large Shield Extender
+
+Light Missile Launcher II
+Light Missile Launcher II
+Light Missile Launcher II
+Shield Command Burst II
+Shield Command Burst II
+Shield Command Burst II
+Skirmish Command Burst II
+
+Medium Command Processor I
+Medium Command Processor I
+
+
+Warrior II x5
+Hammerhead II x5
+
+
+Caldari Navy Mjolnir Light Missile x1000
+Nanite Repair Paste x100
+Active Shielding Charge x900
+Shield Extension Charge x900
+Shield Harmonizing Charge x900
+Evasive Maneuvers Charge x600
+Interdiction Maneuvers Charge x600
+Rapid Deployment Charge x900
+Target Painter II x1

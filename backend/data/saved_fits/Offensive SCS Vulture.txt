@@ -1,0 +1,34 @@
+[Vulture, SCS Offensive]
+
+Damage Control II
+Power Diagnostic System II
+Power Diagnostic System II
+Power Diagnostic System II
+
+100MN Monopropellant Enduring Afterburner
+Caldari Navy Large Shield Extender
+Caldari Navy Large Shield Extender
+Pithum B-Type EM Shield Amplifier
+Pithum B-Type EM Shield Amplifier
+Pithum A-Type Explosive Shield Amplifier
+
+250mm Railgun II
+250mm Railgun II
+250mm Railgun II
+250mm Railgun II
+[Empty High slot]
+Shield Command Burst II
+Shield Command Burst II
+
+Medium Core Defense Field Extender II
+Medium Core Defense Field Extender II
+
+
+Hornet EC-300 x5
+
+
+Spike M x2000
+Caldari Navy Antimatter Charge M x2000
+Caldari Navy Tungsten Charge M x1000
+Shield Extension Charge x600
+Shield Harmonizing Charge x600
