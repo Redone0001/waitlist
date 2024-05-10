@@ -138,6 +138,9 @@ export function FCMenu() {
 		{authContext && authContext.access["waitlist-tag:HQ-FC"] && (
           <GuideCard slug="notes/all" name="Note All" icon={faClipboard} />
           )}
+		{authContext && authContext.access["waitlist-tag:HQ-FC"] && (
+          <GuideCard slug="fleet/all" name="Break Down of the Fleet" icon={faClipboard} />
+          )}
       </CardArray>
     </>
   );

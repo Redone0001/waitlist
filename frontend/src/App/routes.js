@@ -14,6 +14,7 @@ import { ISKh, ISKhCalc } from "../Pages/ISKh";
 import { Legal } from "../Pages/Legal";
 import { NoteAdd } from "../Pages/FC/NoteAdd";
 import { NoteAll } from "../Pages/FC/NoteAll";
+import { FleetAndAlts } from "../Pages/FC/FleetBreakDown";
 import { Pilot } from "../Pages/Pilot";
 import { Plans } from "../Pages/Skills/Plans";
 import { Search } from "../Pages/FC/Search";
@@ -130,6 +131,9 @@ export function Routes() {
       </Route>
 	  <Route exact path="/fc/notes/all">
         <AuthenticatedRoute component={<NoteAll />} access="notes-add" />
+      </Route>
+	  <Route exact path="/fc/fleet/break">
+        <AuthenticatedRoute component={<FleetAndAlts />} access="waitlist-tag:HQ-FC" />
       </Route>
       <Route exact path="/fc/search">
         <AuthenticatedRoute component={<Search />} access="waitlist-tag:HQ-FC" />
