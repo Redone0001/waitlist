@@ -51,15 +51,14 @@ export function FleetAndAlts() {
         <ul>
   {Object.entries(fleetMembers).map(([memberName, alts]) => (
     <li key={memberName}>
-      <h2>{memberName}</h2>
+      <h2><strong>{memberName}</strong></h2>
       <ul>
         {alts.map(alt => (
           <li key={alt.id}>
-            <strong>{alt.name}</strong> - {alt.ship.name} (from {memberName})
+            {alt.name}
           </li>
         ))}
       </ul>
-      <p>Keys in fleetMembers array: {Object.keys(fleetMembers).join(', ')}</p>
     </li>
   ))}
 </ul>
