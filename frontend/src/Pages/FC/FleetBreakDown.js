@@ -3,6 +3,7 @@ import { AuthContext } from "../../contexts";
 
 export function FleetAndAlts() {
   const [fleetMembers, setFleetMembers] = useState([]);
+  const [fleetData, setFleetData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const authContext = React.useContext(AuthContext);
@@ -16,6 +17,7 @@ export function FleetAndAlts() {
           throw new Error('Failed to fetch fleet members.');
         }
         const fleetData = await fleetResponse.json();
+        setFleetData(fleetData.members);
         const members = fleetData.members;
 
         // Fetch alts for all fleet members
@@ -55,7 +57,7 @@ export function FleetAndAlts() {
       <ul>
         {alts.map(alt => (
           <li key={alt.id}>
-            {alt.name}
+            {alt.name} {fleetData.find(member => member.name === alt.name).ship.name)}
           </li>
         ))}
       </ul>
