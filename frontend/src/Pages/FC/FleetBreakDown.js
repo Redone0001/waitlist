@@ -53,11 +53,11 @@ export function FleetAndAlts() {
         <ul>
   {Object.entries(fleetMembers).map(([memberName, alts]) => (
     <li key={memberName}>
-      <h2><strong>{memberName}</strong></h2>
+      <h2><strong>{memberName} - {fleetData.find(member => member.name === memberName).ship.name} - Alts: {alts.length}</strong></h2>
       <ul>
         {alts.map(alt => (
           <li key={alt.id}>
-            {alt.name} {fleetData.find(member => member.name === alt.name).ship.name)}
+            {alt.name} {fleetData.find(member => member.name === alt.name).ship.name}
           </li>
         ))}
       </ul>
