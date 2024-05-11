@@ -1,0 +1,33 @@
+[Sabre, [HORDE 2023] Sabre]
+IFFA Compact Damage Control
+Nanofiber Internal Structure II
+
+5MN Y-T8 Compact Microwarpdrive
+Medium Shield Extender II
+Medium Shield Extender II
+Faint Epsilon Scoped Warp Scrambler
+
+Prototype Cloaking Device I
+Interdiction Sphere Launcher I
+125mm Gatling AutoCannon II
+125mm Gatling AutoCannon II
+125mm Gatling AutoCannon II
+125mm Gatling AutoCannon II
+125mm Gatling AutoCannon II
+125mm Gatling AutoCannon II
+
+Small Hyperspatial Velocity Optimizer II
+Small Hyperspatial Velocity Optimizer II
+
+
+
+
+Hail S x2000
+Republic Fleet Phased Plasma S x2000
+Republic Fleet EMP S x3200
+Stasis Webification Probe x15
+Barrage S x2000
+Republic Fleet Fusion S x2000
+Warp Disrupt Probe x63
+Nanite Repair Paste x75
+
