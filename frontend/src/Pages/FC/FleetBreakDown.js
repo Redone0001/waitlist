@@ -51,7 +51,7 @@ export function FleetAndAlts() {
         <p>{error}</p>
       ) : (
         <ul>
-  {Object.entries(fleetMembers).map(([memberName, alts]) => (
+  {Object.entries(fleetMembers).sort((a, b) => b.alts.length - a.alts.length).map(([memberName, alts]) => (
     <li key={memberName}>
       <h2><strong>{memberName} - {fleetData.find(member => member.name === memberName).ship.name} - Alts: {alts.length}</strong></h2>
       <ul>
