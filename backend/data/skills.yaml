@@ -1008,6 +1008,26 @@ requirements:
       min: 4
       elite: 5
 
+  Rattlesnake:
+    <<: [*generic, *missile]
+    Gallente Drone Specialization: 
+      gold: 5
+    Heavy Drone Operation:
+      min: 4
+      elite: 5
+    Gallente Battleship:
+      min: 3
+      elite: 4
+      gold: 5
+    Caldari Battleship:
+      min: 3
+    Torpedoes:
+      min: 3
+      elite: 4
+      gold: 5
+    Torpedo Specialization:
+      gold: 5
+
   Gila:
     <<: [*generic_offensive, *missile]
     Afterburner:
