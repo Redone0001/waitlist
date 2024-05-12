@@ -29,6 +29,7 @@ function FitsDisplay({ tier, setTier = null }) {
   return (
     <>
       <PageTitle>HQ FITS</PageTitle>
+	  <ImplantOut />
       {setTier != null && (
         <Buttons style={{ marginBottom: "0.5em" }}>
           <InputGroup>
@@ -50,35 +51,9 @@ function FitsDisplay({ tier, setTier = null }) {
               Support
             </Button>
           </InputGroup>
-          <InputGroup>
-            <Button active={tier === "VG"} onClick={(evt) => setTier("VG")}>
-              VG refit
-            </Button>
-          </InputGroup>
         </Buttons>
       )}
-	  <PageTitle>VG reFITS</PageTitle>
-      {setTier != null && (
-        <Buttons style={{ marginBottom: "0.5em" }}>
-          <InputGroup>
-            <Button active={tier === "VG"} onClick={(evt) => setTier("VG")}>
-              VG refit
-            </Button>
-          </InputGroup>
-        </Buttons>
-      )}
-	  <PageTitle>Offensive FITS</PageTitle>
-      {setTier != null && (
-        <Buttons style={{ marginBottom: "0.5em" }}>
-          <InputGroup>
-            <Button active={tier === "Offensive"} onClick={(evt) => setTier("Offensive")}>
-              Offensive
-            </Button>
-          </InputGroup>
-        </Buttons>
-      )}
-      <ImplantOut />
-      {tier === "Starter" ? (
+	  {tier === "Starter" ? (
         <Fitout data={fitData} tier="Starter" />
       ) : tier === "Golden" ? (
         <Fitout data={fitData} tier="Golden" />
@@ -90,8 +65,32 @@ function FitsDisplay({ tier, setTier = null }) {
         <Fitout data={fitData} tier="Other" />
       ) : tier === "Offensive" ? (
         <Fitout data={fitData} tier="Offensive" />
-      ) : tier === "VG" ? (
+      ) : null}
+	  <PageTitle>VG reFITS</PageTitle>
+      {setTier != null && (
+        <Buttons style={{ marginBottom: "0.5em" }}>
+          <InputGroup>
+            <Button active={tier === "VG"} onClick={(evt) => setTier("VG")}>
+              VG refit
+            </Button>
+          </InputGroup>
+        </Buttons>
+      )}
+	  {tier === "VG" ? (
         <Fitout data={fitData} tier="VG" />
+      ) : null}
+	  <PageTitle>Offensive FITS</PageTitle>
+      {setTier != null && (
+        <Buttons style={{ marginBottom: "0.5em" }}>
+          <InputGroup>
+            <Button active={tier === "Offensive"} onClick={(evt) => setTier("Offensive")}>
+              Offensive
+            </Button>
+          </InputGroup>
+        </Buttons>
+      )}
+      {tier === "Offensive" ? (
+        <Fitout data={fitData} tier="Offensive" />
       ) : null}
     </>
   );
