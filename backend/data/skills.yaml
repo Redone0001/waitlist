@@ -535,6 +535,84 @@ requirements:
       min: 3
     Energy Grid Upgrades:
       min: 2
+    
+
+  _logistics_offensive: &logistics_offensive # Logistics skills: all logi pilots need these
+    Acceleration Control:
+      min: 3
+      elite: 4
+    Evasive Maneuvering:
+      min: 3
+      elite: 4
+    Warp Drive Operation:
+      min: 3
+      elite: 5
+    Navigation:
+      min: 4
+      elite: 5
+    Drones:
+      min: 3
+      elite: 5
+    Gallente Drone Specialization:
+      elite: 4
+    Drone Durability:
+      elite: 4
+    Drone Navigation:
+      elite: 4
+    Drone Avionics:
+      elite: 4
+    Advanced Drone Avionics:
+      elite: 4
+    Drone Interfacing:
+      elite: 4
+    Drone Sharpshooting:
+      elite: 4
+    Electronic Warfare:
+      elite: 4
+      gold: 4
+    Thermodynamics:
+      min: 3 
+      elite: 4
+    Capacitor Management:
+      min: 5
+    CPU Management:
+      min: 3
+      elite: 5
+    Repair Systems:
+      min: 2
+      gold: 2
+    Capacitor Systems Operation:
+      min: 5
+    Power Grid Management:
+      min: 3
+      elite: 5
+    Spaceship Command:
+      min: 3
+      elite: 5
+    Nanite Interfacing:
+      elite: 4
+    Nanite Operation:
+      elite: 4
+    Target Management:
+      min: 5
+    Long Range Targeting:
+      min: 5
+    Signature Analysis:
+      min: 5
+    Biology:
+      min: 3
+      elite: 5
+    Shield Management:
+      elite: 4
+    Shield Operation:
+      elite: 4
+    Advanced Target Management:
+      min: 3
+    Energy Grid Upgrades:
+      min: 2
+    Shield Emission Systems:
+      min: 4
+      elite: 5
 
   _rigging:
     &rigging # Rigging skills: any ship with rigs that can be improved with rigging skills
@@ -803,7 +881,7 @@ requirements:
       elite: 5
 
   Basilisk:
-    <<: [*generic_offensive, *logistics]
+    <<: [*generic_offensive, *logistics_offensive]
     Afterburner:
       min: 4
     Evasive Maneuvering:
@@ -824,9 +902,6 @@ requirements:
     Energy Grid Upgrades:
       min: 4
     Capacitor Systems Operation:
-      min: 4
-      elite: 5
-    Shield Emission Systems:
       min: 4
       elite: 5
     Tactical Shield Manipulation:
