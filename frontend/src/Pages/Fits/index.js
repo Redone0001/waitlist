@@ -63,8 +63,6 @@ function FitsDisplay({ tier, setTier = null }) {
         <Fitout data={fitData} tier="Optimal" />
       ) : tier === "Other" ? (
         <Fitout data={fitData} tier="Other" />
-      ) : tier === "Offensive" ? (
-        <Fitout data={fitData} tier="Offensive" />
       ) : null}
 	  <PageTitle>VG reFITS</PageTitle>
       {setTier != null && (
