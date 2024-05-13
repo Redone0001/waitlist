@@ -220,7 +220,6 @@ export function Waitlist() {
         )}
 		<InputGroup>
           <NavButton to={`/guide/rules`}>Rules</NavButton>
-          </Button>
         </InputGroup>
       </Buttons>
 
