@@ -218,6 +218,10 @@ export function Waitlist() {
         {!altCol && (
           <CategoryHeading name="Alts" fleetComposition={fleetComposition} altCol={altCol} />
         )}
+		<InputGroup>
+          <NavButton to={`/guide/rules`}>Rules</NavButton>
+          </Button>
+        </InputGroup>
       </Buttons>
 
       {displayMode === "columns" ? (
