@@ -57,7 +57,7 @@ export function Routes() {
       </Route>
 
       <Route exact path="/fits">
-        <Fits />
+        {<AuthenticatedRoute component={<Fits />} loginRequired />}
       </Route>
       <Route exact path="/isk-h">
         <ISKh />
