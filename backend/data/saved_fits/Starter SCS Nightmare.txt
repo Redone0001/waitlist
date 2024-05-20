@@ -1,44 +1,44 @@
-[Nightmare, Starter Nightmare]
+[Nightmare, Standard Nightmare]
 
 Damage Control II
-Heat Sink II
-Heat Sink II
-Imperial Navy Multispectrum Energized Membrane
-Imperial Navy Multispectrum Energized Membrane
+Imperial Navy Heat Sink
+Imperial Navy Heat Sink
+Centum C-Type Multispectrum Energized Membrane
+Centum C-Type Multispectrum Energized Membrane
 1600mm Steel Plates II
 
+Sensor Booster II
+Republic Fleet Large Cap Battery
 Tracking Computer II
 Tracking Computer II
-Tracking Computer II
-Large Micro Jump Drive
-Alumel-Wired Enduring Sensor Booster
 500MN Quad LiF Restrained Microwarpdrive
 Republic Fleet Large Cap Battery
+Large Micro Jump Drive
 
-Tachyon Modulated Energy Beam I
-Tachyon Modulated Energy Beam I
-Tachyon Modulated Energy Beam I
-Tachyon Modulated Energy Beam I
 Small Tractor Beam I
-Drone Link Augmentor I
+Large Remote Armor Repairer II
+Mega Pulse Laser II
+Mega Pulse Laser II
+Mega Pulse Laser II
+Mega Pulse Laser II
 
 Large Explosive Armor Reinforcer I
-[Empty Rig slot]
 Large Energy Burst Aerator II
+[Empty Rig slot]
 
 
-Federation Navy Hammerhead x2
-Federation Navy Ogre x2
+Ogre II x3
 
 
-Imperial Navy Multifrequency L x32
-True Sanshas Gamma L x16
-True Sanshas Ultraviolet L x16
-Nanite Repair Paste x500
-Scan Resolution Script x2
-Targeting Range Script x2
-Optimal Range Script x4
-Tracking Speed Script x4
-Synth Mindflood Booster x10
-Alumel-Wired Enduring Sensor Booster x1
+Conflagration L x80
+Scorch L x80
+Imperial Navy Multifrequency L x20
+Nanite Repair Paste x1000
+Optimal Range Script x3
+Tracking Speed Script x3
+Sensor Booster II x1
+Stasis Webifier II x1
 Tracking Computer II x1
+Warp Core Stabilizer II x1
+Improved Cloaking Device II x1
+Inertial Stabilizers II x1
