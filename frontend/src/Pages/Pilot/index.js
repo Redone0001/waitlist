@@ -48,7 +48,7 @@ function PilotTags({ tags }) {
     if (tag in icons) {
       tagImages.push(
         <div key={tag} style={{ marginRight: "0.2em" }}>
-          <BadgeIcon type={tag} height="40px" />
+          <BadgeIcon type={tag} height="40px" width="40px"/>
         </div>
       );
     }

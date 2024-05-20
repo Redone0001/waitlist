@@ -105,12 +105,12 @@ export const icons = {
   UNKNOWN: { type: "shield", color: "neutral", letter: "?", name: null },
 };
 
-const BadgeIcon = ({ type = "UNKNOWN", height = "1.2em" }) => {
+const BadgeIcon = ({ type = "UNKNOWN", height = "1.2em", width = "1.2em" }) => {
   const badge = icons[type] ?? icons["UNKNOWN"];
   return badge.type === "shield" ? (
-    <Shield {...badge} h={height} title={badge.name} />
+    <Shield {...badge} h={height} w={width} title={badge.name} />
   ) : (
-    <img src={badge.href} title={badge.name} alt={badge.name} style={{ height }} />
+    <img src={badge.href} title={badge.name} alt={badge.name} style={{ height, width }} />
   );
 };
 
