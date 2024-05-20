@@ -26,6 +26,8 @@ import { Title } from "../../Components/Page";
 import { Button, Buttons } from "../../Components/Form";
 
 const badgeOrder = [
+  "COUNCIL",
+  "TRAINER",
   "HQ-FC",
   "TRAINEE",
   "WEB",
