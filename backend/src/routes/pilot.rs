@@ -29,14 +29,14 @@ async fn pilot_info(
         .await?
     {
         let keys = get_access_keys(&admin.role).unwrap();
-        if keys.contains("waitlist-tag:HQ-FC") {
+        if keys.contains("waitlist-tag:COUNCIL") {
+            tags.push("COUNCIL".to_string());
+        } else if keys.contains("waitlist-tag:TRAINER") {
+            tags.push("TRAINER".to_string());
+        } else if keys.contains("waitlist-tag:HQ-FC") {
             tags.push("HQ-FC".to_string());
         } else if keys.contains("waitlist-tag:TRAINEE") {
             tags.push("TRAINEE".to_string());
-        } else if keys.contains("waitlist-tag:TRAINER") {
-            tags.push("TRAINER".to_string());
-        } else if keys.contains("waitlist-tag:COUNCIL") {
-            tags.push("COUNCIL".to_string());
         };
     }
 
