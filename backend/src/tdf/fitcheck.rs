@@ -347,7 +347,11 @@ impl<'a> FitChecker<'a> {
     }
 
     fn add_snowflake_tags(&mut self) {
-        if self.pilot.access_keys.contains("waitlist-tag:HQ-FC") {
+        if self.pilot.access_keys.contains("waitlist-tag:COUCIL") {
+            self.tags.insert("COUCIL");
+        } else if self.pilot.access_keys.contains("waitlist-tag:TRAINER") {
+            self.tags.insert("TRAINER");
+        } else if self.pilot.access_keys.contains("waitlist-tag:HQ-FC") {
             self.tags.insert("HQ-FC");
         } else if self.pilot.access_keys.contains("waitlist-tag:TRAINEE") {
             self.tags.insert("TRAINEE");
