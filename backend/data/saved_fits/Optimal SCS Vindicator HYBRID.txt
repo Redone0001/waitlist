@@ -1,15 +1,15 @@
 [Vindicator, Optimal Vindicator]
 
 Damage Control II
-Centii A-Type Multispectrum Coating
-Centii A-Type Multispectrum Coating
+Corpum B-Type Multispectrum Energized Membrane
+Corpum B-Type Multispectrum Energized Membrane
 Federation Navy Magnetic Field Stabilizer
 Federation Navy Magnetic Field Stabilizer
 Federation Navy Magnetic Field Stabilizer
 Federation Navy Magnetic Field Stabilizer
 
 Federation Navy 500MN Microwarpdrive
-Federation Navy Tracking Computer
+Federation Navy Stasis Webifier
 Federation Navy Stasis Webifier
 Federation Navy Stasis Webifier
 Federation Navy Stasis Webifier
