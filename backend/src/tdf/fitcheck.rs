@@ -74,8 +74,8 @@ impl<'a> FitChecker<'a> {
         checker.set_category();
         checker.add_snowflake_tags();
         checker.add_implant_tag();
-        checker.merge_tags();
         checker.check_time_in_fleet();
+        checker.merge_tags();
 
         checker.finish()
     }
