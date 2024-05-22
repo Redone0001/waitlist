@@ -35,8 +35,6 @@ Null L x5000
 Void L x15000
 Caldari Navy Antimatter Charge L x8000
 Nanite Repair Paste x1000
-Optimal Range Script x1
-Tracking Speed Script x1
 Warp Core Stabilizer II x1
 Improved Cloaking Device II x1
 Inertial Stabilizers II x2

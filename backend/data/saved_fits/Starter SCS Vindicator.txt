@@ -36,6 +36,4 @@ Caldari Navy Tungsten Charge L x10000
 Nanite Repair Paste x500
 ECCM Script x2
 Scan Resolution Script x2
-Optimal Range Script x2
-Tracking Speed Script x2
 Sensor Booster II x2
