@@ -213,7 +213,7 @@ export function BadgeData() {
             <Content>
               <ul>
                 <li>Being able to multibox 10+ account in HQ fleet</li>
-                <li>All those account have the minimal skill for their ship</li>
+                <li>All those account have the basic skills for their ship</li>
               </ul>
               <br />The list of ship allowed for alt :<br />
               <ul>
