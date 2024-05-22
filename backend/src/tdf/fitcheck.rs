@@ -258,6 +258,8 @@ impl<'a> FitChecker<'a> {
             || self.tags.contains("ELITE-GOLD")
             || self.tags.contains("WEB")
             || self.tags.contains("BASTION")
+            || self.tags.contains("ELITE-SKILLS")
+            || self.tags.contains("GOLD-SKILLS")
 			|| self.tags.contains("BASIC-SKILLS");
             
         if self.fit.hull == type_id!("Megathron") {
