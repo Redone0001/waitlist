@@ -198,7 +198,6 @@ fn build_access_levels() -> BTreeMap<String, BTreeSet<String>> {
             "fit-history-view",
             "search",
             "skill-history-view",
-            "waitlist-edit",
             "stats-view",
             "waitlist-tag:HQ-FC",
             "notes-view",
