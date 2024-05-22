@@ -260,13 +260,13 @@ impl<'a> FitChecker<'a> {
             || self.tags.contains("BASTION")
 			|| self.tags.contains("BASIC-SKILLS");
             
-        if self.fit.hull == type_id!("Megatron") {
+        if self.fit.hull == type_id!("Megathron") {
             if self.pilot.time_in_fleet > (40 * 3600) {
                 self.approved = false;
                 self.tags.insert("MEGA-HOURS-REACHED");
             }
         } else if self.fit.hull == type_id!("Nightmare") || self.fit.hull == type_id!("Oneiros") {
-            if self.pilot.time_in_fleet > (60 * 3600) && {
+            if self.pilot.time_in_fleet > (60 * 3600) {
                 self.approved = false;
                 self.tags.insert("STARTER-HOURS-REACHED");
             }
