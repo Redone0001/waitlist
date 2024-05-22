@@ -75,7 +75,7 @@ impl<'a> FitChecker<'a> {
         checker.add_snowflake_tags();
         checker.add_implant_tag();
         checker.merge_tags();
-        // checker.check_time_in_fleet();
+        checker.check_time_in_fleet();
 
         checker.finish()
     }
@@ -113,6 +113,8 @@ impl<'a> FitChecker<'a> {
             self.tags.insert("GOLD-SKILLS");
         } else if skill_tier == "elite" {
             self.tags.insert("ELITE-SKILLS");
+        } else if skill_tier == "basic" {
+            self.tags.insert("BASIC-SKILLS");
         }
 
         Ok(())
@@ -189,10 +191,12 @@ impl<'a> FitChecker<'a> {
             Some(fit) => {
                 // The NM_Basic is an exception to our usual upgrade rules, in that, it has more tank fitted than the equivalent starter fit
                 // As such, it's allowed to X up with comps at 2 and not 4.
-                if fit.name.contains("STARTER") || fit.name.contains("NM_BASIC") {
+                if fit.name.contains("STARTER") {
                     2
-                } else {
-                    2
+                } else if fit.name.contains("Offensive") {
+					0
+				} else {
+                    4
                 }
             }
             None => 2,
@@ -253,21 +257,22 @@ impl<'a> FitChecker<'a> {
         let pilot_elite = self.tags.contains("ELITE")
             || self.tags.contains("ELITE-GOLD")
             || self.tags.contains("WEB")
-            || self.tags.contains("BASTION");
+            || self.tags.contains("BASTION")
+			|| self.tags.contains("BASIC-SKILLS");
             
-        if self.fit.hull == type_id!("Vindicator") {
-            if self.pilot.time_in_fleet > (225 * 3600) && !pilot_elite {
+        if self.fit.hull == type_id!("Megatron") {
+            if self.pilot.time_in_fleet > (40 * 3600) {
                 self.approved = false;
-                self.tags.insert("ELITE-HOURS-REACHED");
+                self.tags.insert("MEGA-HOURS-REACHED");
             }
-        } else if self.fit.hull == type_id!("Paladin") || self.fit.hull == type_id!("Kronos") {
-            if self.pilot.time_in_fleet > (250 * 3600) && !pilot_elite {
+        } else if self.fit.hull == type_id!("Nightmare") || self.fit.hull == type_id!("Oneiros") {
+            if self.pilot.time_in_fleet > (60 * 3600) && {
                 self.approved = false;
-                self.tags.insert("ELITE-HOURS-REACHED");
+                self.tags.insert("STARTER-HOURS-REACHED");
             }
-        } else if self.pilot.time_in_fleet > (150 * 3600) && !pilot_elite {
+        } else if self.pilot.time_in_fleet > (140 * 3600) && !pilot_elite {
             self.approved = false;
-            self.tags.insert("ELITE-HOURS-REACHED");
+            self.tags.insert("BASIC-HOURS-REACHED");
         }
     }
 
