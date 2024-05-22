@@ -191,7 +191,7 @@ impl<'a> FitChecker<'a> {
             Some(fit) => {
                 // The NM_Basic is an exception to our usual upgrade rules, in that, it has more tank fitted than the equivalent starter fit
                 // As such, it's allowed to X up with comps at 2 and not 4.
-                if fit.name.contains("STARTER") {
+                if fit.name.contains("Starter") {
                     2
                 } else if fit.name.contains("Offensive") {
 					0
