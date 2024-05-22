@@ -403,7 +403,7 @@ theme["Girl Und Panzer"] = _.merge({}, theme.Dark, {
     filter:
       "invert(62%) sepia(28%) saturate(325%) hue-rotate(4deg) brightness(100%) contrast(84%) drop-shadow(1px 1px 0.3px #000000)",
   },
-  sticker: "https://imgur.com/a/rDtNzqC",
+  sticker: "https://i.imgur.com/uSqZCx4.png",
 });
 theme["Alan"] = _.merge({}, theme.Dark, {
   colors: {
