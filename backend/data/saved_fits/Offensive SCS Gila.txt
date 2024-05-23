@@ -29,6 +29,6 @@ Infiltrator II x2
 Valkyrie II x2
 
 
-Caldari Navy Scourge Auto-Targeting Light Missile I x10000
+Scourge Auto-Targeting Light Missile I x10000
 Caldari Navy Scourge Light Missile x10000
 Nanite Repair Paste x200
