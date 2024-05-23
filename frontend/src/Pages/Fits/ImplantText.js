@@ -46,7 +46,7 @@ export function ImplantTable({ type }) {
           <Row>
             <SmallCellHead></SmallCellHead>
             <CellHead>DEFAULT</CellHead>
-            <CellHead>ALTERNATIVE (not required)</CellHead>
+            <CellHead>ALTERNATIVE (not required and you can get them with incursion lp)</CellHead>
           </Row>
         </TableHead>
         <TableBody>
@@ -117,11 +117,11 @@ function HardWires({ toastContext }) {
           <b>Slot 7</b>
         </Cell>
         <Cell>
-          <CopyImplantText toast={toastContext} item={"Ogdin's Eye"} /> increased tracking.
+          <CopyImplantText toast={toastContext} item={"MR-705"} /> increased tracking.
         </Cell>
 
         <Cell>
-          <CopyImplantText toast={toastContext} item={"MR-706"} /> equal to Ogdin&apos;s. <br />
+          <CopyImplantText toast={toastContext} item={"MR-706"} /> <br />
           <CopyImplantText toast={toastContext} item={"RA-706"} /> reps will use less cap, for
           <b> logi only pilots.</b>
         </Cell>
@@ -135,9 +135,9 @@ function HardWires({ toastContext }) {
         </Cell>
 
         <Cell>
-          <CopyImplantText toast={toastContext} item={"MR-807"} /> longer webbing range, for
-          <b> vindicator only pilots.</b> <br />
-          <CopyImplantText toast={toastContext} item={"Zor's Custom Navigation Hyper-Link"} />{" "}
+          <CopyImplantText toast={toastContext} item={"MR-805"} /> longer webbing range, for
+          <b> vindicator only pilots.</b> (not incursion lp)<br />
+          <CopyImplantText toast={toastContext} item={"EM-806"} />{" "}
           increased MWD speed for
           <b> DPS only pilots.</b>
         </Cell>
@@ -147,17 +147,26 @@ function HardWires({ toastContext }) {
           <b>Slot 9</b>
         </Cell>
         <Cell>
-          <CopyImplantText toast={toastContext} item={"RF-906"} /> increased rate of fire.
+          <CopyImplantText toast={toastContext} item={"RF-905"} /> increased rate of fire.
         </Cell>
 
         <Cell>
-          <CopyImplantText toast={toastContext} item={"Pashan's Turret Customization Mindlink"} />{" "}
-          if you have too much isk, increased rate of fire.
+          <CopyImplantText toast={toastContext} item={"RF-906"} />
         </Cell>
       </Row>
       <Row>
         <Cell>
           <b>Slot 10</b>
+        </Cell>
+        <Cell>
+          <b>Kronos/Vindicator:</b>
+          <br />
+          <CopyImplantText toast={toastContext} item={"LH-1005"} /> increased hybrid weapon damage.{" "}
+          <br />
+          <br />
+          <b>Paladin/Nightmare:</b>
+          <br />
+          <CopyImplantText toast={toastContext} item={"LE-1005"} /> increased energy weapon damage.
         </Cell>
         <Cell>
           <b>Kronos/Vindicator:</b>
@@ -168,18 +177,6 @@ function HardWires({ toastContext }) {
           <b>Paladin/Nightmare:</b>
           <br />
           <CopyImplantText toast={toastContext} item={"LE-1006"} /> increased energy weapon damage.
-        </Cell>
-        <Cell>
-          <CopyImplantText toast={toastContext} item={"HG-1006"} /> or
-          <br />
-          <CopyImplantText toast={toastContext} item={"HG-1008"} /> if you have too much isk,
-          increased RAW armor HP for
-          <b> logi only pilots.</b> <br />
-          <br />
-          <b>Paladin/Nightmare:</b>
-          <br />
-          <CopyImplantText toast={toastContext} item={"Pashan's Turret Handling Mindlink"} /> if you
-          have too much isk, increased weapon damage.
         </Cell>
       </Row>
     </>
