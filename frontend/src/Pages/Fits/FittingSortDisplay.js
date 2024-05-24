@@ -219,7 +219,7 @@ function ImplantOut() {
   return (
     <>
       <DisplayDOM style={{ justifyContent: "initial" }}>
-        <ImplantButton name="Savior" img={wbadge} />
+        {/* <ImplantButton name="Savior" img={wbadge} /> */}
         <ImplantButton name="Hybrid" img={hbadge} />
       </DisplayDOM>
     </>
