@@ -26,7 +26,6 @@ categories:
     - Large Pulse Laser Specialization
     - Large Hybrid Turret
     - Large Blaster Specialization
-    - Gunnery
   Missile:
     - Missile Launcher Operation
     - Rapid Launch
@@ -1050,10 +1049,6 @@ requirements:
       min: 1
       elite: 4
       gold : 5
-    Gunnery:
-      min: 2
-    Weapon Upgrades:
-      min: 1
     Gallente Drone Operation:
       elite: 4
       gold: 5
