@@ -7,8 +7,6 @@ categories:
     name: Logistics
   - id: DPS
     name: DPS
-  - id: sniper
-    name: Sniper
   - id: bastion
     name: Bastion
   - id: starter
