@@ -50,35 +50,42 @@ plans:
         tier: min
   - name: ISHTAR BASIC PATH
     description: >
-      This skill plan will train you to standard Ishtar
+      This skill plan will train you to standard Ishtar.
     plan:
       - type: skills
         from: Ishtar
         tier: min
+  - name: EOS BASIC PATH
+    description: >
+      This skill plan will train you to standard Eos.
+    plan:
+      - type: skills
+        from: Eos
+        tier: min
   - name: ONEIROS BASIC PATH
     description: >
-      This skill plan will train you to standard Oneiros
+      This skill plan will train you to standard Oneiros.
     plan:
       - type: skills
         from: Oneiros
         tier: min
   - name: RATTLESNAKE BASIC PATH
     description: >
-      This skill plan will train you to standard Rattlesnake
+      This skill plan will train you to standard Rattlesnake.
     plan:
       - type: skills
         from: Rattlesnake
         tier: min
   - name: GIAL BASIC PATH
     description: >
-      This skill plan will train you to standard Gila
+      This skill plan will train you to standard Gila.
     plan:
       - type: skills
         from: Gila
         tier: min
   - name: BASILISK BASIC PATH
     description: >
-      This skill plan will train you to standard Basilisk
+      This skill plan will train you to standard Basilisk.
     plan:
       - type: skills
         from: Basilisk
@@ -138,6 +145,13 @@ plans:
     plan:
       - type: skills
         from: Ishtar
+        tier: elite
+  - name: EOS ELITE PATH
+    description: >
+      This skill plan will train you to standard Eos with elite skill level.
+    plan:
+      - type: skills
+        from: Eos
         tier: elite
   - name: ONEIROS ELITE PATH
     description: >

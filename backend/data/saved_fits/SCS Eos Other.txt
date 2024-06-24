@@ -30,7 +30,8 @@ Federation Navy Garde x5
 Armor Energizing Charge x3300
 Armor Reinforcement Charge x3300
 Rapid Repair Charge x3300
-Scan Resolution Script x2
+ECCM Script x3
+Scan Resolution Script x3
 Evasive Maneuvers Charge x3000
 Interdiction Maneuvers Charge x3000
 Rapid Deployment Charge x3000

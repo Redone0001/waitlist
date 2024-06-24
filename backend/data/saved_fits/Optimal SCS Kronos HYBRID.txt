@@ -34,11 +34,10 @@ Medium Hull Maintenance Bot II x5
 Null L x10000
 Void L x25000
 Nanite Repair Paste x5000
-ECCM Script x2
-Scan Resolution Script x2
-Tracking Speed Script x3
-Sensor Booster II x1
-Tracking Computer II x1
+ECCM Script x1
+Scan Resolution Script x1
+Tracking Speed Script x2
 Warp Core Stabilizer II x1
 Improved Cloaking Device II x1
 Inertial Stabilizers II x2
+Agency 'Pyrolancea' DB5 Dose II x1

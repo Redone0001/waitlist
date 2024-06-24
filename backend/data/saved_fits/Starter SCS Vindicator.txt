@@ -34,6 +34,6 @@ Ogre II x5
 Caldari Navy Antimatter Charge L x16000
 Caldari Navy Tungsten Charge L x10000
 Nanite Repair Paste x500
-ECCM Script x2
-Scan Resolution Script x2
-Sensor Booster II x2
+Warp Core Stabilizer II x1
+Improved Cloaking Device II x1
+Inertial Stabilizers II x2

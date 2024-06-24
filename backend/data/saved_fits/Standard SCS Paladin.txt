@@ -35,11 +35,8 @@ Conflagration L x60
 Scorch L x60
 Imperial Navy Multifrequency L x4
 Nanite Repair Paste x1000
-Scan Resolution Script x1
-Optimal Range Script x3
-Tracking Speed Script x3
-Sensor Booster II x1
-Tracking Computer II x1
+Optimal Range Script x2
+Tracking Speed Script x2
 Warp Core Stabilizer II x1
 Improved Cloaking Device II x1
 Inertial Stabilizers II x2

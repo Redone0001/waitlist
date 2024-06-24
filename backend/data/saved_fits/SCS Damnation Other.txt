@@ -12,9 +12,9 @@ Federation Navy Remote Tracking Computer
 Federation Navy Remote Tracking Computer
 Federation Navy Remote Tracking Computer
 
-Skirmish Command Burst II
-Skirmish Command Burst II
-Skirmish Command Burst II
+Information Command Burst II
+Information Command Burst II
+Information Command Burst II
 [Empty High slot]
 Small Tractor Beam II
 Drone Link Augmentor I
@@ -34,4 +34,4 @@ Nanite Repair Paste x250
 Evasive Maneuvers Charge x3000
 Interdiction Maneuvers Charge x3000
 Rapid Deployment Charge x3000
-Information Command Burst II x3
+Skirmish Command Burst II x3

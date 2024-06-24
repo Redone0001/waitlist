@@ -2,7 +2,7 @@
 
 Federation Navy Multispectrum Coating
 Centum C-Type Thermal Energized Membrane
-Reactor Control Unit II
+Power Diagnostic System II
 Imperial Navy 800mm Steel Plates
 Capacitor Power Relay II
 
@@ -23,6 +23,5 @@ Medium Ancillary Current Router II
 Hobgoblin II x5
 
 
-Nanite Repair Paste x153
-Standard Mindflood Booster x4
+Nanite Repair Paste x500
 Strong Mindflood Booster x1

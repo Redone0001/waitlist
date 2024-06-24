@@ -804,7 +804,7 @@ requirements:
       min: 4
     Logistics Cruisers:
       min: 4
-      gold: 5
+      elite: 5
     Radar Sensor Compensation:
       elite: 4
     Amarr Cruiser:
@@ -850,6 +850,10 @@ requirements:
       min: 4
     Logistics Cruisers:
       min: 4
+      elite: 5
+    Sensor Linking:
+      min: 1
+      elite: 4
       gold: 5
     Magnetometric Sensor Compensation:
       elite: 4
@@ -940,7 +944,7 @@ requirements:
       gold: 4
     Remote Hull Repair Systems:
       min: 3
-      gold: 4
+      elite: 4
     Heavy Drone Operation:
       min: 1
       elite: 5
@@ -1008,6 +1012,17 @@ requirements:
     Heavy Drone Operation:
       min: 4
       elite: 5
+    Afterburner:
+      min: 4
+    Drone Avionics:
+      min: 3
+      elite: 5
+    Drone Navigation:
+      min: 3
+      elite: 5
+    Gallente Drone Specialization:
+      elite: 4
+      gold: 5
 
   Rattlesnake:
     <<: [*generic, *missile]
@@ -1027,6 +1042,19 @@ requirements:
       elite: 4
       gold: 5
     Torpedo Specialization:
+      gold: 5
+    Energy Grid Upgrades:
+      min: 2
+    Micro Jump Drive Operation:
+      min: 1
+      elite: 4
+      gold : 5
+    Gunnery:
+      min: 2
+    Weapon Upgrades:
+      min: 1
+    Gallente Drone Operation:
+      elite: 4
       gold: 5
 
   Gila:

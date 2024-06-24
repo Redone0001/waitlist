@@ -33,10 +33,6 @@ Conflagration L x60
 Scorch L x60
 Imperial Navy Multifrequency L x40
 Nanite Repair Paste x1000
-ECCM Script x1
-Scan Resolution Script x1
-Targeting Range Script x1
 Optimal Range Script x2
 Tracking Speed Script x2
-Sensor Booster II x1
 Small Tractor Beam I x1

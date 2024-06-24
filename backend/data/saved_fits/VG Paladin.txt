@@ -10,8 +10,8 @@ Centii A-Type Multispectrum Coating
 
 Sentient Sensor Booster
 Sentient Sensor Booster
-Tracking Computer II
-Tracking Computer II
+Federation Navy Tracking Computer
+Federation Navy Tracking Computer
 
 Mega Pulse Laser II
 Large Remote Armor Repairer II
@@ -38,6 +38,5 @@ Nanite Repair Paste x1000
 Scan Resolution Script x2
 Optimal Range Script x3
 Tracking Speed Script x3
-Sensor Booster II x1
 Stasis Webifier II x1
-Tracking Computer II x1
+Federation Navy Tracking Computer x1

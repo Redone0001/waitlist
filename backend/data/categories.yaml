@@ -13,10 +13,8 @@ categories:
     name: Bastion
   - id: starter
     name: Starter
-  - id: links
-    name: Links
   - id: ishtar
-    name: Ishtar
+    name: Drones Boat
   - id: other
     name: Other
   - id: alt
@@ -43,16 +41,16 @@ rules:
   - item: Paladin
     category: sniper
   - item: Nightmare
-    category: sniper
+    category: starter
   - item: Kronos
     category: DPS
   - item: Eos
-    category: links
+    category: ishtar
   - item: Damnation
     category: other
   - item: Ishtar
     category: ishtar
   - item: Rattlesnake
-    category: other
+    category: ishtar
   - item: Gila
     category: DPS

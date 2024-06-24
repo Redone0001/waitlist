@@ -36,7 +36,6 @@ Imperial Navy Multifrequency L x20
 Nanite Repair Paste x1000
 Optimal Range Script x3
 Tracking Speed Script x3
-Sensor Booster II x1
 Stasis Webifier II x1
 Tracking Computer II x1
 Warp Core Stabilizer II x1
