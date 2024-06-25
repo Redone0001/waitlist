@@ -1014,7 +1014,8 @@ requirements:
       min: 4
       elite: 5
     Afterburner:
-      min: 4
+      min: 1
+      gold: 4
     Drone Avionics:
       min: 3
       elite: 5
