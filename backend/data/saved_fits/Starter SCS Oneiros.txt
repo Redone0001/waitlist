@@ -23,9 +23,6 @@ Medium Ancillary Current Router II
 Hammerhead II x5
 
 
-Inherent Implants 'Squire' Capacitor Systems Operation EO-604
-Inherent Implants 'Noble' Remote Armor Repair Systems RA-704
-Eifyr and Co. 'Rogue' Fuel Conservation FC-804
 Strong Mindflood Booster
 Nanite Repair Paste x1000
 Optimal Range Script x2

@@ -760,6 +760,7 @@ requirements:
     Large Hybrid Turret:
       min: 5
     Large Blaster Specialization:
+      min: 3
       elite: 4
       priority: 10
     Gallente Battleship:
