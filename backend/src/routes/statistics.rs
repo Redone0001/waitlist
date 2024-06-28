@@ -210,6 +210,44 @@ impl Queries {
         Ok(result)
     }
 
+    async fn fleet_seconds_by_fc_by_month(
+        db: &crate::DB,
+    ) -> Result<BTreeMap<YearMonth, BTreeMap<TypeID, f64>>, sqlx::Error> {
+        #[derive(sqlx::FromRow)]
+        struct Result {
+            yearmonth: String,
+            character_name: String,
+            time_in_fleet: i64,
+        }
+
+        let res: Vec<Result> = sqlx::query_as(concat!(
+            "
+			SELECT
+				",
+			year_month!(from_unixtime!("first_seen")),
+			" yearmonth,
+				c.name as character_name,
+				CAST(SUM(fa.last_seen - fa.first_seen) AS SIGNED) time_in_fleet
+			FROM fleet_activity fa
+			JOIN character c ON fa.character_id = c.id
+			WHERE fa.is_boss = 1
+			GROUP BY 1, 2
+		"
+        ))
+        .fetch_all(db)
+        .await?;
+
+        let mut result = BTreeMap::new();
+        for row in res {
+            result
+                .entry(YearMonth::parse(&row.yearmonth))
+                .or_insert_with(BTreeMap::new)
+                .insert(row.hull as TypeID, row.time_in_fleet as f64);
+        }
+
+        Ok(result)
+    }
+
     async fn xes_by_hull_by_month(
         db: &crate::DB,
     ) -> Result<BTreeMap<YearMonth, BTreeMap<TypeID, f64>>, sqlx::Error> {
@@ -400,6 +438,20 @@ impl Displayer {
         }
         result
     }
+	
+	fn build_fleet_seconds_by_fc_by_month(
+        source: &BTreeMap<YearMonth, BTreeMap<String, f64>>,
+    ) -> BTreeMap<YearMonth, BTreeMap<String, f64>> {
+        let mut result = BTreeMap::new();
+        for (month, characters) in source {
+            let mut this_month = BTreeMap::new();
+            for (character_name, time_in_fleet) in characters {
+                *this_month.entry(character_name.clone()).or_default() += time_in_fleet;
+            }
+            result.insert(*month, this_month);
+        }
+        result
+    }
 }
 
 #[derive(Serialize)]
@@ -412,6 +464,8 @@ struct StatsResponse {
     fleet_seconds_by_hull_28d: BTreeMap<String, f64>,
     x_vs_time_by_hull_28d: BTreeMap<String, BTreeMap<&'static str, f64>>,
     time_spent_in_fleet_by_month: BTreeMap<YearMonth, BTreeMap<&'static str, f64>>,
+    fleet_seconds_by_character_by_month: BTreeMap<YearMonth, BTreeMap<String, f64>>,
+
 }
 
 #[get("/api/stats")]
@@ -427,6 +481,7 @@ async fn statistics(
     let xes_by_hull_month = Queries::xes_by_hull_by_month(app.get_db()).await?;
     let xes_by_hull_28d = Queries::xes_by_hull_28d(app.get_db()).await?;
     let seconds_by_hull_28d = Queries::fleet_seconds_by_hull_28d(app.get_db()).await?;
+    let seconds_by_fc_month = Queries::fleet_seconds_by_fc_by_month(app.get_db()).await?;
 
     Ok(Json(StatsResponse {
         fleet_seconds_by_hull_by_month: Displayer::build_fleet_seconds_by_hull_by_month(
@@ -445,6 +500,9 @@ async fn statistics(
         )?,
         time_spent_in_fleet_by_month: Displayer::build_time_spent_in_fleet_by_month(
             &seconds_by_character_month,
+        ),
+		fleet_seconds_by_fc_by_month: Displayer::build_fleet_seconds_by_fc_by_month(
+            &seconds_by_fc_month
         ),
     }))
 }

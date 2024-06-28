@@ -191,6 +191,30 @@ function FleetTimeByHullMonth({ data }) {
   );
 }
 
+function FleetTimeByFcMonth({ data }) {
+  const series = separateDataLabels2D(data);
+  return (
+    <ThemedBar
+      data={{
+        labels: series.labels,
+        datasets: _.map(series.series, (numbers, label) => ({
+          label: label,
+          data: numbers.map((seconds) => Math.round(seconds / 3600)),
+        })),
+      }}
+      options={{
+        scales: { x: { stacked: true }, y: { stacked: true } },
+        plugins: {
+          title: {
+            display: true,
+            text: "Time in fleet by FC",
+          },
+        },
+      }}
+    />
+  );
+}
+
 function XByHullMonth({ data }) {
   const series = separateDataLabels2D(data);
   return (
@@ -341,6 +365,9 @@ export function Statistics() {
       </Graph>
       <Graph>
         <TimeSpentByHull28d data={statsData.fleet_seconds_by_hull_28d} />
+      </Graph>
+      <Graph>
+        <FleetTimeByFcMonth data={statsData.fleet_seconds_by_fc_by_month} />
       </Graph>
     </Row>
   );
