@@ -194,7 +194,7 @@ function FleetTimeByHullMonth({ data }) {
 function FleetTimeByFcMonth({ data }) {
   const series = separateDataLabels2D(data);
   return (
-    <ThemedBar
+    <ThemedLine
       data={{
         labels: series.labels,
         datasets: _.map(series.series, (numbers, label) => ({
@@ -203,7 +203,6 @@ function FleetTimeByFcMonth({ data }) {
         })),
       }}
       options={{
-        scales: { x: { stacked: true }, y: { stacked: true } },
         plugins: {
           title: {
             display: true,
