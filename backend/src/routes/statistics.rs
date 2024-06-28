@@ -211,17 +211,17 @@ impl Queries {
     }
 
     async fn fleet_seconds_by_fc_by_month(
-        db: &crate::DB,
-    ) -> Result<BTreeMap<YearMonth, BTreeMap<TypeID, f64>>, sqlx::Error> {
-        #[derive(sqlx::FromRow)]
-        struct Result {
-            yearmonth: String,
-            character_name: String,
-            time_in_fleet: i64,
-        }
+		db: &crate::DB,
+	) -> Result<BTreeMap<YearMonth, BTreeMap<String, f64>>, sqlx::Error> {
+		#[derive(sqlx::FromRow)]
+		struct Result {
+			yearmonth: String,
+			character_name: String,
+			time_in_fleet: i64,
+		}
 
-        let res: Vec<Result> = sqlx::query_as(concat!(
-            "
+		let res: Vec<Result> = sqlx::query_as(concat!(
+			"
 			SELECT
 				",
 			year_month!(from_unixtime!("first_seen")),
@@ -233,20 +233,20 @@ impl Queries {
 			WHERE fa.is_boss = 1
 			GROUP BY 1, 2
 		"
-        ))
-        .fetch_all(db)
-        .await?;
+		))
+		.fetch_all(db)
+		.await?;
 
-        let mut result = BTreeMap::new();
-        for row in res {
-            result
-                .entry(YearMonth::parse(&row.yearmonth))
-                .or_insert_with(BTreeMap::new)
-                .insert(row.character_name as TypeID, row.time_in_fleet as f64);
-        }
+		let mut result = BTreeMap::new();
+		for row in res {
+			result
+				.entry(YearMonth::parse(&row.yearmonth))
+				.or_insert_with(BTreeMap::new)
+				.insert(row.character_name.clone(), row.time_in_fleet as f64);
+		}
 
-        Ok(result)
-    }
+		Ok(result)
+	}
 
     async fn xes_by_hull_by_month(
         db: &crate::DB,
@@ -465,6 +465,7 @@ struct StatsResponse {
     x_vs_time_by_hull_28d: BTreeMap<String, BTreeMap<&'static str, f64>>,
     time_spent_in_fleet_by_month: BTreeMap<YearMonth, BTreeMap<&'static str, f64>>,
     fleet_seconds_by_character_by_month: BTreeMap<YearMonth, BTreeMap<String, f64>>,
+	fleet_seconds_by_fc_by_month: BTreeMap<YearMonth, BTreeMap<String, f64>>,
 
 }
 
@@ -501,9 +502,7 @@ async fn statistics(
         time_spent_in_fleet_by_month: Displayer::build_time_spent_in_fleet_by_month(
             &seconds_by_character_month,
         ),
-		fleet_seconds_by_fc_by_month: Displayer::build_fleet_seconds_by_fc_by_month(
-            &seconds_by_fc_month
-        ),
+		fleet_seconds_by_fc_by_month: Displayer::build_fleet_seconds_by_fc_by_month(&seconds_by_fc_month),
     }))
 }
 
