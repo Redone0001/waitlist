@@ -210,44 +210,6 @@ impl Queries {
         Ok(result)
     }
 
-    async fn fleet_seconds_by_fc_by_month(
-		db: &crate::DB,
-	) -> Result<BTreeMap<YearMonth, BTreeMap<String, f64>>, sqlx::Error> {
-		#[derive(sqlx::FromRow)]
-		struct Result {
-			yearmonth: String,
-			character_name: String,
-			time_in_fleet: i64,
-		}
-
-		let res: Vec<Result> = sqlx::query_as(concat!(
-			"
-			SELECT
-				",
-			year_month!(from_unixtime!("first_seen")),
-			" yearmonth,
-				c.name as character_name,
-				CAST(SUM(fa.last_seen - fa.first_seen) AS SIGNED) time_in_fleet
-			FROM fleet_activity fa
-			JOIN `character` c ON fa.character_id = c.id
-			WHERE fa.is_boss = 1
-			GROUP BY 1, 2
-		"
-		))
-		.fetch_all(db)
-		.await?;
-
-		let mut result = BTreeMap::new();
-		for row in res {
-			result
-				.entry(YearMonth::parse(&row.yearmonth))
-				.or_insert_with(BTreeMap::new)
-				.insert(row.character_name.clone(), row.time_in_fleet as f64);
-		}
-
-		Ok(result)
-	}
-
     async fn xes_by_hull_by_month(
         db: &crate::DB,
     ) -> Result<BTreeMap<YearMonth, BTreeMap<TypeID, f64>>, sqlx::Error> {
@@ -344,6 +306,44 @@ impl Queries {
             .collect())
     }
 
+    async fn fleet_seconds_by_fc_by_month(
+		db: &crate::DB,
+	) -> Result<BTreeMap<YearMonth, BTreeMap<String, f64>>, sqlx::Error> {
+		#[derive(sqlx::FromRow)]
+		struct Result {
+			yearmonth: String,
+			character_name: String,
+			time_in_fleet: i64,
+		}
+
+		let res: Vec<Result> = sqlx::query_as(concat!(
+			"
+			SELECT
+				",
+			year_month!(from_unixtime!("first_seen")),
+			" yearmonth,
+				c.name as character_name,
+				CAST(SUM(fa.last_seen - fa.first_seen) AS SIGNED) time_in_fleet
+			FROM fleet_activity fa
+			JOIN `character` c ON fa.character_id = c.id
+			WHERE fa.is_boss = 1
+			GROUP BY 1, 2
+		"
+		))
+		.fetch_all(db)
+		.await?;
+
+		let mut result = BTreeMap::new();
+		for row in res {
+			result
+				.entry(YearMonth::parse(&row.yearmonth))
+				.or_insert_with(BTreeMap::new)
+				.insert(row.character_name.clone(), row.time_in_fleet as f64);
+		}
+
+		Ok(result)
+	}
+
     async fn fleet_seconds_by_fc_28d(
 		db: &crate::DB,
 	) -> Result<BTreeMap<String, f64>, sqlx::Error> {
@@ -369,12 +369,6 @@ impl Queries {
 		.bind(ago_28d)
 		.fetch_all(db)
 		.await?;
-		
-		let output = res
-			.into_iter()
-			.map(|row| (row.character_name, row.fleet_seconds as f64))
-			.collect()
-		println!("{output}")
 
 		Ok(res
 			.into_iter()
