@@ -464,7 +464,6 @@ struct StatsResponse {
     fleet_seconds_by_hull_28d: BTreeMap<String, f64>,
     x_vs_time_by_hull_28d: BTreeMap<String, BTreeMap<&'static str, f64>>,
     time_spent_in_fleet_by_month: BTreeMap<YearMonth, BTreeMap<&'static str, f64>>,
-    fleet_seconds_by_character_by_month: BTreeMap<YearMonth, BTreeMap<String, f64>>,
 	fleet_seconds_by_fc_by_month: BTreeMap<YearMonth, BTreeMap<String, f64>>,
 
 }
