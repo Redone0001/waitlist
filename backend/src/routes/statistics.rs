@@ -369,6 +369,12 @@ impl Queries {
 		.bind(ago_28d)
 		.fetch_all(db)
 		.await?;
+		
+		let output = res
+			.into_iter()
+			.map(|row| (row.character_name, row.fleet_seconds as f64))
+			.collect()
+		println!("{output}")
 
 		Ok(res
 			.into_iter()
