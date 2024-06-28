@@ -242,7 +242,7 @@ impl Queries {
             result
                 .entry(YearMonth::parse(&row.yearmonth))
                 .or_insert_with(BTreeMap::new)
-                .insert(row.hull as TypeID, row.time_in_fleet as f64);
+                .insert(row.character_name as TypeID, row.time_in_fleet as f64);
         }
 
         Ok(result)
