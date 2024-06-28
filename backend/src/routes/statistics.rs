@@ -343,6 +343,38 @@ impl Queries {
             .map(|row| (row.hull as TypeID, row.fleet_seconds as f64))
             .collect())
     }
+
+    async fn fleet_seconds_by_fc_28d(
+		db: &crate::DB,
+	) -> Result<BTreeMap<String, f64>, sqlx::Error> {
+		let ago_28d = chrono::Utc::now().timestamp() - (28 * 86400);
+
+		#[derive(sqlx::FromRow)]
+		struct Result {
+			character_name: String,
+			fleet_seconds: i64,
+		}
+		
+		let res: Vec<Result> = sqlx::query_as(concat!(
+			"
+			SELECT
+				c.name as character_name,
+				CAST(SUM(fa.last_seen - fa.first_seen) AS SIGNED) fleet_seconds
+			FROM fleet_activity fa
+			JOIN `character` c ON fa.character_id = c.id
+			WHERE fa.first_seen > ? AND fa.is_boss = 1
+			GROUP BY c.name
+			"
+		))
+		.bind(ago_28d)
+		.fetch_all(db)
+		.await?;
+
+		Ok(res
+			.into_iter()
+			.map(|row| (row.character_name, row.fleet_seconds as f64))
+			.collect())
+}
 }
 
 struct Displayer {}
@@ -452,6 +484,36 @@ impl Displayer {
         }
         result
     }
+	
+	fn build_fc_vs_time_28d(
+        source_fc: &BTreeMap<TypeID, f64>,
+        source_time: &BTreeMap<TypeID, f64>,
+    ) -> Result<BTreeMap<String, BTreeMap<&'static str, f64>>, Madness> {
+        let sum_fc: f64 = source_fc.values().sum();
+        let sum_time: f64 = source_time.values().sum();
+
+        let mut result = BTreeMap::new();
+
+        for (fc, &fc_count) in source_fc {
+            let mut fc_map = BTreeMap::new();
+            fc_map.insert("FC", fc_count / sum_fc);
+            fc_map.insert("Time", 0.);
+            result.insert(fc.clone(), fc_map);
+        }
+
+        for (fc, &time) in source_time {
+            if let Some(entry) = result.get_mut(fc) {
+                *entry.get_mut("Time").unwrap() += time / sum_time;
+            } else {
+                let mut fc_map = BTreeMap::new();
+                fc_map.insert("FC", 0.);
+                fc_map.insert("Time", time / sum_time);
+                result.insert(fc.clone(), fc_map);
+            }
+        }
+
+        Ok(result)
+    }
 }
 
 #[derive(Serialize)]
@@ -465,6 +527,7 @@ struct StatsResponse {
     x_vs_time_by_hull_28d: BTreeMap<String, BTreeMap<&'static str, f64>>,
     time_spent_in_fleet_by_month: BTreeMap<YearMonth, BTreeMap<&'static str, f64>>,
 	fleet_seconds_by_fc_by_month: BTreeMap<YearMonth, BTreeMap<String, f64>>,
+	fleet_seconds_by_fc_28d: BTreeMap<String, BTreeMap<&'static str, f64>>,
 
 }
 
@@ -482,6 +545,7 @@ async fn statistics(
     let xes_by_hull_28d = Queries::xes_by_hull_28d(app.get_db()).await?;
     let seconds_by_hull_28d = Queries::fleet_seconds_by_hull_28d(app.get_db()).await?;
     let seconds_by_fc_month = Queries::fleet_seconds_by_fc_by_month(app.get_db()).await?;
+	let seconds_by_fc_28d = Queries::fleet_seconds_by_fc_28d(app.get_db()).await?;
 
     Ok(Json(StatsResponse {
         fleet_seconds_by_hull_by_month: Displayer::build_fleet_seconds_by_hull_by_month(
@@ -502,6 +566,10 @@ async fn statistics(
             &seconds_by_character_month,
         ),
 		fleet_seconds_by_fc_by_month: Displayer::build_fleet_seconds_by_fc_by_month(&seconds_by_fc_month),
+		fleet_seconds_by_fc_28d: Displayer::build_fc_vs_time_28d(
+            &seconds_by_fc_28d,
+            &seconds_by_fc_28d, // Assuming you have separate maps for FC and time data, otherwise use the same map
+        )?,
     }))
 }
 
