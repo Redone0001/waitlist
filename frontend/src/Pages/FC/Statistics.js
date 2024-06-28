@@ -331,6 +331,30 @@ function TimeSpentByHull28d({ data }) {
   );
 }
 
+function TimeSpentByFC28d({ data }) {
+  const series = separateDataLabels(data);
+  return (
+    <ThemedDoughnut
+      data={{
+        labels: series.labels,
+        datasets: [
+          {
+            data: series.data.map((seconds) => Math.round((seconds || 0) / 3600)),
+          },
+        ],
+      }}
+      options={{
+        plugins: {
+          title: {
+            display: true,
+            text: "Fleet time by fc (28d)",
+          },
+        },
+      }}
+    />
+  );
+}
+
 export function Statistics() {
   usePageTitle("Statistics");
   const [statsData] = useApi("/api/stats");
@@ -367,6 +391,9 @@ export function Statistics() {
       </Graph>
       <Graph>
         <FleetTimeByFcMonth data={statsData.fleet_seconds_by_fc_by_month} />
+      </Graph>
+      <Graph>
+        <TimeSpentByFC28d data={statsData.fleet_seconds_by_fc_28d} />
       </Graph>
     </Row>
   );
