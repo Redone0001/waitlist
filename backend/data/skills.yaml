@@ -31,7 +31,7 @@ categories:
     - Vorton Arc Extension
     - Vorton Arc Guidance
     - Vorton Power Amplification
-    - Vorton Projection Operation
+    - Vorton Projector Operation
   Missile:
     - Missile Launcher Operation
     - Rapid Launch
@@ -1105,7 +1105,7 @@ requirements:
     Vorton Power Amplification:
       min: 4
       elite: 5
-    Vorton Projection Operation:
+    Vorton Projector Operation:
       min: 4
       elite: 5
     Warp Drive Operation:
