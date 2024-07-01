@@ -52,3 +52,5 @@ rules:
     category: ishtar
   - item: Gila
     category: DPS
+  - item: Stormbringer
+    category: DPS

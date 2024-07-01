@@ -90,6 +90,13 @@ plans:
       - type: skills
         from: Basilisk
         tier: min
+  - name: STORMBRINGER BASIC PATH
+    description: >
+      This skill plan will train you to standard Stormbringer.
+    plan:
+      - type: skills
+        from: Stormbringer
+        tier: min
   - name: MEGATHRON ELITE PATH
     description: >
       This skill plan will train you to Megathron fit with elite skill level.
@@ -180,4 +187,11 @@ plans:
     plan:
       - type: skills
         from: Basilisk
+        tier: elite
+  - name: STORMBRINGER ELITE PATH
+    description: >
+      This skill plan will train you to standard Stormbringer with elite skill level.
+    plan:
+      - type: skills
+        from: Stormbringer
         tier: elite

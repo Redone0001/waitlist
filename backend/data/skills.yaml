@@ -26,6 +26,12 @@ categories:
     - Large Pulse Laser Specialization
     - Large Hybrid Turret
     - Large Blaster Specialization
+    - Medium Vorton Projector
+    - Medium Vorton Specialization
+    - Vorton Arc Extension
+    - Vorton Arc Guidance
+    - Vorton Power Amplification
+    - Vorton Projection Operation
   Missile:
     - Missile Launcher Operation
     - Rapid Launch
@@ -106,6 +112,7 @@ categories:
     - Amarr Cruiser
     - Gallente Cruiser
     - Caldari Cruiser
+    - EDENCOM Cruiser
     - Logistics Cruisers
     - Marauders
     - Command Ships
@@ -1077,3 +1084,65 @@ requirements:
       min: 4
     Drone Interfacing:
       elite: 4
+
+  Stormbringer:
+    EDENCOM Cruiser:
+      min: 5
+    Tactical Shield Manipulation:
+      min: 4
+      elite: 5
+    Medium Vorton Projector:
+      min: 5
+    Medium Vorton Specialization:
+      min: 4
+      elite: 5
+    Vorton Arc Extension:
+      min: 4
+      elite: 5
+    Vorton Arc Guidance:
+      min: 4
+      elite: 5
+    Vorton Power Amplification:
+      min: 4
+      elite: 5
+    Vorton Projection Operation:
+      min: 4
+      elite: 5
+    Warp Drive Operation:
+      min: 3
+      elite: 5
+    Navigation:
+      min: 4
+      elite: 5
+    Thermodynamics:
+      min: 4
+      elite: 5
+    Capacitor Management:
+      min: 4
+      elite: 5
+    CPU Management:
+      min: 5
+    Capacitor Systems Operation:
+      min: 4
+      elite: 5
+    Power Grid Management:
+      elite: 5
+    Spaceship Command:
+      elite: 5
+    Nanite Interfacing:
+      min: 4
+    Nanite Operation:
+      min: 4
+    Target Management:
+      min: 4
+      elite: 5
+    Long Range Targeting:
+      min: 4
+      elite: 5
+    Signature Analysis:
+      min: 4
+      elite: 5
+    Shield Management:
+      min: 5
+    Shield Operation:
+      min: 5
