@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import React, { useEffect, useState, useReducer } from "react";
 import styled, { ThemeContext } from "styled-components";
 import { ToastContext, AuthContext } from "../../contexts";
 import { apiCall, useApi, errorToaster } from "../../api";
@@ -398,6 +398,7 @@ export function XCard({ entry, fit, onAction }) {
     }
   });
   
+  const [isBlinking, setIsBlinking] = useState(false);
   const hasDeafBeanBadge = tags.includes("DEAF_BEAN");
 
   useEffect(() => {
