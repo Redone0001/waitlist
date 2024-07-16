@@ -102,7 +102,7 @@ export const icons = {
   },
   MULTIBOX: {type: "shield", color: "dark", letter: "M", name: "Multibox"},
   DEAF_BEAN: {type: "shield", color: "red", letter: "D", name: "DEAF_BEAN"},
-  MANGO: { type: "image", href: require("../Pages/Guide/badges/c.png"), name: "Mango" },
+  MANGO: { type: "image", href: require("../Pages/Guide/badges/mango.png"), name: "Mango" },
   STARTER: { type: "shield", color: "neutral", letter: "S", name: "Starter pilot" },
   UNKNOWN: { type: "shield", color: "neutral", letter: "?", name: null },
 };
