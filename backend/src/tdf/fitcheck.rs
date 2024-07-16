@@ -354,6 +354,12 @@ impl<'a> FitChecker<'a> {
     }
 
     fn add_snowflake_tags(&mut self) {
+		if self.badges.contains(&String::from("MANGO")) {
+                    self.tags.insert("MANGO");
+                }
+		if self.badges.contains(&String::from("DEAF_BEAN")) {
+                    self.tags.insert("DEAF_BEAN");
+                } 
         if self.pilot.access_keys.contains("waitlist-tag:COUNCIL") {
             self.tags.insert("COUNCIL");
         } else if self.pilot.access_keys.contains("waitlist-tag:TRAINER") {
@@ -377,6 +383,10 @@ impl<'a> FitChecker<'a> {
     
             if self.fit.hull == type_id!("Vindicator") && self.badges.contains(&String::from("WEB")) {
                 self.tags.insert("WEB-SPECIALIST");
+            }
+    
+            if self.fit.hull == type_id!("Loki") && self.badges.contains(&String::from("MULTIBOX")) {
+                self.tags.insert("MULTIBOX");
             }
     
             if (self.fit.hull == type_id!("Kronos") || self.fit.hull == type_id!("Paladin"))
