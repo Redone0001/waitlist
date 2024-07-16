@@ -261,6 +261,11 @@ impl<'a> FitChecker<'a> {
             || self.tags.contains("ELITE-SKILLS")
             || self.tags.contains("GOLD-SKILLS")
 			|| self.tags.contains("BASIC-SKILLS");
+		let pilot_deaf = self.tags.contains("DEAF_BEAN");
+		
+		if pilot_deaf{
+			self.approved = false;
+		}
             
         if self.fit.hull == type_id!("Megathron") {
             if self.pilot.time_in_fleet > (40 * 3600) {
