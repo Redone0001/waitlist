@@ -208,7 +208,7 @@ export function BadgeData() {
             <br />
             This badge is optional
             <br />
-            Requirements to get web specialist badge are: <br />
+            Requirements to get multibox specialist badge are: <br />
             <br />
             <Content>
               <ul>
