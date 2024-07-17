@@ -92,10 +92,10 @@ plans:
         tier: min
   - name: STORMBRINGER BASIC PATH
     description: >
-      This skill plan will train you to standard Basilisk.
+      This skill plan will train you to standard Stormbringer.
     plan:
       - type: skills
-        from: Basilisk
+        from: Stormbringer
         tier: min
   - name: GOLEM BASIC PATH
     description: >

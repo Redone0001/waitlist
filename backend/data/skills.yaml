@@ -1181,8 +1181,7 @@ requirements:
       min: 4
       elite: 5
     Missile Launcher Operation:
-      min: 4
-      elite: 5
+      min: 5
     Rapid Launch:
       min: 4
       elite: 5
@@ -1201,9 +1200,28 @@ requirements:
     Guided Missile Precision:
       min: 4
       elite: 5
+    Target Painting:
+      min: 3
+      elite: 4
+      gold: 5
+    Tactical Shield Manipulation:
+      min: 4
+      elite: 5
+    Biology:
+      min: 4
+      elite: 5
+    Neurotoxin Control:
+      min: 4
+      elite: 5
+    Neurotoxin Recovery:
+      min: 3
+      elite: 5
+    
 
   Loki:
     <<: [*generic_offensive, *logistics_offensive]
+    Capacitor Management:
+      min: 5
     Evasive Maneuvering:
       min: 3
     Minmatar Cruiser:
@@ -1216,6 +1234,7 @@ requirements:
       min: 5
     Tactical Shield Manipulation:
       min: 4
+      elite: 5
     Target Management:
       min: 4
       elite: 5
