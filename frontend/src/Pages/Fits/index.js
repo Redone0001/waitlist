@@ -71,7 +71,7 @@ function FitsDisplay({ tier, setTier = null }) {
             <Button active={tier === "VG"} onClick={(evt) => setTier("VG")}>
               VG refit
             </Button>
-			<Button active={tier === "shield_VG"} onClick={(evt) => setTier("shield_VG")}>
+			<Button active={tier === "Shield_Storm"} onClick={(evt) => setTier("Shield_Storm")}>
               VG Stormbringer Doctrine
             </Button>
           </InputGroup>
@@ -79,8 +79,8 @@ function FitsDisplay({ tier, setTier = null }) {
       )}
 	  {tier === "VG" ? (
         <Fitout data={fitData} tier="VG" />
-      ) : tier === "shield_VG" ? (
-        <Fitout data={fitData} tier="shield_VG" />
+      ) : tier === "Shield_Storm" ? (
+        <Fitout data={fitData} tier="Shield_Storm" />
       ) : null}
 	  <PageTitle>Offensive FITS</PageTitle>
       {setTier != null && (
