@@ -1,0 +1,41 @@
+[Claymore, SCS storm]
+
+Damage Control II
+Power Diagnostic System II
+Power Diagnostic System II
+Power Diagnostic System II
+
+Caldari Navy Large Shield Extender
+Multispectrum Shield Hardener II
+Caldari Navy Large Shield Extender
+Caldari Navy Large Shield Extender
+Multispectrum Shield Hardener II
+Caldari Navy Large Shield Extender
+
+Medium Energy Neutralizer II
+Medium Energy Neutralizer II
+Medium Energy Neutralizer II
+Shield Command Burst II
+Shield Command Burst II
+Shield Command Burst II
+Medium Energy Neutralizer II
+
+Medium Command Processor I
+Medium Kinetic Shield Reinforcer II
+
+
+Warrior II x5
+Valkyrie II x5
+
+
+Caldari Navy Mjolnir Light Missile x1000
+Nanite Repair Paste x100
+Active Shielding Charge x900
+Shield Extension Charge x900
+Shield Harmonizing Charge x900
+Evasive Maneuvers Charge x600
+Interdiction Maneuvers Charge x600
+Rapid Deployment Charge x900
+Skirmish Command Burst II x1
+10MN Monopropellant Enduring Afterburner x1
+50MN Quad LiF Restrained Microwarpdrive x1
