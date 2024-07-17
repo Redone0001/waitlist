@@ -1,0 +1,43 @@
+[Golem, SCS storm]
+
+IFFA Compact Damage Control
+Caldari Navy Ballistic Control System
+Caldari Navy Ballistic Control System
+Caldari Navy Ballistic Control System
+
+Astro-Inertial Compact Missile Guidance Computer
+Astro-Inertial Compact Missile Guidance Computer
+X-Large Ancillary Shield Booster
+Republic Fleet Target Painter
+Pithum C-Type Multispectrum Shield Hardener
+Thukker Large Cap Battery
+Gist C-Type X-Large Shield Booster
+
+Torpedo Launcher II
+Imperial Navy Large EMP Smartbomb
+Torpedo Launcher II
+Bastion Module I
+Imperial Navy Large EMP Smartbomb
+Torpedo Launcher II
+Auto Targeting System I
+Torpedo Launcher II
+
+Large EM Shield Reinforcer II
+Large Processor Overclocking Unit II
+
+
+Warrior II x5
+Imperial Navy Curator x1
+Hornet EC-300 x5
+
+
+Mjolnir Rage Torpedo x6000
+Navy Cap Booster 400 x45
+Missile Precision Script x2
+Missile Range Script x2
+Caldari Navy Inferno Torpedo x4000
+Caldari Navy Mjolnir Torpedo x1000
+Caldari Navy Nova Torpedo x1000
+Caldari Navy Scourge Torpedo x1000
+Standard Crash Booster x10
+Strong Blue Pill Booster x10

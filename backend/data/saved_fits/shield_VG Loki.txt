@@ -1,0 +1,41 @@
+[Loki, SCS storm]
+
+IFFA Compact Damage Control
+True Sansha Capacitor Power Relay
+True Sansha Capacitor Power Relay
+True Sansha Capacitor Power Relay
+Nanofiber Internal Structure II
+
+Thukker Large Cap Battery
+Caldari Navy Large Shield Extender
+Pithum C-Type Multispectrum Shield Hardener
+Caldari Navy Large Shield Extender
+Pithum C-Type Multispectrum Shield Hardener
+
+Information Command Burst II
+Pithum A-Type Medium Remote Shield Booster
+Pithum A-Type Medium Remote Shield Booster
+Pithum A-Type Medium Remote Shield Booster
+Pithum A-Type Medium Remote Shield Booster
+Pithum A-Type Medium Remote Shield Booster
+Pithum A-Type Medium Remote Shield Booster
+
+Medium Core Defense Field Extender II
+Medium Core Defense Field Extender II
+Medium Core Defense Field Extender II
+
+Loki Core - Augmented Nuclear Reactor
+Loki Defensive - Augmented Durability
+Loki Offensive - Support Processor
+Loki Propulsion - Wake Limiter
+
+
+Hornet EC-300 x10
+
+
+Sensor Optimization Charge x2000
+Active Shielding Charge x2000
+Shield Command Burst II x1
+Federation Navy 10MN Afterburner x1
+Gistum A-Type 50MN Microwarpdrive x1
+Signal Amplifier II x2

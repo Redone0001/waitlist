@@ -92,10 +92,24 @@ plans:
         tier: min
   - name: STORMBRINGER BASIC PATH
     description: >
-      This skill plan will train you to standard Stormbringer.
+      This skill plan will train you to standard Basilisk.
     plan:
       - type: skills
-        from: Stormbringer
+        from: Basilisk
+        tier: min
+  - name: GOLEM BASIC PATH
+    description: >
+      This skill plan will train you to standard Golem.
+    plan:
+      - type: skills
+        from: Golem
+        tier: min
+  - name: LOKI BASIC PATH
+    description: >
+      This skill plan will train you to standard Loki.
+    plan:
+      - type: skills
+        from: Loki
         tier: min
   - name: MEGATHRON ELITE PATH
     description: >
@@ -194,4 +208,18 @@ plans:
     plan:
       - type: skills
         from: Stormbringer
+        tier: elite
+  - name: GOLEM ELITE PATH
+    description: >
+      This skill plan will train you to standard Golem with elite skill level.
+    plan:
+      - type: skills
+        from: Golem
+        tier: elite
+  - name: LOKI ELITE PATH
+    description: >
+      This skill plan will train you to standard Loki with elite skill level.
+    plan:
+      - type: skills
+        from: Loki
         tier: elite
