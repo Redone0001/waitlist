@@ -28,11 +28,11 @@ rules:
     category: logi
   - item: Basilisk
     category: logi
-  - item: Loki
-    category: logi
   # Bastion
   - item: Bastion Module I
     category: bastion
+  - item: Pithum A-Type Medium Remote Shield Booster
+    category: logi
   # Ships
   - item: Megathron
     category: starter
