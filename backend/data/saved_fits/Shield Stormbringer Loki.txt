@@ -4,11 +4,11 @@ IFFA Compact Damage Control
 True Sansha Capacitor Power Relay
 True Sansha Capacitor Power Relay
 True Sansha Capacitor Power Relay
-Nanofiber Internal Structure II
+True Sansha Capacitor Power Relay
 
 Thukker Large Cap Battery
 Caldari Navy Large Shield Extender
-Pithum C-Type Multispectrum Shield Hardener
+Federation Navy 10MN Afterburner
 Caldari Navy Large Shield Extender
 Pithum C-Type Multispectrum Shield Hardener
 
@@ -24,18 +24,17 @@ Medium Core Defense Field Extender II
 Medium Core Defense Field Extender II
 Medium Core Defense Field Extender II
 
+
+Hornet EC-300 x10
+
 Loki Core - Augmented Nuclear Reactor
 Loki Defensive - Augmented Durability
 Loki Offensive - Support Processor
 Loki Propulsion - Wake Limiter
-
-
-Hornet EC-300 x10
-
-
-Sensor Optimization Charge x2000
-Active Shielding Charge x2000
-Shield Command Burst II x1
-Federation Navy 10MN Afterburner x1
+Sensor Optimization Charge x1000
+Rapid Deployment Charge x1000
+Skirmish Command Burst II x1
+Nanofiber Internal Structure II x1
 Gistum A-Type 50MN Microwarpdrive x1
+Pithum A-Type Medium Remote Shield Booster x1
 Signal Amplifier II x2
