@@ -183,7 +183,7 @@ fn build_access_levels() -> BTreeMap<String, BTreeSet<String>> {
 			"skill-view",
 			"waitlist-manage",
             "waitlist-edit",
-            "waitlist-tag:ADVANCED-TRAINEE",
+            "fleet-break-down",
 			],
     );
     build_level(

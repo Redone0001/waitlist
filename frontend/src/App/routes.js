@@ -133,7 +133,7 @@ export function Routes() {
         <AuthenticatedRoute component={<NoteAll />} access="notes-add" />
       </Route>
 	  <Route exact path="/fc/fleet/break">
-        <AuthenticatedRoute component={<FleetAndAlts />} access="waitlist-tag:ADVANCED-TRAINEE" />
+        <AuthenticatedRoute component={<FleetAndAlts />} access="fleet-break-down" />
       </Route>
       <Route exact path="/fc/search">
         <AuthenticatedRoute component={<Search />} access="waitlist-tag:HQ-FC" />
