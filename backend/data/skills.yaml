@@ -1152,6 +1152,9 @@ requirements:
       min: 5
     Shield Operation:
       min: 5
+    Advanced Weapon Upgrades:
+      min: 4
+      elite: 5
 
   Golem:
     Caldari Battleship:
