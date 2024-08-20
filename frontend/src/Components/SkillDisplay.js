@@ -167,6 +167,50 @@ export function Legend() {}
 export function SkillDisplay({ characterId, ship, setShip = null, filterMin = false }) {
   const [skills] = useApi(`/api/skills?character_id=${characterId}`);
   const shipName = ship.toUpperCase();
+  const InfoIcon = styled.span`
+	  display: inline-block;
+	  margin-left: 8px;
+	  cursor: pointer;
+	  position: relative;
+	  color: ${(props) => props.theme.colors.accent3};
+	  font-weight: bold;
+
+	  &:hover::after {
+		content: "${(props) => props.tooltip}";
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 120%;
+		background-color: ${(props) => props.theme.colors.accent3};
+		color: #fff;
+		padding: 0.5em;
+		border-radius: 5px;
+		white-space: nowrap;
+		font-size: 0.9em;
+		z-index: 10;
+		opacity: 1;
+		visibility: visible;
+	  }
+
+	  &:hover::before {
+		content: "";
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 100%;
+		border-width: 5px;
+		border-style: solid;
+		border-color: ${(props) => props.theme.colors.accent3} transparent transparent transparent;
+		z-index: 10;
+	  }
+
+	  &::after,
+	  &::before {
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.3s ease, visibility 0.3s ease;
+	  }
+	`;
 
   return (
     <>
@@ -252,6 +296,10 @@ export function SkillDisplay({ characterId, ship, setShip = null, filterMin = fa
         </a>
       </Badge> 
       <Badge variant="success">Elite GOLD</Badge>
+
+      <InfoIcon tooltip="Click 'Basic' or 'Elite' to view the skill plan for this ship.">
+        ?
+      </InfoIcon>
     </div>
       <SkillHeader>
         {ship === "Nestor" || ship === "Guardian" ? (
