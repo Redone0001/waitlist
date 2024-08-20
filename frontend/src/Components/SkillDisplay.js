@@ -166,6 +166,7 @@ export function Legend() {}
 
 export function SkillDisplay({ characterId, ship, setShip = null, filterMin = false }) {
   const [skills] = useApi(`/api/skills?character_id=${characterId}`);
+  const shipName = ship.toUpperCase();
 
   return (
     <>
@@ -238,9 +239,20 @@ export function SkillDisplay({ characterId, ship, setShip = null, filterMin = fa
       )}
 
       <div style={{ marginBottom: "1em" }}>
-        Legend: <Badge variant="danger">Starter</Badge> <Badge variant="warning">Basic</Badge>{" "}
-        <Badge variant="secondary">Elite</Badge> <Badge variant="success">Elite GOLD</Badge>
-      </div>
+      Legend: 
+      <Badge variant="danger">Starter</Badge> 
+      <Badge variant="warning">
+        <a href={`/skills/plans?plan=${shipName}%20BASIC%20PATH`} style={{ color: 'inherit', textDecoration: 'none' }}>
+          Basic
+        </a>
+      </Badge>
+      <Badge variant="secondary">
+        <a href={`/skills/plans?plan=${shipName}%20ELITE%20PATH`} style={{ color: 'inherit', textDecoration: 'none' }}>
+          Elite
+        </a>
+      </Badge> 
+      <Badge variant="success">Elite GOLD</Badge>
+    </div>
       <SkillHeader>
         {ship === "Nestor" || ship === "Guardian" ? (
           <InfoNote>Basic tier skills are required for logistics.</InfoNote>
