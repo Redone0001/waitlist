@@ -39,7 +39,9 @@ rules:
   - item: Vindicator
     category: DPS
   - item: Paladin
-    category: sniper
+    category: starter
+  - item: Kronos
+    category: DPS
   - item: Nightmare
     category: starter
   - item: Kronos
