@@ -36,21 +36,21 @@ function FitsDisplay({ tier, setTier = null }) {
       {setTier != null && (
         <Buttons style={{ marginBottom: "0.5em" }}>
           <InputGroup>
-            <Button active={tier === "Starter"} onClick={(evt) => setTier("Starter")} style={{ backgroundColor: "green" }}>
+            <Button active={tier === "Starter"} onClick={(evt) => setTier("Starter")} style={{ backgroundColor: props.theme.colors.success.color }}>
               Starter
             </Button>
-            <Button active={tier === "Golden"} onClick={(evt) => setTier("Golden")} style={{ backgroundColor: "green" }}>
+            <Button active={tier === "Golden"} onClick={(evt) => setTier("Golden")} style={{ backgroundColor: props.theme.colors.success.color }}>
               Golden
             </Button>
-            <Button active={tier === "Standard"} onClick={(evt) => setTier("Standard")} style={{ backgroundColor: "green" }}>
+            <Button active={tier === "Standard"} onClick={(evt) => setTier("Standard")} style={{ backgroundColor: props.theme.colors.success.color }}>
               Standard
             </Button>
-            <Button active={tier === "Optimal"} onClick={(evt) => setTier("Optimal")} style={{ backgroundColor: "green" }}>
+            <Button active={tier === "Optimal"} onClick={(evt) => setTier("Optimal")} style={{ backgroundColor: props.theme.colors.success.color }}>
               Optimal
             </Button>
           </InputGroup>
           <InputGroup>
-            <Button active={tier === "Other"} onClick={(evt) => setTier("Other")} style={{ backgroundColor: "green" }}>
+            <Button active={tier === "Other"} onClick={(evt) => setTier("Other")} style={{ backgroundColor: props.theme.colors.success.color }}>
               Support
             </Button>
           </InputGroup>
@@ -71,10 +71,10 @@ function FitsDisplay({ tier, setTier = null }) {
       {setTier != null && (
         <Buttons style={{ marginBottom: "0.5em" }}>
           <InputGroup>
-            <Button active={tier === "VG"} onClick={(evt) => setTier("VG")} style={{ backgroundColor: "green" }}>
+            <Button active={tier === "VG"} onClick={(evt) => setTier("VG")} style={{ backgroundColor: props.theme.colors.success.color }}>
               VG refit
             </Button>
-			<Button active={tier === "Shield Stormbringer"} onClick={(evt) => setTier("Shield Stormbringer")} style={{ backgroundColor: "red" }}>
+			<Button active={tier === "Shield Stormbringer"} onClick={(evt) => setTier("Shield Stormbringer")} style={{ backgroundColor: props.theme.colors.danger.color }}>
               VG Stormbringer Doctrine
             </Button>
           </InputGroup>
@@ -89,7 +89,7 @@ function FitsDisplay({ tier, setTier = null }) {
       {setTier != null && (
         <Buttons style={{ marginBottom: "0.5em" }}>
           <InputGroup>
-            <Button active={tier === "Offensive"} onClick={(evt) => setTier("Offensive")} style={{ backgroundColor: "yellow" }}>
+            <Button active={tier === "Offensive"} onClick={(evt) => setTier("Offensive")} style={{ backgroundColor: props.theme.colors.warning.color }}>
               Offensive
             </Button>
           </InputGroup>
