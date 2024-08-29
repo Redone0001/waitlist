@@ -70,7 +70,7 @@ function FitsDisplay({ tier, setTier = null }) {
       ) : tier === "Other" ? (
         <Fitout data={fitData} tier="Other" />
       ) : null}
-	  <h1>Vg refit<h1>
+	  <h1>Vg refit</h1>
 	  <Buttons style={{ marginBottom: "0.5em" }}>
           <InputGroup>
             <Button active={tier === "VG"} onClick={(evt) => setTier("VG")} style={{ backgroundColor: theme.colors.success.color }}>
