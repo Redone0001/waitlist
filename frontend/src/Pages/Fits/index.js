@@ -31,9 +31,9 @@ function FitsDisplay({ tier, setTier = null }) {
   return (
     <>
       <PageTitle>HQ FITS</PageTitle>
-	  <p style={{ marginBottom: "1em", fontStyle: "italic", color: "#555" }}>
+	  <h3 style={{ marginBottom: "1em", fontStyle: "italic", color: "#555" }}>
       Each doctrine has its own color. Do not mix them: Green with Green, Red with Red, etc.
-      </p>
+      </h3>
 	  <ImplantOut />
       {setTier != null && (
         <Buttons style={{ marginBottom: "0.5em" }}>
