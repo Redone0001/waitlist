@@ -29,25 +29,28 @@ function FitsDisplay({ tier, setTier = null }) {
   return (
     <>
       <PageTitle>HQ FITS</PageTitle>
+	  <p style={{ marginBottom: "1em", fontStyle: "italic", color: "#555" }}>
+      Each doctrine has its own color. Do not mix them: Green with Green, Red with Red, etc.
+      </p>
 	  <ImplantOut />
       {setTier != null && (
         <Buttons style={{ marginBottom: "0.5em" }}>
           <InputGroup>
-            <Button active={tier === "Starter"} onClick={(evt) => setTier("Starter")}>
+            <Button active={tier === "Starter"} onClick={(evt) => setTier("Starter")} style={{ backgroundColor: "green" }}>
               Starter
             </Button>
-            <Button active={tier === "Golden"} onClick={(evt) => setTier("Golden")}>
+            <Button active={tier === "Golden"} onClick={(evt) => setTier("Golden")} style={{ backgroundColor: "green" }}>
               Golden
             </Button>
-            <Button active={tier === "Standard"} onClick={(evt) => setTier("Standard")}>
+            <Button active={tier === "Standard"} onClick={(evt) => setTier("Standard")} style={{ backgroundColor: "green" }}>
               Standard
             </Button>
-            <Button active={tier === "Optimal"} onClick={(evt) => setTier("Optimal")}>
+            <Button active={tier === "Optimal"} onClick={(evt) => setTier("Optimal")} style={{ backgroundColor: "green" }}>
               Optimal
             </Button>
           </InputGroup>
           <InputGroup>
-            <Button active={tier === "Other"} onClick={(evt) => setTier("Other")}>
+            <Button active={tier === "Other"} onClick={(evt) => setTier("Other")} style={{ backgroundColor: "green" }}>
               Support
             </Button>
           </InputGroup>
@@ -68,10 +71,10 @@ function FitsDisplay({ tier, setTier = null }) {
       {setTier != null && (
         <Buttons style={{ marginBottom: "0.5em" }}>
           <InputGroup>
-            <Button active={tier === "VG"} onClick={(evt) => setTier("VG")}>
+            <Button active={tier === "VG"} onClick={(evt) => setTier("VG")} style={{ backgroundColor: "green" }}>
               VG refit
             </Button>
-			<Button active={tier === "Shield Stormbringer"} onClick={(evt) => setTier("Shield Stormbringer")}>
+			<Button active={tier === "Shield Stormbringer"} onClick={(evt) => setTier("Shield Stormbringer")} style={{ backgroundColor: "red" }}>
               VG Stormbringer Doctrine
             </Button>
           </InputGroup>
@@ -86,7 +89,7 @@ function FitsDisplay({ tier, setTier = null }) {
       {setTier != null && (
         <Buttons style={{ marginBottom: "0.5em" }}>
           <InputGroup>
-            <Button active={tier === "Offensive"} onClick={(evt) => setTier("Offensive")}>
+            <Button active={tier === "Offensive"} onClick={(evt) => setTier("Offensive")} style={{ backgroundColor: "yellow" }}>
               Offensive
             </Button>
           </InputGroup>
