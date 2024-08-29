@@ -23,10 +23,10 @@ export function Fits() {
 function FitsDisplay({ tier, setTier = null }) {
   usePageTitle(`${tier} Fits`);
   const [fitData] = useApi(`/api/fittings`);
+  const theme = useTheme();
   if (fitData === null) {
     return <em>Loading fits...</em>;
   }
-   const theme = useTheme();
 
   return (
     <>
