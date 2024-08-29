@@ -4,6 +4,7 @@ import { Fitout, ImplantOut } from "./FittingSortDisplay";
 import { PageTitle } from "../../Components/Page";
 import { useLocation, useHistory } from "react-router-dom";
 import { usePageTitle } from "../../Util/title";
+import { useTheme } from 'styled-components';
 
 export function Fits() {
   const queryParams = new URLSearchParams(useLocation().search);
@@ -25,6 +26,7 @@ function FitsDisplay({ tier, setTier = null }) {
   if (fitData === null) {
     return <em>Loading fits...</em>;
   }
+   const theme = useTheme();
 
   return (
     <>
