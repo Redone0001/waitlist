@@ -30,10 +30,11 @@ function FitsDisplay({ tier, setTier = null }) {
 
   return (
     <>
-      <PageTitle>HQ FITS</PageTitle>
 	  <h2 style={{ marginBottom: "1em", fontStyle: "italic", color: "#555" }}>
       Each doctrine has its own color. Do not mix them: Green with Green, Red with Red, etc.
       </h2>
+      <PageTitle>Main Armor Doctrine</PageTitle>
+	  <h1>HQ Fits</h1>
 	  <ImplantOut />
       {setTier != null && (
         <Buttons style={{ marginBottom: "0.5em" }}>
@@ -69,25 +70,32 @@ function FitsDisplay({ tier, setTier = null }) {
       ) : tier === "Other" ? (
         <Fitout data={fitData} tier="Other" />
       ) : null}
-	  <PageTitle>VG reFITS</PageTitle>
-      {setTier != null && (
-        <Buttons style={{ marginBottom: "0.5em" }}>
+	  <h1>Vg refit<h1>
+	  <Buttons style={{ marginBottom: "0.5em" }}>
           <InputGroup>
             <Button active={tier === "VG"} onClick={(evt) => setTier("VG")} style={{ backgroundColor: theme.colors.success.color }}>
               VG refit
-            </Button>
-			<Button active={tier === "Shield Stormbringer"} onClick={(evt) => setTier("Shield Stormbringer")} style={{ backgroundColor: theme.colors.danger.color }}>
-              VG Stormbringer Doctrine
             </Button>
           </InputGroup>
         </Buttons>
       )}
 	  {tier === "VG" ? (
         <Fitout data={fitData} tier="VG" />
-      ) : tier === "Shield Stormbringer" ? (
+      ) : null}
+	  <PageTitle>Stormbringer Doctrine</PageTitle>
+      {setTier != null && (
+        <Buttons style={{ marginBottom: "0.5em" }}>
+          <InputGroup>
+			<Button active={tier === "Shield Stormbringer"} onClick={(evt) => setTier("Shield Stormbringer")} style={{ backgroundColor: theme.colors.danger.color }}>
+              VG Stormbringer Doctrine
+            </Button>
+          </InputGroup>
+        </Buttons>
+      )}
+	  {tier === "Shield Stormbringer" ? (
         <Fitout data={fitData} tier="Shield Stormbringer" />
       ) : null}
-	  <PageTitle>Offensive FITS</PageTitle>
+	  <PageTitle>Offensive Doctrine</PageTitle>
       {setTier != null && (
         <Buttons style={{ marginBottom: "0.5em" }}>
           <InputGroup>
