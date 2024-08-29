@@ -100,7 +100,7 @@ function FitsDisplay({ tier, setTier = null }) {
       {setTier != null && (
         <Buttons style={{ marginBottom: "0.5em" }}>
           <InputGroup>
-            <Button active={tier === "Offensive"} onClick={(evt) => setTier("Offensive")} style={{ backgroundColor: theme.colors.warning.color }}>
+            <Button active={tier === "Offensive"} onClick={(evt) => setTier("Offensive")} style={{ backgroundColor: theme.colors.primary.color }}>
               Offensive
             </Button>
           </InputGroup>
