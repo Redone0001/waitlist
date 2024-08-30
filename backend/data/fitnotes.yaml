@@ -50,4 +50,11 @@ notes:
   - name: Offensive SCS Gila
     description: >
       This fit requires the EE-601 Implant if you use the fed navy AB.
+  - name: Shield Stormbringer Basic
+    description: >
+      This fit is compatible with basic skill level.
+      T2 gun can be used if you have the skills
+  - name: Shield Stormbringer Elite
+    description: >
+      This fit is compatible with elite skill level.
 

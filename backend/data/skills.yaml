@@ -1084,14 +1084,16 @@ requirements:
   Stormbringer:
     EDENCOM Cruiser:
       min: 4
+      elite: 5
     Tactical Shield Manipulation:
       min: 4
-      elite: 5
+      gold: 5
     Medium Vorton Projector:
-      min: 5
+      min: 4
+      elite: 5
     Medium Vorton Specialization:
-      min: 3
-      elite: 4
+      min: 0
+      elite: 3
       gold: 5
     Vorton Arc Extension:
       min: 3
@@ -1130,9 +1132,11 @@ requirements:
     Spaceship Command:
       elite: 5
     Nanite Interfacing:
-      min: 4
+      min: 0
+      elite: 4
     Nanite Operation:
-      min: 4
+      min: 0
+      elite: 4
     Target Management:
       min: 4
       elite: 5
