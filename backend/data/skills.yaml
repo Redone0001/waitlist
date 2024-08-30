@@ -1105,7 +1105,7 @@ requirements:
       gold: 5
     Vorton Power Amplification:
       min: 4
-      elite: 5
+      gold: 5
     Vorton Projector Operation:
       min: 3
       elite: 4
