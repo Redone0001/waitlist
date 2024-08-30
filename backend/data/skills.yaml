@@ -234,8 +234,6 @@ requirements:
       priority: 5
     Shield Management:
       elite: 4
-    Shield Operation:
-      elite: 4
 
   _generic_offensive: &generic_offensive # Generic skills: everyone needs these
     Acceleration Control:
@@ -314,8 +312,6 @@ requirements:
       priority: 5
     Shield Management:
       min: 4
-    Shield Operation:
-      min: 4
 
   _booster: &booster # Booster skills: Only boosters need these
     EM Armor Compensation:
@@ -393,8 +389,6 @@ requirements:
       min: 5
       priority: 5
     Shield Management:
-      elite: 4
-    Shield Operation:
       elite: 4
 
   _sideeffects: &sideeffects
@@ -542,8 +536,6 @@ requirements:
       elite: 5
     Shield Management:
       elite: 4
-    Shield Operation:
-      elite: 4
     Advanced Target Management:
       min: 3
     Energy Grid Upgrades:
@@ -616,8 +608,6 @@ requirements:
       min: 3
       elite: 5
     Shield Management:
-      elite: 4
-    Shield Operation:
       elite: 4
     Advanced Target Management:
       min: 3
@@ -1153,8 +1143,6 @@ requirements:
       min: 4
       elite: 5
     Shield Management:
-      min: 5
-    Shield Operation:
       min: 5
     Advanced Weapon Upgrades:
       min: 4
