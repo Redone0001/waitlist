@@ -1093,27 +1093,31 @@ requirements:
 
   Stormbringer:
     EDENCOM Cruiser:
-      min: 5
+      min: 4
     Tactical Shield Manipulation:
       min: 4
       elite: 5
     Medium Vorton Projector:
       min: 5
     Medium Vorton Specialization:
-      min: 4
-      elite: 5
+      min: 3
+      elite: 4
+      gold: 5
     Vorton Arc Extension:
-      min: 4
-      elite: 5
+      min: 3
+      elite: 4
+      gold: 5
     Vorton Arc Guidance:
-      min: 4
-      elite: 5
+      min: 3
+      elite: 4
+      gold: 5
     Vorton Power Amplification:
       min: 4
       elite: 5
     Vorton Projector Operation:
-      min: 4
-      elite: 5
+      min: 3
+      elite: 4
+      gold: 5
     Warp Drive Operation:
       min: 3
       elite: 5
@@ -1121,7 +1125,7 @@ requirements:
       min: 4
       elite: 5
     Thermodynamics:
-      min: 4
+      min: 3
       elite: 5
     Capacitor Management:
       min: 4

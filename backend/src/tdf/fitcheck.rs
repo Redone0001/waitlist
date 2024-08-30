@@ -195,6 +195,8 @@ impl<'a> FitChecker<'a> {
                     2
                 } else if fit.name.contains("Offensive") {
 					0
+				} else if fit.name.contains("Stormbringer") {
+					0
 				} else {
                     4
                 }
