@@ -14,6 +14,17 @@ pub fn detect_base_set(implants: &[TypeID]) -> Option<&'static str> {
             ],
         ),
         (
+            "AMULET",
+            [
+                type_id!("Mid-grade Amulet Alpha"),
+                type_id!("Mid-grade Amulet Beta"),
+                type_id!("Mid-grade Amulet Delta"),
+                type_id!("Mid-grade Amulet Epsilon"),
+                type_id!("Mid-grade Amulet Gamma"),
+                type_id!("Mid-grade Amulet Omega"),
+            ],
+        ),
+        (
             "HYBRID",
             [
                 type_id!("High-grade Amulet Alpha"),
