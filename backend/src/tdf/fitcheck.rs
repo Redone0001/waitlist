@@ -170,8 +170,8 @@ impl<'a> FitChecker<'a> {
             if doctrine_fit.name.contains("STARTER") {
                 self.tags.insert("STARTER-FIT");
             }
-            if fit_ok && doctrine_fit.name.contains("ELITE") {
-                self.tags.insert("ELITE-FIT");
+            if fit_ok && doctrine_fit.name.contains("Optimal") {
+                self.tags.insert("OPTIMAL-FIT");
             }
 
             self.analysis = Some(PubAnalysis {
@@ -405,14 +405,14 @@ impl<'a> FitChecker<'a> {
     }
 
     fn merge_tags(&mut self) {
-        if self.tags.contains("ELITE-FIT") {
+        if self.tags.contains("OPTIMAL-FIT") {
             if ["WARPSPEED", "HYBRID", "AMULET"]
                 .iter()
                 .any(|e| self.tags.contains(e))
                 || self.tags.contains("SAVIOR")
             {
                 if self.tags.contains("ELITE-SKILLS") {
-                    self.tags.remove("ELITE-FIT");
+                    self.tags.remove("OPTIMAL-FIT");
                     self.tags.remove("ELITE-SKILLS");
                     if self.tags.contains("BASTION-SPECIALIST") {
                         self.tags.remove("BASTION-SPECIALIST");
@@ -421,10 +421,10 @@ impl<'a> FitChecker<'a> {
                         self.tags.remove("WEB-SPECIALIST");
                         self.tags.insert("WEB");
                     } else {
-                        self.tags.insert("ELITE");
+                        self.tags.insert("OPTIMAL");
                     }
                 } else if self.tags.contains("GOLD-SKILLS") {
-                    self.tags.remove("ELITE-FIT");
+                    self.tags.remove("OPTIMAL-FIT");
                     self.tags.remove("GOLD-SKILLS");
                     self.tags.insert("ELITE-GOLD");
                     if self.tags.contains("BASTION-SPECIALIST") {
@@ -437,7 +437,7 @@ impl<'a> FitChecker<'a> {
                 }
             } else if self.tags.contains("ANTIGANK") {
                 // ANTIGANK fleet clutter cleanup
-                self.tags.remove("ELITE-FIT");
+                self.tags.remove("OPTIMAL-FIT");
             }
         } else if self.tags.contains("STARTER-SKILLS") || self.tags.contains("STARTER-FIT") {
             self.tags.remove("STARTER-FIT");
