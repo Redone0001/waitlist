@@ -66,18 +66,30 @@ alternatives:
     - - Guardian Antimatter Charge L
       - Dread Guristas Antimatter Charge L
 
+  - - - Heavy Hull Maintenance Bot II
+  - - - Heavy Hull Maintenance Bot I
+
+  - - - Medium Hull Maintenance Bot II
+  - - - Medium Hull Maintenance Bot I
+
+  - - - Light Hull Maintenance Bot II
+  - - - Light Hull Maintenance Bot I
+
+  - - - Small Tractor Beam II
+  - - - Small Tractor Beam I
+
   - - - Federation Navy Hobgoblin
-    - - Hobgoblin II
+  - - - Hobgoblin II
     - - "'Augmented' Hobgoblin"
       - Light Mutated Drone
 
   - - - Federation Navy Hammerhead
-    - - Hammerhead II
+  - - - Hammerhead II
     - - "'Augmented' Hammerhead"
       - Medium Mutated Drone
 
   - - - Federation Navy Ogre
-    - - Ogre II
+  - - - Ogre II
     - - "'Augmented' Ogre"
       - Heavy Mutated Drone
       
@@ -191,9 +203,7 @@ drugs_approve_override:
     remove: # These are removed from the expected fit
       - Agency 'Pyrolancea' DB7 Dose III
       - Agency 'Pyrolancea' DB9 Dose IV
-    add: # Set new requirements, here 1 db5 or better and 2 db3 or better
-      - name: Agency 'Pyrolancea' DB3 Dose I
-        amount: 2
+    add: # Set new requirements, here 1 db5
       - name: Agency 'Pyrolancea' DB5 Dose II
         amount: 1
   - detect: Agency 'Overclocker' SB7 Dose III
