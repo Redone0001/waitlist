@@ -209,6 +209,8 @@ function ShipDisplay({ fit, id, note }) {
                 {note ? <FontAwesomeIcon icon={faExclamationCircle} /> : null}
                 {fit.name.toLowerCase().includes("hybrid") ? (
                   <Shield color="red" letter="H" title="Hybrid Implants" />
+                ) : fit.name.toLowerCase().includes("amulet") ? (
+                  <Shield color="red" letter="A" title="Amulet Implants" />
                 ) : fit.name.toLowerCase().includes("Savior") ? (
                   <Shield color="red" letter="W" title="Savior Implants" />
                 ) : null}
