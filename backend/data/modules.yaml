@@ -152,16 +152,16 @@ from_attribute:
     reverse: true
 
 accept_t1: # Meta information missing, but luckily we can just match it naively
-  - Heavy Shield Maintenance Bot I
-  - Heavy Armor Maintenance Bot I
-  - Heavy Hull Maintenance Bot I
-  - Medium Shield Maintenance Bot I
-  - Medium Armor Maintenance Bot I
-  - Medium Hull Maintenance Bot I
-  - Light Shield Maintenance Bot I
-  - Light Armor Maintenance Bot I
-  - Light Hull Maintenance Bot I
-  - Small Tractor Beam I
+  - Heavy Shield Maintenance Bot II
+  - Heavy Armor Maintenance Bot II
+  - Heavy Hull Maintenance Bot II
+  - Medium Shield Maintenance Bot II
+  - Medium Armor Maintenance Bot II
+  - Medium Hull Maintenance Bot II
+  - Light Shield Maintenance Bot II
+  - Light Armor Maintenance Bot II
+  - Light Hull Maintenance Bot II
+  - Small Tractor Beam II
 
 identification: # Modules/groups we use to look at to figure out what we're flying
   - Damage Control II
