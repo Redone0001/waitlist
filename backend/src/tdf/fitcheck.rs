@@ -426,7 +426,7 @@ impl<'a> FitChecker<'a> {
                 } else if self.tags.contains("GOLD-SKILLS") {
                     self.tags.remove("OPTIMAL-FIT");
                     self.tags.remove("GOLD-SKILLS");
-                    self.tags.insert("ELITE-GOLD");
+                    self.tags.insert("OPTIMAL-GOLD");
                     if self.tags.contains("BASTION-SPECIALIST") {
                         self.tags.remove("BASTION-SPECIALIST");
                         self.tags.insert("BASTION");
