@@ -87,7 +87,7 @@ fn detect_slot7(hull: TypeID, implants: &[TypeID]) -> Option<()> {
         || ((hull == type_id!("Nestor")
             || hull == type_id!("Oneiros")
             || hull == type_id!("Guardian"))
-            && implants.contains(&type_id!("% RA-706")))
+            && (implants.contains(&type_id!("% RA-706")) || implants.contains(&type_id!("% RA-705"))))
     {
         Some(())
     } else {
