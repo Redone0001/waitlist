@@ -167,7 +167,7 @@ impl<'a> FitChecker<'a> {
             if !(diff.cargo_missing.is_empty() && fit_ok) {
                 self.approved = false;
             }
-            if doctrine_fit.name.contains("STARTER") {
+            if doctrine_fit.name.contains("Starter") {
                 self.tags.insert("STARTER-FIT");
             }
             if fit_ok && doctrine_fit.name.contains("Optimal") {
@@ -290,7 +290,7 @@ impl<'a> FitChecker<'a> {
             let set_tag = implantmatch::detect_base_set(self.pilot.implants).unwrap_or("");
             if set_tag != "SAVIOR" {
                 let mut implants_nok = "";
-                if doctrine_fit.name.contains("HYBRID") && set_tag != "AMULET" {
+                if (doctrine_fit.name.contains("HYBRID") || doctrine_fit.name.contains("AMULET"))&& set_tag != "AMULET" {
                     let implants:[(i32, i32); 6] = [
                     (type_id!("Mid-grade Amulet Alpha"), type_id!("High-grade Amulet Alpha")),
                     (type_id!("Mid-grade Amulet Beta"), type_id!("High-grade Amulet Beta")),
