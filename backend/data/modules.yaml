@@ -68,34 +68,27 @@ alternatives:
 
   - - - Heavy Hull Maintenance Bot II
     - - Heavy Hull Maintenance Bot I
-    - - Heavy Hull Maintenance Bot II
 
   - - - Medium Hull Maintenance Bot II
     - - Medium Hull Maintenance Bot I
-    - - Medium Hull Maintenance Bot II
 
   - - - Light Hull Maintenance Bot II
     - - Light Hull Maintenance Bot I
-    - - Light Hull Maintenance Bot II
 
   - - - Small Tractor Beam II
     - - Small Tractor Beam I
-    - - Small Tractor Beam II
 
   - - - Federation Navy Hobgoblin
-    - - Federation Navy Hobgoblin
     - - Hobgoblin II
     - - "'Augmented' Hobgoblin"
       - Light Mutated Drone
 
   - - - Federation Navy Hammerhead
-    - - Federation Navy Hammerhead
     - - Hammerhead II
     - - "'Augmented' Hammerhead"
       - Medium Mutated Drone
 
   - - - Federation Navy Ogre
-    - - Federation Navy Ogre
     - - Ogre II
     - - "'Augmented' Ogre"
       - Heavy Mutated Drone
