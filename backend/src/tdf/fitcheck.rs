@@ -170,7 +170,7 @@ impl<'a> FitChecker<'a> {
             if doctrine_fit.name.contains("STARTER") {
                 self.tags.insert("STARTER-FIT");
             }
-            if fit_ok && doctrine_fit.name.contains("OPTIMAL") {
+            if fit_ok && doctrine_fit.name.contains("Optimal") {
                 self.tags.insert("OPTIMAL-FIT");
             }
 
