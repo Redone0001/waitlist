@@ -118,6 +118,8 @@ fn detect_slot9(hull: TypeID, implants: &[TypeID]) -> Option<()> {
         Some(())
     } else if implants.contains(&type_id!("% RF-906"))
         || implants.contains(&type_id!("% RF-905"))
+        || implants.contains(&type_id!("% SS-906"))
+        || implants.contains(&type_id!("% SS-905"))
         || implants.contains(&type_id!("Pashan's Turret Customization Mindlink"))
     {
         Some(())
