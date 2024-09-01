@@ -69,6 +69,7 @@ categories:
     - Light Drone Operation
     - Medium Drone Operation
     - Heavy Drone Operation
+    - Sentry Drone Interfacing
     - Repair Drone Operation
   Engineering:
     - Thermodynamics
@@ -1016,6 +1017,10 @@ requirements:
     Heavy Drone Operation:
       min: 4
       elite: 5
+    Sentry Drone Interfacing:
+      min: 1
+      elite: 3
+      gold: 5
     Afterburner:
       min: 1
       gold: 4
