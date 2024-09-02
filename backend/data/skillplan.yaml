@@ -76,7 +76,7 @@ plans:
       - type: skills
         from: Rattlesnake
         tier: min
-  - name: GIAL BASIC PATH
+  - name: GILA BASIC PATH
     description: >
       This skill plan will train you to standard Gila.
     plan:
