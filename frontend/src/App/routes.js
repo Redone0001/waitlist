@@ -20,6 +20,7 @@ import { Plans } from "../Pages/Skills/Plans";
 import { Search } from "../Pages/FC/Search";
 import { Skills } from "../Pages/Skills/Skills";
 import { Statistics } from "../Pages/FC/Statistics";
+import { Statistics } from "../Pages/Leaderboard";
 import { Waitlist } from "../Pages/Waitlist";
 import { Xup } from "../Pages/Xup";
 
@@ -73,6 +74,9 @@ export function Routes() {
       </Route>
       <Route exact path="/skills/plans">
         <Plans />
+      </Route>
+      <Route exact path="/leaderboard">
+        {<AuthenticatedRoute component={<Leaderboard />} loginRequired />}
       </Route>
 
       {/* Guides: Badges, Index, Guide Page */}

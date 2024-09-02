@@ -375,6 +375,56 @@ impl Queries {
 			.map(|row| (row.character_name, row.fleet_seconds as f64))
 			.collect())
 	}
+
+    async fn leaderboard_28d(db: &crate::DB) -> Result<Vec<LeaderboardResult>, Error> {
+        let res: Vec<LeaderboardResult> = sqlx::query_as!(
+            LeaderboardResult,
+            "
+            SELECT 
+                c.name AS character_name,
+                SUM((fa.last_seen - fa.first_seen) / 3600) AS total_hours_in_fleet
+            FROM 
+                fleet_activity fa
+            JOIN 
+                `character` c ON fa.character_id = c.id
+            WHERE 
+                fa.first_seen >= UNIX_TIMESTAMP(NOW() - INTERVAL 28 DAY)
+            GROUP BY 
+                c.id, c.name
+            ORDER BY 
+                total_hours_in_fleet DESC
+            LIMIT 10
+            "
+        )
+        .fetch_all(db)
+        .await?;
+
+        Ok(res)
+    }
+
+    async fn leaderboard_all_time(db: &crate::DB) -> Result<Vec<LeaderboardResult>, Error> {
+        let res: Vec<LeaderboardResult> = sqlx::query_as!(
+            LeaderboardResult,
+            "
+            SELECT 
+                c.name AS character_name,
+                SUM((fa.last_seen - fa.first_seen) / 3600) AS total_hours_in_fleet
+            FROM 
+                fleet_activity fa
+            JOIN 
+                `character` c ON fa.character_id = c.id
+            GROUP BY 
+                c.id, c.name
+            ORDER BY 
+                total_hours_in_fleet DESC
+            LIMIT 10
+            "
+        )
+        .fetch_all(db)
+        .await?;
+
+        Ok(res)
+    }
 }
 
 struct Displayer {}
@@ -501,6 +551,34 @@ struct StatsResponse {
 
 }
 
+#[derive(sqlx::FromRow, Serialize)]
+struct LeaderboardResult {
+    character_name: String,
+    total_hours_in_fleet: f64,
+}
+
+#[derive(Serialize)]
+struct LeaderboardResponse {
+    leaderboard_28d: Vec<LeaderboardResult>,
+    leaderboard_all_time: Vec<LeaderboardResult>,
+}
+
+#[get("/api/leaderboard")]
+async fn leaderboard(
+    app: &rocket::State<Application>,
+    account: AuthenticatedAccount,
+) -> Result<Json<LeaderboardResponse>, Madness> {
+    account.require_access("leaderboard-view")?;
+
+    let leaderboard_28d = Queries::leaderboard_28d(app.get_db()).await?;
+    let leaderboard_all_time = Queries::leaderboard_all_time(app.get_db()).await?;
+
+    Ok(Json(LeaderboardResponse {
+        leaderboard_28d,
+        leaderboard_all_time,
+    }))
+}
+
 #[get("/api/stats")]
 async fn statistics(
     app: &rocket::State<Application>,
@@ -541,5 +619,5 @@ async fn statistics(
 }
 
 pub fn routes() -> Vec<rocket::Route> {
-    routes![statistics]
+    routes![statistics, leaderboard]
 }
