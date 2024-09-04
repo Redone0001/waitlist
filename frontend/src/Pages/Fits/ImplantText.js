@@ -16,7 +16,7 @@ import {
 export function ImplantTable({ type }) {
   const toastContext = React.useContext(ToastContext);
   var implants;
-  if (type === "Hybrid") {
+  if (type === "Amulet") {
     implants = [
       "Mid-grade Amulet Alpha",
       "Mid-grade Amulet Beta",
