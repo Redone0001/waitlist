@@ -173,15 +173,12 @@ function FleetTimeByHullMonth({ data }) {
     <ThemedLine
       data={{
         labels: series.labels,
-        datasets: [
-          {
-            label: "Pilots",
-            data: series.data,
-          },
-        ],
+        datasets: _.map(series.series, (numbers, label) => ({
+          label: label,
+          data: numbers.map((num) => num || 0),
+        })),
       }}
       options={{
-        scales: { x: { stacked: true }, y: { stacked: true } },
         plugins: {
           title: {
             display: true,
