@@ -175,7 +175,7 @@ function FleetTimeByHullMonth({ data }) {
         labels: series.labels,
         datasets: _.map(series.series, (numbers, label) => ({
           label: label,
-          data: numbers.map((num) => num || 0),
+          data: series.data.map((seconds) => Math.round((seconds || 0) / 3600)),
         })),
       }}
       options={{
