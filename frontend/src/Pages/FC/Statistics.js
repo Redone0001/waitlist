@@ -170,7 +170,7 @@ function PilotsByMonth({ data }) {
 function FleetTimeByHullMonth({ data }) {
   const series = separateDataLabels2D(data);
   return (
-    <ThemedBar
+    <ThemedLine
       data={{
         labels: series.labels,
         datasets: _.map(series.series, (numbers, label) => ({
