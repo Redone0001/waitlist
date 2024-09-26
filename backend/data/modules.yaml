@@ -95,12 +95,12 @@ alternatives:
     - - Large Abyssal Armor Plates
 
   - - - Remote Sensor Booster II
-    - - Remote Tracking Computer II
-      - Federation Navy Remote Tracking Computer
-      - Shadow Serpentis Remote Tracking Computer
     - - Remote Sensor Booster II
       - Sentient Remote Sensor Booster
       - Shadow Serpentis Remote Sensor Booster
+    - - Remote Tracking Computer II
+      - Federation Navy Remote Tracking Computer
+      - Shadow Serpentis Remote Tracking Computer
 
 from_meta:
   # Automagically determine alternatives
