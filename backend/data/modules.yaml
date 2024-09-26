@@ -94,6 +94,14 @@ alternatives:
     - - Imperial Navy 1600mm Steel Plates
     - - Large Abyssal Armor Plates
 
+  - - - Remote Sensor Booster II
+    - - Remote Tracking Computer II
+      - Federation Navy Remote Tracking Computer
+      - Shadow Serpentis Remote Tracking Computer
+    - - Remote Sensor Booster II
+      - Sentient Remote Sensor Booster
+      - Shadow Serpentis Remote Sensor Booster
+
 from_meta:
   # Automagically determine alternatives
   # Base is the lowest allowed meta level alternative module
@@ -105,7 +113,6 @@ from_meta:
     alternative: Large Micro Jump Drive
   - base: Supratidal Entropic Disintegrator II
   - base: Imperial Navy Drone Damage Amplifier
-  - base: Remote Tracking Computer II
   - base: Dark Blood Capacitor Power Relay
   - base: Imperial Navy Cap Recharger
   - base: Large Inductive Compact Remote Capacitor Transmitter
