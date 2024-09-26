@@ -96,11 +96,7 @@ alternatives:
 
   - - - Remote Sensor Booster II
     - - Remote Sensor Booster II
-      - Sentient Remote Sensor Booster
-      - Shadow Serpentis Remote Sensor Booster
     - - Remote Tracking Computer II
-      - Federation Navy Remote Tracking Computer
-      - Shadow Serpentis Remote Tracking Computer
 
 from_meta:
   # Automagically determine alternatives
@@ -207,8 +203,6 @@ drugs_approve_override:
       - Agency 'Pyrolancea' DB7 Dose III
       - Agency 'Pyrolancea' DB9 Dose IV
     add: # Set new requirements, here 1 db5 or better and 2 db3 or better
-      - name: Agency 'Pyrolancea' DB3 Dose I
-        amount: 2
       - name: Agency 'Pyrolancea' DB5 Dose II
         amount: 1
   - detect: Agency 'Overclocker' SB7 Dose III
