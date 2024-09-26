@@ -202,6 +202,7 @@ cargo_ignore: # Cargo modules that do not need to be in the fit to be approved
   - Warp Core Stabilizer II
   - Skirmish Command Burst II
   - Armor Command Burst II
+  - Omnidirectional Tracking Link II
 
 # Make auto approval amount for drugs different
 # To be used togheter with the alternatives config
