@@ -103,9 +103,17 @@ from_meta:
   - base: Sensor Booster II
   - base: Tracking Computer II
     alternative: Large Micro Jump Drive
+  - base: Armor Command Burst II
+    alternative: Skirmish Command Burst II
   - base: Supratidal Entropic Disintegrator II
   - base: Imperial Navy Drone Damage Amplifier
   - base: Remote Tracking Computer II
+    alternative: Sentient Remote Sensor Booster
+    alternative: Shadow Serpentis Remote Sensor Booster
+  - base: Remote Sensor Booster II
+    alternative: Remote Tracking Computer II
+    alternative: Shadow Serpentis Remote Tracking Computer
+    alternative: Federation Navy Remote Tracking Computer
   - base: Dark Blood Capacitor Power Relay
   - base: Imperial Navy Cap Recharger
   - base: Large Inductive Compact Remote Capacitor Transmitter
