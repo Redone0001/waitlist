@@ -200,6 +200,8 @@ cargo_ignore: # Cargo modules that do not need to be in the fit to be approved
   - Inertial Stabilizers II
   - Improved Cloaking Device II
   - Warp Core Stabilizer II
+  - Skirmish Command Burst II
+  - Armor Command Burst II
 
 # Make auto approval amount for drugs different
 # To be used togheter with the alternatives config
