@@ -95,14 +95,6 @@ alternatives:
     - - Imperial Navy 1600mm Steel Plates
     - - Large Abyssal Armor Plates
 
-  - - - Remote Sensor Booster II
-    - - Remote Tracking Computer II
-      - Federation Navy Remote Tracking Computer
-      - Shadow Serpentis Remote Tracking Computer
-    - - Remote Sensor Booster II
-      - Sentient Remote Sensor Booster
-      - Shadow Serpentis Remote Sensor Booster
-
 from_meta:
   # Automagically determine alternatives
   # Base is the lowest allowed meta level alternative module
