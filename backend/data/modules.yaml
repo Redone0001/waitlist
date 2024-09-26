@@ -69,6 +69,7 @@ alternatives:
   - - - Armor Command Burst II
     - - Skirmish Command Burst II
     - - Armor Command Burst II
+      - Skirmish Command Burst II
     - - Information Command Burst II
 
   - - - Federation Navy Hobgoblin
@@ -93,6 +94,14 @@ alternatives:
       - Syndicate 1600mm Steel Plates
     - - Imperial Navy 1600mm Steel Plates
     - - Large Abyssal Armor Plates
+
+  - - - Remote Sensor Booster II
+    - - Remote Tracking Computer II
+      - Federation Navy Remote Tracking Computer
+      - Shadow Serpentis Remote Tracking Computer
+    - - Remote Sensor Booster II
+      - Sentient Remote Sensor Booster
+      - Shadow Serpentis Remote Sensor Booster
 
 from_meta:
   # Automagically determine alternatives
