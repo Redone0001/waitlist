@@ -5,7 +5,7 @@ import { Fitout, ImplantOut } from "./FittingSortDisplay";
 import { PageTitle } from "../../Components/Page";
 import { useLocation, useHistory } from "react-router-dom";
 import { usePageTitle } from "../../Util/title";
-import { useTheme } from 'styled-components';
+import { useTheme } from 'styled-components';	
 import { AuthContext, ToastContext } from "../../contexts";
 
 export function Fits() {
@@ -61,7 +61,7 @@ function FitsDisplay({ tier, setTier = null }) {
             </Button>
 			{authContext && authContext.access["waitlist-tag:TRAINEE"] && (
 			<Button active={tier === "fc_only"} onClick={(evt) => setTier("fc_only")} style={{ backgroundColor: theme.colors.success.color }}>
-              Support
+              UwU section (fc only)
             </Button>
 			)}
           </InputGroup>
