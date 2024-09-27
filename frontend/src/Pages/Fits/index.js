@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import { useApi } from "../../api";
 import { InputGroup, Button, Buttons } from "../../Components/Form";
 import { Fitout, ImplantOut } from "./FittingSortDisplay";
@@ -22,6 +23,7 @@ export function Fits() {
 
 function FitsDisplay({ tier, setTier = null }) {
   usePageTitle(`${tier} Fits`);
+  const authContext = useContext(AuthContext);
   const [fitData] = useApi(`/api/fittings`);
   const theme = useTheme();
   if (fitData === null) {
