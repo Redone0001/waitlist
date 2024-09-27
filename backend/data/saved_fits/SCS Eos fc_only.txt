@@ -1,0 +1,47 @@
+[Eos, SCS des]
+
+Centum A-Type Explosive Energized Membrane
+Federation Navy 1600mm Steel Plates
+Centum B-Type Multispectrum Energized Membrane
+Damage Control II
+Centum B-Type Multispectrum Energized Membrane
+Federation Navy 1600mm Steel Plates
+Centii A-Type Multispectrum Coating
+
+50MN Quad LiF Restrained Microwarpdrive
+Imperial Navy Cap Recharger
+Type-E Enduring Cargo Scanner
+Ta3 Compact Ship Scanner
+
+[Empty High slot]
+Skirmish Command Burst II
+[Empty High slot]
+Skirmish Command Burst II
+[Empty High slot]
+
+Medium Trimark Armor Pump II
+Medium Trimark Armor Pump II
+
+
+Warrior II x5
+'Augmented' Ogre x5
+Federation Navy Garde x5
+Hornet EC-300 x5
+
+
+Mid-grade Amulet Alpha
+Mid-grade Amulet Beta
+Mid-grade Amulet Gamma
+Mid-grade Amulet Delta
+Mid-grade Amulet Epsilon
+Mid-grade Amulet Omega
+Federation Navy Command Mindlink
+
+
+Armor Energizing Charge x600
+Armor Reinforcement Charge x600
+Rapid Repair Charge x600
+Evasive Maneuvers Charge x600
+Interdiction Maneuvers Charge x600
+Rapid Deployment Charge x600
+Armor Command Burst II x2

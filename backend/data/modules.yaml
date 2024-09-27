@@ -203,6 +203,8 @@ cargo_ignore: # Cargo modules that do not need to be in the fit to be approved
   - Skirmish Command Burst II
   - Armor Command Burst II
   - Omnidirectional Tracking Link II
+  - Standard Mindflood Booster
+  - Strong Mindflood Booster
 
 # Make auto approval amount for drugs different
 # To be used togheter with the alternatives config
