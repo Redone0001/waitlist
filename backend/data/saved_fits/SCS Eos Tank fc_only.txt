@@ -29,15 +29,6 @@ Federation Navy Garde x5
 Hornet EC-300 x5
 
 
-Mid-grade Amulet Alpha
-Mid-grade Amulet Beta
-Mid-grade Amulet Gamma
-Mid-grade Amulet Delta
-Mid-grade Amulet Epsilon
-Mid-grade Amulet Omega
-Federation Navy Command Mindlink
-
-
 Armor Energizing Charge x600
 Armor Reinforcement Charge x600
 Rapid Repair Charge x600
