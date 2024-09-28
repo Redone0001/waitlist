@@ -60,7 +60,7 @@ function FitsDisplay({ tier, setTier = null }) {
               Support
             </Button>
 			{authContext && authContext.access["waitlist-tag:TRAINEE"] && (
-			<Button active={tier === "fc_only"} onClick={(evt) => setTier("fc_only")} style={{ backgroundColor: theme.colors.success.color }}>
+			<Button active={tier === "fc only"} onClick={(evt) => setTier("fc only")} style={{ backgroundColor: theme.colors.success.color }}>
               UwU section (fc only)
             </Button>
 			)}
@@ -75,8 +75,8 @@ function FitsDisplay({ tier, setTier = null }) {
         <Fitout data={fitData} tier="Standard" />
       ) : tier === "Optimal" ? (
         <Fitout data={fitData} tier="Optimal" />
-      ) : tier === "fc_only" ? (
-        <Fitout data={fitData} tier="fc_only" />
+      ) : tier === "fc only" ? (
+        <Fitout data={fitData} tier="fc only" />
       ) : tier === "Other" ? (
         <Fitout data={fitData} tier="Other" />
       ) : null}
