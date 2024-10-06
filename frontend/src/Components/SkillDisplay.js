@@ -166,6 +166,51 @@ export function Legend() {}
 
 export function SkillDisplay({ characterId, ship, setShip = null, filterMin = false }) {
   const [skills] = useApi(`/api/skills?character_id=${characterId}`);
+  const shipName = ship.toUpperCase();
+  const InfoIcon = styled.span`
+	  display: inline-block;
+	  margin-left: 8px;
+	  cursor: pointer;
+	  position: relative;
+	  color: ${(props) => props.theme.colors.accent3};
+	  font-weight: bold;
+
+	  &:hover::after {
+		content: "${(props) => props.tooltip}";
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 120%;
+		background-color: ${(props) => props.theme.colors.accent3};
+		color: #fff;
+		padding: 0.5em;
+		border-radius: 5px;
+		white-space: nowrap;
+		font-size: 0.9em;
+		z-index: 10;
+		opacity: 1;
+		visibility: visible;
+	  }
+
+	  &:hover::before {
+		content: "";
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 100%;
+		border-width: 5px;
+		border-style: solid;
+		border-color: ${(props) => props.theme.colors.accent3} transparent transparent transparent;
+		z-index: 10;
+	  }
+
+	  &::after,
+	  &::before {
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.3s ease, visibility 0.3s ease;
+	  }
+	`;
 
   return (
     <>
@@ -223,13 +268,39 @@ export function SkillDisplay({ characterId, ship, setShip = null, filterMin = fa
               Basilisk
             </Button>
           </InputGroup>
+          <InputGroup>
+            <Button active={ship === "Golem"} onClick={(evt) => setShip("Golem")}>
+              Golem
+            </Button>
+            <Button active={ship === "Stormbringer"} onClick={(evt) => setShip("Stormbringer")}>
+              Stormbringer
+            </Button>
+            <Button active={ship === "Loki"} onClick={(evt) => setShip("Loki")}>
+              Loki logi
+            </Button>
+          </InputGroup>
         </Buttons>
       )}
 
       <div style={{ marginBottom: "1em" }}>
-        Legend: <Badge variant="danger">Starter</Badge> <Badge variant="warning">Basic</Badge>{" "}
-        <Badge variant="secondary">Elite</Badge> <Badge variant="success">Elite GOLD</Badge>
-      </div>
+      Legend: 
+      <Badge variant="danger">Starter</Badge> 
+      <Badge variant="warning">
+        <a href={`/skills/plans?plan=${shipName}%20BASIC%20PATH`} style={{ color: 'inherit', textDecoration: 'none' }}>
+          Basic
+        </a>
+      </Badge>
+      <Badge variant="secondary">
+        <a href={`/skills/plans?plan=${shipName}%20ELITE%20PATH`} style={{ color: 'inherit', textDecoration: 'none' }}>
+          Elite
+        </a>
+      </Badge> 
+      <Badge variant="success">Elite GOLD</Badge>
+
+      <InfoIcon tooltip="Click 'Basic' or 'Elite' to view the skill plan for this ship.">
+        ?
+      </InfoIcon>
+    </div>
       <SkillHeader>
         {ship === "Nestor" || ship === "Guardian" ? (
           <InfoNote>Basic tier skills are required for logistics.</InfoNote>

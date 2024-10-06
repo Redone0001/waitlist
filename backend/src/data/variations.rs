@@ -183,7 +183,7 @@ impl Builder {
         for entry in &self.file.accept_t1 {
             let mut tiers = HashMap::new();
             tiers.insert(TypeDB::id_of(entry)?, 2);
-            tiers.insert(TypeDB::id_of(&entry[..entry.len() - 1])?, 1);
+            tiers.insert(TypeDB::id_of(&entry[..entry.len() - 1])?, 2);
             to_merge.push(tiers);
         }
         for merge in to_merge {

@@ -1,0 +1,45 @@
+[Eos, SCS max]
+Damage Control II
+Corpii A-Type Explosive Coating
+Centum C-Type Multispectrum Energized Membrane
+Federation Navy 1600mm Steel Plates
+Corpii C-Type Explosive Coating
+Reactor Control Unit II
+Federation Navy 1600mm Steel Plates
+
+50MN Y-T8 Compact Microwarpdrive
+Sentient Remote Sensor Booster
+Sentient Remote Sensor Booster
+Ta3 Compact Ship Scanner
+
+Skirmish Command Burst II
+Armor Command Burst II
+Armor Command Burst II
+Drone Link Augmentor I
+Armor Command Burst II
+
+Medium Command Processor I
+Medium Command Processor I
+
+
+
+
+'Augmented' Ogre x5
+Federation Navy Garde x5
+Hammerhead II x5
+
+ECCM Script x3
+Optimal Range Script x3
+Tracking Speed Script x1
+Armor Energizing Charge x1000
+Rapid Repair Charge x1000
+Armor Reinforcement Charge x1000
+Scan Resolution Script x2
+Rapid Deployment Charge x1000
+Nanite Repair Paste x500
+Agency 'Overclocker' SB5 Dose II x1
+Cargo Scanner I x1
+Peripheral Compact Target Painter x1
+Omnidirectional Tracking Link II x1
+Federation Navy Remote Tracking Computer x1
+

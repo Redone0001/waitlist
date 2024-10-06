@@ -33,6 +33,5 @@ Ogre II x3
 Caldari Navy Antimatter Charge L x8000
 Tungsten Charge L x5000
 Nanite Repair Paste x500
-Scan Resolution Script x1
-Optimal Range Script x1
 Tracking Speed Script x1
+Optimal Range Script x1

@@ -20,9 +20,9 @@
 
 Upgrade numbers (check their history to judge!)
 
-:arrowred: Pilots flying a megathron must be in another ship by 40 hours in fleet. This can be another starter ship.
-:arrowyellow: By 60 hours, some improvement should be shown. Upgrade your ship to a standard fit or train basic skills. 
-:arrowgreen: All pilots are expected to have at least one standard fit ship, with basic skills for that ship, by the time they have flown with us for 120 hours. 
+Pilots flying a megathron must be in another ship by 40 hours in fleet. This can be another starter ship.
+By 60 hours, some improvement should be shown. Upgrade your ship to a standard fit or train basic skills. 
+All pilots are expected to have at least one standard fit ship, with basic skills for that ship, by the time they have flown with us for 120 hours. 
 
 
 ### Multiboxing

@@ -12,7 +12,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
 import { Markdown } from "../../Components/Markdown";
 import { BadgeDOM, BadgeModal } from "../../Components/Badge";
-import hbadge from "../Guide/badges/h.png";
+import abadge from "../Guide/badges/a.png";
 import wbadge from "../Guide/badges/w.png";
 
 export const FitCard = styled.div`
@@ -178,6 +178,12 @@ function ShipDisplay({ fit, id, note }) {
                   HYBRID FIT! This fit requires at least Amulet 1 - 6. <br /> See implants above 
                 </p>
               </Note>
+            ) : fit.name.indexOf("AMULET") !== -1 ? (
+              <Note variant={"danger"}>
+                <p>
+                  AMULET FIT! This fit requires at least Amulet 1 - 6. <br /> See implants above
+                </p>
+              </Note>
             ) : fit.name.indexOf("SAVIOR") !== -1 ? (
               <Note variant={"danger"}>
                 <p>
@@ -203,6 +209,8 @@ function ShipDisplay({ fit, id, note }) {
                 {note ? <FontAwesomeIcon icon={faExclamationCircle} /> : null}
                 {fit.name.toLowerCase().includes("hybrid") ? (
                   <Shield color="red" letter="H" title="Hybrid Implants" />
+                ) : fit.name.toLowerCase().includes("amulet") ? (
+                  <Shield color="red" letter="A" title="Amulet Implants" />
                 ) : fit.name.toLowerCase().includes("Savior") ? (
                   <Shield color="red" letter="W" title="Savior Implants" />
                 ) : null}
@@ -220,7 +228,7 @@ function ImplantOut() {
     <>
       <DisplayDOM style={{ justifyContent: "initial" }}>
         {/* <ImplantButton name="Savior" img={wbadge} /> */}
-        <ImplantButton name="Hybrid" img={hbadge} />
+        <ImplantButton name="Amulet" img={abadge} />
       </DisplayDOM>
     </>
   );

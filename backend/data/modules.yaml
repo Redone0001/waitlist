@@ -66,18 +66,26 @@ alternatives:
     - - Guardian Antimatter Charge L
       - Dread Guristas Antimatter Charge L
 
+  - - - Armor Command Burst II
+    - - Armor Command Burst II
+    - - Skirmish Command Burst II
+    - - Information Command Burst II
+
   - - - Federation Navy Hobgoblin
     - - Hobgoblin II
+    - - Federation Navy Hobgoblin
     - - "'Augmented' Hobgoblin"
       - Light Mutated Drone
 
   - - - Federation Navy Hammerhead
     - - Hammerhead II
+    - - Federation Navy Hammerhead
     - - "'Augmented' Hammerhead"
       - Medium Mutated Drone
 
   - - - Federation Navy Ogre
     - - Ogre II
+    - - Federation Navy Ogre
     - - "'Augmented' Ogre"
       - Heavy Mutated Drone
       
@@ -85,6 +93,14 @@ alternatives:
       - Syndicate 1600mm Steel Plates
     - - Imperial Navy 1600mm Steel Plates
     - - Large Abyssal Armor Plates
+
+  - - - Remote Sensor Booster II
+    - - Remote Sensor Booster II
+    - - Sentient Remote Sensor Booster
+    - - Shadow Serpentis Remote Sensor Booster
+    - - Remote Tracking Computer II
+    - - Federation Navy Remote Tracking Computer
+    - - Shadow Serpentis Remote Tracking Computer
 
 from_meta:
   # Automagically determine alternatives
@@ -97,7 +113,6 @@ from_meta:
     alternative: Large Micro Jump Drive
   - base: Supratidal Entropic Disintegrator II
   - base: Imperial Navy Drone Damage Amplifier
-  - base: Remote Tracking Computer II
   - base: Dark Blood Capacitor Power Relay
   - base: Imperial Navy Cap Recharger
   - base: Large Inductive Compact Remote Capacitor Transmitter
@@ -182,6 +197,14 @@ identification: # Modules/groups we use to look at to figure out what we're flyi
 cargo_ignore: # Cargo modules that do not need to be in the fit to be approved
   - Large Micro Jump Drive
   - Imperial Navy 1600mm Steel Plates
+  - Inertial Stabilizers II
+  - Improved Cloaking Device II
+  - Warp Core Stabilizer II
+  - Skirmish Command Burst II
+  - Armor Command Burst II
+  - Omnidirectional Tracking Link II
+  - Standard Mindflood Booster
+  - Strong Mindflood Booster
 
 # Make auto approval amount for drugs different
 # To be used togheter with the alternatives config
@@ -192,8 +215,6 @@ drugs_approve_override:
       - Agency 'Pyrolancea' DB7 Dose III
       - Agency 'Pyrolancea' DB9 Dose IV
     add: # Set new requirements, here 1 db5 or better and 2 db3 or better
-      - name: Agency 'Pyrolancea' DB3 Dose I
-        amount: 2
       - name: Agency 'Pyrolancea' DB5 Dose II
         amount: 1
   - detect: Agency 'Overclocker' SB7 Dose III

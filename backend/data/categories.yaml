@@ -31,13 +31,17 @@ rules:
   # Bastion
   - item: Bastion Module I
     category: bastion
+  - item: Pithum A-Type Medium Remote Shield Booster
+    category: logi
   # Ships
   - item: Megathron
     category: starter
   - item: Vindicator
     category: DPS
   - item: Paladin
-    category: sniper
+    category: starter
+  - item: Kronos
+    category: DPS
   - item: Nightmare
     category: starter
   - item: Kronos
@@ -51,4 +55,6 @@ rules:
   - item: Rattlesnake
     category: ishtar
   - item: Gila
+    category: DPS
+  - item: Stormbringer
     category: DPS
