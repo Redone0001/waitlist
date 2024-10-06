@@ -114,11 +114,16 @@ function FitsDisplay({ tier, setTier = null }) {
             <Button active={tier === "Offensive"} onClick={(evt) => setTier("Offensive")} style={{ backgroundColor: theme.colors.primary.color }}>
               Offensive
             </Button>
+			<Button active={tier === "OffSupport"} onClick={(evt) => setTier("OffSupport")} style={{ backgroundColor: theme.colors.primary.color }}>
+              Support
+            </Button>
           </InputGroup>
         </Buttons>
       )}
       {tier === "Offensive" ? (
         <Fitout data={fitData} tier="Offensive" />
+      ) : tier === "OffSupport" ? (
+        <Fitout data={fitData} tier="OffSupport" />
       ) : null}
     </>
   );

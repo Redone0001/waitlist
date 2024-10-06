@@ -1,0 +1,39 @@
+[Golem, SCS offensive]
+
+Damage Control II
+Ballistic Control System II
+Ballistic Control System II
+Ballistic Control System II
+
+Large Micro Jump Drive
+Republic Fleet Large Shield Extender
+Multispectrum Shield Hardener II
+Pithum A-Type EM Shield Amplifier
+Multispectrum Shield Hardener II
+Republic Fleet Large Shield Extender
+500MN Quad LiF Restrained Microwarpdrive
+
+Torpedo Launcher II
+Auto Targeting System I
+Torpedo Launcher II
+Bastion Module I
+Small Tractor Beam II
+Torpedo Launcher II
+Heavy Gremlin Compact Energy Neutralizer
+Torpedo Launcher II
+
+Large EM Shield Reinforcer II
+Large Core Defense Field Extender I
+
+
+Mjolnir Fury Cruise Missile x4000
+Mjolnir Rage Torpedo x4000
+Caldari Navy Inferno Cruise Missile x500
+Caldari Navy Mjolnir Cruise Missile x500
+Caldari Navy Nova Cruise Missile x500
+Caldari Navy Scourge Cruise Missile x500
+Caldari Navy Inferno Torpedo x500
+Caldari Navy Mjolnir Torpedo x500
+Caldari Navy Nova Torpedo x500
+Caldari Navy Scourge Torpedo x500
+Cruise Missile Launcher II x4
