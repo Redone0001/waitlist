@@ -1,6 +1,6 @@
 [Guardian, Standard Guardian V2.large]
 
-Corelum B-Type Multispectrum Energized Membrane
+Imperial Navy Multispectrum Energized Membrane
 Centum C-Type Thermal Energized Membrane
 Caldari Navy Power Diagnostic System
 Imperial Navy 800mm Steel Plates
