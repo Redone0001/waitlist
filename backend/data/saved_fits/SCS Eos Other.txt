@@ -9,13 +9,13 @@ Drone Damage Amplifier II
 Drone Damage Amplifier II
 
 50MN Y-T8 Compact Microwarpdrive
-Remote Sensor Booster II
-Remote Sensor Booster II
-Remote Sensor Booster II
+Shadow Serpentis Remote Tracking Computer
+Shadow Serpentis Remote Tracking Computer
+Shadow Serpentis Remote Tracking Computer
 
-Armor Command Burst II
-Armor Command Burst II
-Armor Command Burst II
+Skirmish Command Burst II
+Skirmish Command Burst II
+Skirmish Command Burst II
 [Empty High slot]
 [Empty High slot]
 
@@ -27,15 +27,15 @@ Ogre II x5
 Federation Navy Garde x5
 
 
-Armor Energizing Charge x3300
-Armor Reinforcement Charge x3300
-Rapid Repair Charge x3300
+Armor Energizing Charge x1000
+Armor Reinforcement Charge x1000
+Rapid Repair Charge x1000
 ECCM Script x3
 Scan Resolution Script x3
-Evasive Maneuvers Charge x3000
-Interdiction Maneuvers Charge x3000
-Rapid Deployment Charge x3000
+Evasive Maneuvers Charge x1000
+Interdiction Maneuvers Charge x1000
+Rapid Deployment Charge x1000
 Optimal Range Script x3
 Tracking Speed Script x3
-Skirmish Command Burst II x3
-Shadow Serpentis Remote Tracking Computer x3
+Armor Command Burst II x3
+Sentient Remote Sensor Booster x3
