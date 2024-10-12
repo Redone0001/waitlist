@@ -111,8 +111,6 @@ from_meta:
   - base: Sensor Booster II
   - base: Tracking Computer II
     alternative: Large Micro Jump Drive
-  - base: Drone Link Augmentor I
-  - base: Drone Navigation Computer II
   - base: Supratidal Entropic Disintegrator II
   - base: Imperial Navy Drone Damage Amplifier
   - base: Dark Blood Capacitor Power Relay
