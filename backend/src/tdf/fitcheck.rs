@@ -351,6 +351,7 @@ impl<'a> FitChecker<'a> {
         let mut category =
             categories::categorize(self.fit).unwrap_or_else(|| "starter".to_string());
         if self.tags.contains("STARTER-SKILLS") || self.tags.contains("STARTER-FIT") {
+			self.tags.insert("STARTER");
             if category == "logi" {
                 self.approved = false;
             } else {
