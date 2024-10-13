@@ -2,7 +2,7 @@ import React from "react";
 import { ToastContext, AuthContext } from "../../contexts";
 import { addToast } from "../../Components/Toast";
 import { apiCall, errorToaster, useApi } from "../../api";
-import { Button, Buttons, InputGroup, NavButton, Textarea } from "../../Components/Form";
+import { Button, Buttons, InputGroup, NavButton, Textarea, Select } from "../../Components/Form";
 import { useLocation } from "react-router-dom";
 import { Content, PageTitle } from "../../Components/Page";
 import { FitDisplay, ImplantDisplay } from "../../Components/FitDisplay";
@@ -72,7 +72,7 @@ async function xUp({ character, eft, toastContext, waitlist_id, alt }) {
   }
 }
 
-export function Xup() {
+export function Xup({ onChangeCharacter }) {
   usePageTitle("X-up");
   const toastContext = React.useContext(ToastContext);
   const authContext = React.useContext(AuthContext);
