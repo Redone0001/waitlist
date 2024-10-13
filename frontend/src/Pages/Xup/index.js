@@ -81,8 +81,8 @@ export function Xup() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [reviewOpen, setReviewOpen] = useState(false);
   const [alt, setAlt] = useState(false);
-  const [selectedCharacter, setSelectedCharacter] = useState(authContext.current.id); // New state for selected character
-  const [selectedCharacterName, setSelectedCharacterName] = useState(authContext.current.name); // New state for selected character
+  const [selectedCharacter, setSelectedCharacter] = useState(authContext.current.id);
+  const [selectedCharacterName, setSelectedCharacterName] = useState(authContext.current.name);
   const waitlist_id = queryParams.get("wl");
 
   // Fetch implants whenever selectedCharacter changes
@@ -161,7 +161,7 @@ export function Xup() {
           {implants ? (
             <ImplantDisplay
               implants={implants.implants}
-              name={`${selectedCharacterName}'s capsule`}
+              name={`Your implants:`}
             />
           ) : null}
         </Box>
