@@ -169,6 +169,7 @@ export function Xup({ onChangeCharacter }) {
       }}
     </AuthContext.Consumer>
   );
+}
 
 function XupCheck({ waitlistId, setOpen }) {
   const authContext = React.useContext(AuthContext);
