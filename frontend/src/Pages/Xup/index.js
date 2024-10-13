@@ -82,6 +82,7 @@ export function Xup() {
   const [reviewOpen, setReviewOpen] = useState(false);
   const [alt, setAlt] = useState(false);
   const [selectedCharacter, setSelectedCharacter] = useState(authContext.current.id); // New state for selected character
+  const [selectedCharacterName, setSelectedCharacterName] = useState(authContext.current.name); // New state for selected character
   const waitlist_id = queryParams.get("wl");
 
   // Fetch implants whenever selectedCharacter changes
@@ -89,7 +90,8 @@ export function Xup() {
 
   useEffect(() => {
     setSelectedCharacter(authContext.current.id); // Set initial character
-  }, [authContext.current.id]);
+	setSelectedCharacterName(authContext.current.name);
+  }, [authContext.current.id,authContext.current.name]);
 
   if (!waitlist_id) {
     return <em>Missing waitlist information</em>;
@@ -128,7 +130,6 @@ export function Xup() {
                 </option>
               ))}
             </Select>
-            <Button static>{authContext.current.name}</Button>
             <Button
               variant="success"
               onClick={(evt) => {
@@ -160,7 +161,7 @@ export function Xup() {
           {implants ? (
             <ImplantDisplay
               implants={implants.implants}
-              name={`${authContext.current.name}'s capsule`}
+              name={`${selectedCharacterName}'s capsule`}
             />
           ) : null}
         </Box>
