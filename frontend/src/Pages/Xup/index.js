@@ -93,7 +93,7 @@ export function Xup({ onChangeCharacter }) {
 
   return (
    <AuthContext.Consumer>
-      {(authContext) => (
+      {(authContext) => {
 	  const [implants] = useApi(`/api/implants?character_id=${authContext.current.id}`);
 	  return (
     <>
