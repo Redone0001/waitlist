@@ -72,30 +72,30 @@ async function xUp({ character, eft, toastContext, waitlist_id, alt }) {
   }
 }
 
-export function Xup({ onChangeCharacter }) {
+export function Xup() {
   usePageTitle("X-up");
   const toastContext = React.useContext(ToastContext);
   const authContext = React.useContext(AuthContext);
   const queryParams = new URLSearchParams(useLocation().search);
-  const [eft, setEft] = React.useState("");
-  const [isSubmitting, setIsSubmitting] = React.useState(false);
-  const [reviewOpen, setReviewOpen] = React.useState(false);
-  const [alt, setAlt] = React.useState(false);
-
-  const handleChange = () => {
-    setAlt(!alt);
-  };
-
+  const [eft, setEft] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [reviewOpen, setReviewOpen] = useState(false);
+  const [alt, setAlt] = useState(false);
+  const [selectedCharacter, setSelectedCharacter] = useState(authContext.current.id); // New state for selected character
   const waitlist_id = queryParams.get("wl");
+
+  // Fetch implants whenever selectedCharacter changes
+  const [implants] = useApi(`/api/implants?character_id=${selectedCharacter}`);
+
+  useEffect(() => {
+    setSelectedCharacter(authContext.current.id); // Set initial character
+  }, [authContext.current.id]);
+
   if (!waitlist_id) {
     return <em>Missing waitlist information</em>;
   }
 
   return (
-   <AuthContext.Consumer>
-      {(authContext) => {
-	  const [implants] = useApi(`/api/implants?character_id=${authContext.current.id}`);
-	  return (
     <>
       {reviewOpen && (
         <Modal open={true} setOpen={(evt) => null}>
@@ -118,16 +118,17 @@ export function Xup({ onChangeCharacter }) {
 
           <InputGroup>
             <Select
-			  value={authContext.current.id}
-			  onChange={(evt) => onChangeCharacter && onChangeCharacter(parseInt(evt.target.value))}
-			  style={{ flexGrow: "1" }}
-			>
-			  {authContext.characters.map((character) => (
-				<option key={character.id} value={character.id}>
-				  {character.name}
-				</option>
-			  ))}
-			</Select>
+              value={selectedCharacter}
+              onChange={(evt) => setSelectedCharacter(parseInt(evt.target.value))} // Update selected character
+              style={{ flexGrow: "1" }}
+            >
+              {authContext.characters.map((character) => (
+                <option key={character.id} value={character.id}>
+                  {character.name}
+                </option>
+              ))}
+            </Select>
+            <Button static>{authContext.current.name}</Button>
             <Button
               variant="success"
               onClick={(evt) => {
@@ -135,13 +136,13 @@ export function Xup({ onChangeCharacter }) {
                 errorToaster(
                   toastContext,
                   xUp({
-                    character: authContext.current.id,
+                    character: selectedCharacter, // Use selected character
                     eft,
                     toastContext,
                     waitlist_id,
                     alt,
                   }).then((evt) => setReviewOpen(true))
-                ).finally((evt) => setIsSubmitting(false));
+                ).finally(() => setIsSubmitting(false));
               }}
               disabled={eft.trim().length < 50 || !eft.startsWith("[") || isSubmitting}
             >
@@ -162,12 +163,9 @@ export function Xup({ onChangeCharacter }) {
               name={`${authContext.current.name}'s capsule`}
             />
           ) : null}
-              </Box>
-            </div>
-          </>
-        );
-      }}
-    </AuthContext.Consumer>
+        </Box>
+      </div>
+    </>
   );
 }
 
