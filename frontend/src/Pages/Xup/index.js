@@ -81,7 +81,6 @@ export function Xup({ onChangeCharacter }) {
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [reviewOpen, setReviewOpen] = React.useState(false);
   const [alt, setAlt] = React.useState(false);
-  const [implants] = useApi(`/api/implants?character_id=${authContext.current.id}`);
 
   const handleChange = () => {
     setAlt(!alt);
@@ -93,6 +92,9 @@ export function Xup({ onChangeCharacter }) {
   }
 
   return (
+   <AuthContext.Consumer>
+      {(authContext) => (
+	  const [implants] = useApi(`/api/implants?character_id=${authContext.current.id}`);
     <>
       {reviewOpen && (
         <Modal open={true} setOpen={(evt) => null}>
@@ -162,6 +164,8 @@ export function Xup({ onChangeCharacter }) {
         </Box>
       </div>
     </>
+	)}
+    </AuthContext.Consumer>
   );
 }
 
