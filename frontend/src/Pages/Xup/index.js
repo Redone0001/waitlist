@@ -115,11 +115,11 @@ export function Xup() {
 
           <InputGroup>
             <Select
-			  value={whoami.current.id}
+			  value={authContext.current.id}
 			  onChange={(evt) => onChangeCharacter && onChangeCharacter(parseInt(evt.target.value))}
 			  style={{ flexGrow: "1" }}
 			>
-			  {whoami.characters.map((character) => (
+			  {authContext.characters.map((character) => (
 				<option key={character.id} value={character.id}>
 				  {character.name}
 				</option>
