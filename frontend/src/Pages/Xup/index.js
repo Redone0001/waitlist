@@ -177,6 +177,21 @@ function XupCheck({ waitlistId, setOpen }) {
     xupData.waitlist,
     (entry) => entry.character && entry.character.id === authContext.account_id
   );
+  
+  const handleKeyDown = (event) => {
+    if (event.key === "Escape") {
+      setOpen(false); 
+    } else if (event.key === "Enter") {
+      window.location.href = `/waitlist?wl=${waitlistId}`;
+    }
+  };
+  
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown); 
+    };
+  }, []); 
 
   return (
     <>
