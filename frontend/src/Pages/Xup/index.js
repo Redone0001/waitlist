@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { ToastContext, AuthContext } from "../../contexts";
 import { addToast } from "../../Components/Toast";
 import { apiCall, errorToaster, useApi } from "../../api";
@@ -169,15 +169,6 @@ function XupCheck({ waitlistId, setOpen }) {
   const authContext = React.useContext(AuthContext);
   const [xupData] = useApi(`/api/waitlist?waitlist_id=${waitlistId}`);
 
-  if (!xupData) {
-    return <em>Loading</em>;
-  }
-
-  const myEntry = _.find(
-    xupData.waitlist,
-    (entry) => entry.character && entry.character.id === authContext.account_id
-  );
-  
   const handleKeyDown = (event) => {
     if (event.key === "Escape") {
       setOpen(false); 
@@ -192,6 +183,15 @@ function XupCheck({ waitlistId, setOpen }) {
       window.removeEventListener("keydown", handleKeyDown); 
     };
   }, []); 
+
+  if (!xupData) {
+    return <em>Loading</em>;
+  }
+
+  const myEntry = _.find(
+    xupData.waitlist,
+    (entry) => entry.character && entry.character.id === authContext.account_id
+  );
 
   return (
     <>
