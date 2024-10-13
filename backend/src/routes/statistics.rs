@@ -326,9 +326,9 @@ impl Queries {
             CAST(SUM(fa.last_seen - fa.first_seen) AS SIGNED) total_time_in_fleet
         FROM fleet_activity fa
         JOIN alt_character ac ON ac.alt_id = fa.character_id
-        JOIN admin a ON ac.account_id = a.account_id
+        JOIN admin a ON ac.account_id = a.character_id
         WHERE fa.is_boss = 1
-        GROUP BY 1, a.account_id
+        GROUP BY 1, a.character_id
         "
 		))
 		.fetch_all(db)
