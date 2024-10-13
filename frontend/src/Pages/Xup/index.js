@@ -114,7 +114,17 @@ export function Xup() {
           />
 
           <InputGroup>
-            <Button static>{authContext.current.name}</Button>
+            <Select
+			  value={whoami.current.id}
+			  onChange={(evt) => onChangeCharacter && onChangeCharacter(parseInt(evt.target.value))}
+			  style={{ flexGrow: "1" }}
+			>
+			  {whoami.characters.map((character) => (
+				<option key={character.id} value={character.id}>
+				  {character.name}
+				</option>
+			  ))}
+			</Select>
             <Button
               variant="success"
               onClick={(evt) => {
