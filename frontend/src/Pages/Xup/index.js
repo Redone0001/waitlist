@@ -95,6 +95,7 @@ export function Xup({ onChangeCharacter }) {
    <AuthContext.Consumer>
       {(authContext) => (
 	  const [implants] = useApi(`/api/implants?character_id=${authContext.current.id}`);
+	  return (
     <>
       {reviewOpen && (
         <Modal open={true} setOpen={(evt) => null}>
@@ -161,13 +162,13 @@ export function Xup({ onChangeCharacter }) {
               name={`${authContext.current.name}'s capsule`}
             />
           ) : null}
-        </Box>
-      </div>
-    </>
-	)}
+              </Box>
+            </div>
+          </>
+        );
+      }}
     </AuthContext.Consumer>
   );
-}
 
 function XupCheck({ waitlistId, setOpen }) {
   const authContext = React.useContext(AuthContext);
