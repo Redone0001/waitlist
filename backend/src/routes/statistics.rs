@@ -329,7 +329,7 @@ impl Queries {
 		LEFT JOIN alt_character ac ON fa.character_id = ac.alt_id
 		LEFT JOIN admin a ON a.character_id = ac.account_id OR a.character_id = fa.character_id
 		WHERE fa.is_boss = 1
-		GROUP BY c.name
+		GROUP BY 1, c.name
         "
 		))
 		.fetch_all(db)
