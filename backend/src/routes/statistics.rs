@@ -323,7 +323,7 @@ impl Queries {
         year_month!(from_unixtime!("fa.first_seen")),
         " yearmonth,
             c.name as character_name,   -- Fetch the character name
-            CAST(SUM(fa.last_seen - fa.first_seen) AS SIGNED) total_time_in_fleet
+            CAST(SUM(fa.last_seen - fa.first_seen) AS SIGNED) time_in_fleet
         FROM fleet_activity fa
         JOIN alt_character ac ON ac.alt_id = fa.character_id
         JOIN admin a ON ac.account_id = a.character_id
