@@ -325,9 +325,9 @@ impl Queries {
             c.name as character_name,   -- Fetch the character name
             CAST(SUM(fa.last_seen - fa.first_seen) AS SIGNED) time_in_fleet
         FROM fleet_activity fa
-        JOIN `character` c ON fa.character_id = c.id
 		LEFT JOIN alt_character ac ON fa.character_id = ac.alt_id
-		LEFT JOIN admin a ON a.character_id = ac.account_id OR a.character_id = fa.character_id
+		JOIN admin a ON ac.account_id = a.character_id OR fa.character_id = a.character_id
+		JOIN `character` c ON a.character_id = c.id
 		WHERE fa.is_boss = 1
 		GROUP BY 1, c.name
         "
