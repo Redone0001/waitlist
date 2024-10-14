@@ -317,18 +317,19 @@ impl Queries {
 		}
 
 		let res: Vec<Result> = sqlx::query_as(concat!(
-			"
+			 "
         SELECT
             ",
         year_month!(from_unixtime!("fa.first_seen")),
         " yearmonth,
-            a.character_id as account_id,
+            c.name as character_name,   -- Fetch the character name
             CAST(SUM(fa.last_seen - fa.first_seen) AS SIGNED) total_time_in_fleet
         FROM fleet_activity fa
         JOIN alt_character ac ON ac.alt_id = fa.character_id
         JOIN admin a ON ac.account_id = a.character_id
+        JOIN `character` c ON a.character_id = c.id  -- Link to main character's name
         WHERE fa.is_boss = 1
-        GROUP BY 1, a.character_id
+        GROUP BY 1, c.name   -- Group by the year and character name
         "
 		))
 		.fetch_all(db)
