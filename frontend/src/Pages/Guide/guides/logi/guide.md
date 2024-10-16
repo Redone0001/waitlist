@@ -143,7 +143,7 @@ For cap broadcasts run continuously while an Outuni is on grid, switching your c
 
 Logi cruisers will set up an orbit on the FC to reduce incoming damage. There is no need for Nestors to move in these sites.
 
-### Assualts (AS)
+### Assaults (AS)
 
 For all AS sites the FC is your anchor, pilots will stay grouped together on the FC but generally you will only be burning 30km or so into the site and sitting on the FC until the site is complete.
 

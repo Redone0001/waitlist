@@ -9,12 +9,15 @@
 - Sansha Containment Service _(its an ingame channel, join it)_
 - Sansha Containment Service MOTD _(Rights to edit MOTD)_
 - Standardized MOTD for running fleets. (see Useful Links below)
+- One alt in the SRP corp
+
 
 ## Useful Links
 
 - [FC Flight Checklist](https://docs.google.com/document/d/1-UXnzDgYq3F9Cct7R9dAqWWDWFOSPIP4rrNhiJnBIYk/edit?usp=sharing)
 - [Standardized Fleet channel MOTD](https://docs.google.com/document/d/1COb_wlZs8wB0Xut1i6jqCHck58Cy--4nZXHWHrd64Jo/edit?usp=sharing)
 - [Rep diminishing tests](https://www.dropbox.com/s/pv80oowbtr3o9xp/Rep%20dimishing.xlsx?dl=0)
+- [FC drive folder](https://drive.google.com/drive/folders/1iezTWZp36jyMT6SgERHjWWaeW3FUw8q9?usp=sharing)
 
 ### Inviting
 
