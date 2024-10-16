@@ -25,9 +25,6 @@ notes:
   - name: shield_VG
     description: >
       # **These fits are only to be used when a Stormbringer fleet is pinged. Don't mix them with regular armor fleet.**
-  - name: fc only
-    description: >
-      # **Marauders fit require High Grade Amulet 1-6 to be used.**
 
 
   # Ship specific notes
