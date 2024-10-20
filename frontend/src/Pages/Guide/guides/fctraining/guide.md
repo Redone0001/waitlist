@@ -37,17 +37,22 @@ To officially join the training program contact your favorite council member or 
 
 In this first stage you will learn how to voice fleet, tag and do waitlist invites/motd updates. You will be expected to learn and know every role and anchor position.
 
-Progressing to the next stage requires passing **VAN FLEET** (yes seriously), It's a backseat with an FC Trainer, you will do invites trough the in game waitlist channel, while running a normal fleet. Make sure you know all the fits!
-
 ### Advanced Trainee
 
-In this stage, efficiency, safety and in depth knowledge will be taught and expected. You will need to master contesting, knowing how the agro mechanics work. Knowing NPC's and why we tag them the way we do. Fleet control will also need to be mastered.
+In this stage, efficiency, safety and in depth knowledge will be taught and expected.
+You will need to master fleet control and knowing how the agro mechanics work.
+PvP situation should not scare you.
+Knowing NPC's and why we tag them the way we do. 
+Fleet control will also need to be mastered.
+
 
 Progressing to the next stage requires passing **BUS FLEET** along with getting at least one other +1 from any FC Trainer or council that was not the active backseat.
 
-### Probationary FC
+## Fleet requirement
 
-FC's that just got their HQ tags, they need 6 logi and cannot train nestors or new FC's. The Probationary period can last up to 3 months.
+- Logi: 4 nestor (5 guard = 2 nestor), min 2 nestor for TCRC (no guard only)
+- Links: Armor links ML with cmd ship 5
+- DPS: 2 kronos + 5 paladins
 
 ## Tagging
 

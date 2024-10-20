@@ -153,7 +153,7 @@ Please use the [Anchoring guide](/guide/anchoring) for specifics on positioning 
 
 ### True Power Provisional Headquarters (TPPH) & Nation Rebirth Facility (NRF)
 
-Usually there will be Damnation in fleet AKA meatshield which will sit in a pre-determined position to attempt to consolidate aggro on wave spawns, however pilots will often be arriving into the site late and making their way from the beacon. Keep an eye on these pilots and try to do your best to keep them alive, target broadcast as neccessary and if the pilots ship is still dipping ask for more reps. Nestors can burn toward aggro targets to get within their 29km optimal should it be neccessary but no more than one Nestor should ever need to burn back.
+Usually there will be tanky eos in fleet AKA meatshield which will sit in a pre-determined position to attempt to consolidate aggro on wave spawns, however pilots will often be arriving into the site late and making their way from the beacon. Keep an eye on these pilots and try to do your best to keep them alive, target broadcast as neccessary and if the pilots ship is still dipping ask for more reps. Nestors can burn toward aggro targets to get within their 29km optimal should it be neccessary but no more than one Nestor should ever need to burn back.
 
 The two major dangers to watch for are pilots jumping with aggro at the entry to a room/site, and or jumping from the beacon with aggro on a new wave spawn, often these pilots will be jumping without boosts or out of logi rep ranges. Its important to try your best to save these pilots either by overheating your prop mod, overheating your reps, or calling it out on comms.
 
@@ -161,7 +161,7 @@ The two major dangers to watch for are pilots jumping with aggro at the entry to
 
 This site can be particularly dangerous, so as a logi you must pay attention to broadcasts/aggro switches, which occur every minute approximately.
 
-The FC will order the Meatshield (usually a Damnation) to enter the site first and establish the aggro. Depending on how pre-loaded the site is we will take the gate anywhere from 0-30 seconds after the meatshield.
+The FC will order the Meatshield (usually a tanky eos) to enter the site first and establish the aggro. Depending on how pre-loaded the site is we will take the gate anywhere from 0-30 seconds after the meatshield.
 
 As a cruiser you do not want to take the gate first when FC calls gate status, you have one of the fastest warp speeds. So count to 3 before taking the gate. Nestors should take it immediately on hearing the Gate status.
 

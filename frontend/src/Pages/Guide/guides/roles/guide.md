@@ -13,7 +13,7 @@ Below you can see all the available roles with a brief description, more concise
 | **DDD**       | The light drone bunny, shoots frigates in all sites. Fulfilled by a single Vindicator                                                 |
 | **HHH**       | The heavy drone bunny, shoots untagged cruisers and numbers backwards. Fulfilled by up to three Vindicators.                          |
 | **MTAC/CIVI** | Specific to TCRCs (HQ's) & OCF (Assaults). Used to transport items to complete a site. Held by Nightmares and Paladins                |
-| **MS**        | Short for meatshield, sent into TCRCs to establish aggro to allow for safer entry into a preloaded site. Primarily held by Damnation. |
+| **MS**        | Short for meatshield, sent into TCRCs to establish aggro to allow for safer entry into a preloaded site. Primarily held by tanky eos. |
 
 Roles will be listed in the fleet MOTD.
 
@@ -95,7 +95,7 @@ To effectively do this role we ask for Paladins with T2 tractor beams due to the
 
 ## MS
 
-Your role as MS is to provide safer entrances to TCRC sites by consolidating aggro on one target (yourself). Having previous scouting knowledge here helps but isnt a requirement. We usually ask pilots to MS in our doctrine fit Damnation which can be found on the in game mailing list. However should a damnation not be available any bastion ship with full amulet implants (1-6) can be given the role, failing this as a last resort a bastion ship fitted with an additional extra plate can also safely do the role.
+Your role as MS is to provide safer entrances to TCRC sites by consolidating aggro on one target (yourself). Having previous scouting knowledge here helps but isnt a requirement. We usually ask pilots to MS in our doctrine fit tanky eos which can be found on the in game mailing list. However should a meatshield ship not be available any bastion ship with full amulet implants (1-6) can be given the role, failing this as a last resort a bastion ship fitted with an additional extra plate can also safely do the role.
 
 As MS it is important the FC can hear you clearly and that you respond in a timely manner, during a site entrance the comms should be clear to allow this. After confirming you have recieved armor boosts and been given the call for "meatshield and meatshield only" you should broadcast for armor & capacitor then take the acceleration gate. Avoid using any trigger words when doing this so that pilots do not accidentally follow you in.
 
