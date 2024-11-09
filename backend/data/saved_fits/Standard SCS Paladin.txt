@@ -22,7 +22,7 @@ Large Remote Armor Repairer II
 Bastion Module I
 Mega Pulse Laser II
 
-Large Energy Burst Aerator II
+Large Trimark Armor Pump II
 Large Trimark Armor Pump II
 
 
@@ -33,11 +33,11 @@ Light Hull Maintenance Bot II x5
 
 Conflagration L x60
 Scorch L x60
-Imperial Navy Multifrequency L x4
+Imperial Navy Multifrequency L x40
 Nanite Repair Paste x1000
 Optimal Range Script x2
 Tracking Speed Script x2
 Warp Core Stabilizer II x1
 Improved Cloaking Device II x1
-Inertial Stabilizers II x2
+Inertial Stabilizers II x3
 Small Tractor Beam I x1
