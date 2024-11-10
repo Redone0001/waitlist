@@ -1,17 +1,17 @@
-[Kronos, Optimal Kronos]
+[Kronos, Jakaja Special]
 
+Federation Navy Magnetic Field Stabilizer
+Federation Navy Magnetic Field Stabilizer
+Federation Navy Magnetic Field Stabilizer
+Federation Navy Magnetic Field Stabilizer
 Centum A-Type Multispectrum Energized Membrane
-Federation Navy Magnetic Field Stabilizer
-Federation Navy Magnetic Field Stabilizer
-Federation Navy Magnetic Field Stabilizer
 Centum A-Type Multispectrum Energized Membrane
-Federation Navy Magnetic Field Stabilizer
 Imperial Navy 1600mm Steel Plates
 
-Core A-Type 500MN Microwarpdrive
-Federation Navy Tracking Computer
-True Sansha Warp Disruptor
 Large Micro Jump Drive
+True Sansha Warp Disruptor
+Federation Navy Tracking Computer
+Core A-Type 500MN Microwarpdrive
 Sentient Sensor Booster
 
 Neutron Blaster Cannon II
@@ -19,10 +19,10 @@ Neutron Blaster Cannon II
 Neutron Blaster Cannon II
 Neutron Blaster Cannon II
 True Sansha Large EMP Smartbomb
-Bastion Module I
 True Sansha Large EMP Smartbomb
+Bastion Module I
 
-Large Trimark Armor Pump II
+Large Hybrid Burst Aerator II
 Large Trimark Armor Pump II
 
 
