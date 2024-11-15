@@ -11,7 +11,7 @@ We use tree logistics ships.
 Oneiros, Guardian and Nestor.
 These ships all have a special role to play in the fleet as well as logistics.
 
- ![](https://images.evetech.net/types/11987/icon) ![](https://images.evetech.net/types/33472/icon)
+ ![](https://images.evetech.net/types/11989/icon) ![](https://images.evetech.net/types/11987/icon) ![](https://images.evetech.net/types/33472/icon)
 
 - Oneiros - Provides bonused tracking computer to vindi/nightmare (prio to DDD)
 - Guardian - Provides capacitor to ships who need it.

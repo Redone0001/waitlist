@@ -77,17 +77,17 @@ The [General tips](/guide/tips) guide gives advice on what to look for when purc
 1. Any tank module (resist > HP):
 - better resist modules (centum A-type Multispectrum Energized Membranes)
 - better plate / amulet 
-1. Cap stability modules:
+2. Cap stability modules:
 - X-Type prop doesn't give cap penalty
 - Cap battery for nestor
-1. Damage modules/drones:
+3. Damage modules/drones:
 - Cheap abyssal dmg modules
 - Augmented ogre
 - Expensive abyssal dmg modules
 
 ### Optimal gold
 
-1. Finally, once you have all skills to optimal gold for your ship get your **optimal gold** badge to show off your awesomeness. 
+Finally, once you have all skills to optimal gold for your ship get your **optimal gold** badge to show off your awesomeness. 
 Just ask any FC who is not running the current fleet to check you meet the requirements. 
 This is just a skill check on the site.
 
