@@ -29,12 +29,15 @@ Beancursion works with a tier system. Pilots can be categorized as starter, stan
 
 ### Starter
 
-1. **Get a [starter fit](/fits?Tier=Starter)**, you will need level 2 armor compensation skills to be able to x-up, and you need to be able to online all the modules from the fit. We recommend the Vindi or Nightmare starters.
+1. **Get a [starter fit](/fits?Tier=Starter)**, you will need level 2 armor compensation skills to be able to x-up, and you need to be able to online all the modules from the fit.
+ We recommend the Vindi or Nightmare starters.
 
-(If you are Alpha status and cannot use the MJD in the cargo this is fine, we understand pilots will need time to Omega their accounts) If you're low on ISK, you can start by getting the **Megathron**. If you do, it's important that you focus on upgrading to another ship as soon as possible.
+(If you are Alpha status and cannot use the MJD in the cargo this is fine, we understand pilots will need time to Omega their accounts) 
+If you're low on ISK, you can start by getting the **Megathron**. 
+If you do, it's important that you focus on upgrading to another ship as soon as possible.
 
-2. Omega your account **ASAP**. Start with one month, its plenty!
-3. If you are still in a Megathron get yourself a Vindi or Nightmare starter fit. **\*(You must be out of a megathron by 40 hours of fleet time)**.
+2. Omega your account **ASAP**. Start with the 3 month pack, its plenty!
+3. Train the tank skills first then focus on the rest of the skills.
 4. Past 60 hours in fleet its important to show progression in your upgrading, either via ship, skills, or fit.
 
 ### Standard
@@ -57,15 +60,36 @@ Once you have the standard fit ready to go, continue **training and injecting st
 
 ### Optimal
 
-1. **Upgrade to [optimal fits](/fits?Tier=Optimal)**. You do not need to have every skill at optimal level to fly the fit. You will need the mid-grade set to fly hybrid fit. Go buy those upgrades while still training/injecting the skills.
+1. Get amulet implants. Mid grade are a required but you can use highgrade if you wish to do so. 
+You can mix and match mid-grade / high-grade. 
+If you know you want to upgrade in future, get high grade 1-5 and mid grade omega.
+1. **Upgrade to [optimal fits](/fits?Tier=Optimal)**. 
+You do not need to have every skill at optimal level to fly the fit. 
+You will need the mid-grade set to fly hybrid/amulet fit (see first point).
 
-2. Finish by getting all the **elite skills**. The order is up to you, but we recommend getting the skills that give the biggest damage increase first, and of course maximize your survivability by upgrading the tank skills.
+1. Finish by getting all the **elite skills**. The order is up to you, but we recommend getting the skills that give the biggest damage increase first, and of course maximize your survivability by upgrading the tank skills.
 
-3. This is a good time to get **abyssal modules**. [Mutaplasmid.space](https://mutaplasmid.space/) is a good website for finding contracts, but remember abyssals must be "better than faction". The [General tips](/guide/tips) guide gives advice on what to look for when purchasing abyssals.
+1. This is a good time to get **abyssal modules** or better modules than the fits require. [Mutaplasmid.space](https://mutaplasmid.space/) is a good website for finding contracts, but remember abyssals must be "better than faction". 
+The [General tips](/guide/tips) guide gives advice on what to look for when purchasing abyssals.
+
+#### What module to upgrade in what order
+
+1. Any tank module (resist > HP):
+- better resist modules (centum A-type Multispectrum Energized Membranes)
+- better plate / amulet 
+1. Cap stability modules:
+- X-Type prop doesn't give cap penalty
+- Cap battery for nestor
+1. Damage modules/drones:
+- Cheap abyssal dmg modules
+- Augmented ogre
+- Expensive abyssal dmg modules
 
 ### Optimal gold
 
-1. Finally, once you have all skills to optimal gold for your ship get your **optimal gold** badge to show off your awesomeness. Just ask any FC who is not running the current fleet to check you meet the requirements. This is just a skill check on the site.
+1. Finally, once you have all skills to optimal gold for your ship get your **optimal gold** badge to show off your awesomeness. 
+Just ask any FC who is not running the current fleet to check you meet the requirements. 
+This is just a skill check on the site.
 
 ### Branch out
 
