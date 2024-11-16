@@ -143,7 +143,6 @@ However you should not ignore rate of fire as any increase in overall DPS should
 As with all abyssal modules, you should simulate your fit with any potential abyssals to check your fitting and that you gain DPS.
 Base faction modules give 25.8% DPS, your abyssals should be higher than this or it will be rejected.
 You can use the [abyssal apraisals](https://mutaplasmid.space/appraisal/) to check your modules DPS%.
-The bastion specialist badge requires damage modules with 29% or better DPS.
 
 - Damage modifier > ROF > CPU
 
