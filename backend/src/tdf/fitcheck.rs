@@ -235,10 +235,11 @@ impl<'a> FitChecker<'a> {
             }
         }
 		
-		if let Some(fit) = self.fit {
-			if fit.name.contains("Offensive") || fit.name.contains("Stormbringer") {
+		match self.fit {
+			Some(fit) if fit.name.contains("Offensive") || fit.name.contains("Stormbringer") => {
 				// Fit matches conditions, no tank skills required.
-			} else {
+			}
+			Some(_) => {
 				// Check for Hull Upgrades
 				if self.pilot.skills.get(type_id!("Hull Upgrades")) < 5 {
 					self.errors.push("Missing tank skill: Hull Upgrades 5 required".to_string());
