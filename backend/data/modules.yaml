@@ -93,6 +93,9 @@ alternatives:
       - Syndicate 1600mm Steel Plates
     - - Imperial Navy 1600mm Steel Plates
     - - Large Abyssal Armor Plates
+      
+  - - - Caldari Navy Scourge Torpedo
+    - - Scourge Rage Torpedo 
 
   - - - Remote Sensor Booster II
     - - Remote Sensor Booster II
@@ -137,6 +140,7 @@ from_meta:
     abyssal: Medium Abyssal Armor Plates
   - base: Damage Control I
     abyssal: Abyssal Damage Control
+  - base: Prototype 'Arbalest' Torpedo Launcher
 
 from_attribute:
   - base:
