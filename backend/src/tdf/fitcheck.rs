@@ -235,22 +235,20 @@ impl<'a> FitChecker<'a> {
             }
         }
 		
-		match self.fit {
-			Some(fit) if fit.name.contains("Offensive") || fit.name.contains("Stormbringer") => {
-				// Fit matches conditions, no tank skills required.
+		if self.fit.name.contains("Offensive") || self.fit.name.contains("Stormbringer") {
+			// Fit matches conditions, no tank skills required.
+		} else {
+			// Check for Hull Upgrades
+			if self.pilot.skills.get(type_id!("Hull Upgrades")) < 5 {
+				self.errors.push("Missing tank skill: Hull Upgrades 5 required".to_string());
 			}
-			Some(_) => {
-				// Check for Hull Upgrades
-				if self.pilot.skills.get(type_id!("Hull Upgrades")) < 5 {
-					self.errors.push("Missing tank skill: Hull Upgrades 5 required".to_string());
-				}
-				
-				// Check for Mechanics
-				if self.pilot.skills.get(type_id!("Mechanics")) < 4 {
-					self.errors.push("Missing tank skill: Mechanics 4 required".to_string());
-				}
+			
+			// Check for Mechanics
+			if self.pilot.skills.get(type_id!("Mechanics")) < 4 {
+				self.errors.push("Missing tank skill: Mechanics 4 required".to_string());
 			}
 		}
+
 
         if self
             .fit
