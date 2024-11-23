@@ -195,7 +195,7 @@ identification: # Modules/groups we use to look at to figure out what we're flyi
   - Medium Remote Repair Augmentor II
   - Medium Capacitor Control Circuit II
   - Large Hybrid Locus Coordinator II
-  - Centum A-Type Multispectrum Energized Membrane
+  - 500MN Quad LiF Restrained Microwarpdrive
 
 cargo_ignore: # Cargo modules that do not need to be in the fit to be approved
   - Large Micro Jump Drive

@@ -167,7 +167,7 @@ impl<'a> FitChecker<'a> {
             if !(diff.cargo_missing.is_empty() && fit_ok) {
                 self.approved = false;
             }
-            if doctrine_fit.name.contains("Starter") {
+            if doctrine_fit.name.contains("Starter") ||  doctrine_fit.name.contains("GOLDEN"){
                 self.tags.insert("STARTER-FIT");
             }
             if fit_ok && doctrine_fit.name.contains("Optimal") {
@@ -234,6 +234,14 @@ impl<'a> FitChecker<'a> {
                 self.approved = false;
             }
         }
+		
+		if self.pilot.skills.get(type_id!("Hull Upgrades")) < 5 && !fit.name.contains("Offensive") && !fit.name.contains("Stormbringer") {
+			self.errors.push("Missing tank skill: Hull Upgrades 5 required".to_string());
+		}
+
+		if self.pilot.skills.get(type_id!("Mechanics")) < 4 && !fit.name.contains("Offensive") && !fit.name.contains("Stormbringer") {
+			self.errors.push("Missing tank skill: Mechanics 4 required".to_string());
+		}
 
         if self
             .fit
