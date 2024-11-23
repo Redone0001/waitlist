@@ -235,14 +235,16 @@ impl<'a> FitChecker<'a> {
             }
         }
 		
-		if self.fit.name.contains("Offensive") || self.fit.name.contains("Stormbringer") {
-			// Fit matches conditions, no tank skills required.
+		let exempt_hulls = vec!["Claymore", "Golem", "Stormbringer",  "Loki", "Gila", "Vulture", "Basilisk"];
+
+		if exempt_hulls.iter().any(|hull| self.fit.hull.contains(hull)) {
+			// Fit matches an exempt hull, no tank skills required.
 		} else {
 			// Check for Hull Upgrades
 			if self.pilot.skills.get(type_id!("Hull Upgrades")) < 5 {
 				self.errors.push("Missing tank skill: Hull Upgrades 5 required".to_string());
 			}
-			
+
 			// Check for Mechanics
 			if self.pilot.skills.get(type_id!("Mechanics")) < 4 {
 				self.errors.push("Missing tank skill: Mechanics 4 required".to_string());
