@@ -237,7 +237,7 @@ impl<'a> FitChecker<'a> {
 		
 		let exempt_hulls = vec!["Claymore", "Golem", "Stormbringer",  "Loki", "Gila", "Vulture", "Basilisk"];
 
-		if exempt_hulls.iter().any(|hull| self.fit.hull.contains(hull)) {
+		if exempt_hulls.iter().any(|hull_name| self.fit.hull == type_id!(hull_name)) {
 			// Fit matches an exempt hull, no tank skills required.
 		} else {
 			// Check for Hull Upgrades
