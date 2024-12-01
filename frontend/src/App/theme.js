@@ -156,6 +156,51 @@ const theme = {
   }),
 };
 
+theme["Xmas"] = _.merge({}, theme.Dark, {
+  colors: {
+    background: "#0B132B", // Midnight blue for a wintery feel
+    active: "#D72638", // Festive cherry red
+    shadow: "rgba(0, 0, 0, 0.3)", // Softer shadow
+    outline: "rgba(215, 38, 56, 0.5)", // Subtle red outline for focus states
+
+    secondary: {
+      color: "#2A9D8F", // Evergreen with a modern tint
+      text: "white", // High contrast for readability
+      accent: "#57CC99", // Frosty green for accents
+      disabled: "#b8c2cc", // Muted gray for disabled elements
+    },
+    input: {
+      color: "#1E2022", // Charcoal background
+      text: "#E5E5E5", // Light text for readability
+      accent: "#D72638", // Active red for focus or hover states
+      disabled: "#4B5563", // Muted dark gray
+    },
+    success: {
+      color: "#34A853", // Holly green
+      text: "white", // High contrast
+      accent: "#76C893", // Frosty green for success highlights
+      disabled: "#224C2A", // Deep forest green for disabled state
+    },
+    danger: {
+      color: "#C92A2A", // Classic poinsettia red
+      text: "white", // High contrast for danger warnings
+      accent: "#EF476F", // Bright crimson for danger accents
+      disabled: "#591B1B", // Muted red-brown
+    },
+    accent1: "#6F1D1B", // Cozy cranberry red
+    accent2: "#D9381E", // Bright cardinal red for emphasis
+    accent3: "#F4D06F", // Vibrant gold for highlights
+    accent4: "#FFFFFF", // Snow white for icy accents
+  },
+  font: {
+    family: "Roboto, sans-serif", // A clean and modern font
+    header: "Playfair Display, serif", // Elegant font for headers
+  },
+  logo: {
+    
+  },
+  sticker: "https://i.imgur.com/OcmNUNt.png",  // Example Christmas sticker URL
+});
 theme.AMOLED = _.merge({}, theme.Dark, {
   colors: {
     text: "#f0f0f0",

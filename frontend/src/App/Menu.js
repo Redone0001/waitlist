@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../contexts";
 import logoImage from "./logo.png";
+import logoXmasImage from "./logo_xmass.png";
 import styled from "styled-components";
 import { InputGroup, Select, NavButton } from "../Components/Form";
 import { EventNotifier } from "../Components/Event";
@@ -93,6 +94,7 @@ NavBar.Name = styled.div`
 
 export function Menu({ onChangeCharacter, theme, setTheme, sticker, setSticker }) {
   const [isOpenMobileView, setOpenMobileView] = React.useState(false);
+ const logoSrc = theme === "Xmas" ? logoXmasImage : logoImage;
   return (
     <AuthContext.Consumer>
       {(whoami) => (

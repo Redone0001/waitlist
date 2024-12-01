@@ -1,4 +1,5 @@
 import React from "react";
+import Snowfall from "react-snowfall";
 import { BrowserRouter as Router, Switch } from "react-router-dom";
 import { processAuth } from "../Pages/Auth";
 import { ToastDisplay } from "../Components/Toast";
@@ -115,6 +116,7 @@ export default class App extends React.Component {
               <AuthContext.Provider value={this.state.auth}>
                 <Router>
                   <Container>
+                    <Snowfall />
                     <Menu
                       onChangeCharacter={(char) => this.changeCharacter(char)}
                       theme={this.state.theme}
