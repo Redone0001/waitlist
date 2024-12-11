@@ -197,9 +197,9 @@ theme["Xmas"] = _.merge({}, theme.Dark, {
     header: "Playfair Display, serif", // Elegant font for headers
   },
   logo: {
-    
+    filter: "none",
   },
-  sticker: "https://i.imgur.com/OcmNUNt.png",  // Example Christmas sticker URL
+  sticker: "https://imgur.com/3EI54VE.png",
 });
 theme.AMOLED = _.merge({}, theme.Dark, {
   colors: {
