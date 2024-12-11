@@ -59,7 +59,7 @@ However FC voice has higher priority than tags, you must listen to and follow FC
 
 To join fleet, Warp to FC twice, if you get the error message natural phenomena, ask for gate status.
 
-Last but not least, we strongly recommend that you pay 30 mil for the day or 100m for full focus to the ship replacement program AKA SRP (details in fleet MOTD). It covers your ship for FC and LOGI errors only.
+Last but not least, we strongly recommend that you pay [*SRP amount*](/guide/xup#ship-replacement-program-4) for full focus to the ship replacement program AKA SRP (details in fleet MOTD). It covers your ship for FC and LOGI errors only.
 
 Any questions?
 
@@ -145,6 +145,7 @@ Pre setup:
 
 - Exit:
      1. Align when tower is low.
+	 1. MTAC warp out.
      1. Clear any tackle (tag X).
      1. Warp the DPS/Sniper off grid. Only logi, your booster (armor) and the primary stays.
      1. Check that nobody is bumpuing on bubble / battery.

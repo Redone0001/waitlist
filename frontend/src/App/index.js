@@ -116,7 +116,7 @@ export default class App extends React.Component {
               <AuthContext.Provider value={this.state.auth}>
                 <Router>
                   <Container>
-                    <Snowfall />
+                    {new Date().getMonth() === 11 && this.state.sticker && <Snowfall />}
                     <Menu
                       onChangeCharacter={(char) => this.changeCharacter(char)}
                       theme={this.state.theme}
