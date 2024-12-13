@@ -84,8 +84,8 @@ const theme = {
   Dark: _.merge({}, globals, {
     base: "dark",
     logo: {
-      filter: "invert(1)",
-    },
+    filter: "none",
+  },
     colors: {
       background: "#1f1f1f",
       text: "#cccccc",
@@ -332,7 +332,7 @@ theme["Chocola"] = _.merge({}, theme.Dark, {
     accent3: "#d15886",
   },
   logo: {
-    filter: "invert(1) drop-shadow(1px 2px 0.5px #80173E)",
+    filter: "none",
   },
   sticker: "https://i.imgur.com/ohDedR4.png",
 });
@@ -389,7 +389,7 @@ theme["Vanilla"] = _.merge({}, theme.Dark, {
 
   logo: {
     filter:
-      "invert(62%) sepia(28%) saturate(325%) hue-rotate(4deg) brightness(100%) contrast(84%) drop-shadow(1px 1px 0.3px #000000)",
+      "none",
   },
   sticker: "https://i.imgur.com/8JN6udB.png",
 });
@@ -446,7 +446,7 @@ theme["Girl Und Panzer"] = _.merge({}, theme.Dark, {
 
   logo: {
     filter:
-      "invert(62%) sepia(28%) saturate(325%) hue-rotate(4deg) brightness(100%) contrast(84%) drop-shadow(1px 1px 0.3px #000000)",
+      "none",
   },
   sticker: "https://i.imgur.com/uSqZCx4.png",
 });
@@ -503,7 +503,7 @@ theme["Alan"] = _.merge({}, theme.Dark, {
 
   logo: {
     filter:
-      "invert(62%) sepia(28%) saturate(325%) hue-rotate(4deg) brightness(100%) contrast(84%) drop-shadow(1px 1px 0.3px #000000)",
+      "none",
   },
   sticker: "https://i.imgur.com/02OSsX4.png",
 });
