@@ -54,7 +54,8 @@
     "react-snowfall": "^2.0.0",
     "remark-gfm": "^4.0.0",
     "styled-components": "^6.1.1",
-    "varint": "^6.0.0"
+    "varint": "^6.0.0",
+    "react-dropzone": "^14.0.0"
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
