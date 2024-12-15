@@ -18,26 +18,31 @@ export function DPS_calc() {
   const [logData, setLogData] = useState([]);
   const [chartData, setChartData] = useState(null);
   const [totals, setTotals] = useState({});
+  const [startTime, setStartTime] = useState('');
+  const [endTime, setEndTime] = useState('');
 
-  const onDrop = (acceptedFiles) => {
-    let allParsedData = [];
+	const onDrop = (acceptedFiles) => {
+	  let allParsedData = [];
 
-    acceptedFiles.forEach((file) => {
-      const reader = new FileReader();
-      reader.onload = () => {
-        const text = reader.result;
-        const listener = extractListener(text);
-        const parsedData = parseLogFile(text, listener);
-        allParsedData = [...allParsedData, ...parsedData];
+	  acceptedFiles.forEach((file) => {
+		const reader = new FileReader();
+		reader.onload = () => {
+		  const text = reader.result;
+		  const listener = extractListener(text);
+		  const parsedData = parseLogFile(text, listener);
+		  allParsedData = [...allParsedData, ...parsedData];
 
-        const aggregatedData = aggregateData(allParsedData);
-        setLogData(aggregatedData);
-        generateChartData(aggregatedData);
-        calculateTotals(aggregatedData);
-      };
-      reader.readAsText(file);
-    });
-  };
+		  const aggregatedData = aggregateData(allParsedData);
+		  setLogData(aggregatedData);
+		  generateChartData(aggregatedData);
+		  calculateTotals(aggregatedData);
+		};
+		reader.readAsText(file);
+	  });
+	};
+
+	const { getRootProps, getInputProps } = useDropzone({ onDrop });
+
 
   const extractListener = (text) => {
     const listenerMatch = text.match(/Listener:\s*(.*)/);
@@ -95,15 +100,35 @@ export function DPS_calc() {
     const datasets = [];
     const labelsSet = new Set();
 
-    Object.entries(aggregatedData).forEach(([listener, data]) => {
-      const formattedData = data.map((entry) => {
+    // Collect all unique labels (timestamps)
+    Object.values(aggregatedData).forEach((data) => {
+      data.forEach((entry) => {
         const formattedTime = new Date(entry.time * 1000).toLocaleTimeString([], {
           hour: '2-digit',
           minute: '2-digit',
         });
         labelsSet.add(formattedTime);
-        return { x: formattedTime, y: entry.damage };
       });
+    });
+
+    const labels = Array.from(labelsSet).sort(); // Ensure the labels are sorted chronologically
+
+    // Process each listener's data
+    Object.entries(aggregatedData).forEach(([listener, data]) => {
+      const dataMap = new Map(
+        data.map((entry) => {
+          const formattedTime = new Date(entry.time * 1000).toLocaleTimeString([], {
+            hour: '2-digit',
+            minute: '2-digit',
+          });
+          return [formattedTime, entry.damage];
+        })
+      );
+
+      const formattedData = labels.map((label) => ({
+        x: label,
+        y: dataMap.get(label) || 0, // Default to 0 if no data for the time point
+      }));
 
       const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
       datasets.push({
@@ -115,7 +140,6 @@ export function DPS_calc() {
       });
     });
 
-    const labels = Array.from(labelsSet).sort(); // Ensure the labels are sorted chronologically
     setChartData({ labels, datasets });
   };
 
@@ -129,18 +153,67 @@ export function DPS_calc() {
     setTotals(totals);
   };
 
-  const { getRootProps, getInputProps } = useDropzone({
-    onDrop,
-    multiple: true,
-    accept: '.log, .txt',
-  });
+  const handleFilter = () => {
+  if (!startTime || !endTime) {
+    alert('Please set both start and end times.');
+    return;
+  }
+
+  // Convert the start and end times into "HH:MM" format for comparison
+  const startMinutes = parseTimeToMinutes(startTime);
+  const endMinutes = parseTimeToMinutes(endTime);
+
+  const filteredData = {};
+
+  for (const listener in logData) {
+    filteredData[listener] = logData[listener].filter((entry) => {
+      const entryMinutes = timestampToMinutes(entry.time);
+      return entryMinutes >= startMinutes && entryMinutes <= endMinutes;
+    });
+  }
+
+  generateChartData(filteredData);
+  calculateTotals(filteredData);
+};
+
+	// Helper function to convert "HH:MM" strings into minutes since midnight
+	const parseTimeToMinutes = (time) => {
+	  const [hours, minutes] = time.split(':').map(Number);
+	  return hours * 60 + minutes;
+	};
+
+	// Helper function to convert a timestamp into minutes since midnight
+	const timestampToMinutes = (timestamp) => {
+	  const date = new Date(timestamp * 1000); // Convert seconds to milliseconds
+	  return date.getHours() * 60 + date.getMinutes();
+	};
+
 
   return (
     <div className="DPS">
-      <h1>Log File Upload and Graph Visualization</h1>
       <div {...getRootProps()} style={styles.dropzone}>
         <input {...getInputProps()} />
         <p>Drag & Drop some log files here, or click to select files</p>
+      </div>
+
+      <div style={styles.filterContainer}>
+        <label>
+          Start Time:
+          <input
+            type="time"
+            value={startTime}
+            onChange={(e) => setStartTime(e.target.value)}
+          />
+        </label>
+        <label>
+          End Time:
+          <input
+            type="time"
+            value={endTime}
+            onChange={(e) => setEndTime(e.target.value)}
+          />
+        </label>
+        <button onClick={handleFilter}>Apply Filter</button>
       </div>
 
       {chartData && (
@@ -186,6 +259,13 @@ const styles = {
     cursor: 'pointer',
     width: '80%',
     margin: 'auto',
+  },
+  filterContainer: {
+    width: '80%',
+    margin: '20px auto',
+    display: 'flex',
+    justifyContent: 'column',
+    gap: '10px',
   },
   chartContainer: {
     width: '80%',
