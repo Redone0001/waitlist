@@ -99,14 +99,16 @@ export function DPS_calc() {
   const generateChartData = (aggregatedData) => {
     const datasets = [];
     const labelsSet = new Set();
+	const hour_option = {
+		hour12: false
+		hour: '2-digit',
+        minute: '2-digit',
+	}
 
     // Collect all unique labels (timestamps)
     Object.values(aggregatedData).forEach((data) => {
       data.forEach((entry) => {
-        const formattedTime = new Date(entry.time * 1000).toLocaleTimeString([], {
-          hour: '2-digit',
-          minute: '2-digit',
-        });
+        const formattedTime = new Date(entry.time * 1000).toLocaleTimeString([], hour_option);
         labelsSet.add(formattedTime);
       });
     });
@@ -117,10 +119,7 @@ export function DPS_calc() {
     Object.entries(aggregatedData).forEach(([listener, data]) => {
       const dataMap = new Map(
         data.map((entry) => {
-          const formattedTime = new Date(entry.time * 1000).toLocaleTimeString([], {
-            hour: '2-digit',
-            minute: '2-digit',
-          });
+          const formattedTime = new Date(entry.time * 1000).toLocaleTimeString([], hour_option);
           return [formattedTime, entry.damage];
         })
       );
@@ -268,9 +267,9 @@ const styles = {
     gap: '10px',
   },
   chartContainer: {
-    width: '80%',
+    width: '100%',
     margin: '20px auto',
-    height: '400px',
+    height: '600px',
   },
   table: {
     width: '80%',
