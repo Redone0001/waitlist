@@ -19,6 +19,8 @@ export function DPS_calc() {
   const [chartData, setChartData] = useState(null);
   const [totals, setTotals] = useState({});
   const [startTime, setStartTime] = useState('');
+  const [endTime, setEndTime] = useState('');
+
 	const onDrop = (acceptedFiles) => {
 	  let allParsedData = [];
 
@@ -97,16 +99,14 @@ export function DPS_calc() {
   const generateChartData = (aggregatedData) => {
     const datasets = [];
     const labelsSet = new Set();
-	const hour_option = {
-			hour12: false
-			hour: '2-digit',
-			minute: '2-digit',
-          }
 
     // Collect all unique labels (timestamps)
     Object.values(aggregatedData).forEach((data) => {
       data.forEach((entry) => {
-        const formattedTime = new Date(entry.time * 1000).toLocaleTimeString([], hour_option);
+        const formattedTime = new Date(entry.time * 1000).toLocaleTimeString([], {
+          hour: '2-digit',
+          minute: '2-digit',
+        });
         labelsSet.add(formattedTime);
       });
     });
@@ -117,7 +117,10 @@ export function DPS_calc() {
     Object.entries(aggregatedData).forEach(([listener, data]) => {
       const dataMap = new Map(
         data.map((entry) => {
-          const formattedTime = new Date(entry.time * 1000).toLocaleTimeString([], hour_option);
+          const formattedTime = new Date(entry.time * 1000).toLocaleTimeString([], {
+            hour: '2-digit',
+            minute: '2-digit',
+          });
           return [formattedTime, entry.damage];
         })
       );
@@ -265,9 +268,9 @@ const styles = {
     gap: '10px',
   },
   chartContainer: {
-    width: '100%',
+    width: '80%',
     margin: '20px auto',
-    height: '600px',
+    height: '400px',
   },
   table: {
     width: '80%',
