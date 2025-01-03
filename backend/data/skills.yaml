@@ -23,6 +23,7 @@ categories:
     - Sharpshooter
     - Surgical Strike
     - Trajectory Analysis
+    - Large Precursor Weapon
     - Large Energy Turret
     - Large Pulse Laser Specialization
     - Large Hybrid Turret
@@ -109,6 +110,7 @@ categories:
     - Gallente Battleship
     - Minmatar Battleship
     - Caldari Battleship
+    - Precursor Battleship
     - Amarr Battlecruiser
     - Gallente Battlecruiser
     - Minmatar Cruiser
@@ -1263,3 +1265,18 @@ requirements:
     Minmatar Propulsion Systems:
       min: 4
       elite: 5
+    
+
+  Leshak:
+    <<: [*generic, *gunnery]
+    Large Precursor Weapon:
+      min: 5
+    Precursor Battleship:
+      min: 4
+      elite: 5
+    Rapid Firing:
+      min: 5
+      priority: 2
+    Surgical Strike:
+      min: 5
+      priority: 2
