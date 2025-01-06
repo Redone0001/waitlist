@@ -46,6 +46,12 @@ export function Home() {
           electronic warfare, capacitor warfare as well as playing on speed and signature to their
           advantage and this helps to teach you many of the ingame mechanics you may face.
         </p>
+		<h3>You want your own waitlist?</h3>
+		<p>
+          I'm offering the waitlist as a service. For more information, reach out to Jakaja Cain.
+		  In game mail is prefered.
+		  <a href="https://evewho.com/character/2114767957">Jakaja Cain</a>.
+        </p>
       </Content>
     </>
   );
