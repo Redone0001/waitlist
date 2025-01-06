@@ -1,15 +1,26 @@
-# The Ditanian Fleet Waitlist
-The official incursion waitlist for The Ditanian Fleet, Eve Online's premier armour HQ incursion community. Features include ESI fleet invites, skill checking, fit checking, a doctrine page, and community guides. 
+# Beancursion Waitlist
+The official incursion waitlist for Beancursion.
+Features include ESI fleet invites, skill checking, fit checking, a doctrine page, and community guides. 
+[Orignial repo](https://github.com/The-ditanian-fleet/waitlist)
 
+
+### Using the waitlist "as a service"
+I offer the possibility to use the waitlist as a service.
+Most of the content can be modified for your specific need.
+This is suitable for incursion and pochven ratting.
+All fees are in ISK according to [CCP EULA](https://developers.eveonline.com/resource). 
 
 ### Contributing
-Report bugs by opening a GitHub issue, or send a message to a TDF HQ FC. Security issues should be reported to an FC directly. 
+Report bugs by opening a GitHub issue, or send a message to a [Jakaja Cain](https://evewho.com/character/2114767957).
+Security issues should be reported to an FC directly. 
 
 #### A One-Time Change
-If you only want to make a one-time contribution, have a chat with the FC team. We will discuss your idea, any potential issues and may make some requests. After our chat, fork the repository and get to work.
+If you only want to make a one-time contribution, have a chat with me (Jakaja).
+We will discuss your idea, any potential issues and may make some requests.
+After our chat, fork the repository and get to work.
 
 #### Regular Contributions
-If you want to make regular contributions, please reach out to Reoze or Lyari on Discord.
+If you want to make regular contributions, please reach out to me on Discord.
 
 #### Creating a Pull Request
 Once you think you are ready, please check:
