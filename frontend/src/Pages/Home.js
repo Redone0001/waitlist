@@ -48,8 +48,8 @@ export function Home() {
         </p>
 		<h3>You want your own waitlist?</h3>
 		<p>
-          I'm offering the waitlist as a service. For more information, reach out to Jakaja Cain.
-		  In game mail is prefered.
+          I&apos;m offering the waitlist as a service. For more information, reach out to Jakaja Cain.
+		  In game mail is preferred.
 		  <a href="https://evewho.com/character/2114767957">Jakaja Cain</a>.
         </p>
       </Content>
