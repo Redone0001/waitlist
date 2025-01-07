@@ -93,7 +93,7 @@ You can have this open on your phone in your tryouts and/or first trainee fleets
 **Wave 1**
 
 - N : Romi, Osti, Uitra
-- L : Mara, Deltote, Vylade
+- L : Mara, Deltote
 
 **Wave 2**
 

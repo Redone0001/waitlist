@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import React, { useEffect, useState, useReducer } from "react";
 import styled, { ThemeContext } from "styled-components";
 import { ToastContext, AuthContext } from "../../contexts";
 import { apiCall, useApi, errorToaster } from "../../api";
@@ -397,6 +397,23 @@ export function XCard({ entry, fit, onAction }) {
       tagText.push(tag);
     }
   });
+  
+  const [isBlinking, setIsBlinking] = useState(false);
+  const hasDeafBeanBadge = tags.includes("DEAF_BEAN");
+
+  useEffect(() => {
+    if (hasDeafBeanBadge) {
+      const blinkInterval = setInterval(() => {
+        setIsBlinking((prev) => !prev);
+      }, 500);
+
+      return () => {
+        clearInterval(blinkInterval);
+      };
+    }
+  }, [hasDeafBeanBadge]);
+
+  const opacity = isBlinking ? 0.5 : 1;
 
   const approvalFlag = fit.approved ? null : (
     <span title="Pending approval">

@@ -170,16 +170,15 @@ function PilotsByMonth({ data }) {
 function FleetTimeByHullMonth({ data }) {
   const series = separateDataLabels2D(data);
   return (
-    <ThemedBar
+    <ThemedLine
       data={{
         labels: series.labels,
         datasets: _.map(series.series, (numbers, label) => ({
           label: label,
-          data: numbers.map((seconds) => Math.round(seconds / 3600)),
+          data: numbers.map((seconds) => Math.round((seconds || 0) / 3600)),
         })),
       }}
       options={{
-        scales: { x: { stacked: true }, y: { stacked: true } },
         plugins: {
           title: {
             display: true,

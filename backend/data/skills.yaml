@@ -15,6 +15,7 @@ categories:
     - Shield Management
     - Shield Operation
     - Tactical Shield Manipulation
+    - EDENCOM Cruiser
   Gunnery:
     - Controlled Bursts
     - Motion Prediction
@@ -26,6 +27,12 @@ categories:
     - Large Pulse Laser Specialization
     - Large Hybrid Turret
     - Large Blaster Specialization
+    - Medium Vorton Projector
+    - Medium Vorton Specialization
+    - Vorton Arc Extension
+    - Vorton Arc Guidance
+    - Vorton Power Amplification
+    - Vorton Projector Operation
   Missile:
     - Missile Launcher Operation
     - Rapid Launch
@@ -62,6 +69,7 @@ categories:
     - Light Drone Operation
     - Medium Drone Operation
     - Heavy Drone Operation
+    - Sentry Drone Interfacing
     - Repair Drone Operation
   Engineering:
     - Thermodynamics
@@ -103,6 +111,12 @@ categories:
     - Caldari Battleship
     - Amarr Battlecruiser
     - Gallente Battlecruiser
+    - Minmatar Cruiser
+    - Minmatar Strategic Cruiser
+    - Minmatar Core Systems
+    - Minmatar Defensive Systems
+    - Minmatar Offensive Systems
+    - Minmatar Propulsion Systems
     - Amarr Cruiser
     - Gallente Cruiser
     - Caldari Cruiser
@@ -221,8 +235,6 @@ requirements:
       priority: 5
     Shield Management:
       elite: 4
-    Shield Operation:
-      elite: 4
 
   _generic_offensive: &generic_offensive # Generic skills: everyone needs these
     Acceleration Control:
@@ -301,8 +313,6 @@ requirements:
       priority: 5
     Shield Management:
       min: 4
-    Shield Operation:
-      min: 4
 
   _booster: &booster # Booster skills: Only boosters need these
     EM Armor Compensation:
@@ -380,8 +390,6 @@ requirements:
       min: 5
       priority: 5
     Shield Management:
-      elite: 4
-    Shield Operation:
       elite: 4
 
   _sideeffects: &sideeffects
@@ -529,8 +537,6 @@ requirements:
       elite: 5
     Shield Management:
       elite: 4
-    Shield Operation:
-      elite: 4
     Advanced Target Management:
       min: 3
     Energy Grid Upgrades:
@@ -603,8 +609,6 @@ requirements:
       min: 3
       elite: 5
     Shield Management:
-      elite: 4
-    Shield Operation:
       elite: 4
     Advanced Target Management:
       min: 3
@@ -963,6 +967,10 @@ requirements:
     Heavy Drone Operation:
       min: 4
       elite: 5
+    Sentry Drone Interfacing:
+      min: 1
+      elite: 3
+      gold: 5
     Leadership:
       min: 5
     Wing Command:
@@ -1013,6 +1021,10 @@ requirements:
     Heavy Drone Operation:
       min: 4
       elite: 5
+    Sentry Drone Interfacing:
+      min: 1
+      elite: 3
+      gold: 5
     Afterburner:
       min: 1
       gold: 4
@@ -1077,3 +1089,177 @@ requirements:
       min: 4
     Drone Interfacing:
       elite: 4
+
+  Stormbringer:
+    EDENCOM Cruiser:
+      min: 4
+      elite: 5
+    Tactical Shield Manipulation:
+      min: 4
+      gold: 5
+    Medium Vorton Projector:
+      min: 4
+      elite: 5
+    Medium Vorton Specialization:
+      min: 0
+      elite: 3
+      gold: 5
+    Vorton Arc Extension:
+      min: 3
+      elite: 4
+      gold: 5
+    Vorton Arc Guidance:
+      min: 3
+      elite: 4
+      gold: 5
+    Vorton Power Amplification:
+      min: 4
+      gold: 5
+    Vorton Projector Operation:
+      min: 3
+      elite: 4
+      gold: 5
+    Warp Drive Operation:
+      min: 3
+      elite: 5
+    Navigation:
+      min: 4
+      elite: 5
+    Thermodynamics:
+      min: 3
+      elite: 5
+    Capacitor Management:
+      min: 4
+      elite: 5
+    CPU Management:
+      min: 5
+    Capacitor Systems Operation:
+      min: 4
+      elite: 5
+    Power Grid Management:
+      elite: 5
+    Spaceship Command:
+      elite: 5
+    Nanite Interfacing:
+      min: 0
+      elite: 4
+    Nanite Operation:
+      min: 0
+      elite: 4
+    Target Management:
+      min: 4
+      elite: 5
+    Long Range Targeting:
+      min: 4
+      elite: 5
+    Signature Analysis:
+      min: 4
+      elite: 5
+    Shield Management:
+      min: 5
+    Advanced Weapon Upgrades:
+      min: 4
+      elite: 5
+
+  Golem:
+    Caldari Battleship:
+      min: 5
+    Marauders:
+      min: 4
+      elite: 5
+    Torpedoes:
+      min: 5
+    Torpedo Specialization:
+      min: 4
+      gold: 5
+    Target Management:
+      min: 4
+      elite: 5
+    Long Range Targeting:
+      min: 4
+      elite: 5
+    Signature Analysis:
+      min: 4
+      elite: 5
+    Shield Management:
+      min: 5
+    Shield Operation:
+      min: 5
+    Thermodynamics:
+      min: 4
+      elite: 5
+    Missile Launcher Operation:
+      min: 5
+    Rapid Launch:
+      min: 4
+      elite: 5
+    Missile Bombardment:
+      min: 4
+      elite: 5
+    Missile Projection:
+      min: 4
+      elite: 5
+    Target Navigation Prediction:
+      min: 4
+      elite: 5
+    Warhead Upgrades:
+      min: 4
+      elite: 5
+    Guided Missile Precision:
+      min: 4
+      elite: 5
+    Target Painting:
+      min: 3
+      elite: 4
+      gold: 5
+    Tactical Shield Manipulation:
+      min: 4
+      elite: 5
+    Biology:
+      min: 4
+      elite: 5
+    Neurotoxin Control:
+      min: 4
+      elite: 5
+    Neurotoxin Recovery:
+      min: 3
+      elite: 5
+    
+
+  Loki:
+    <<: [*generic_offensive, *logistics_offensive]
+    Capacitor Management:
+      min: 5
+    Evasive Maneuvering:
+      min: 3
+    Minmatar Cruiser:
+      min: 5
+    CPU Management:
+      min: 4
+    Energy Grid Upgrades:
+      min: 4
+    Capacitor Systems Operation:
+      min: 5
+    Tactical Shield Manipulation:
+      min: 4
+      elite: 5
+    Target Management:
+      min: 4
+      elite: 5
+    Advanced Target Management:
+      elite: 4
+    Long Range Targeting:
+      min: 4
+      elite: 5
+    Signature Analysis:
+      min: 4
+      elite: 5
+    Minmatar Core Systems:
+      min: 5
+    Minmatar Defensive Systems:
+      min: 5
+    Minmatar Offensive Systems:
+      min: 5
+    Minmatar Propulsion Systems:
+      min: 4
+      elite: 5

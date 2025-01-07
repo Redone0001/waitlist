@@ -14,6 +14,17 @@ pub fn detect_base_set(implants: &[TypeID]) -> Option<&'static str> {
             ],
         ),
         (
+            "AMULET",
+            [
+                type_id!("Mid-grade Amulet Alpha"),
+                type_id!("Mid-grade Amulet Beta"),
+                type_id!("Mid-grade Amulet Delta"),
+                type_id!("Mid-grade Amulet Epsilon"),
+                type_id!("Mid-grade Amulet Gamma"),
+                type_id!("Mid-grade Amulet Omega"),
+            ],
+        ),
+        (
             "HYBRID",
             [
                 type_id!("High-grade Amulet Alpha"),
@@ -72,10 +83,11 @@ pub fn detect_base_set(implants: &[TypeID]) -> Option<&'static str> {
 fn detect_slot7(hull: TypeID, implants: &[TypeID]) -> Option<()> {
     if implants.contains(&type_id!("Ogdin's Eye Coordination Enhancer"))
         || implants.contains(&type_id!("% MR-706"))
+        || implants.contains(&type_id!("% MR-705"))
         || ((hull == type_id!("Nestor")
             || hull == type_id!("Oneiros")
             || hull == type_id!("Guardian"))
-            && implants.contains(&type_id!("% RA-706")))
+            && (implants.contains(&type_id!("% RA-706")) || implants.contains(&type_id!("% RA-705"))))
     {
         Some(())
     } else {
@@ -84,10 +96,11 @@ fn detect_slot7(hull: TypeID, implants: &[TypeID]) -> Option<()> {
 }
 
 fn detect_slot8(hull: TypeID, implants: &[TypeID]) -> Option<()> {
-    if implants.contains(&type_id!("% EM-805")) {
+    if implants.contains(&type_id!("% EM-805")) 
+        || implants.contains(&type_id!("% EM-806"))
+	{
         Some(())
-    } else if (implants.contains(&type_id!("Zor's Custom Navigation Hyper-Link"))
-        || implants.contains(&type_id!("% MR-807")))
+    } else if (implants.contains(&type_id!("% MR-805")))
         && !(hull == type_id!("Nestor")
             || hull == type_id!("Oneiros")
             || hull == type_id!("Guardian"))
@@ -104,7 +117,9 @@ fn detect_slot9(hull: TypeID, implants: &[TypeID]) -> Option<()> {
         // No useful implants.
         Some(())
     } else if implants.contains(&type_id!("% RF-906"))
+        || implants.contains(&type_id!("% RF-905"))
         || implants.contains(&type_id!("% SS-906"))
+        || implants.contains(&type_id!("% SS-905"))
         || implants.contains(&type_id!("Pashan's Turret Customization Mindlink"))
     {
         Some(())
@@ -115,15 +130,17 @@ fn detect_slot9(hull: TypeID, implants: &[TypeID]) -> Option<()> {
 
 pub fn detect_slot10(hull: TypeID, implants: &[TypeID]) -> Option<()> {
     if hull == type_id!("Nightmare") || hull == type_id!("Paladin") {
-        if implants.contains(&type_id!("Pashan's Turret Handling Mindlink"))
-            || implants.contains(&type_id!("% LE-1006"))
+        if implants.contains(&type_id!("% LE-1006"))
+            || implants.contains(&type_id!("% LE-1005"))
         {
             Some(())
         } else {
             None
         }
     } else if hull == type_id!("Vindicator") || hull == type_id!("Kronos") {
-        if implants.contains(&type_id!("% LH-1006")) {
+        if implants.contains(&type_id!("% LH-1006"))
+            || implants.contains(&type_id!("% LH-1005"))
+		{
             Some(())
         } else {
             None

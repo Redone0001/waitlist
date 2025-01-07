@@ -167,11 +167,11 @@ impl<'a> FitChecker<'a> {
             if !(diff.cargo_missing.is_empty() && fit_ok) {
                 self.approved = false;
             }
-            if doctrine_fit.name.contains("STARTER") {
+            if doctrine_fit.name.contains("Starter") {
                 self.tags.insert("STARTER-FIT");
             }
-            if fit_ok && doctrine_fit.name.contains("ELITE") {
-                self.tags.insert("ELITE-FIT");
+            if fit_ok && doctrine_fit.name.contains("Optimal") {
+                self.tags.insert("OPTIMAL-FIT");
             }
 
             self.analysis = Some(PubAnalysis {
@@ -194,6 +194,8 @@ impl<'a> FitChecker<'a> {
                 if fit.name.contains("Starter") {
                     2
                 } else if fit.name.contains("Offensive") {
+					0
+				} else if fit.name.contains("Stormbringer") {
 					0
 				} else {
                     4
@@ -261,6 +263,11 @@ impl<'a> FitChecker<'a> {
             || self.tags.contains("ELITE-SKILLS")
             || self.tags.contains("GOLD-SKILLS")
 			|| self.tags.contains("BASIC-SKILLS");
+		let pilot_deaf = self.tags.contains("DEAF_BEAN");
+		
+		if pilot_deaf{
+			self.approved = false;
+		}
             
         if self.fit.hull == type_id!("Megathron") {
             if self.pilot.time_in_fleet > (40 * 3600) {
@@ -283,7 +290,7 @@ impl<'a> FitChecker<'a> {
             let set_tag = implantmatch::detect_base_set(self.pilot.implants).unwrap_or("");
             if set_tag != "SAVIOR" {
                 let mut implants_nok = "";
-                if doctrine_fit.name.contains("HYBRID") && set_tag != "AMULET" {
+                if (doctrine_fit.name.contains("HYBRID") || doctrine_fit.name.contains("AMULET"))&& set_tag != "AMULET" {
                     let implants:[(i32, i32); 6] = [
                     (type_id!("Mid-grade Amulet Alpha"), type_id!("High-grade Amulet Alpha")),
                     (type_id!("Mid-grade Amulet Beta"), type_id!("High-grade Amulet Beta")),
@@ -354,6 +361,12 @@ impl<'a> FitChecker<'a> {
     }
 
     fn add_snowflake_tags(&mut self) {
+		if self.badges.contains(&String::from("MANGO")) {
+                    self.tags.insert("MANGO");
+                }
+		if self.badges.contains(&String::from("DEAF_BEAN")) {
+                    self.tags.insert("DEAF_BEAN");
+                } 
         if self.pilot.access_keys.contains("waitlist-tag:COUNCIL") {
             self.tags.insert("COUNCIL");
         } else if self.pilot.access_keys.contains("waitlist-tag:TRAINER") {
@@ -379,6 +392,10 @@ impl<'a> FitChecker<'a> {
                 self.tags.insert("WEB-SPECIALIST");
             }
     
+            if self.fit.hull == type_id!("Loki") && self.badges.contains(&String::from("MULTIBOX")) {
+                self.tags.insert("MULTIBOX");
+            }
+    
             if (self.fit.hull == type_id!("Kronos") || self.fit.hull == type_id!("Paladin"))
                 && self.badges.contains(&String::from("BASTION"))
             {
@@ -388,14 +405,14 @@ impl<'a> FitChecker<'a> {
     }
 
     fn merge_tags(&mut self) {
-        if self.tags.contains("ELITE-FIT") {
+        if self.tags.contains("OPTIMAL-FIT") {
             if ["WARPSPEED", "HYBRID", "AMULET"]
                 .iter()
                 .any(|e| self.tags.contains(e))
                 || self.tags.contains("SAVIOR")
             {
                 if self.tags.contains("ELITE-SKILLS") {
-                    self.tags.remove("ELITE-FIT");
+                    self.tags.remove("OPTIMAL-FIT");
                     self.tags.remove("ELITE-SKILLS");
                     if self.tags.contains("BASTION-SPECIALIST") {
                         self.tags.remove("BASTION-SPECIALIST");
@@ -404,12 +421,12 @@ impl<'a> FitChecker<'a> {
                         self.tags.remove("WEB-SPECIALIST");
                         self.tags.insert("WEB");
                     } else {
-                        self.tags.insert("ELITE");
+                        self.tags.insert("OPTIMAL");
                     }
                 } else if self.tags.contains("GOLD-SKILLS") {
-                    self.tags.remove("ELITE-FIT");
+                    self.tags.remove("OPTIMAL-FIT");
                     self.tags.remove("GOLD-SKILLS");
-                    self.tags.insert("ELITE-GOLD");
+                    self.tags.insert("OPTIMAL-GOLD");
                     if self.tags.contains("BASTION-SPECIALIST") {
                         self.tags.remove("BASTION-SPECIALIST");
                         self.tags.insert("BASTION");
@@ -420,7 +437,7 @@ impl<'a> FitChecker<'a> {
                 }
             } else if self.tags.contains("ANTIGANK") {
                 // ANTIGANK fleet clutter cleanup
-                self.tags.remove("ELITE-FIT");
+                self.tags.remove("OPTIMAL-FIT");
             }
         } else if self.tags.contains("STARTER-SKILLS") || self.tags.contains("STARTER-FIT") {
             self.tags.remove("STARTER-FIT");

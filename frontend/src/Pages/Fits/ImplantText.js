@@ -16,7 +16,7 @@ import {
 export function ImplantTable({ type }) {
   const toastContext = React.useContext(ToastContext);
   var implants;
-  if (type === "Hybrid") {
+  if (type === "Amulet") {
     implants = [
       "Mid-grade Amulet Alpha",
       "Mid-grade Amulet Beta",
@@ -36,8 +36,8 @@ export function ImplantTable({ type }) {
   return (
     <>
       <InfoNote>
-        {type === "Hybrid"
-          ? "Hybrid tagged fits require at least Amulet 1 - 6 to be flown."
+        {type === "Amulet"
+          ? "Amulet tagged fits require at least Amulet 1 - 6 to be flown."
           : "Required for Elite badge on non implant specific ships."}
       </InfoNote>
 
@@ -63,7 +63,7 @@ export function ImplantTable({ type }) {
             <Cell>
               <b>Slot 6</b>
             </Cell>
-            {type === "Hybrid" ? (
+            {type === "Amulet" ? (
               <Cell>
               <CopyImplantText toast={toastContext} item={"Mid-grade Amulet Omega"} />
             </Cell>
