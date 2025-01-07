@@ -105,6 +105,9 @@ export function NavLinks({ whoami }) {
       <Links exact to="/isk-h/calc">
         ISK/h
       </Links>
+      <Links exact to="/dps">
+        DPS Graph
+      </Links>
       {whoami && whoami.access["fleet-view"] && (
         <Links exact to="/fc/fleet">
           Fleet

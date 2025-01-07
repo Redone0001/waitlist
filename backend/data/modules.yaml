@@ -93,6 +93,9 @@ alternatives:
       - Syndicate 1600mm Steel Plates
     - - Imperial Navy 1600mm Steel Plates
     - - Large Abyssal Armor Plates
+      
+  - - - Caldari Navy Scourge Torpedo
+    - - Scourge Rage Torpedo 
 
   - - - Remote Sensor Booster II
     - - Remote Sensor Booster II
@@ -111,6 +114,8 @@ from_meta:
   - base: Sensor Booster II
   - base: Tracking Computer II
     alternative: Large Micro Jump Drive
+  - base: Drone Link Augmentor I
+  - base: Drone Navigation Computer II
   - base: Supratidal Entropic Disintegrator II
   - base: Imperial Navy Drone Damage Amplifier
   - base: Dark Blood Capacitor Power Relay
@@ -135,6 +140,7 @@ from_meta:
     abyssal: Medium Abyssal Armor Plates
   - base: Damage Control I
     abyssal: Abyssal Damage Control
+  - base: Prototype 'Arbalest' Torpedo Launcher
 
 from_attribute:
   - base:
@@ -193,6 +199,7 @@ identification: # Modules/groups we use to look at to figure out what we're flyi
   - Medium Remote Repair Augmentor II
   - Medium Capacitor Control Circuit II
   - Large Hybrid Locus Coordinator II
+  - 500MN Quad LiF Restrained Microwarpdrive
 
 cargo_ignore: # Cargo modules that do not need to be in the fit to be approved
   - Large Micro Jump Drive
@@ -205,6 +212,9 @@ cargo_ignore: # Cargo modules that do not need to be in the fit to be approved
   - Omnidirectional Tracking Link II
   - Standard Mindflood Booster
   - Strong Mindflood Booster
+  - Shadow Serpentis Remote Tracking Computer
+  - ECCM Script
+  - Tracking Speed Script
 
 # Make auto approval amount for drugs different
 # To be used togheter with the alternatives config

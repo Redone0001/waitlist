@@ -123,7 +123,7 @@ function Fitout({ data, tier }) {
         } else {
           fitnote = null;
         }
-        if (logiid.includes(parseInt(id))) {
+        if (logiid.includes(parseInt(id)) || ship.name.toLowerCase().includes("logi")) {
           logi.push(<ShipDisplay key={ship.name} fit={ship} id={id} note={fitnote} />);
         } else {
           dps.push(<ShipDisplay key={ship.name} fit={ship} id={id} note={fitnote} />);

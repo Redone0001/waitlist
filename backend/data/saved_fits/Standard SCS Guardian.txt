@@ -1,20 +1,20 @@
-[Guardian, Standard Guardian]
+[Guardian, Standard Guardian V2.large]
 
-Federation Navy Multispectrum Coating
+Imperial Navy Multispectrum Energized Membrane
 Centum C-Type Thermal Energized Membrane
-Power Diagnostic System II
+Caldari Navy Power Diagnostic System
 Imperial Navy 800mm Steel Plates
-Capacitor Power Relay II
+True Sansha Capacitor Power Relay
 
 Republic Fleet Large Cap Battery
-10MN Afterburner II
+Domination 10MN Afterburner
 
-Imperial Navy Large Remote Capacitor Transmitter
+Large Inductive Compact Remote Capacitor Transmitter
+Large Inductive Compact Remote Capacitor Transmitter
+Medium Coaxial Compact Remote Armor Repairer
 Large Remote Armor Repairer II
 Large Remote Armor Repairer II
-Large Remote Armor Repairer II
-Centum C-Type Medium Remote Armor Repairer
-Centum C-Type Medium Remote Armor Repairer
+Large Ancillary Remote Armor Repairer
 
 Medium Capacitor Control Circuit II
 Medium Ancillary Current Router II

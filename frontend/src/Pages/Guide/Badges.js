@@ -108,7 +108,7 @@ export function BadgeData() {
             <br />
             This badge 
             <br />
-            Requirements to aquire the elite badge are:
+            Requirements to acquire the elite badge are:
             <br />
             <br />
             <Content>
@@ -118,7 +118,7 @@ export function BadgeData() {
                 <li>Elite skills or better for the applicable ship</li>
               </ul>
             </Content>
-            <InfoNote>You must be scanned by an FC to aquire the badge so reach to your favorite FC</InfoNote>
+            <InfoNote>You must be scanned by an FC to acquire the badge so reach to your favorite FC</InfoNote>
             <br />
             <InputGroup>
               <NavButton to={`/skills`}>Check your skills</NavButton>

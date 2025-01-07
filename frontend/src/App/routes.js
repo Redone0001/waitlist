@@ -11,6 +11,7 @@ import { Fleet, FleetRegister } from "../Pages/FC/Fleet";
 import { FleetCompHistory } from "../Pages/FC/FleetCompHistory";
 import { Home } from "../Pages/Home";
 import { ISKh, ISKhCalc } from "../Pages/ISKh";
+import {DPS_calc} from "../Pages/DPS";
 import { Legal } from "../Pages/Legal";
 import { NoteAdd } from "../Pages/FC/NoteAdd";
 import { NoteAll } from "../Pages/FC/NoteAll";
@@ -61,6 +62,9 @@ export function Routes() {
       </Route>
       <Route exact path="/isk-h">
         <ISKh />
+      </Route>
+      <Route exact path="/dps">
+        <DPS_calc />
       </Route>
       <Route exact path="/isk-h/calc">
         <ISKhCalc />

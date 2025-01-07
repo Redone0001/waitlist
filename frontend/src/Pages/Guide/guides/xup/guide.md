@@ -35,8 +35,15 @@ If you are unsure **ALWAYS** warp to the FC, if you at the correct site you will
 
 ## Ship Replacement Program
 
-Paying 30M ISK to the Beancursion SRP corporation (a link is provided in the fleet MOTD) covers your ship until the next server downtime. Simply right click the corporation and "Give Money." The cover is for FC and logi error. You are not covered for your own mistakes. Be sure to broadcast on time and make sure you are in the right place in the right site. The payout covers everything destroyed should you die, make sure to have a correct fit. The fleet will pick up anything in your wreck and contract it to you. SRP is completely optional but strongly recommended.
-
+Paying a flat amount to the Beancursion SRP corporation (a link is provided in the fleet MOTD) covers your ship until the next server downtime. 
+There is also an option to cover you for the duration of the spawn.  
+Simply right click the corporation and "Give Money."  for the amount in the MOTD.  
+Both options cover you for FC and logi error.  
+You are not covered for your own mistakes. 
+Be sure to broadcast on time and make sure you are in the right place in the right site. 
+The payout covers everything destroyed should you die, make sure to have a correct fit. 
+The fleet will pick up anything in your wreck and contract it to you. 
+SRP is completely optional but strongly recommended.
 
 ![](paysrp.png)
 

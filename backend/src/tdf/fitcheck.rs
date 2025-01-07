@@ -167,7 +167,7 @@ impl<'a> FitChecker<'a> {
             if !(diff.cargo_missing.is_empty() && fit_ok) {
                 self.approved = false;
             }
-            if doctrine_fit.name.contains("Starter") {
+            if doctrine_fit.name.contains("Starter") ||  doctrine_fit.name.contains("GOLDEN"){
                 self.tags.insert("STARTER-FIT");
             }
             if fit_ok && doctrine_fit.name.contains("Optimal") {
@@ -234,6 +234,31 @@ impl<'a> FitChecker<'a> {
                 self.approved = false;
             }
         }
+		
+		let exempt_hull_ids: Vec<_> = vec![
+			type_id!("Claymore"),
+			type_id!("Golem"),
+			type_id!("Stormbringer"),
+			type_id!("Loki"),
+			type_id!("Gila"),
+			type_id!("Vulture"),
+			type_id!("Basilisk"),
+		];
+
+		if exempt_hull_ids.contains(&self.fit.hull) {
+			// Fit matches an exempt hull, no tank skills required.
+		} else {
+			// Check for Hull Upgrades
+			if self.pilot.skills.get(type_id!("Hull Upgrades")) < 5 {
+				self.errors.push("Missing tank skill: Hull Upgrades 5 required".to_string());
+			}
+
+			// Check for Mechanics
+			if self.pilot.skills.get(type_id!("Mechanics")) < 4 {
+				self.errors.push("Missing tank skill: Mechanics 4 required".to_string());
+			}
+		}
+
 
         if self
             .fit
@@ -351,6 +376,7 @@ impl<'a> FitChecker<'a> {
         let mut category =
             categories::categorize(self.fit).unwrap_or_else(|| "starter".to_string());
         if self.tags.contains("STARTER-SKILLS") || self.tags.contains("STARTER-FIT") {
+			self.tags.insert("STARTER");
             if category == "logi" {
                 self.approved = false;
             } else {

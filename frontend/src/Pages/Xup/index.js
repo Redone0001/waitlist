@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { ToastContext, AuthContext } from "../../contexts";
 import { addToast } from "../../Components/Toast";
 import { apiCall, errorToaster, useApi } from "../../api";
-import { Button, Buttons, InputGroup, NavButton, Textarea } from "../../Components/Form";
+import { Button, Buttons, InputGroup, NavButton, Textarea, Select } from "../../Components/Form";
 import { useLocation } from "react-router-dom";
 import { Content, PageTitle } from "../../Components/Page";
 import { FitDisplay, ImplantDisplay } from "../../Components/FitDisplay";
@@ -77,17 +77,22 @@ export function Xup() {
   const toastContext = React.useContext(ToastContext);
   const authContext = React.useContext(AuthContext);
   const queryParams = new URLSearchParams(useLocation().search);
-  const [eft, setEft] = React.useState("");
-  const [isSubmitting, setIsSubmitting] = React.useState(false);
-  const [reviewOpen, setReviewOpen] = React.useState(false);
-  const [alt, setAlt] = React.useState(false);
-  const [implants] = useApi(`/api/implants?character_id=${authContext.current.id}`);
-
-  const handleChange = () => {
-    setAlt(!alt);
-  };
-
+  const [eft, setEft] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [reviewOpen, setReviewOpen] = useState(false);
+  const [alt, setAlt] = useState(false);
+  const [selectedCharacter, setSelectedCharacter] = useState(authContext.current.id);
+  const [selectedCharacterName, setSelectedCharacterName] = useState(authContext.current.name);
   const waitlist_id = queryParams.get("wl");
+
+  // Fetch implants whenever selectedCharacter changes
+  const [implants] = useApi(`/api/implants?character_id=${selectedCharacter}`);
+
+  useEffect(() => {
+    setSelectedCharacter(authContext.current.id); // Set initial character
+	setSelectedCharacterName(authContext.current.name);
+  }, [authContext.current.id,authContext.current.name]);
+
   if (!waitlist_id) {
     return <em>Missing waitlist information</em>;
   }
@@ -114,7 +119,17 @@ export function Xup() {
           />
 
           <InputGroup>
-            <Button static>{authContext.current.name}</Button>
+            <Select
+              value={selectedCharacter}
+              onChange={(evt) => setSelectedCharacter(parseInt(evt.target.value))} // Update selected character
+              style={{ flexGrow: "1" }}
+            >
+              {authContext.characters.map((character) => (
+                <option key={character.id} value={character.id}>
+                  {character.name}
+                </option>
+              ))}
+            </Select>
             <Button
               variant="success"
               onClick={(evt) => {
@@ -122,13 +137,13 @@ export function Xup() {
                 errorToaster(
                   toastContext,
                   xUp({
-                    character: authContext.current.id,
+                    character: selectedCharacter, // Use selected character
                     eft,
                     toastContext,
                     waitlist_id,
                     alt,
                   }).then((evt) => setReviewOpen(true))
-                ).finally((evt) => setIsSubmitting(false));
+                ).finally(() => setIsSubmitting(false));
               }}
               disabled={eft.trim().length < 50 || !eft.startsWith("[") || isSubmitting}
             >
@@ -146,7 +161,7 @@ export function Xup() {
           {implants ? (
             <ImplantDisplay
               implants={implants.implants}
-              name={`${authContext.current.name}'s capsule`}
+              name={`Your implants:`}
             />
           ) : null}
         </Box>
@@ -158,6 +173,21 @@ export function Xup() {
 function XupCheck({ waitlistId, setOpen }) {
   const authContext = React.useContext(AuthContext);
   const [xupData] = useApi(`/api/waitlist?waitlist_id=${waitlistId}`);
+
+  const handleKeyDown = (event) => {
+    if (event.key === "Escape") {
+      setOpen(false); 
+    } else if (event.key === "Enter") {
+      window.location.href = `/waitlist?wl=${waitlistId}`;
+    }
+  };
+  
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown); 
+    };
+  }, []); 
 
   if (!xupData) {
     return <em>Loading</em>;

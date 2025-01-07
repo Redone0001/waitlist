@@ -8,7 +8,7 @@
 
 ## Things you need acces to
 
-- Not Applicable for now
+- Not Applicable for now.
 
 ## Rules
 
@@ -38,7 +38,7 @@
      - Nestors can replace cruisers, but not the other way around 
   1. Must be flying 1 fully skilled primary booster and 1 other doctrine non booster ship.
   1. Must have 2 backseats / 1 FC trainer/ 1 council to run the Kundalini for the first time even if fully tagged HQ FC.
-  1. Cannot fly if the influence is below 75% blue bar.
+  1. Trainnee cannot fly if the influence is below 75% blue bar.
   1. Should be responsible for initial fleet form-up when possible unless a trainer states otherwise.
 
 ## Fleet Start Safety Speech
@@ -59,7 +59,7 @@ However FC voice has higher priority than tags, you must listen to and follow FC
 
 To join fleet, Warp to FC twice, if you get the error message natural phenomena, ask for gate status.
 
-Last but not least, we strongly recommend that you pay 30 mil for the day or 100m for full focus to the ship replacement program AKA SRP (details in fleet MOTD). It covers your ship for FC and LOGI errors only.
+Last but not least, we strongly recommend that you pay [*SRP amount*](/guide/xup#ship-replacement-program-4) for full focus to the ship replacement program AKA SRP (details in fleet MOTD). It covers your ship for FC and LOGI errors only.
 
 Any questions?
 
@@ -86,21 +86,25 @@ Pre setup:
 
 #### Intial Wave:
 
-1. Get battleship in. 5-8s later everyone in.
+1. Get battleship/battle cruiser in. 5-8s later everyone in.
 1. *Group 1* bastion and clear mara > Deltole.
 1. Rest of the fleet get into position quickly while killing the initial wave.
 
+### When meatshield is in position
+
+1. Group 2 paladin bastion until end of site.
+
 #### First Wave:
 
-1. All paladin bastion. If low on DPS/ high npc amount bastion the kronos or slide in position.
-2. Clear the wave.
+1. *Group 1* & kronos bastion
+1. Clear the wave.
 
 #### Second Wave (Mara wave):
 
-1. Depending on your fleet size, bastion all paladin or only *group 2*.
+1. Depending on your fleet size, rebastion *group 1*.
 1. Clear the wave.
 
-#### Last Wabe (Outini wave):
+#### Last Wave (Outini wave):
 
 1. *Group 1* of paladin jump and clear the far spawn.
 1. Rest of the fleet bastion.
@@ -109,23 +113,14 @@ Pre setup:
 
 ### TPPH
 
-Pre setup:
-- 6-8 paladin in a "group" will be called "group 1".
-- all other paladin in "group 2".
+#### room 1 & 2:
 
-#### room 1:
-
-1. Bastion *group 1* on beacon.
-1. Burn jump the rest of the fleet.
-
-#### room 2:
-
-1. Bastion *group 2* on beacon.
+1. Bastion paladin on beacon.
 1. Burn jump the rest of the fleet.
 
 #### room 3:
 
-1. Bastion *group 1* on beacon.
+1. Bastion few paladins (*group 1*) on beacon.
 1. Burn jump the rest of the fleet.
 1. Keep an Osti tag X until everyone is in position.
 1. Bastion on every wave spawn for 1 cycle and clear the waves.
@@ -146,11 +141,43 @@ Pre setup:
 
 - Main:
      1. Bastion after a full swap (all Osti + all Yulai).
-     1. Spot a good extraction algin.
+     1. Spot a good extraction align.
 
 - Exit:
      1. Align when tower is low.
+	 1. MTAC warp out.
      1. Clear any tackle (tag X).
      1. Warp the DPS/Sniper off grid. Only logi, your booster (armor) and the primary stays.
      1. Check that nobody is bumpuing on bubble / battery.
      1. Fleet warp everyone off.
+	 
+## Thing to do and not do
+
+### DO
+
+1. Watch laser and see if the agro goes to someone. Don't rely on people to call agro.
+1. Keep comms disciple. Some people are here to have a social time other are here to make money. Shout should be use wisely and entry/exit should be quiet.
+1. Be clear on comms.
+1. Lock tag X and make sure it stays alive.
+1. During unplanned event, talk to the fleet and/or the people involve.
+1. Be aware of your grid. Position of everyone is important.
+
+
+### DON'T
+
+1. Stay on beacon for long period of time. It's ok to slide TPPH/NRF entry with low links and pulse inside.
+1. Bypass rules. Thoses are meant to keep everyone safe. If you are not sure, ask someone knowledgeable.
+1. Run site in another way than mention above. (Normal TCRC should never be done)
+1. Run whithout your own links.
+1. Invite people with bad drones.
+
+### Isk improvement Method
+
+1. All paper work can be done during the site.
+1. TPPH/NRF gate green before fleet lands.
+1. Get rid of tag X faster
+1. Align out before end of site. TPPH/NRF let people warp out themself when they have drones/payout.
+1. More marauders
+1. Even more marauders
+1. In NRF, paladin of group 2 can bastion all the time, even between waves. They only need to be in correct position and meatshield as well.
+
