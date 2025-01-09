@@ -24,6 +24,7 @@ categories:
     - Surgical Strike
     - Trajectory Analysis
     - Large Precursor Weapon
+    - Large Disintegrator Specialization
     - Large Energy Turret
     - Large Pulse Laser Specialization
     - Large Hybrid Turret
@@ -1271,12 +1272,23 @@ requirements:
     <<: [*generic, *gunnery]
     Large Precursor Weapon:
       min: 5
+      priority: 1
     Precursor Battleship:
       min: 4
       elite: 5
+      priority: 1
     Rapid Firing:
       min: 5
       priority: 2
     Surgical Strike:
       min: 5
       priority: 2
+    Heavy Drone Operation:
+      min: 3
+      elite: 5
+      priority: 5
+    Remote Armor Repair Systems:
+      min: 3
+      gold: 5
+    Energy Grid Upgrades:
+      min: 2
