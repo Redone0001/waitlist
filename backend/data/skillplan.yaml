@@ -76,6 +76,13 @@ plans:
       - type: skills
         from: Rattlesnake
         tier: min
+  - name: LESHAK BASIC PATH
+    description: >
+      This skill plan will train you to the basic Leshak fit.
+    plan:
+      - type: skills
+        from: Leshak
+        tier: min
   - name: GILA BASIC PATH
     description: >
       This skill plan will train you to standard Gila.
@@ -187,6 +194,13 @@ plans:
     plan:
       - type: skills
         from: Rattlesnake
+        tier: elite
+  - name: LESHAK ELITE PATH
+    description: >
+      This skill plan will train you to the basic Leshak fit.
+    plan:
+      - type: skills
+        from: Leshak
         tier: elite
   - name: GILA ELITE PATH
     description: >

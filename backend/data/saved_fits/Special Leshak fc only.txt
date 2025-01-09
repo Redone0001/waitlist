@@ -1,11 +1,11 @@
 [Leshak, SCS Leshak]
 
-Veles Entropic Radiation Sink
-Veles Entropic Radiation Sink
+Entropic Radiation Sink II
+Entropic Radiation Sink II
 Sentient Damage Control
 Entropic Radiation Sink II
 Imperial Navy 1600mm Steel Plates
-Corelum A-Type Multispectrum Energized Membrane
+Corpii A-Type Multispectrum Coating
 Corpii A-Type Multispectrum Coating
 Entropic Radiation Sink II
 
@@ -14,10 +14,10 @@ Large Micro Jump Drive
 Federation Navy Tracking Computer
 Domination Large Cap Battery
 
-'Peace' Large Remote Armor Repairer
-'Peace' Large Remote Armor Repairer
-'Peace' Large Remote Armor Repairer
-'Peace' Large Remote Armor Repairer
+Large I-ax Enduring Remote Armor Repairer
+Large I-ax Enduring Remote Armor Repairer
+Large I-ax Enduring Remote Armor Repairer
+Large I-ax Enduring Remote Armor Repairer
 Zorya's Supratidal Entropic Disintegrator
 
 Large Explosive Armor Reinforcer II
@@ -26,7 +26,7 @@ Large Trimark Armor Pump II
 
 
 Warrior II x5
-'Augmented' Ogre x4
+Ogre II x4
 Hornet EC-300 x5
 Heavy Hull Maintenance Bot II x4
 
@@ -38,4 +38,4 @@ ECCM Script x1
 Scan Resolution Script x1
 Targeting Range Script x1
 Sentient Sensor Booster x1
-Consortium Small Tractor Beam x1
+Small Tractor Beam II x1
