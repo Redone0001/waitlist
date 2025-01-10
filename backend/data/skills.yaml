@@ -1273,6 +1273,9 @@ requirements:
     Large Precursor Weapon:
       min: 5
       priority: 1
+    Large Disintegrator Specialization:
+      min: 1
+      gold: 5
     Precursor Battleship:
       min: 4
       elite: 5
