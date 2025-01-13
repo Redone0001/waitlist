@@ -392,7 +392,7 @@ export function Statistics() {
         <FleetTimeByFcMonth data={statsData.fleet_seconds_by_fc_by_month} />
       </Graph>
       <Graph>
-        <TimeSpentByFC90d data={statsData.fleet_seconds_by_fc_28d} />
+        <TimeSpentByFC90d data={statsData.fleet_seconds_by_fc_90d} />
       </Graph>
     </Row>
   );
