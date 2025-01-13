@@ -330,7 +330,7 @@ function TimeSpentByHull28d({ data }) {
   );
 }
 
-function TimeSpentByFC28d({ data }) {
+function TimeSpentByFC90d({ data }) {
   const series = separateDataLabels(data);
   return (
     <ThemedDoughnut
@@ -346,7 +346,7 @@ function TimeSpentByFC28d({ data }) {
         plugins: {
           title: {
             display: true,
-            text: "Fleet time by fc (28d)",
+            text: "Fleet time by fc (90d)",
           },
         },
       }}
@@ -392,7 +392,7 @@ export function Statistics() {
         <FleetTimeByFcMonth data={statsData.fleet_seconds_by_fc_by_month} />
       </Graph>
       <Graph>
-        <TimeSpentByFC28d data={statsData.fleet_seconds_by_fc_28d} />
+        <TimeSpentByFC90d data={statsData.fleet_seconds_by_fc_28d} />
       </Graph>
     </Row>
   );

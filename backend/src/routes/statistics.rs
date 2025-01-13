@@ -346,10 +346,10 @@ impl Queries {
 		Ok(result)
 	}
 
-    async fn fleet_seconds_by_fc_28d(
+    async fn fleet_seconds_by_fc_90d(
 		db: &crate::DB,
 	) -> Result<BTreeMap<String, f64>, sqlx::Error> {
-		let ago_28d = chrono::Utc::now().timestamp() - (28 * 86400);
+		let ago_28d = chrono::Utc::now().timestamp() - (90 * 86400);
 
 		#[derive(sqlx::FromRow)]
 		struct Result {
@@ -499,7 +499,7 @@ struct StatsResponse {
     x_vs_time_by_hull_28d: BTreeMap<String, BTreeMap<&'static str, f64>>,
     time_spent_in_fleet_by_month: BTreeMap<YearMonth, BTreeMap<&'static str, f64>>,
 	fleet_seconds_by_fc_by_month: BTreeMap<YearMonth, BTreeMap<String, f64>>,
-	fleet_seconds_by_fc_28d: BTreeMap<String, f64>,
+	fleet_seconds_by_fc_90d: BTreeMap<String, f64>,
 
 }
 
@@ -517,7 +517,7 @@ async fn statistics(
     let xes_by_hull_28d = Queries::xes_by_hull_28d(app.get_db()).await?;
     let seconds_by_hull_28d = Queries::fleet_seconds_by_hull_28d(app.get_db()).await?;
     let seconds_by_fc_month = Queries::fleet_seconds_by_fc_by_month(app.get_db()).await?;
-	let seconds_by_fc_28d = Queries::fleet_seconds_by_fc_28d(app.get_db()).await?;
+	let seconds_by_fc_90d = Queries::fleet_seconds_by_fc_90d(app.get_db()).await?;
 
     Ok(Json(StatsResponse {
         fleet_seconds_by_hull_by_month: Displayer::build_fleet_seconds_by_hull_by_month(
@@ -538,7 +538,7 @@ async fn statistics(
             &seconds_by_character_month,
         ),
 		fleet_seconds_by_fc_by_month: Displayer::build_fleet_seconds_by_fc_by_month(&seconds_by_fc_month),
-		fleet_seconds_by_fc_28d: seconds_by_fc_28d,
+		fleet_seconds_by_fc_90d: seconds_by_fc_90d,
     }))
 }
 
