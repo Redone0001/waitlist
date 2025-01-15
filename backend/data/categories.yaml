@@ -58,3 +58,5 @@ rules:
     category: DPS
   - item: Stormbringer
     category: DPS
+  - item: Leshak
+    category: DPS
