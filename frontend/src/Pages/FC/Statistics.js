@@ -169,20 +169,47 @@ function PilotsByMonth({ data }) {
 
 function FleetTimeByHullMonth({ data }) {
   const series = separateDataLabels2D(data);
+
+  // Calculate percentages for each time period
+  const datasets = _.map(series.series, (numbers, label) => {
+    const totalPerLabel = series.labels.map((_, index) =>
+      _.sumBy(series.series, (seriesNumbers) => seriesNumbers[index] || 0)
+    );
+
+    return {
+      label: label,
+      data: numbers.map((seconds, index) => {
+        const total = totalPerLabel[index] || 1; // Prevent division by zero
+        return Math.round(((seconds || 0) / total) * 100); // Convert to percentage
+      }),
+    };
+  });
+
   return (
     <ThemedLine
       data={{
         labels: series.labels,
-        datasets: _.map(series.series, (numbers, label) => ({
-          label: label,
-          data: numbers.map((seconds) => Math.round((seconds || 0) / 3600)),
-        })),
+        datasets: datasets,
       }}
       options={{
         plugins: {
           title: {
             display: true,
-            text: "Time in fleet by hull",
+            text: "Time in fleet by hull (%)",
+          },
+          tooltip: {
+            callbacks: {
+              label: (context) => `${context.raw}%`, // Display percentage in the tooltip
+            },
+          },
+        },
+        scales: {
+          y: {
+            ticks: {
+              callback: (value) => `${value}%`, // Display percentage on y-axis
+            },
+            beginAtZero: true,
+            max: 100, // Y-axis range from 0 to 100
           },
         },
       }}
