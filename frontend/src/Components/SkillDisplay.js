@@ -245,19 +245,17 @@ export function SkillDisplay({ characterId, ship, setShip = null, filterMin = fa
             </Button>
           </InputGroup>
           <InputGroup>
-            <Button active={ship === "Eos"} onClick={(evt) => setShip("Eos")}>
-              Eos
-            </Button>
-            <Button active={ship === "Damnation"} onClick={(evt) => setShip("Damnation")}>
-              Damnation
-            </Button>
-          </InputGroup>
-          <InputGroup>
             <Button active={ship === "Ishtar"} onClick={(evt) => setShip("Ishtar")}>
               Ishtar
             </Button>
+            <Button active={ship === "Eos"} onClick={(evt) => setShip("Eos")}>
+              Eos
+            </Button>
             <Button active={ship === "Rattlesnake"} onClick={(evt) => setShip("Rattlesnake")}>
               Rattlesnake
+            </Button>
+            <Button active={ship === "Leshak"} onClick={(evt) => setShip("Leshak")}>
+              Leshak
             </Button>
           </InputGroup>
           <InputGroup>
@@ -269,9 +267,6 @@ export function SkillDisplay({ characterId, ship, setShip = null, filterMin = fa
             </Button>
           </InputGroup>
           <InputGroup>
-            <Button active={ship === "Golem"} onClick={(evt) => setShip("Golem")}>
-              Golem
-            </Button>
             <Button active={ship === "Stormbringer"} onClick={(evt) => setShip("Stormbringer")}>
               Stormbringer
             </Button>

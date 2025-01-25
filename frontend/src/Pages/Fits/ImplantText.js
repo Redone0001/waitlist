@@ -15,31 +15,53 @@ import {
 
 export function ImplantTable({ type }) {
   const toastContext = React.useContext(ToastContext);
-  var implants;
-  if (type === "Amulet") {
-    implants = [
-      "Mid-grade Amulet Alpha",
-      "Mid-grade Amulet Beta",
-      "Mid-grade Amulet Gamma",
-      "Mid-grade Amulet Delta",
-      "Mid-grade Amulet Epsilon",
-    ];
-  } else {
-    implants = [
-      "Mid-grade Savior Alpha",
-      "Mid-grade Savior Beta",
-      "Mid-grade Savior Gamma",
-      "Mid-grade Savior Delta",
-      "Mid-grade Savior Epsilon",
-    ];
-  }
+  const implantOptions = {
+  Amulet: [
+    "Mid-grade Amulet Alpha",
+    "Mid-grade Amulet Beta",
+    "Mid-grade Amulet Gamma",
+    "Mid-grade Amulet Delta",
+    "Mid-grade Amulet Epsilon",
+    "Mid-grade Amulet Omega",
+  ],
+  Savior: [
+    "High-grade Amulet Alpha",
+    "High-grade Amulet Beta",
+    "High-grade Amulet Gamma",
+    "High-grade Amulet Delta",
+    "High-grade Amulet Epsilon",
+    "High-grade Amulet Omega",
+  ],
+  Triglavian: [
+    "High-grade Mimesis Alpha",
+    "High-grade Mimesis Beta",
+    "High-grade Mimesis Gamma",
+    "High-grade Mimesis Delta",
+    "High-grade Mimesis Epsilon",
+    "High-grade Mimesis Omega",
+  ],
+  default: [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+  ],
+};
+
+const implants = implantOptions[type] || implantOptions.default;
   return (
     <>
       <InfoNote>
-        {type === "Amulet"
-          ? "Amulet tagged fits require at least Amulet 1 - 6 to be flown."
-          : "Required for Elite badge on non implant specific ships."}
-      </InfoNote>
+	    {type === "Amulet"
+		  ? "Amulet tagged fits require all implants 1 to 6 to be flown."
+		  : type === "Savior"
+		  ? "Savior tagged fits require all implants to be flown."
+		  : type === "Triglavian"
+		  ? "Triglavian tagged fits are encourage to fly with Mimesis. Only high grade complete set are acceptable."
+		  : "Required for Elite badge on non implant specific ships."}
+	  </InfoNote>
 
       <Table style={{ width: "100%" }}>
         <TableHead>
@@ -58,24 +80,10 @@ export function ImplantTable({ type }) {
               implant={currentValue}
             />
           ))}
-
-          <Row>
-            <Cell>
-              <b>Slot 6</b>
-            </Cell>
-            {type === "Amulet" ? (
-              <Cell>
-              <CopyImplantText toast={toastContext} item={"Mid-grade Amulet Omega"} />
-            </Cell>
-            ) : (
-              <Cell>
-                <CopyImplantText toast={toastContext} item={"Mid-grade Savior Omega"} /> if you
-                have too much isk.
-              </Cell>
-            )}
-          </Row>
-
-          <HardWires toastContext={toastContext} />
+          <HardWires 
+		  toastContext={toastContext} 
+		  type=type
+		  />
         </TableBody>
       </Table>
     </>
@@ -109,7 +117,114 @@ function CopyImplantText({ toast, item }) {
   );
 }
 
-function HardWires({ toastContext }) {
+function HardWires({ toastContext, type }) {
+	const hardwireOptions = {
+    Amulet: [
+      {
+        slot: 7,
+        armor: { text: "MR-705", description: "increased tracking." },
+        shield: [
+			{ text: "MR-706", description: "increased tracking." },
+			{ text: "RA-706", description: "reduce cap need for remote reps." },
+		],
+      },
+      {
+        slot: 8,
+        armor: { text: "EM-805", description: "increased capacitor." },
+        shield: [
+			{ text: "EM-806", description: "increased capacitor." },
+			{ text: "MR-805", description: "increased web range." },
+		],
+      },
+      {
+        slot: 9,
+        armor: { text: "RF-905", description: "increased rate of fire." },
+        shield: { text: "RF-906", description: "increased rate of fire." },
+      },
+      {
+        slot: 10,
+        armor: [
+          { text: "LH-1005", description: "increased hybrid damage." },
+          { text: "LE-1005", description: "increased laser damage." },
+        ],
+        shield: [
+          { text: "LH-1006", description: "increased hybrid damage." },
+          { text: "LE-1006", description: "increased laser damage." },
+          { text: "HG-1006", description: "increased armor." },
+        ],
+      },
+    ],Savior: [
+      {
+        slot: 7,
+        armor: { text: "MR-705", description: "increased tracking." },
+        shield: [
+			{ text: "MR-706", description: "increased tracking." },
+			{ text: "RA-706", description: "reduce cap need for remote reps" },
+		],
+      },
+      {
+        slot: 8,
+        armor: { text: "EM-805", description: "increased capacitor." },
+        shield: [
+			{ text: "EM-806", description: "increased capacitor." },
+		],
+      },
+      {
+        slot: 9,
+        armor: { text: "RF-905", description: "increased rate of fire." },
+        shield: { text: "RF-906", description: "increased rate of fire." },
+      },
+      {
+        slot: 10,
+        armor: [
+          { text: "LH-1005", description: "increased hybrid damage." },
+          { text: "LE-1005", description: "increased laser damage." },
+        ],
+        shield: [
+          { text: "LH-1006", description: "increased hybrid damage." },
+          { text: "LE-1006", description: "increased laser damage." },
+          { text: "HG-1006", description: "increased armor." },
+        ],
+      },
+    ],Triglavian: [
+      {
+        slot: 7,
+        armor: [
+			{ text: "MR-705", description: "increased tracking." },
+			{ text: "RA-705", description: "reduce cap need for remote reps." },
+			],
+        shield: [
+			{ text: "MR-706", description: "increased tracking." },
+			{ text: "RA-706", description: "reduce cap need for reps." },
+		],
+      },
+      {
+        slot: 8,
+        armor: { text: "EM-805", description: "increased capacitor." },
+        shield: [
+			{ text: "EM-806", description: "increased capacitor." },
+		],
+      },
+      {
+        slot: 9,
+        armor: { text: "RF-906", description: "increased rate of fire." },
+        shield: null,
+      },
+      {
+        slot: 10,
+        armor: [
+          { text: "HG-1005", description: "increased armor." },
+        ],
+        shield: [
+          { text: "HG-1006", description: "increased armor." },
+          { text: "HG-1008", description: "increased armor." },
+        ],
+      },
+    ],
+    default: [],
+  };
+
+  const rows = hardwireOptions[type] || hardwireOptions.default;
   return (
     <>
       <Row>
@@ -117,13 +232,11 @@ function HardWires({ toastContext }) {
           <b>Slot 7</b>
         </Cell>
         <Cell>
-          <CopyImplantText toast={toastContext} item={"MR-705"} /> increased tracking.
+          <CopyImplantText toast={toastContext} item={"EM-705"} /> increased agility.
         </Cell>
 
         <Cell>
-          <CopyImplantText toast={toastContext} item={"MR-706"} /> <br />
-          <CopyImplantText toast={toastContext} item={"RA-706"} /> reps will use less cap, for
-          <b> logi only pilots.</b>
+          <CopyImplantText toast={toastContext} item={"SM-705"} /> increase shield.
         </Cell>
       </Row>
       <Row>
@@ -135,9 +248,7 @@ function HardWires({ toastContext }) {
         </Cell>
 
         <Cell>
-          <CopyImplantText toast={toastContext} item={"MR-805"} /> longer webbing range, for
-          <b> vindicator only pilots.</b> (not incursion lp)<br />
-          <CopyImplantText toast={toastContext} item={"EM-806"} />
+          <CopyImplantText toast={toastContext} item={"EM-805"} /> increased capacitor.
         </Cell>
       </Row>
       <Row>
@@ -145,11 +256,11 @@ function HardWires({ toastContext }) {
           <b>Slot 9</b>
         </Cell>
         <Cell>
-          <CopyImplantText toast={toastContext} item={"RF-905"} /> increased rate of fire.
+          <CopyImplantText toast={toastContext} item={"HS-905"} /> increased agility.
         </Cell>
 
         <Cell>
-          <CopyImplantText toast={toastContext} item={"RF-906"} />
+          <CopyImplantText toast={toastContext} item={"HS-905"} /> increased agility.
         </Cell>
       </Row>
       <Row>
@@ -157,24 +268,20 @@ function HardWires({ toastContext }) {
           <b>Slot 10</b>
         </Cell>
         <Cell>
-          <b>Kronos/Vindicator:</b>
+          <b>Armor:</b>
           <br />
-          <CopyImplantText toast={toastContext} item={"LH-1005"} /> increased hybrid weapon damage.{" "}
+          <CopyImplantText toast={toastContext} item={"HG-1005"} /> increased armor.{" "}
           <br />
           <br />
-          <b>Paladin/Nightmare:</b>
+          <b>Optional:</b>
           <br />
-          <CopyImplantText toast={toastContext} item={"LE-1005"} /> increased energy weapon damage.
+          <CopyImplantText toast={toastContext} item={"HG-1006"} /> increased armor.
         </Cell>
         <Cell>
-          <b>Kronos/Vindicator:</b>
+          <b>Shield:</b>
           <br />
-          <CopyImplantText toast={toastContext} item={"LH-1006"} /> increased hybrid weapon damage.{" "}
+          <CopyImplantText toast={toastContext} item={"Shield Command Mindlink"} /> links boost.{" "}
           <br />
-          <br />
-          <b>Paladin/Nightmare:</b>
-          <br />
-          <CopyImplantText toast={toastContext} item={"LE-1006"} /> increased energy weapon damage.
         </Cell>
       </Row>
     </>

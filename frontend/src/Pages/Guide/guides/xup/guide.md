@@ -35,8 +35,7 @@ If you are unsure **ALWAYS** warp to the FC, if you at the correct site you will
 
 ## Ship Replacement Program
 
-Paying a flat amount to the Beancursion SRP corporation (a link is provided in the fleet MOTD) covers your ship until the next server downtime. 
-There is also an option to cover you for the duration of the spawn.  
+Paying a flat amount to the Beancursion SRP corporation (a link is provided in the fleet MOTD) covers your ship for the duration of the spawn.  
 Simply right click the corporation and "Give Money."  for the amount in the MOTD.  
 Both options cover you for FC and logi error.  
 You are not covered for your own mistakes. 

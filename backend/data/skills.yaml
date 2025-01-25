@@ -1284,8 +1284,12 @@ requirements:
       min: 5
       priority: 2
     Surgical Strike:
-      min: 5
+      min: 4
+      elite: 5
       priority: 2
+    Motion Prediction:
+      min: 4
+      elite: 5
     Heavy Drone Operation:
       min: 3
       elite: 5

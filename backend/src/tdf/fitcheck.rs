@@ -144,11 +144,19 @@ impl<'a> FitChecker<'a> {
             && (!self.pilot.implants.contains(&type_id!("% EM-805")) && !self.pilot.implants.contains(&type_id!("% EM-806")))
         {
             self.tags.insert("NO-EM-805");
+			self.approved = false;
         }
 		if (self.fit.hull == type_id!("Oneiros"))
             && (!self.pilot.implants.contains(&type_id!("% RA-704")) || !self.pilot.implants.contains(&type_id!("% FC-804")) || !self.pilot.implants.contains(&type_id!("% EO-604")))
         {
-            self.tags.insert("Missing Oneiros implant");
+            self.tags.insert("Missing Oneiros implants");
+			self.approved = false;
+        }
+		if (self.fit.hull == type_id!("Leshak"))
+            && (!self.pilot.implants.contains(&type_id!("% RF-906")))
+        {
+            self.tags.insert("NO-RF-906");
+			self.approved = false;
         }
     }
 
