@@ -82,7 +82,7 @@ const implants = implantOptions[type] || implantOptions.default;
           ))}
           <HardWires 
 		  toastContext={toastContext} 
-		  type=type
+		  type={type}
 		  />
         </TableBody>
       </Table>
