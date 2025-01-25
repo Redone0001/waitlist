@@ -227,63 +227,43 @@ function HardWires({ toastContext, type }) {
   const rows = hardwireOptions[type] || hardwireOptions.default;
   return (
     <>
-      <Row>
-        <Cell>
-          <b>Slot 7</b>
-        </Cell>
-        <Cell>
-          <CopyImplantText toast={toastContext} item={"EM-705"} /> increased agility.
-        </Cell>
-
-        <Cell>
-          <CopyImplantText toast={toastContext} item={"SM-705"} /> increase shield.
-        </Cell>
-      </Row>
-      <Row>
-        <Cell>
-          <b>Slot 8</b>
-        </Cell>
-        <Cell>
-          <CopyImplantText toast={toastContext} item={"EM-805"} /> increased capacitor.
-        </Cell>
-
-        <Cell>
-          <CopyImplantText toast={toastContext} item={"EM-805"} /> increased capacitor.
-        </Cell>
-      </Row>
-      <Row>
-        <Cell>
-          <b>Slot 9</b>
-        </Cell>
-        <Cell>
-          <CopyImplantText toast={toastContext} item={"HS-905"} /> increased agility.
-        </Cell>
-
-        <Cell>
-          <CopyImplantText toast={toastContext} item={"HS-905"} /> increased agility.
-        </Cell>
-      </Row>
-      <Row>
-        <Cell>
-          <b>Slot 10</b>
-        </Cell>
-        <Cell>
-          <b>Armor:</b>
-          <br />
-          <CopyImplantText toast={toastContext} item={"HG-1005"} /> increased armor.{" "}
-          <br />
-          <br />
-          <b>Optional:</b>
-          <br />
-          <CopyImplantText toast={toastContext} item={"HG-1006"} /> increased armor.
-        </Cell>
-        <Cell>
-          <b>Shield:</b>
-          <br />
-          <CopyImplantText toast={toastContext} item={"Shield Command Mindlink"} /> links boost.{" "}
-          <br />
-        </Cell>
-      </Row>
+      {rows.map(({ slot, armor, shield }) => (
+        <Row key={slot}>
+          <Cell>
+            <b>Slot {slot}</b>
+          </Cell>
+          <Cell>
+            {Array.isArray(armor) ? (
+              armor.map(({ text, description }) => (
+                <div key={text}>
+                  <CopyImplantText toast={toastContext} item={text} /> {description}
+                </div>
+              ))
+            ) : armor ? (
+              <div>
+                <CopyImplantText toast={toastContext} item={armor.text} /> {armor.description}
+              </div>
+            ) : (
+              <span>No armor options</span>
+            )}
+          </Cell>
+          <Cell>
+            {Array.isArray(shield) ? (
+              shield.map(({ text, description }) => (
+                <div key={text}>
+                  <CopyImplantText toast={toastContext} item={text} /> {description}
+                </div>
+              ))
+            ) : shield ? (
+              <div>
+                <CopyImplantText toast={toastContext} item={shield.text} /> {shield.description}
+              </div>
+            ) : (
+              <span>No shield options</span>
+            )}
+          </Cell>
+        </Row>
+      ))}
     </>
   );
 }
