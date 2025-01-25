@@ -172,7 +172,7 @@ function FleetTimeByHullMonthPercentage({ data }) {
 
   const datasets = _.map(series.series, (numbers, label) => {
     // Compute the total time for each time period (index) across all hulls
-    const totalPerLabel = series.labels.map((_, index) =>
+    const totalPerLabel = series.labels.map((label, index) =>
       _.sum(Object.values(series.series).map((seriesNumbers) => seriesNumbers[index] || 0))
     );
 
