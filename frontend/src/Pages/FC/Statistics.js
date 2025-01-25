@@ -399,7 +399,7 @@ export function Statistics() {
         <PilotsByMonth data={statsData.pilots_by_month} />
       </Graph>
       <Graph>
-        <FleetTimeByHullMonth data={statsData.fleet_seconds_by_hull_by_month} />
+        <FleetTimeByHullMonthPercentage data={statsData.fleet_seconds_by_hull_by_month} />
       </Graph>
       <Graph>
         <XByHullMonth data={statsData.xes_by_hull_by_month} />
