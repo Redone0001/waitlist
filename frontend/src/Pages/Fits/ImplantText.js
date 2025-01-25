@@ -244,7 +244,7 @@ function HardWires({ toastContext, type }) {
                 <CopyImplantText toast={toastContext} item={armor.text} /> {armor.description}
               </div>
             ) : (
-              <span>No armor options</span>
+              <span>Nothing to see here</span>
             )}
           </Cell>
           <Cell>
@@ -259,7 +259,7 @@ function HardWires({ toastContext, type }) {
                 <CopyImplantText toast={toastContext} item={shield.text} /> {shield.description}
               </div>
             ) : (
-              <span>No shield options</span>
+              <span>No alternative options</span>
             )}
           </Cell>
         </Row>
