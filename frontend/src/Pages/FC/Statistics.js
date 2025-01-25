@@ -199,7 +199,11 @@ function FleetTimeByHullMonthPercentage({ data }) {
           },
           tooltip: {
             callbacks: {
-              label: (context) => `${context.raw}%`, // Display percentage in the tooltip
+              label: (context) => {
+                const label = context.dataset.label || '';
+                const percentage = context.raw; // Raw value represents the percentage
+                return `${label}: ${percentage}%`;
+              },
             },
           },
         },
