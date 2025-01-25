@@ -167,13 +167,13 @@ function PilotsByMonth({ data }) {
   );
 }
 
-function FleetTimeByHullMonth({ data }) {
+function FleetTimeByHullMonthPercentage({ data }) {
   const series = separateDataLabels2D(data);
 
-  // Calculate percentages for each time period
   const datasets = _.map(series.series, (numbers, label) => {
+    // Compute the total time for each time period (index) across all hulls
     const totalPerLabel = series.labels.map((_, index) =>
-      _.sumBy(series.series, (seriesNumbers) => seriesNumbers[index] || 0)
+      _.sum(Object.values(series.series).map((seriesNumbers) => seriesNumbers[index] || 0))
     );
 
     return {
@@ -216,6 +216,7 @@ function FleetTimeByHullMonth({ data }) {
     />
   );
 }
+
 
 function FleetTimeByFcMonth({ data }) {
   const series = separateDataLabels2D(data);
