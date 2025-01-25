@@ -13,6 +13,7 @@ import { faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
 import { Markdown } from "../../Components/Markdown";
 import { BadgeDOM, BadgeModal } from "../../Components/Badge";
 import abadge from "../Guide/badges/a.png";
+import lbadge from "../Guide/badges/rl.png";
 import wbadge from "../Guide/badges/w.png";
 
 export const FitCard = styled.div`
@@ -229,6 +230,7 @@ function ImplantOut() {
       <DisplayDOM style={{ justifyContent: "initial" }}>
         {/* <ImplantButton name="Savior" img={wbadge} /> */}
         <ImplantButton name="Amulet" img={abadge} />
+		<ImplantButton name="Triglavian" img={lbadge} />
       </DisplayDOM>
     </>
   );
