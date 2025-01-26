@@ -20,10 +20,10 @@ export function AllFleetsMembers() {
   const [allFleetInfo, setAllFleetInfo] = React.useState(null);
   const fetchFleetData = () => {
     apiCall("/api/fleet/fleet_all")
-      .then(data) => {
-    console.log("API Response:", data); // Log the full response
-    setAllFleetInfo(data); // Set the state
-  }
+      .then((data) => {
+		console.log("API Response:", data); // Log the full response
+		setAllFleetInfo(data); // Set the state
+	  })
       .catch((err) => setAllFleetInfo(null)); // Handle error (e.g., logging)
   };
   React.useEffect(() => {
