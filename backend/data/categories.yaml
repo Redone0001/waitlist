@@ -13,8 +13,6 @@ categories:
     name: Starter
   - id: ishtar
     name: Drones Boat
-  - id: other
-    name: Other
   - id: alt
     name: Alts
 
@@ -48,8 +46,6 @@ rules:
     category: DPS
   - item: Eos
     category: ishtar
-  - item: Damnation
-    category: other
   - item: Ishtar
     category: ishtar
   - item: Rattlesnake
