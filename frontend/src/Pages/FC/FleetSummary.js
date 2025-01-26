@@ -21,7 +21,10 @@ export function AllFleetsMembers() {
   React.useEffect(() => {
     setAllFleetInfo(null);
     apiCall("/api/fleet/fleet_all")
-      .then(setAllFleetInfo)
+      .then((data) => {
+    console.log("API Response:", data); // Log the full response
+    setAllFleetInfo(data); // Set the state
+  })
       .catch((err) => setAllFleetInfo(null)); // What's error handling?
   }, []);
   console.log(allFleetInfo)
