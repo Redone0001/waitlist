@@ -23,7 +23,7 @@ export function AllFleetsMembers() {
     apiCall("/api/fleet/fleet_all")
       .then(setAllFleetInfo)
       .catch((err) => setAllFleetInfo(null)); // What's error handling?
-  });
+  }, []);
   console.log(allFleetInfo)
 
   if (!allFleetInfo) {
