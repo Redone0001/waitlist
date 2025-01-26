@@ -100,7 +100,7 @@ export function DPS_calc() {
     const datasets = [];
     const labelsSet = new Set();
 	const hour_option = {
-		hour12: false
+		hour12: false,
 		hour: '2-digit',
         minute: '2-digit',
 	}
