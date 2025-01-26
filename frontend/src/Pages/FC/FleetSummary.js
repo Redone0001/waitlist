@@ -15,7 +15,7 @@ const drones_boat = ["Eos", "Ishtar", "Rattlesnake"];
 const bad = ["Megathron", "Nightmare"];
 
 
-function AllFleetsMembers() {
+export function AllFleetsMembers() {
   const authContext = React.useContext(AuthContext);
   const [allFleetInfo, setAllFleetInfo] = React.useState(null);
   React.useEffect(() => {
