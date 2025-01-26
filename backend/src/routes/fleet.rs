@@ -188,10 +188,10 @@ async fn process_fleet_id(
     }))
 }
 
-pub async fn get_fleet_ids(db: &sqlx::PgPool) -> Result<Vec<i64>> {
+pub async fn get_fleet_ids(app: &rocket::State<Application>) -> Result<Vec<i64>> {
     // Query the `fleet` table and collect the `id` column into a vector
-    let fleet_ids = query!("SELECT id FROM fleet")
-        .fetch_all(db)
+    let fleet_ids = sqlx::query!("SELECT id FROM fleet")
+        .fetch_all(app.get_db())
         .await?
         .into_iter()
         .map(|row| row.id)
@@ -210,15 +210,16 @@ async fn fleet_members(
     authorize_character(app.get_db(), &account, character_id, None).await?;
 
     let fleet_id = get_current_fleet_id(app, character_id).await?;
+	let response = process_fleet_id(fleet_id, app).await?
 	
-    OK(process_fleet_id(fleet_id, app).await?)
+    OK(response)
 }
 
 #[get("/api/fleet/fleet_all")]
 async fn fleet_members_all(
     account: AuthenticatedAccount,
     app: &rocket::State<Application>,
-) -> Result<Vec<Json<FleetMembersResponse>, Madness> {
+) -> Result<Vec<Json<FleetMembersResponse>>, Madness> {
     account.require_access("fleet-view")?;
 	
 	let fleet_ids = get_fleet_ids(app.get_db()).await?;
