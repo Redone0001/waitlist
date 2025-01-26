@@ -94,7 +94,25 @@ export function AllFleetsMembers() {
 
           {/* Fleet Ship Summary */}
           <h4>Ship Summary:</h4>
-          <pre>{JSON.stringify(fleetData.summary, null, 2)}</pre>
+          <h4>Ship Summary:</h4>
+          <Table>
+            <TableHead>
+              <Row>
+                <CellHead>Ship Name</CellHead>
+                <CellHead>Count</CellHead>
+              </Row>
+            </TableHead>
+            <TableBody>
+              {Object.entries(fleetData.summary)
+                .sort((a, b) => b[1] - a[1]) // Sort by count (descending)
+                .map(([shipName, count]) => (
+                  <Row key={shipName}>
+                    <Cell>{shipName}</Cell>
+                    <Cell>{count}</Cell>
+                  </Row>
+                ))}
+            </TableBody>
+          </Table>
         </div>
       ))
     ) : (
