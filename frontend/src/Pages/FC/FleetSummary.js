@@ -94,7 +94,6 @@ export function AllFleetsMembers() {
 
           {/* Fleet Ship Summary */}
           <h4>Ship Summary:</h4>
-          <h4>Ship Summary:</h4>
           <Table>
             <TableHead>
               <Row>
