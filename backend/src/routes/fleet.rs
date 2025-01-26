@@ -237,7 +237,9 @@ async fn fleet_members_all(
     }
 
     // Return the collected responses
-    Ok(Json(responses))
+    Ok(Json(AllFleetFleetMembersResponse {
+        fleets: responses,
+    }))
 
 }
 
