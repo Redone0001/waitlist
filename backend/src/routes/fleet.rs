@@ -188,7 +188,7 @@ async fn process_fleet_id(
     }))
 }
 
-pub async fn get_fleet_ids(app: &rocket::State<Application>) -> Result<Vec<i64>> {
+pub async fn get_fleet_ids(app: &rocket::State<Application>) -> Result<Vec<i64>, Madness> {
     // Query the `fleet` table and collect the `id` column into a vector
     let fleet_ids = sqlx::query!("SELECT id FROM fleet")
         .fetch_all(app.get_db())
@@ -210,9 +210,9 @@ async fn fleet_members(
     authorize_character(app.get_db(), &account, character_id, None).await?;
 
     let fleet_id = get_current_fleet_id(app, character_id).await?;
-	let response = process_fleet_id(fleet_id, app).await?
+    let response = process_fleet_id(fleet_id, app).await?;
 	
-    OK(response)
+    Ok(response)
 }
 
 #[get("/api/fleet/fleet_all")]
