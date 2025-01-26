@@ -158,7 +158,7 @@ function ColumnWaitlist({ waitlist, onAction, fleetComposition, altCol }) {
           </ColumnWaitlistDOM.Category>
         ))}
       </ColumnWaitlistDOM>
-	  </AllFleetsMembers>
+	  <AllFleetsMembers />
     </>
   );
 }
