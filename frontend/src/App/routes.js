@@ -16,6 +16,7 @@ import { Legal } from "../Pages/Legal";
 import { NoteAdd } from "../Pages/FC/NoteAdd";
 import { NoteAll } from "../Pages/FC/NoteAll";
 import { FleetAndAlts } from "../Pages/FC/FleetBreakDown";
+import { AllFleetsMembers } from "../Pages/FC/FleetSummary";
 import { Pilot } from "../Pages/Pilot";
 import { Plans } from "../Pages/Skills/Plans";
 import { Search } from "../Pages/FC/Search";
@@ -138,6 +139,9 @@ export function Routes() {
       </Route>
 	  <Route exact path="/fc/fleet/break">
         <AuthenticatedRoute component={<FleetAndAlts />} access="fleet-break-down" />
+      </Route>
+	  <Route exact path="/fc/fleet/info">
+        <AuthenticatedRoute component={<AllFleetsMembers />} access="fleet-view" />
       </Route>
       <Route exact path="/fc/search">
         <AuthenticatedRoute component={<Search />} access="waitlist-tag:HQ-FC" />

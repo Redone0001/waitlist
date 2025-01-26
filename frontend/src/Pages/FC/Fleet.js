@@ -11,6 +11,8 @@ import { usePageTitle } from "../../Util/title";
 
 const marauders = ["Paladin", "Kronos"];
 const logi = ["Nestor", "Guardian", "Oneiros"];
+const trig = ["Leshak"];
+const drones_boat = ["Eos", "Ishtar", "Rattlesnake"];
 const bad = ["Megathron", "Nightmare"];
 
 async function setWaitlistOpen(waitlistId, isOpen) {
@@ -143,6 +145,8 @@ function FleetMembers() {
     Marauder: 0,
     Logi: 0,
     Vindicator: 0,
+    Leshak: 0,
+    Drones: 0,
     "Mega/Night": 0,
   };
 
@@ -155,6 +159,8 @@ function FleetMembers() {
       if (logi.includes(member.ship.name)) cats["Logi"]++;
       if ("Vindicator" === member.ship.name) cats["Vindicator"]++;
       if (bad.includes(member.ship.name)) cats["Mega/Night"]++;
+      if (trig.includes(member.ship.name)) cats["Leshak"]++;
+      if (drones_boat.includes(member.ship.name)) cats["Drones"]++;
     });
   }
   return (
@@ -165,6 +171,8 @@ function FleetMembers() {
         <BorderedBox>Marauders: {cats["Marauder"]} </BorderedBox>
         <BorderedBox>Logistics: {cats["Logi"]} </BorderedBox>
         <BorderedBox>Vindicators: {cats["Vindicator"]} </BorderedBox>
+        <BorderedBox>Logistics: {cats["Leshak"]} </BorderedBox>
+        <BorderedBox>Vindicators: {cats["Drones"]} </BorderedBox>
         <BorderedBox>Megathron/Nightmare: {cats["Mega/Night"]} </BorderedBox>
       </InputGroup>
       <Table>
