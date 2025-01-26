@@ -144,7 +144,7 @@ struct FleetMembersMember {
 async fn process_fleet_id(
 	fleet_id: i64,
     app: &rocket::State<Application>,
-) -> Result<Json<FleetMembersResponse>, Madness> {
+) -> Result<FleetMembersResponse, Madness> {
 	
 	let fleet = match sqlx::query!("SELECT boss_id FROM fleet WHERE id = ?", fleet_id)
         .fetch_optional(app.get_db())
