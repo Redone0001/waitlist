@@ -124,6 +124,11 @@ async fn fleet_info(
 }
 
 #[derive(Debug, Serialize)]
+struct AllFleetFleetMembersResponse {
+    fleets: Vec<FleetMembersResponse>,
+}
+
+#[derive(Debug, Serialize)]
 struct FleetMembersResponse {
     members: Vec<FleetMembersMember>,
 }
@@ -219,7 +224,7 @@ async fn fleet_members(
 async fn fleet_members_all(
     account: AuthenticatedAccount,
     app: &rocket::State<Application>,
-) -> Result<Json<Vec<Json<FleetMembersResponse>>>, Madness> {
+) -> Result<Json<AllFleetFleetMembersResponse>, Madness> {
     account.require_access("fleet-view")?;
 	
 	let fleet_ids = get_fleet_ids(app).await?;
