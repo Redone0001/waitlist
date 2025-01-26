@@ -49,7 +49,7 @@ export function AllFleetsMembers() {
   // Fetch fleet data
 	const fetchFleetData = React.useCallback(async () => {
 	  try {
-		const data = await apiCall("/api/fleet/fleet_all");
+		const data = await apiCall("/api/fleet/fleet_all", {});
 		console.log("API Response:", data);
 		setAllFleetInfo(data);  // Set the data into the state
 	  } catch (err) {
