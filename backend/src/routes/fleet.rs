@@ -125,7 +125,7 @@ async fn fleet_info(
 
 #[derive(Debug, Serialize)]
 struct AllFleetFleetMembersResponse {
-    fleets: Vec<Json<FleetMembersResponse>>,
+    fleets: Vec<FleetMembersResponse>,
 }
 
 #[derive(Debug, Serialize)]
@@ -174,7 +174,7 @@ async fn process_fleet_id(
     .map(|squad| (squad.squad_id, squad.category))
     .collect();
 
-    Ok(Json(FleetMembersResponse {
+    Ok(FleetMembersResponse {
         members: in_fleet
             .into_iter()
             .map(|member| FleetMembersMember {
@@ -190,7 +190,7 @@ async fn process_fleet_id(
                     .map(|s| s.to_string()),
             })
             .collect(),
-    }))
+    })
 }
 
 pub async fn get_fleet_ids(app: &rocket::State<Application>) -> Result<Vec<i64>, Madness> {
@@ -217,7 +217,7 @@ async fn fleet_members(
     let fleet_id = get_current_fleet_id(app, character_id).await?;
     let response = process_fleet_id(fleet_id, app).await?;
 	
-    Ok(response)
+    Ok(Json(response))
 }
 
 #[get("/api/fleet/fleet_all")]
@@ -237,9 +237,7 @@ async fn fleet_members_all(
     }
 
     // Return the collected responses
-    Ok(Json(AllFleetFleetMembersResponse {
-        fleets: responses,
-    }))
+    Ok(Json(responses))
 
 }
 
