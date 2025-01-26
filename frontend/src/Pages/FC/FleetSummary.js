@@ -47,17 +47,16 @@ export function AllFleetsMembers() {
   const eventContext = React.useContext(EventContext); // Get the event context
 
   // Fetch fleet data
-  const fetchFleetData = React.useCallback(() => {
-    apiCall("/api/fleet/fleet_all")
-      .then((data) => {
-        console.log("API Response:", data);
-        setAllFleetInfo(data);
-      })
-      .catch((err) => {
-        console.error("Error fetching fleet data:", err);
-        setAllFleetInfo(null);
-      });
-  }, []);
+	const fetchFleetData = React.useCallback(async () => {
+	  try {
+		const data = await apiCall("/api/fleet/fleet_all");
+		console.log("API Response:", data);
+		setAllFleetInfo(data);  // Set the data into the state
+	  } catch (err) {
+		console.error("Error fetching fleet data:", err);
+		setAllFleetInfo(null);  // Set to null on error
+	  }
+	}, []);
 
   React.useEffect(() => {
     // Initial fetch
