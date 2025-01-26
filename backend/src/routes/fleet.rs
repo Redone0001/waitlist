@@ -219,7 +219,7 @@ async fn fleet_members(
 async fn fleet_members_all(
     account: AuthenticatedAccount,
     app: &rocket::State<Application>,
-) -> Result<Vec<Json<FleetMembersResponse>>, Madness> {
+) -> Result<Json<Vec<FleetMembersResponse>>, Madness> {
     account.require_access("fleet-view")?;
 	
 	let fleet_ids = get_fleet_ids(app).await?;
@@ -232,7 +232,7 @@ async fn fleet_members_all(
     }
 
     // Return the collected responses
-    Ok(responses)
+    Ok(Json(responses))
 
 }
 
