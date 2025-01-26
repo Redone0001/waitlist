@@ -157,6 +157,10 @@ function ColumnWaitlist({ waitlist, onAction, fleetComposition, altCol }) {
             {category[1].length ? null : <em>Nobody here!</em>}
           </ColumnWaitlistDOM.Category>
         ))}
+		<ColumnWaitlistDOM.Category key="Fleet Summary">
+		  <CategoryHeading name="Fleet Summary" fleetComposition={fleetComposition} />
+          <AllFleetsMembers />
+        </ColumnWaitlistDOM.Category>
       </ColumnWaitlistDOM>
 	  <AllFleetsMembers />
     </>
