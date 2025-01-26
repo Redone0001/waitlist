@@ -75,8 +75,6 @@ export function AllFleetsMembers() {
 
   return (
     <>
-      <br />
-      <Title>Fleet composition</Title>
       {allFleetInfo ? (
       fleetSummaries.map((fleetData, index) => (
         <div key={index}>
@@ -84,12 +82,12 @@ export function AllFleetsMembers() {
 
           {/* Input Group for Fleet Categories */}
           <InputGroup>
-            <BorderedBox>Marauders: {fleetData.cats["Marauder"]}</BorderedBox>
-            <BorderedBox>Logistics: {fleetData.cats["Logi"]}</BorderedBox>
-            <BorderedBox>Vindicators: {fleetData.cats["Vindicator"]}</BorderedBox>
-            <BorderedBox>Leshak: {fleetData.cats["Leshak"]}</BorderedBox>
+            <BorderedBox>Bastion: {fleetData.cats["Marauder"]}</BorderedBox>
+            <BorderedBox>Logi: {fleetData.cats["Logi"]}</BorderedBox>
+            <BorderedBox>Vindi: {fleetData.cats["Vindicator"]}</BorderedBox>
+            <BorderedBox>Shak: {fleetData.cats["Leshak"]}</BorderedBox>
             <BorderedBox>Drones: {fleetData.cats["Drones"]}</BorderedBox>
-            <BorderedBox>Megathron/Nightmare: {fleetData.cats["Mega/Night"]}</BorderedBox>
+            <BorderedBox>NBI: {fleetData.cats["Mega/Night"]}</BorderedBox>
           </InputGroup>
 
           {/* Fleet Ship Summary */}
