@@ -125,7 +125,7 @@ async fn fleet_info(
 
 #[derive(Debug, Serialize)]
 struct AllFleetFleetMembersResponse {
-    fleets: Vec<FleetMembersResponse>,
+    fleets: Vec<Json<FleetMembersResponse>>,
 }
 
 #[derive(Debug, Serialize)]
