@@ -222,7 +222,7 @@ async fn fleet_members_all(
 ) -> Result<Vec<Json<FleetMembersResponse>>, Madness> {
     account.require_access("fleet-view")?;
 	
-	let fleet_ids = get_fleet_ids(app.get_db()).await?;
+	let fleet_ids = get_fleet_ids(app).await?;
 
     // Iterate over each fleet ID and process it, collecting the responses
     let mut responses = Vec::new();
