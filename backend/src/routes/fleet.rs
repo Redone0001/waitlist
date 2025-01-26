@@ -136,17 +136,12 @@ struct FleetMembersMember {
     wl_category: Option<String>,
 }
 
-#[get("/api/fleet/members?<character_id>")]
-async fn fleet_members(
-    account: AuthenticatedAccount,
-    character_id: i64,
+async fn process_fleet_id(
+	fleet_id: i64,
     app: &rocket::State<Application>,
 ) -> Result<Json<FleetMembersResponse>, Madness> {
-    account.require_access("fleet-view")?;
-    authorize_character(app.get_db(), &account, character_id, None).await?;
-
-    let fleet_id = get_current_fleet_id(app, character_id).await?;
-    let fleet = match sqlx::query!("SELECT boss_id FROM fleet WHERE id = ?", fleet_id)
+	
+	let fleet = match sqlx::query!("SELECT boss_id FROM fleet WHERE id = ?", fleet_id)
         .fetch_optional(app.get_db())
         .await?
     {
@@ -191,6 +186,53 @@ async fn fleet_members(
             })
             .collect(),
     }))
+}
+
+pub async fn get_fleet_ids(db: &sqlx::PgPool) -> Result<Vec<i64>> {
+    // Query the `fleet` table and collect the `id` column into a vector
+    let fleet_ids = query!("SELECT id FROM fleet")
+        .fetch_all(db)
+        .await?
+        .into_iter()
+        .map(|row| row.id)
+        .collect();
+
+    Ok(fleet_ids)
+}
+
+#[get("/api/fleet/members?<character_id>")]
+async fn fleet_members(
+    account: AuthenticatedAccount,
+    character_id: i64,
+    app: &rocket::State<Application>,
+) -> Result<Json<FleetMembersResponse>, Madness> {
+    account.require_access("fleet-view")?;
+    authorize_character(app.get_db(), &account, character_id, None).await?;
+
+    let fleet_id = get_current_fleet_id(app, character_id).await?;
+	
+    OK(process_fleet_id(fleet_id, app).await?)
+}
+
+#[get("/api/fleet/fleet_all")]
+async fn fleet_members_all(
+    account: AuthenticatedAccount,
+    app: &rocket::State<Application>,
+) -> Result<Vec<Json<FleetMembersResponse>, Madness> {
+    account.require_access("fleet-view")?;
+	
+	let fleet_ids = get_fleet_ids(app.get_db()).await?;
+
+    // Iterate over each fleet ID and process it, collecting the responses
+    let mut responses = Vec::new();
+    for fleet_id in fleet_ids {
+        let response = process_fleet_id(fleet_id, app).await?;
+        responses.push(response);
+    }
+
+    // Return the collected responses
+    Ok(responses)
+
 }
 
 #[derive(Debug, Deserialize)]
@@ -307,6 +349,7 @@ pub fn routes() -> Vec<rocket::Route> {
         fleet_info,
         close_fleet,
         fleet_members,
+		fleet_members_all,
         register_fleet
     ]
 }
