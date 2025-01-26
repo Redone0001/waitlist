@@ -3,7 +3,7 @@ import { NotepadWaitlist } from "./NotepadWaitlist";
 import styled from "styled-components";
 import { XCard } from "./XCard";
 import _ from "lodash";
-import AllFleetsMembers from "../FC/FleetSummary";
+import { AllFleetsMembers } from "../FC/FleetSummary";
 
 const CategoryHeadingDOM = styled.div`
   display: flex;
