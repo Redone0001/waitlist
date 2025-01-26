@@ -14,6 +14,33 @@ const trig = ["Leshak"];
 const drones_boat = ["Eos", "Ishtar", "Rattlesnake"];
 const bad = ["Megathron", "Nightmare"];
 
+function coalesceCalls(func, wait) {
+  var nextCall = null;
+  var timer = null;
+
+  const timerFn = function () {
+    timer = setTimeout(timerFn, wait);
+
+    if (nextCall) {
+      const [context, args] = nextCall;
+      nextCall = null;
+      func.apply(context, args);
+    }
+  };
+
+  // Splay the initial timer, after that use a constant time interval
+  timer = setTimeout(timerFn, wait * Math.random());
+
+  return [
+    function () {
+      nextCall = [this, arguments];
+    },
+    function () {
+      clearTimeout(timer);
+    },
+  ];
+}
+
 
 export function AllFleetsMembers() {
   const [allFleetInfo, setAllFleetInfo] = React.useState(null);
@@ -52,6 +79,39 @@ export function AllFleetsMembers() {
   if (!allFleetInfo) {
     return <div>Loading...</div>;
   }
+  
+  const fleetSummaries = allFleetInfo.fleets.map((fleet, fleetIndex) => {
+    const summary = {}; // Summary for the fleet
+    const cats = { // Categories for the fleet
+      Marauder: 0,
+      Logi: 0,
+      Vindicator: 0,
+      "Mega/Night": 0,
+      Leshak: 0,
+      Drones: 0,
+    };
+    // Process members of this fleet
+    fleet.members.forEach((member) => {
+      const shipName = member.ship.name;
+      // Update ship count in summary
+      if (!summary[shipName]) summary[shipName] = 0;
+      summary[shipName]++;
+      // Categorize the ship
+      if (marauders.includes(shipName)) cats["Marauder"]++;
+      if (logi.includes(shipName)) cats["Logi"]++;
+      if (shipName === "Vindicator") cats["Vindicator"]++;
+      if (bad.includes(shipName)) cats["Mega/Night"]++;
+      if (trig.includes(shipName)) cats["Leshak"]++;
+      if (drones_boat.includes(shipName)) cats["Drones"]++;
+    });
+    return { fleetIndex, summary, cats };
+  });
+  // Log the summaries for each fleet
+  fleetSummaries.forEach((fleetData, index) => {
+    console.log(`Fleet ${index + 1}:`);
+    console.log("Summary:", fleetData.summary);
+    console.log("Categories:", fleetData.cats);
+  });
 
   return (
     <>
