@@ -18,14 +18,23 @@ const bad = ["Megathron", "Nightmare"];
 export function AllFleetsMembers() {
   const authContext = React.useContext(AuthContext);
   const [allFleetInfo, setAllFleetInfo] = React.useState(null);
-  React.useEffect(() => {
-    setAllFleetInfo(null);
-    apiCall("/api/fleet/fleet_all", {})
-      .then((data) => {
+  const fetchFleetData = () => {
+    apiCall("/api/fleet/fleet_all")
+      .then(data) => {
     console.log("API Response:", data); // Log the full response
     setAllFleetInfo(data); // Set the state
-  })
-      .catch((err) => setAllFleetInfo(null)); // What's error handling?
+  }
+      .catch((err) => setAllFleetInfo(null)); // Handle error (e.g., logging)
+  };
+  React.useEffect(() => {
+    // Initial fetch
+    fetchFleetData();
+
+    const interval = setInterval(() => {
+      fetchFleetData();
+    }, 30000); // Refresh every 30 seconds
+
+    return () => clearInterval(interval);
   }, []);
   console.log(allFleetInfo)
 
