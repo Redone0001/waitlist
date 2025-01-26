@@ -20,7 +20,7 @@ export function AllFleetsMembers() {
   const [allFleetInfo, setAllFleetInfo] = React.useState(null);
   React.useEffect(() => {
     setAllFleetInfo(null);
-    apiCall("/api/fleet/fleet_all")
+    apiCall("/api/fleet/fleet_all", {})
       .then((data) => {
     console.log("API Response:", data); // Log the full response
     setAllFleetInfo(data); // Set the state
