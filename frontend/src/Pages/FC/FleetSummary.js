@@ -1,5 +1,5 @@
 import React from "react";
-import { AuthContext, ToastContext } from "../../contexts";
+import { AuthContext, ToastContext, EventContext } from "../../contexts";
 import { Button, Buttons, InputGroup, NavButton, Select } from "../../Components/Form";
 import { Content, Title } from "../../Components/Page";
 import { apiCall, errorToaster, toaster, useApi } from "../../api";
@@ -16,71 +16,42 @@ const bad = ["Megathron", "Nightmare"];
 
 
 export function AllFleetsMembers() {
-  const authContext = React.useContext(AuthContext);
   const [allFleetInfo, setAllFleetInfo] = React.useState(null);
-  const fetchFleetData = () => {
+  const eventContext = React.useContext(EventContext); // Get the event context
+
+  // Fetch fleet data
+  const fetchFleetData = React.useCallback(() => {
     apiCall("/api/fleet/fleet_all")
       .then((data) => {
-		console.log("API Response:", data); // Log the full response
-		setAllFleetInfo(data); // Set the state
-	  })
-      .catch((err) => setAllFleetInfo(null)); // Handle error (e.g., logging)
-  };
+        console.log("API Response:", data);
+        setAllFleetInfo(data);
+      })
+      .catch((err) => {
+        console.error("Error fetching fleet data:", err);
+        setAllFleetInfo(null);
+      });
+  }, []);
+
   React.useEffect(() => {
     // Initial fetch
     fetchFleetData();
 
-    const interval = setInterval(() => {
-      fetchFleetData();
-    }, 30000); // Refresh every 30 seconds
-
-    return () => clearInterval(interval);
-  }, []);
-  console.log(allFleetInfo)
+    // Setup event listeners
+    if (eventContext) {
+      const [updateFn, clearUpdateFn] = coalesceCalls(fetchFleetData, 2000);
+      eventContext.addEventListener("comp_update", updateFn);
+      eventContext.addEventListener("open", updateFn);
+      return () => {
+        clearUpdateFn();
+        eventContext.removeEventListener("comp_update", updateFn);
+        eventContext.removeEventListener("open", updateFn);
+      };
+    }
+  }, [fetchFleetData, eventContext]); // Re-run if eventContext or fetchFleetData changes
 
   if (!allFleetInfo) {
-    return null;
+    return <div>Loading...</div>;
   }
-  
-  
-  const fleetSummaries = allFleetInfo.fleets.map((fleet, fleetIndex) => {
-    const summary = {}; // Summary for the fleet
-    const cats = { // Categories for the fleet
-      Marauder: 0,
-      Logi: 0,
-      Vindicator: 0,
-      "Mega/Night": 0,
-      Leshak: 0,
-      Drones: 0,
-    };
-
-    // Process members of this fleet
-    fleet.members.forEach((member) => {
-      const shipName = member.ship.name;
-
-      // Update ship count in summary
-      if (!summary[shipName]) summary[shipName] = 0;
-      summary[shipName]++;
-
-      // Categorize the ship
-      if (marauders.includes(shipName)) cats["Marauder"]++;
-      if (logi.includes(shipName)) cats["Logi"]++;
-      if (shipName === "Vindicator") cats["Vindicator"]++;
-      if (bad.includes(shipName)) cats["Mega/Night"]++;
-      if (trig.includes(shipName)) cats["Leshak"]++;
-      if (drones_boat.includes(shipName)) cats["Drones"]++;
-    });
-
-    return { fleetIndex, summary, cats };
-  });
-
-  // Log the summaries for each fleet
-  fleetSummaries.forEach((fleetData, index) => {
-    console.log(`Fleet ${index + 1}:`);
-    console.log("Summary:", fleetData.summary);
-    console.log("Categories:", fleetData.cats);
-  });
-
 
   return (
     <>
