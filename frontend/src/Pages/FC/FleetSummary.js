@@ -20,7 +20,7 @@ export function AllFleetsMembers() {
   const [allFleetInfo, setAllFleetInfo] = React.useState(null);
   React.useEffect(() => {
     setAllFleetInfo(null);
-    useApi("/api/fleet/fleet_all")
+    apiCall("/api/fleet/fleet_all")
       .then(setAllFleetInfo)
       .catch((err) => setAllFleetInfo(null)); // What's error handling?
   });
