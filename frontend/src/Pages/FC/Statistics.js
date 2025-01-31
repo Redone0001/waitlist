@@ -250,7 +250,7 @@ function FleetTimeAllFcMonth({ data }) {
   
   // Sum all series into a single dataset
   const summedData = series.labels.map((_, index) => 
-    _.sumBy(series.series, (numbers) => numbers[index] || 0)
+    _.sum(series.series, (numbers) => numbers[index] || 0)
   );
 
   return (
