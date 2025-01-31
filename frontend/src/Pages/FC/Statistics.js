@@ -245,6 +245,37 @@ function FleetTimeByFcMonth({ data }) {
   );
 }
 
+function FleetTimeAllFcMonth({ data }) {
+  const series = separateDataLabels2D(data);
+  
+  // Sum all series into a single dataset
+  const summedData = series.labels.map((_, index) => 
+    _.sumBy(series.series, (numbers) => numbers[index] || 0)
+  );
+
+  return (
+    <ThemedLine
+      data={{
+        labels: series.labels,
+        datasets: [
+          {
+            label: "Total FC Hours",
+            data: summedData,
+          },
+        ],
+      }}
+      options={{
+        plugins: {
+          title: {
+            display: true,
+            text: "Total fleet availlability by Month",
+          },
+        },
+      }}
+    />
+  )
+}
+
 function XByHullMonth({ data }) {
   const series = separateDataLabels2D(data);
   return (
@@ -425,6 +456,9 @@ export function Statistics() {
       </Graph>
       <Graph>
         <TimeSpentByFC90d data={statsData.fleet_seconds_by_fc_90d} />
+      </Graph>
+      <Graph>
+        <FleetTimeAllFcMonth data={statsData.fleet_seconds_by_fc_by_month} />
       </Graph>
     </Row>
   );
