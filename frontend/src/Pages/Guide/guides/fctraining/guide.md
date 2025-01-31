@@ -11,9 +11,13 @@
 Beancursion is always looking for new FC's.
 Is fleet down during your prime time? Want to fix that?
 
-There is no pressure to accept a T badge straight away. You can ask to voice and/or tag a few fleets, see if it's for you. All thats required is an L badge! You can ask any full FC to do a tryout, you can do up to five tryouts. All you need to know before starting a tryout is on this page, tagging order and shortcuts. You don't need to have tags completely memorized for the first fleet.
+There is no pressure to accept a T badge straight away.
+You can ask to voice and/or tag a few fleets, see if it's for you.
+All thats required is an L badge! You can ask any full FC to do a tryout, you can do up to five tryouts.
+All you need to know before starting a tryout is on this page, tagging order and shortcuts.
+You don't need to have tags completely memorized for the first fleet.
 
-If you have any doubts or questions, ask any FC, FC Trainer or council.
+If you have any doubts or questions, ask any FC.
 
 ## Joining the training program
 
@@ -29,7 +33,7 @@ Disadvantages
 - Pilots will use anything you say against you
 - You will get pings and trolled in discord
 
-To officially join the training program contact your favorite council member or FC Trainer to join.
+To officially join the training program contact your favorite FC Trainer to join.
 
 ## Training Program Stages
 
@@ -46,7 +50,7 @@ Knowing NPC's and why we tag them the way we do.
 Fleet control will also need to be mastered.
 
 
-Progressing to the next stage requires passing **BUS FLEET** along with getting at least one other +1 from any FC Trainer or council that was not the active backseat.
+Progressing to the next stage requires passing **BUS FLEET** along with getting at least one other +1 from any FC Trainerthat was not the active backseat.
 
 ## Fleet requirement
 

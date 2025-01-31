@@ -21,4 +21,5 @@ Bans include, but are not limited to:
 - Actively downgrading
 - Sneaking alts in to fleet
 
-All questions and concerns can be mailed to Council listed in Beancursion discord
+All questions and concerns can be mailed to Jakaja listed in Beancursion discord.
+If the issue concern Jakaja, reach out to Astral (Horde Sherif).

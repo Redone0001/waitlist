@@ -34,10 +34,9 @@
 - HQ
   1. Must have the minimum logi
      - NRF & TPPH: 7 logi worth min (cruiser = 1/nestor = 2) with 2 nestor min.
-     - FC Trainers and Council can override logi requirements while in fleet
      - Nestors can replace cruisers, but not the other way around 
   1. Must be flying 1 fully skilled primary booster and 1 other doctrine non booster ship.
-  1. Must have 2 backseats / 1 FC trainer/ 1 council to run the Kundalini for the first time even if fully tagged HQ FC.
+  1. Must have 2 backseats / 1 FC trainer to run the Kundalini for the first time even if fully tagged HQ FC.
   1. Trainnee cannot fly if the influence is below 75% blue bar.
   1. Should be responsible for initial fleet form-up when possible unless a trainer states otherwise.
 

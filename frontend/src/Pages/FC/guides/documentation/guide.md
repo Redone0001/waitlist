@@ -4,8 +4,8 @@
 
 ## Things you need access to:
 
-- Waitlist FC Trainee site access _(Reach out to Council)_
-- Command-chat on discord _(Contact Daedalus or Jakaja)_
+- Waitlist FC Trainee site access _(Reach out to Jakaja)_
+- Command-chat on discord _(Contact Jakaja)_
 - Sansha Containment Service _(its an ingame channel, join it)_
 - Sansha Containment Service MOTD _(Rights to edit MOTD)_
 - Standardized MOTD for running fleets. (see Useful Links below)
@@ -50,20 +50,19 @@ Use the discord [srp channel](https://discord.com/channels/1028666338383777873/1
 New Spawn checklist				
 - Verify within Home / Forward staging range.			
 - Verify systems rental status.			
-	- If rented, have council contact Contact Keleilos Shizaru to obtain permission to run.		
-	- If owned by horde or NPC / Hostile space, proceed.		
+	- If rented, check within command team (with a everyone ping) if nobody already contacted Keleilos Shizaru to obtain permission to run. Give 1 hour and scroll history. Any fc can reachout but only 1 person should do it.	
+	- If owned by horde, Slyce, NC or NPC / Hostile space, proceed.		
 - Find or Verify a safe staging area (with clone bay preferably).			
 - Validate a safe route utilizing Titan bridges, ansiblex, or gate to gate route.			
-	- If route utilizes ansiblex, Council should contact Woodius Miles for fuel management of ansiblex.		
+	- If route utilizes ansiblex, an fc should contact Woodius Miles for fuel management of ansiblex. Same logic as rental satus. 		
 - Ping Announcement channel for new staging and any applicable info.			
 - Ping Move fleets as needed.			
 				
 Returning checklist (post mom kill)				
-- Ping announcement channel that focus is over			
+- Ping that focus is over			
 	- If in rental system, include 3 days to move ships and equipment out of area.		
 	- If clone bay in rental structure, include 3 day notice to move clone out of area.		
-- Ping move fleets back home.			
-	- If route utilizes ansiblex, Council should contact Woodius Miles for fuel management of ansiblex.		
-- Reset staging in Gila staging or MJ-			
+- Ping move fleets back home.
+- Reset staging in SCS MOTD			
 - Contract mom loot to public and have it posted in SCS MOTD			
 - Send contract money to SRP corp.			
