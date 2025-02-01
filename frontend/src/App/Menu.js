@@ -8,6 +8,8 @@ import { InputGroup, Select, NavButton } from "../Components/Form";
 import { EventNotifier } from "../Components/Event";
 import { ThemeSelect } from "../Components/ThemeSelect";
 import { NavLinks, MobileNavButton, MobileNav } from "./Navigation";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDiscord, fa-headphones-simple } from "@fortawesome/free-brands-svg-icons";
 
 const NavBar = styled.div`
   display: flex;
@@ -136,6 +138,15 @@ export function Menu({ onChangeCharacter, theme, setTheme, sticker, setSticker }
               )}
               <InputGroup fixed>
                 <EventNotifier />
+                <AButtonAlt title="Group" href="https://www.pandemic-horde.org/settings/groups/open">
+                  <FontAwesomeIcon icon={faUserGroup} />
+                </AButtonAlt>
+                <AButtonAlt title="Discord" href="https://www.pandemic-horde.org/settings/discord/join">
+                  <FontAwesomeIcon icon={faDiscord} />
+                </AButtonAlt>
+                <AButtonAlt title="Mumble" href="https://www.pandemic-horde.org/settings/mumble/join">
+                  <FontAwesomeIcon icon={fa-headphones-simple} />
+                </AButtonAlt>
                 <ThemeSelect
                   theme={theme}
                   setTheme={setTheme}
