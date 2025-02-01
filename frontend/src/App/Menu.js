@@ -9,7 +9,7 @@ import { EventNotifier } from "../Components/Event";
 import { ThemeSelect } from "../Components/ThemeSelect";
 import { NavLinks, MobileNavButton, MobileNav } from "./Navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDiscord, fa-headphones-simple } from "@fortawesome/free-brands-svg-icons";
+import { faDiscord, fa-headphones-simple, faUserGroup } from "@fortawesome/free-brands-svg-icons";
 
 const NavBar = styled.div`
   display: flex;
