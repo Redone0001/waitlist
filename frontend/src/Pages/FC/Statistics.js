@@ -276,6 +276,60 @@ function FleetTimeAllFcMonth({ data }) {
   )
 }
 
+function FleetTimeByFCMonthPercentage({ data }) {
+  const series = separateDataLabels2D(data);
+
+  const datasets = _.map(series.series, (numbers, label) => {
+    // Compute the total time for each time period (index) across all hulls
+    const totalPerLabel = series.labels.map((label, index) =>
+      _.sum(Object.values(series.series).map((seriesNumbers) => seriesNumbers[index] || 0))
+    );
+
+    return {
+      label: label,
+      data: numbers.map((seconds, index) => {
+        const total = totalPerLabel[index] || 1; // Prevent division by zero
+        return Math.round(((seconds || 0) / total) * 100); // Convert to percentage
+      }),
+    };
+  });
+
+  return (
+    <ThemedLine
+      data={{
+        labels: series.labels,
+        datasets: datasets,
+      }}
+      options={{
+        plugins: {
+          title: {
+            display: true,
+            text: "Time in fleet by FC (%)",
+          },
+          tooltip: {
+            callbacks: {
+              label: (context) => {
+                const label = context.dataset.label || '';
+                const percentage = context.raw; // Raw value represents the percentage
+                return `${label}: ${percentage}%`;
+              },
+            },
+          },
+        },
+        scales: {
+          y: {
+            ticks: {
+              callback: (value) => `${value}%`, // Display percentage on y-axis
+            },
+            beginAtZero: true,
+            max: 35, // Y-axis range from 0 to 35
+          },
+        },
+      }}
+    />
+  );
+}
+
 function XByHullMonth({ data }) {
   const series = separateDataLabels2D(data);
   return (
@@ -459,6 +513,9 @@ export function Statistics() {
       </Graph>
       <Graph>
         <FleetTimeAllFcMonth data={statsData.fleet_seconds_by_fc_by_month} />
+      </Graph>
+      <Graph>
+        <FleetTimeByFCMonthPercentage data={statsData.fleet_seconds_by_fc_by_month} />
       </Graph>
     </Row>
   );
