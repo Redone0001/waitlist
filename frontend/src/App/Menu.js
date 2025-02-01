@@ -144,7 +144,7 @@ export function Menu({ onChangeCharacter, theme, setTheme, sticker, setSticker }
                 <NavButton exact to="https://www.pandemic-horde.org/settings/discord/join" title="Join Discord">
                   <FontAwesomeIcon icon={faDiscord} />
                 </NavButton>
-                <NavButton exact to="https://www.pandemic-horde.org/settings/mumble/join" title="Settup Mumble">
+                <NavButton exact to="https://www.pandemic-horde.org/settings/mumble/join" title="Setup Mumble">
                   <FontAwesomeIcon icon={faHeadphones} />
                 </NavButton>
                 <EventNotifier />

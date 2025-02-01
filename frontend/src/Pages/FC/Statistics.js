@@ -212,8 +212,7 @@ function FleetTimeByHullMonthPercentage({ data }) {
             ticks: {
               callback: (value) => `${value}%`, // Display percentage on y-axis
             },
-            beginAtZero: true,
-            max: 35, // Y-axis range from 0 to 35
+            beginAtZero: true
           },
         },
       }}
@@ -321,8 +320,7 @@ function FleetTimeByFCMonthPercentage({ data }) {
             ticks: {
               callback: (value) => `${value}%`, // Display percentage on y-axis
             },
-            beginAtZero: true,
-            max: 35, // Y-axis range from 0 to 35
+            beginAtZero: true
           },
         },
       }}
