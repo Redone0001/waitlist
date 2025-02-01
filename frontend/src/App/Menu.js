@@ -9,7 +9,7 @@ import { EventNotifier } from "../Components/Event";
 import { ThemeSelect } from "../Components/ThemeSelect";
 import { NavLinks, MobileNavButton, MobileNav } from "./Navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDiscord, fa-headphones-simple, faUserGroup } from "@fortawesome/free-brands-svg-icons";
+import { faDiscord, faHeadphones, faUserGroup } from "@fortawesome/free-brands-svg-icons";
 
 const NavBar = styled.div`
   display: flex;
@@ -145,7 +145,7 @@ export function Menu({ onChangeCharacter, theme, setTheme, sticker, setSticker }
                   <FontAwesomeIcon icon={faDiscord} />
                 </AButtonAlt>
                 <AButtonAlt title="Mumble" href="https://www.pandemic-horde.org/settings/mumble/join">
-                  <FontAwesomeIcon icon={fa-headphones-simple} />
+                  <FontAwesomeIcon icon={faHeadphones} />
                 </AButtonAlt>
                 <ThemeSelect
                   theme={theme}
