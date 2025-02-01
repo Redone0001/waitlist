@@ -138,15 +138,15 @@ export function Menu({ onChangeCharacter, theme, setTheme, sticker, setSticker }
                 </>
               )}
               <InputGroup fixed>
-                <NavButton exact to="https://www.pandemic-horde.org/settings/groups/open" title="Group on Square">
+                <AButton href="https://www.pandemic-horde.org/settings/groups/open" target="_blank" rel="noopener noreferrer" title="Group on Square">
                   <FontAwesomeIcon icon={faUserGroup} />
-                </NavButton>
-                <NavButton exact to="https://www.pandemic-horde.org/settings/discord/join" title="Join Discord">
+                </AButton>
+                <AButton href="https://www.pandemic-horde.org/settings/discord/join" target="_blank" rel="noopener noreferrer" title="Join Discord">
                   <FontAwesomeIcon icon={faDiscord} />
-                </NavButton>
-                <NavButton exact to="https://www.pandemic-horde.org/settings/mumble/join" title="Setup Mumble">
+                </AButton>
+                <AButton href="https://www.pandemic-horde.org/settings/mumble/join" target="_blank" rel="noopener noreferrer" title="Setup Mumble">
                   <FontAwesomeIcon icon={faHeadphones} />
-                </NavButton>
+                </AButton>
                 <EventNotifier />
                 <ThemeSelect
                   theme={theme}
