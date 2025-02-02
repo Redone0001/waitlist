@@ -21,6 +21,7 @@ import {
   faSignInAlt,
   faUserGraduate,
   faUsers,
+  faCaretUp,
 } from "@fortawesome/free-solid-svg-icons";
 import { replaceTitle, parseMarkdownTitle, usePageTitle } from "../../Util/title";
 
@@ -140,6 +141,9 @@ export function GuideIndex() {
         <GuideCard slug="/guide/bastion" name="Using Bastion" icon={faFistRaised}>
           The Bastion Module offers a great damage increase, but it has to be used safely. Learn
           how!
+        </GuideCard>
+        <GuideCard slug="/guide/leshak" name="Flying a Leshak" icon={faCaretUp}>
+          You just got a Leshak ? This guide help you use it to his maximal potential.
         </GuideCard>
         <GuideCard slug="/badges" name="Information about badges" icon={faIdBadge}>
           What are all these badges I see?
