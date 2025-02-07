@@ -116,9 +116,9 @@ export function AllFleetsMembers() {
     console.log("Categories:", fleetData.cats);
   });
   const borderColor =
-    cat_all < 60
+    cats["All"] < 60
       ? theme.colors.success
-      : cat_all > 63
+      : cats["All"] > 63
       ? theme.colors.danger
       : theme.colors.warning;
 
