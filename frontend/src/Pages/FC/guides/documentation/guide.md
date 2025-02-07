@@ -72,4 +72,21 @@ Returning checklist (post mom kill)
 To use this, please copy from below.
 Then paste into your MOTD.
 
-	<font size="14" color="#bfffffff"></font><font size="18" color="#ffffffff">--<br>Dock up structure:<br></font><font size="18" color="#ffff0000">YOU MUST BE IN COMMS<br></font><font size="14" color="#ffffff00">Anchor DPS/SNIPER/Links:<br>ANCHOR Logi:<br></font><font size="14" color="#ffffe400"><loc><a href="https://waitlist.beancursion.org/guide/roles#ddd-2">DDD1</a></loc></font><font size="14" color="#ffffff00">:<br></font><font size="14" color="#ffffe400"><loc><a href="https://waitlist.beancursion.org/guide/roles#hhh-7">HHH1</a></loc></font><font size="14" color="#ffffff00">:<br></font><font size="14" color="#ffffe400"><loc><a href="https://waitlist.beancursion.org/guide/roles#hhh-7">HHH2</a></loc></font><font size="14" color="#ffffff00">:<br></font><font size="14" color="#ffffe400"><a href="https://waitlist.beancursion.org/guide/roles#hhh-7">HHH3</a></font><font size="14" color="#ffffff00">:<br>OVERFLOW:<br></font><font size="14" color="#ffffe400"><loc><a href="https://waitlist.beancursion.org/guide/roles#mtaccivi-9">MTAC</a></loc></font><font size="14" color="#ffffff00">:<br></font><font size="14" color="#ffffe400"><loc><a href="https://waitlist.beancursion.org/guide/roles#mtaccivi-9">MTAC</a></loc></font><font size="14" color="#ffffff00">:<br></font><font size="14" color="#ffffe400"><loc><a href="https://waitlist.beancursion.org/guide/roles#ms-12">Meatshield</a></loc></font><font size="14" color="#ffffff00">:<br></font><font size="14" color="#ff00ff00">DDD Priority</font><font size="14" color="#ffffff00">: Niarja > Tama > Schmaeel > Renyn > Eystur<br></font><font size="14" color="#ff00ff00"><b>SRP: </font><font size="14" color="#ffd98d00"><a href="showinfo:2//98722655">Horde Collection Agency</a><br></font><font size="14" color="#ff00ff00">50M/toon/focus <br></font><font size="14" color="#ffffe400"><loc><a href="https://waitlist.beancursion.org/guide/fctraining#tagging-7">Tagging helper guide</a></loc><br></font><font size="14" color="#ff00ffff">SRP Amount: Full Jita Sell Value of doctrine level ship</b></font>
+	<font size="14" color="#bfffffff"></font><font size="18" color="#ffffffff">--
+	Dock up structure:
+	</font><font size="18" color="#ffff0000">YOU MUST BE IN COMMS	
+	</font><font size="14" color="#ffffff00">Anchor DPS/SNIPER/Links:
+	ANCHOR Logi:	
+	</font><font size="14" color="#ffffe400"><loc><a href="https://waitlist.beancursion.org/guide/roles#ddd-2">DDD1</a></loc></font><font size="14" color="#ffffff00">:
+	</font><font size="14" color="#ffffe400"><loc><a href="https://waitlist.beancursion.org/guide/roles#hhh-7">HHH1</a></loc></font><font size="14" color="#ffffff00">:
+	</font><font size="14" color="#ffffe400"><loc><a href="https://waitlist.beancursion.org/guide/roles#hhh-7">HHH2</a></loc></font><font size="14" color="#ffffff00">:
+	</font><font size="14" color="#ffffe400"><a href="https://waitlist.beancursion.org/guide/roles#hhh-7">HHH3</a></font><font size="14" color="#ffffff00">:
+	OVERFLOW:
+	</font><font size="14" color="#ffffe400"><loc><a href="https://waitlist.beancursion.org/guide/roles#mtaccivi-9">MTAC</a></loc></font><font size="14" color="#ffffff00">:
+	</font><font size="14" color="#ffffe400"><loc><a href="https://waitlist.beancursion.org/guide/roles#mtaccivi-9">MTAC</a></loc></font><font size="14" color="#ffffff00">:
+	</font><font size="14" color="#ffffe400"><loc><a href="https://waitlist.beancursion.org/guide/roles#ms-12">Meatshield</a></loc></font><font size="14" color="#ffffff00">:
+	</font><font size="14" color="#ff00ff00">DDD Priority</font><font size="14" color="#ffffff00">: Niarja > Tama > Schmaeel > Renyn > Eystur
+	</font><font size="14" color="#ff00ff00"><b>SRP: </font><font size="14" color="#ffd98d00"><a href="showinfo:2//98722655">Horde Collection Agency</a>
+	</font><font size="14" color="#ff00ff00">50M/toon/focus 
+	</font><font size="14" color="#ffffe400"><loc><a href="https://waitlist.beancursion.org/guide/fctraining#tagging-7">Tagging helper guide</a></loc>
+	</font><font size="14" color="#ff00ffff">SRP Amount: Full Jita Sell Value of doctrine level ship</b></font>
