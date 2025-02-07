@@ -115,56 +115,61 @@ export function AllFleetsMembers() {
     console.log("Summary:", fleetData.summary);
     console.log("Categories:", fleetData.cats);
   });
-  const borderColor =
-    cats["All"] < 60
-      ? theme.colors.success
-      : cats["All"] > 63
-      ? theme.colors.danger
-      : theme.colors.warning;
 
   return (
-    <>
-      {allFleetInfo ? (
-      fleetSummaries.map((fleetData, index) => (
-        <div key={index}>
-          <h3>Fleet {index + 1}</h3>
+  <>
+    {allFleetInfo ? (
+      fleetSummaries.map((fleetData, index) => {
+        // Determine border color dynamically per fleet
+        const borderColor =
+          fleetData.cats["All"] < 60
+            ? theme.colors.success
+            : fleetData.cats["All"] > 63
+            ? theme.colors.danger
+            : theme.colors.warning;
 
-          {/* Input Group for Fleet Categories */}
-          <InputGroup>
-            <BorderedBox>Bastion: {fleetData.cats["Marauder"]}</BorderedBox>
-            <BorderedBox>Logi: {fleetData.cats["Logi"]}</BorderedBox>
-            <BorderedBox>Vindi: {fleetData.cats["Vindicator"]}</BorderedBox>
-            <BorderedBox>Shak: {fleetData.cats["Leshak"]}</BorderedBox>
-            <BorderedBox>Drones: {fleetData.cats["Drones"]}</BorderedBox>
-            <BorderedBox>NBI: {fleetData.cats["Mega/Night"]}</BorderedBox>
-            <BorderedBox style={{ borderColor }}>NBI: {fleetData.cats["All"]}</BorderedBox>
-          </InputGroup>
+        return (
+          <div key={index}>
+            <h3>Fleet {index + 1}</h3>
 
-          {/* Fleet Ship Summary */}
-          <h4>Ship Summary:</h4>
-          <Table>
-            <TableHead>
-              <Row>
-                <CellHead>Ship Name</CellHead>
-                <CellHead>Count</CellHead>
-              </Row>
-            </TableHead>
-            <TableBody>
-              {Object.entries(fleetData.summary)
-                .sort((a, b) => b[1] - a[1]) // Sort by count (descending)
-                .map(([shipName, count]) => (
-                  <Row key={shipName}>
-                    <Cell>{shipName}</Cell>
-                    <Cell>{count}</Cell>
-                  </Row>
-                ))}
-            </TableBody>
-          </Table>
-        </div>
-      ))
+            {/* Input Group for Fleet Categories */}
+            <InputGroup>
+              <BorderedBox>Bastion: {fleetData.cats["Marauder"]}</BorderedBox>
+              <BorderedBox>Logi: {fleetData.cats["Logi"]}</BorderedBox>
+              <BorderedBox>Vindi: {fleetData.cats["Vindicator"]}</BorderedBox>
+              <BorderedBox>Shak: {fleetData.cats["Leshak"]}</BorderedBox>
+              <BorderedBox>Drones: {fleetData.cats["Drones"]}</BorderedBox>
+              <BorderedBox>NBI: {fleetData.cats["Mega/Night"]}</BorderedBox>
+              <BorderedBox style={{ borderColor }}>
+                All: {fleetData.cats["All"]}
+              </BorderedBox>
+            </InputGroup>
+
+            {/* Fleet Ship Summary */}
+            <h4>Ship Summary:</h4>
+            <Table>
+              <TableHead>
+                <Row>
+                  <CellHead>Ship Name</CellHead>
+                  <CellHead>Count</CellHead>
+                </Row>
+              </TableHead>
+              <TableBody>
+                {Object.entries(fleetData.summary)
+                  .sort((a, b) => b[1] - a[1]) // Sort by count (descending)
+                  .map(([shipName, count]) => (
+                    <Row key={shipName}>
+                      <Cell>{shipName}</Cell>
+                      <Cell>{count}</Cell>
+                    </Row>
+                  ))}
+              </TableBody>
+            </Table>
+          </div>
+        );
+      })
     ) : (
       <p>Loading fleet data...</p>
     )}
-    </>
-  );
-}
+  </>
+);
