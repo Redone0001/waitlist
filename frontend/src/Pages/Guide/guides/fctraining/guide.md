@@ -124,3 +124,27 @@ You can have this open on your phone in your tryouts and/or first trainee fleets
 - N : Deltole, Outuni
 - X : MTAC Squad Schmaeels, Auga (see [Scouting](/guide/scouting) guide)
 - 1 : All other Schmaeels
+
+# VG sites, tips & tricks
+
+## Preload Override Transfer Arrays
+Warp in a scout, immediately warp it out. 20 minutes later the (respawning) Eysturs (that eat drones) will have despawned.
+Have the scout tag the site beacon with *letter* tags (in order) so the FC knows which site is which.
+
+## Tag priorities
+
+__Nation Mining Colony__
+Wave 1: Mara - Romi, have DDD go through frigs, secondary webs spread on primary, then secondary targets.
+Wave 2&3: Niarjas, try to blap Tamas with Pallies until they're closer than 40km, then cruisers, finally kill all frigs.
+
+__Nation Commander Outpost__
+Wave 1: Paladins go Niarja, Romis, then webbed frigs. DPS goes Niarja, then frigs (Tama, Schmaeel, Renyn, Eystur)
+Wave 2: Niarja, Auga, Tamas, Schmaeels, Renyns, Eysturs
+Wave 3: Sanshas Nation Commander, Augas, Tamas, rest of the frigs
+Wave 4: Freefire Niarja & Tamas, then blap Schmaeels & Renyns, finally kill Eysturs
+
+__Override Transfer Array__
+All waves: Ignore Eysturs if they're there. Don't launch small drones if there's Eysturs in the site.
+Wave 1&2: Blap Niarjas & Tamas with Pallies (swap off Tamas once they're <40 km off and have DPS take over there), then Augas, then Deltole
+Wave 3: Niarja, Auga, Deltole, finally Tamas. (Some Tamas are not essential to finishing the site.)
+
