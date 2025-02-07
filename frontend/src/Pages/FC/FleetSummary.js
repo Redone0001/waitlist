@@ -46,6 +46,7 @@ function coalesceCalls(func, wait) {
 export function AllFleetsMembers() {
   const [allFleetInfo, setAllFleetInfo] = React.useState(null);
   const eventContext = React.useContext(EventContext); // Get the event context
+  const theme = useTheme();
 
   // Fetch fleet data
 	const fetchFleetData = React.useCallback(async () => {
