@@ -58,7 +58,7 @@ export function DPS_calc() {
       const match_reps = regex_reps.exec(line);
       if (match_dps) {
         const time = match_dps[1];
-        const damage = parseInt(match_dps[2], 10);
+        const damage = parseInt(match_dps[2], 0);
         const target = match_dps[3];
 
         parsedData.push({
@@ -67,12 +67,11 @@ export function DPS_calc() {
           damage,
           target,
           timestamp: new Date(time).getTime() / 1000,
-		  type: "Damage",
         });
       }
 	  if (match_reps) {
         const time = match_reps[1];
-        const reps = parseInt(match_reps[2], 10);
+        const reps = parseInt(match_reps[2], 0);
         const target = match_reps[3];
 
         parsedData.push({
@@ -81,7 +80,6 @@ export function DPS_calc() {
           reps,
           target,
           timestamp: new Date(time).getTime() / 1000,
-		  type: "Repair",
         });
       }
     });
