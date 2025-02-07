@@ -130,7 +130,7 @@ export function FCMenu() {
             <GuideCard slug="trainee" name="FC Training" icon={faGraduationCap} />
           )}
         {authContext &&
-          authContext.access["search"] && ( //any full FC
+          authContext.access["fleet-invite"] && ( 
             <GuideCard slug="documentation" name="FC Documentation" icon={faBiohazard} />
           )}
         {authContext && authContext.access["stats-view"] && (
@@ -142,9 +142,14 @@ export function FCMenu() {
 		{authContext && authContext.access["fleet-break-down"] && (
           <GuideCard slug="fleet/break" name="Break Down of the Fleet" icon={faBars} />
           )}
+		{authContext && authContext.access["fleet-break-down"] && (
+          <GuideCard slug="fleet/info" name="Listing of the Fleet" icon={faBars} />
+          )}
+        {authContext &&
+          authContext.access["waitlist-tag:TRAINER"] && ( //any full FC
+            <GuideCard slug="trainer" name="Trainer Documentation" icon={faBiohazard} />
+          )}
       </CardArray>
-	  <PageTitle>FC backseat report</PageTitle>
-	  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeq8lTHPl6mLK8yR7ue2RCITmFNtISYryJlww8TXzHCCsGcZA/viewform?embedded=true" width="640" height="1191" frameBorder="0" marginHeight="0" marginWidth="0">Loading…</iframe>
     </>
   );
 }

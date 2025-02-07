@@ -120,7 +120,7 @@ export function Routes() {
         <AuthenticatedRoute component={<CommandersPage />} access="commanders-view" />
       </Route>
       <Route exact path="/fc/documentation">
-        <AuthenticatedRoute component={<GuideFC />} access="waitlist-tag:HQ-FC" />
+        <AuthenticatedRoute component={<GuideFC />} access="fleet-invite" />
       </Route>
       <Route exact path="/fc/fleet">
         <AuthenticatedRoute component={<Fleet />} access="fleet-view" />
@@ -151,6 +151,9 @@ export function Routes() {
       </Route>
       <Route exact path="/fc/trainee">
         <AuthenticatedRoute component={<GuideFC />} access="waitlist-tag:TRAINEE" />
+      </Route>
+      <Route exact path="/fc/trainer">
+        <AuthenticatedRoute component={<GuideFC />} access="waitlist-tag:TRAINER" />
       </Route>
 
       {/* Auth Routes: Login, Callback, Logout */}

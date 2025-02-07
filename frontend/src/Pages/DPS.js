@@ -54,11 +54,12 @@ export function DPS_calc() {
     const parsedData = [];
 
     lines.forEach((line) => {
-      const match = regex.exec(line);
-      if (match) {
-        const time = match[1];
-        const damage = parseInt(match[2], 10);
-        const target = match[3];
+      const match_dps = regex_dps.exec(line);
+      const match_reps = regex_reps.exec(line);
+      if (match_dps) {
+        const time = match_dps[1];
+        const damage = parseInt(match_dps[2], 10);
+        const target = match_dps[3];
 
         parsedData.push({
           listener,
@@ -66,6 +67,21 @@ export function DPS_calc() {
           damage,
           target,
           timestamp: new Date(time).getTime() / 1000,
+		  type: "Damage",
+        });
+      }
+	  if (match_reps) {
+        const time = match_dps[1];
+        const reps = parseInt(match_dps[2], 10);
+        const target = match_dps[3];
+
+        parsedData.push({
+          listener,
+          time,
+          reps,
+          target,
+          timestamp: new Date(time).getTime() / 1000,
+		  type: "Repair",
         });
       }
     });
@@ -289,4 +305,5 @@ const styles = {
   },
 };
 
-const regex = /\[ (\d{4}\.\d{2}\.\d{2} \d{2}:\d{2}:\d{2}) \] \(combat\) .*?<b>(\d+)<\/b> .*?to<\/font> <b><color=0xffffffff>([\w\s]+)<\/b>/;
+const regex_dps = /\[ (\d{4}\.\d{2}\.\d{2} \d{2}:\d{2}:\d{2}) \] \(combat\) <color=0xff00ffff><b>(\d+)<\/b> .*?to<\/font> <b><color=0xffffffff>([\w\s]+)<\/b>/;
+const regex_reps = /\[ (\d{4}\.\d{2}\.\d{2} \d{2}:\d{2}:\d{2}) \] \(combat\) <color=0xffccff66><b>(\d+)<\/b>.*?to <\/font><b>.*?<b>([\w\s]+)<\/b>/;
