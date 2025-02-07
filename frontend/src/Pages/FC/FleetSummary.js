@@ -7,6 +7,7 @@ import { Cell, CellHead, Row, Table, TableBody, TableHead } from "../../Componen
 import { BorderedBox } from "../../Components/NoteBox";
 import _ from "lodash";
 import { usePageTitle } from "../../Util/title";
+import { useTheme } from "styled-components";
 
 const marauders = ["Paladin", "Kronos"];
 const logi = ["Nestor", "Guardian", "Oneiros"];
@@ -88,6 +89,7 @@ export function AllFleetsMembers() {
       "Mega/Night": 0,
       Leshak: 0,
       Drones: 0,
+	  All: 0,
     };
     // Process members of this fleet
     fleet.members.forEach((member) => {
@@ -102,6 +104,7 @@ export function AllFleetsMembers() {
       if (bad.includes(shipName)) cats["Mega/Night"]++;
       if (trig.includes(shipName)) cats["Leshak"]++;
       if (drones_boat.includes(shipName)) cats["Drones"]++;
+	  cats["All"]++;
     });
     return { fleetIndex, summary, cats };
   });
@@ -111,6 +114,12 @@ export function AllFleetsMembers() {
     console.log("Summary:", fleetData.summary);
     console.log("Categories:", fleetData.cats);
   });
+  const borderColor =
+    cat_all < 60
+      ? theme.colors.success
+      : cat_all > 63
+      ? theme.colors.danger
+      : theme.colors.warning;
 
   return (
     <>
@@ -127,6 +136,7 @@ export function AllFleetsMembers() {
             <BorderedBox>Shak: {fleetData.cats["Leshak"]}</BorderedBox>
             <BorderedBox>Drones: {fleetData.cats["Drones"]}</BorderedBox>
             <BorderedBox>NBI: {fleetData.cats["Mega/Night"]}</BorderedBox>
+            <BorderedBox style={{ borderColor }}>NBI: {fleetData.cats["All"]}</BorderedBox>
           </InputGroup>
 
           {/* Fleet Ship Summary */}
