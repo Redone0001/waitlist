@@ -140,7 +140,7 @@ export function AllFleetsMembers() {
               <BorderedBox>Shak: {fleetData.cats["Leshak"]}</BorderedBox>
               <BorderedBox>Drones: {fleetData.cats["Drones"]}</BorderedBox>
               <BorderedBox>NBI: {fleetData.cats["Mega/Night"]}</BorderedBox>
-              <BorderedBox style={{ borderColor }}>
+              <BorderedBox bgColor={ borderColor }>
                 All: {fleetData.cats["All"]}
               </BorderedBox>
             </InputGroup>
