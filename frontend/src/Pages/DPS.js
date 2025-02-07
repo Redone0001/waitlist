@@ -102,8 +102,9 @@ export function DPS_calc() {
 
       if (lastEntry && lastEntry.time === intervalStart) {
         lastEntry.damage += entry.damage;
+		lastEntry.reps += entry.reps;
       } else {
-        listenerData.push({ time: intervalStart, damage: entry.damage });
+        listenerData.push({ time: intervalStart, damage: entry.damage, reps: entry.reps  });
       }
     });
 
