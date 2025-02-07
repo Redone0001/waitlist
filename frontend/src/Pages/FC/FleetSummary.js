@@ -123,10 +123,10 @@ export function AllFleetsMembers() {
         // Determine border color dynamically per fleet
         const borderColor =
           fleetData.cats["All"] < 60
-            ? theme.colors.success
+            ? theme.colors.success.color
             : fleetData.cats["All"] > 63
-            ? theme.colors.danger
-            : theme.colors.warning;
+            ? theme.colors.danger.color
+            : theme.colors.warning.color;
 
         return (
           <div key={index}>
