@@ -71,9 +71,9 @@ export function DPS_calc() {
         });
       }
 	  if (match_reps) {
-        const time = match_dps[1];
-        const reps = parseInt(match_dps[2], 10);
-        const target = match_dps[3];
+        const time = match_reps[1];
+        const reps = parseInt(match_reps[2], 10);
+        const target = match_reps[3];
 
         parsedData.push({
           listener,
@@ -113,60 +113,90 @@ export function DPS_calc() {
   };
 
   const generateChartData = (aggregatedData) => {
-    const datasets = [];
-    const labelsSet = new Set();
-	const hour_option = {
-		hour12: false,
-		hour: '2-digit',
-        minute: '2-digit',
-	}
-
-    // Collect all unique labels (timestamps)
-    Object.values(aggregatedData).forEach((data) => {
-      data.forEach((entry) => {
-        const formattedTime = new Date(entry.time * 1000).toLocaleTimeString([], hour_option);
-        labelsSet.add(formattedTime);
-      });
-    });
-
-    const labels = Array.from(labelsSet).sort(); // Ensure the labels are sorted chronologically
-
-    // Process each listener's data
-    Object.entries(aggregatedData).forEach(([listener, data]) => {
-      const dataMap = new Map(
-        data.map((entry) => {
-          const formattedTime = new Date(entry.time * 1000).toLocaleTimeString([], hour_option);
-          return [formattedTime, entry.damage];
-        })
-      );
-
-      const formattedData = labels.map((label) => ({
-        x: label,
-        y: dataMap.get(label) || 0, // Default to 0 if no data for the time point
-      }));
-
-      const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-      datasets.push({
-        label: listener,
-        data: formattedData,
-        borderColor: randomColor,
-        backgroundColor: `${randomColor}33`,
-        fill: false,
-      });
-    });
-
-    setChartData({ labels, datasets });
+  const datasets = [];
+  const labelsSet = new Set();
+  const hour_option = {
+    hour12: false,
+    hour: '2-digit',
+    minute: '2-digit',
   };
+
+  // Collect all unique labels (timestamps)
+  Object.values(aggregatedData).forEach((data) => {
+    data.forEach((entry) => {
+      const formattedTime = new Date(entry.time * 1000).toLocaleTimeString([], hour_option);
+      labelsSet.add(formattedTime);
+    });
+  });
+
+  const labels = Array.from(labelsSet).sort(); // Ensure the labels are sorted chronologically
+
+  // Process each listener's data
+  Object.entries(aggregatedData).forEach(([listener, data]) => {
+    const damageDataMap = new Map();
+    const repairDataMap = new Map();
+
+    data.forEach((entry) => {
+      const formattedTime = new Date(entry.time * 1000).toLocaleTimeString([], hour_option);
+      if (entry.damage) {
+        damageDataMap.set(formattedTime, (damageDataMap.get(formattedTime) || 0) + entry.damage);
+      }
+      if (entry.reps) {
+        repairDataMap.set(formattedTime, (repairDataMap.get(formattedTime) || 0) + entry.reps);
+      }
+    });
+
+    const damageData = labels.map((label) => ({
+      x: label,
+      y: damageDataMap.get(label) || 0,
+    }));
+
+    const repairData = labels.map((label) => ({
+      x: label,
+      y: repairDataMap.get(label) || 0,
+    }));
+
+    const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+    datasets.push({
+      label: `${listener} - Damage`,
+      data: damageData,
+      borderColor: randomColor,
+      backgroundColor: `${randomColor}33`,
+      fill: false,
+    });
+
+    datasets.push({
+      label: `${listener} - Repair`,
+      data: repairData,
+      borderColor: randomColor,
+      backgroundColor: `${randomColor}33`,
+      fill: false,
+    });
+  });
+
+  setChartData({ labels, datasets });
+};
 
   const calculateTotals = (aggregatedData) => {
-    const totals = {};
+  const totals = {};
 
-    for (const listener in aggregatedData) {
-      totals[listener] = aggregatedData[listener].reduce((sum, entry) => sum + entry.damage, 0);
-    }
+  for (const listener in aggregatedData) {
+    totals[listener] = aggregatedData[listener].reduce(
+      (sum, entry) => {
+        if (entry.damage) {
+          sum.damage += entry.damage;
+        }
+        if (entry.reps) {
+          sum.reps += entry.reps;
+        }
+        return sum;
+      },
+      { damage: 0, reps: 0 }
+    );
+  }
 
-    setTotals(totals);
-  };
+  setTotals(totals);
+};
 
   const handleFilter = () => {
   if (!startTime || !endTime) {
@@ -246,21 +276,23 @@ export function DPS_calc() {
       )}
 
       <table style={styles.table}>
-        <thead>
-          <tr>
-            <th>Toon name</th>
-            <th>Total Damage</th>
-          </tr>
-        </thead>
-        <tbody>
-          {Object.entries(totals).map(([listener, damage]) => (
-            <tr key={listener}>
-              <td>{listener}</td>
-              <td>{damage}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+		  <thead>
+			<tr>
+			  <th>Toon name</th>
+			  <th>Total Damage</th>
+			  <th>Total Repairs</th>
+			</tr>
+		  </thead>
+		  <tbody>
+			{Object.entries(totals).map(([listener, totals]) => (
+			  <tr key={listener}>
+				<td>{listener}</td>
+				<td>{totals.damage}</td>
+				<td>{totals.reps}</td>
+			  </tr>
+			))}
+		  </tbody>
+		</table>
     </div>
   );
 }
