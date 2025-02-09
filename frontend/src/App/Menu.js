@@ -36,7 +36,7 @@ NavBar.Header = styled.div`
 NavBar.LogoLink = styled(NavLink).attrs((props) => ({
   activeClassName: "active",
 }))`
-  margin-right: 2em;
+  margin-right: 1em;
   flex-grow: 0;
   line-height: 0;
   @media (max-width: 480px) {
@@ -45,7 +45,7 @@ NavBar.LogoLink = styled(NavLink).attrs((props) => ({
   }
 `;
 NavBar.Logo = styled.img`
-  width: 135px;
+  width: 100px;
   filter: ${(props) => props.theme.logo.filter};
 `;
 NavBar.Menu = styled.div`
@@ -87,7 +87,7 @@ NavBar.Main = styled.div`
   }
 `;
 NavBar.Name = styled.div`
-  margin-right: 2em;
+  margin-right: 1em;
   @media (max-width: 480px) {
     margin-right: 0em;
     width: 100%;
