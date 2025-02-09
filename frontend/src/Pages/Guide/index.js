@@ -22,6 +22,8 @@ import {
   faUserGraduate,
   faUsers,
   faCaretUp,
+  faJedi,
+  faBiohazard,
 } from "@fortawesome/free-solid-svg-icons";
 import { replaceTitle, parseMarkdownTitle, usePageTitle } from "../../Util/title";
 
@@ -156,7 +158,10 @@ export function GuideIndex() {
           Scouts give the FC information on what&apos;s happening elsewhere. Learn how to perform
           this role!
         </GuideCard>
-        <GuideCard slug="/guide/fctraining" name="Becoming an FC" icon={faUserGraduate}>
+        <GuideCard slug="/guide/wormhole" name="Wormhole rolling guide" icon={faBiohazard}>
+          Wormhole can offer ennemies quick route to our position. Roll those hole and keep the fleet safe.
+        </GuideCard>
+        <GuideCard slug="/guide/fctraining" name="Becoming an FC" icon={faJedi}>
           Do you want to join the FC team?
         </GuideCard>
       </CardArray>

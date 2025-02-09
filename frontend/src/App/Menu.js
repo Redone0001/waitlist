@@ -45,7 +45,7 @@ NavBar.LogoLink = styled(NavLink).attrs((props) => ({
   }
 `;
 NavBar.Logo = styled.img`
-  width: 150px;
+  width: 135px;
   filter: ${(props) => props.theme.logo.filter};
 `;
 NavBar.Menu = styled.div`
