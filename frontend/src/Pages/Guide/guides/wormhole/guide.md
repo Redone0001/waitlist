@@ -52,8 +52,8 @@ Rolling ship are designed to be cheap and easy to replace don't worry too much a
 
 ## Tips & Tricks & links:
 
-[eve wiki WH attributes](https://wiki.eveuniversity.org/Wormhole_attributes)
-[eve wiki WH](https://wiki.eveuniversity.org/Wormhole)
-[Rolling cheatsheet](https://learningtoeve.wordpress.com/wp-content/uploads/2020/11/rolling.png?w=1024)
+- [eve wiki WH attributes](https://wiki.eveuniversity.org/Wormhole_attributes)
+- [eve wiki WH](https://wiki.eveuniversity.org/Wormhole)
+- [Rolling cheatsheet](https://learningtoeve.wordpress.com/wp-content/uploads/2020/11/rolling.png?w=1024)
 
 
