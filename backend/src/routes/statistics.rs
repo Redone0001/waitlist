@@ -247,8 +247,8 @@ impl Queries {
         Ok(result)
     }
 
-    async fn xes_by_hull_28d(db: &crate::DB) -> Result<BTreeMap<TypeID, f64>, sqlx::Error> {
-        let ago_28d = chrono::Utc::now().timestamp() - (28 * 86400);
+    async fn xes_by_hull_30d(db: &crate::DB) -> Result<BTreeMap<TypeID, f64>, sqlx::Error> {
+        let ago_30d = chrono::Utc::now().timestamp() - (30 * 86400);
 
         #[derive(sqlx::FromRow)]
         struct Result {
@@ -266,7 +266,7 @@ impl Queries {
             GROUP BY 1
             "
         ))
-        .bind(ago_28d)
+        .bind(ago_30d)
         .fetch_all(db)
         .await?;
 
@@ -276,10 +276,10 @@ impl Queries {
             .collect())
     }
 
-    async fn fleet_seconds_by_hull_28d(
+    async fn fleet_seconds_by_hull_30d(
         db: &crate::DB,
     ) -> Result<BTreeMap<TypeID, f64>, sqlx::Error> {
-        let ago_28d = chrono::Utc::now().timestamp() - (28 * 86400);
+        let ago_30d = chrono::Utc::now().timestamp() - (30 * 86400);
 
         #[derive(sqlx::FromRow)]
         struct Result {
@@ -296,7 +296,7 @@ impl Queries {
             GROUP BY 1
         "
         ))
-        .bind(ago_28d)
+        .bind(ago_30d)
         .fetch_all(db)
         .await?;
 
@@ -349,7 +349,7 @@ impl Queries {
     async fn fleet_seconds_by_fc_90d(
 		db: &crate::DB,
 	) -> Result<BTreeMap<String, f64>, sqlx::Error> {
-		let ago_28d = chrono::Utc::now().timestamp() - (90 * 86400);
+		let ago_30d = chrono::Utc::now().timestamp() - (90 * 86400);
 
 		#[derive(sqlx::FromRow)]
 		struct Result {
@@ -368,7 +368,39 @@ impl Queries {
 			GROUP BY c.name
 			"
 		))
-		.bind(ago_28d)
+		.bind(ago_30d)
+		.fetch_all(db)
+		.await?;
+
+		Ok(res
+			.into_iter()
+			.map(|row| (row.character_name, row.fleet_seconds as f64))
+			.collect())
+	}
+
+    async fn fleet_seconds_by_fc_30d(
+		db: &crate::DB,
+	) -> Result<BTreeMap<String, f64>, sqlx::Error> {
+		let ago_30d = chrono::Utc::now().timestamp() - (30 * 86400);
+
+		#[derive(sqlx::FromRow)]
+		struct Result {
+			character_name: String,
+			fleet_seconds: i64,
+		}
+		
+		let res: Vec<Result> = sqlx::query_as(concat!(
+			"
+			SELECT
+				c.name as character_name,
+				CAST(SUM(fa.last_seen - fa.first_seen) AS SIGNED) fleet_seconds
+			FROM fleet_activity fa
+			JOIN `character` c ON fa.character_id = c.id
+			WHERE fa.first_seen > ? AND fa.is_boss = 1
+			GROUP BY c.name
+			"
+		))
+		.bind(ago_30d)
 		.fetch_all(db)
 		.await?;
 
@@ -411,19 +443,19 @@ impl Displayer {
             .collect()
     }
 
-    fn build_xes_by_hull_28d(
+    fn build_xes_by_hull_30d(
         source: &BTreeMap<TypeID, f64>,
     ) -> Result<BTreeMap<String, f64>, Madness> {
         Ok(filter_into_other_1d(translate_hulls_1d(source)?, 0.01))
     }
 
-    fn build_fleet_seconds_by_hull_28d(
+    fn build_fleet_seconds_by_hull_30d(
         source: &BTreeMap<TypeID, f64>,
     ) -> Result<BTreeMap<String, f64>, Madness> {
         Ok(filter_into_other_1d(translate_hulls_1d(source)?, 0.01))
     }
 
-    fn build_x_vs_time_by_hull_28d(
+    fn build_x_vs_time_by_hull_30d(
         source_x: &BTreeMap<TypeID, f64>,
         source_time: &BTreeMap<TypeID, f64>,
     ) -> Result<BTreeMap<String, BTreeMap<&'static str, f64>>, Madness> {
@@ -494,12 +526,13 @@ struct StatsResponse {
     xes_by_hull_by_month: BTreeMap<YearMonth, BTreeMap<String, f64>>,
     fleet_seconds_by_month: BTreeMap<YearMonth, f64>,
     pilots_by_month: BTreeMap<YearMonth, f64>,
-    xes_by_hull_28d: BTreeMap<String, f64>,
-    fleet_seconds_by_hull_28d: BTreeMap<String, f64>,
-    x_vs_time_by_hull_28d: BTreeMap<String, BTreeMap<&'static str, f64>>,
+    xes_by_hull_30d: BTreeMap<String, f64>,
+    fleet_seconds_by_hull_30d: BTreeMap<String, f64>,
+    x_vs_time_by_hull_30d: BTreeMap<String, BTreeMap<&'static str, f64>>,
     time_spent_in_fleet_by_month: BTreeMap<YearMonth, BTreeMap<&'static str, f64>>,
 	fleet_seconds_by_fc_by_month: BTreeMap<YearMonth, BTreeMap<String, f64>>,
 	fleet_seconds_by_fc_90d: BTreeMap<String, f64>,
+	fleet_seconds_by_fc_30d: BTreeMap<String, f64>,
 
 }
 
@@ -514,10 +547,11 @@ async fn statistics(
         Queries::fleet_seconds_by_character_by_month(app.get_db()).await?;
     let seconds_by_hull_month = Queries::fleet_seconds_by_hull_by_month(app.get_db()).await?;
     let xes_by_hull_month = Queries::xes_by_hull_by_month(app.get_db()).await?;
-    let xes_by_hull_28d = Queries::xes_by_hull_28d(app.get_db()).await?;
-    let seconds_by_hull_28d = Queries::fleet_seconds_by_hull_28d(app.get_db()).await?;
+    let xes_by_hull_30d = Queries::xes_by_hull_30d(app.get_db()).await?;
+    let seconds_by_hull_30d = Queries::fleet_seconds_by_hull_30d(app.get_db()).await?;
     let seconds_by_fc_month = Queries::fleet_seconds_by_fc_by_month(app.get_db()).await?;
 	let seconds_by_fc_90d = Queries::fleet_seconds_by_fc_90d(app.get_db()).await?;
+	let seconds_by_fc_30d = Queries::fleet_seconds_by_fc_30d(app.get_db()).await?;
 
     Ok(Json(StatsResponse {
         fleet_seconds_by_hull_by_month: Displayer::build_fleet_seconds_by_hull_by_month(
@@ -526,19 +560,20 @@ async fn statistics(
         xes_by_hull_by_month: Displayer::build_xes_by_hull_by_month(&xes_by_hull_month)?,
         fleet_seconds_by_month: Displayer::build_fleet_seconds_by_month(&seconds_by_hull_month),
         pilots_by_month: Displayer::build_pilots_by_month(&seconds_by_character_month),
-        xes_by_hull_28d: Displayer::build_xes_by_hull_28d(&xes_by_hull_28d)?,
-        fleet_seconds_by_hull_28d: Displayer::build_fleet_seconds_by_hull_28d(
-            &seconds_by_hull_28d,
+        xes_by_hull_30d: Displayer::build_xes_by_hull_30d(&xes_by_hull_30d)?,
+        fleet_seconds_by_hull_30d: Displayer::build_fleet_seconds_by_hull_30d(
+            &seconds_by_hull_30d,
         )?,
-        x_vs_time_by_hull_28d: Displayer::build_x_vs_time_by_hull_28d(
-            &xes_by_hull_28d,
-            &seconds_by_hull_28d,
+        x_vs_time_by_hull_30d: Displayer::build_x_vs_time_by_hull_30d(
+            &xes_by_hull_30d,
+            &seconds_by_hull_30d,
         )?,
         time_spent_in_fleet_by_month: Displayer::build_time_spent_in_fleet_by_month(
             &seconds_by_character_month,
         ),
 		fleet_seconds_by_fc_by_month: Displayer::build_fleet_seconds_by_fc_by_month(&seconds_by_fc_month),
 		fleet_seconds_by_fc_90d: seconds_by_fc_90d,
+		fleet_seconds_by_fc_30d: seconds_by_fc_30d,
     }))
 }
 
