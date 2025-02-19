@@ -333,7 +333,7 @@ function XByHullMonth({ data }) {
 
   const datasets = _.map(series.series, (numbers, label) => {
     // Compute the total X'es for each month across all hulls
-    const totalPerMonth = series.labels.map((_, index) =>
+    const totalPerMonth = series.labels.map((__, index) =>
       _.sum(Object.values(series.series).map((seriesNumbers) => seriesNumbers[index] || 0))
     );
 
