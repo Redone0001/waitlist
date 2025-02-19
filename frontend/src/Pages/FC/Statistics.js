@@ -405,7 +405,7 @@ function TimeSpentInFleetByMonth({ data }) {
   );
 }
 
-function XVsTimeByHull28d({ data }) {
+function XVsTimeByHull30d({ data }) {
   const series = separateDataLabels2D(data);
   return (
     <ThemedBar
@@ -420,7 +420,7 @@ function XVsTimeByHull28d({ data }) {
         plugins: {
           title: {
             display: true,
-            text: "Time vs X'es in percentages (28d)",
+            text: "Time vs X'es in percentages (30d)",
           },
         },
       }}
@@ -428,7 +428,7 @@ function XVsTimeByHull28d({ data }) {
   );
 }
 
-function XByHull28d({ data }) {
+function XByHull30d({ data }) {
   const series = separateDataLabels(data);
   return (
     <ThemedDoughnut
@@ -444,7 +444,7 @@ function XByHull28d({ data }) {
         plugins: {
           title: {
             display: true,
-            text: "X'es by hull (28d)",
+            text: "X'es by hull (30d)",
           },
         },
       }}
@@ -452,7 +452,7 @@ function XByHull28d({ data }) {
   );
 }
 
-function TimeSpentByHull28d({ data }) {
+function TimeSpentByHull30d({ data }) {
   const series = separateDataLabels(data);
   return (
     <ThemedDoughnut
@@ -468,7 +468,7 @@ function TimeSpentByHull28d({ data }) {
         plugins: {
           title: {
             display: true,
-            text: "Time in fleet by hull (28d)",
+            text: "Time in fleet by hull (30d)",
           },
         },
       }}
@@ -523,10 +523,10 @@ export function Statistics() {
         <XByHullMonth data={statsData.xes_by_hull_by_month} />
       </Graph>
       <Graph>
-        <XByHull28d data={statsData.xes_by_hull_28d} />
+        <XByHull30d data={statsData.xes_by_hull_30d} />
       </Graph>
       <Graph>
-        <TimeSpentByHull28d data={statsData.fleet_seconds_by_hull_28d} />
+        <TimeSpentByHull30d data={statsData.fleet_seconds_by_hull_30d} />
       </Graph>
       <Graph>
         <FleetTimeByFcMonth data={statsData.fleet_seconds_by_fc_by_month} />
