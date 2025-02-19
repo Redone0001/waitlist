@@ -330,20 +330,42 @@ function FleetTimeByFCMonthPercentage({ data }) {
 
 function XByHullMonth({ data }) {
   const series = separateDataLabels2D(data);
+  
+  // Calculate the total per label to convert to percentages
+  const totals = series.labels.map((__, index) => 
+    _.sumBy(series.series, (numbers) => numbers[index] || 0)
+  );
+
   return (
     <ThemedLine
       data={{
         labels: series.labels,
         datasets: _.map(series.series, (numbers, label) => ({
           label: label,
-          data: numbers.map((num) => num || 0),
+          data: numbers.map((num, index) => 
+            totals[index] > 0 ? ((num || 0) / totals[index]) * 100 : 0
+          ),
         })),
       }}
       options={{
         plugins: {
           title: {
             display: true,
-            text: "X'es by hull",
+            text: "X'es by hull (%)",
+          },
+          tooltip: {
+            callbacks: {
+              label: (tooltipItem) => {
+                return `${tooltipItem.dataset.label}: ${tooltipItem.raw.toFixed(2)}%`;
+              },
+            },
+          },
+        },
+        scales: {
+          y: {
+            ticks: {
+              callback: (value) => `${value}%`,
+            },
           },
         },
       }}
