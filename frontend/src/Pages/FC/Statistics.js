@@ -330,22 +330,27 @@ function FleetTimeByFCMonthPercentage({ data }) {
 
 function XByHullMonth({ data }) {
   const series = separateDataLabels2D(data);
-  
-  // Calculate the total per label to convert to percentages
-  const totals = series.labels.map((__, index) => 
-    _.sumBy(series.series, (numbers) => numbers[index] || 0)
-  );
+
+  const datasets = _.map(series.series, (numbers, label) => {
+    // Compute the total X'es for each month across all hulls
+    const totalPerMonth = series.labels.map((_, index) =>
+      _.sum(Object.values(series.series).map((seriesNumbers) => seriesNumbers[index] || 0))
+    );
+
+    return {
+      label: label,
+      data: numbers.map((count, index) => {
+        const total = totalPerMonth[index] || 1; // Prevent division by zero
+        return Math.round(((count || 0) / total) * 100); // Convert to percentage
+      }),
+    };
+  });
 
   return (
     <ThemedLine
       data={{
         labels: series.labels,
-        datasets: _.map(series.series, (numbers, label) => ({
-          label: label,
-          data: numbers.map((num, index) => 
-            totals[index] > 0 ? ((num || 0) / totals[index]) * 100 : 0
-          ),
-        })),
+        datasets: datasets,
       }}
       options={{
         plugins: {
@@ -355,8 +360,10 @@ function XByHullMonth({ data }) {
           },
           tooltip: {
             callbacks: {
-              label: (tooltipItem) => {
-                return `${tooltipItem.dataset.label}: ${tooltipItem.raw.toFixed(2)}%`;
+              label: (context) => {
+                const label = context.dataset.label || '';
+                const percentage = context.raw; // Raw value represents the percentage
+                return `${label}: ${percentage}%`;
               },
             },
           },
@@ -364,14 +371,16 @@ function XByHullMonth({ data }) {
         scales: {
           y: {
             ticks: {
-              callback: (value) => `${value}%`,
+              callback: (value) => `${value}%`, // Display percentage on y-axis
             },
+            beginAtZero: true,
           },
         },
       }}
     />
   );
 }
+
 
 function TimeSpentInFleetByMonth({ data }) {
   const series = separateDataLabels2D(data);
