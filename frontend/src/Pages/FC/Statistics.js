@@ -523,12 +523,6 @@ export function Statistics() {
         <XByHullMonth data={statsData.xes_by_hull_by_month} />
       </Graph>
       <Graph>
-        <TimeSpentInFleetByMonth data={statsData.time_spent_in_fleet_by_month} />
-      </Graph>
-      <Graph>
-        <XVsTimeByHull28d data={statsData.x_vs_time_by_hull_28d} />
-      </Graph>
-      <Graph>
         <XByHull28d data={statsData.xes_by_hull_28d} />
       </Graph>
       <Graph>
@@ -538,13 +532,13 @@ export function Statistics() {
         <FleetTimeByFcMonth data={statsData.fleet_seconds_by_fc_by_month} />
       </Graph>
       <Graph>
+        <FleetTimeByFCMonthPercentage data={statsData.fleet_seconds_by_fc_by_month} />
+      </Graph>
+      <Graph>
         <TimeSpentByFC90d data={statsData.fleet_seconds_by_fc_90d} />
       </Graph>
       <Graph>
         <FleetTimeAllFcMonth data={statsData.fleet_seconds_by_fc_by_month} />
-      </Graph>
-      <Graph>
-        <FleetTimeByFCMonthPercentage data={statsData.fleet_seconds_by_fc_by_month} />
       </Graph>
     </Row>
   );
