@@ -476,6 +476,30 @@ function TimeSpentByHull30d({ data }) {
   );
 }
 
+function TimeSpentByFC30d({ data }) {
+  const series = separateDataLabels(data);
+  return (
+    <ThemedDoughnut
+      data={{
+        labels: series.labels,
+        datasets: [
+          {
+            data: series.data.map((seconds) => Math.round((seconds || 0) / 3600)),
+          },
+        ],
+      }}
+      options={{
+        plugins: {
+          title: {
+            display: true,
+            text: "Fleet time by fc (30d)",
+          },
+        },
+      }}
+    />
+  );
+}
+
 function TimeSpentByFC90d({ data }) {
   const series = separateDataLabels(data);
   return (
@@ -533,6 +557,9 @@ export function Statistics() {
       </Graph>
       <Graph>
         <FleetTimeByFCMonthPercentage data={statsData.fleet_seconds_by_fc_by_month} />
+      </Graph>
+      <Graph>
+        <TimeSpentByFC30d data={statsData.fleet_seconds_by_fc_30d} />
       </Graph>
       <Graph>
         <TimeSpentByFC90d data={statsData.fleet_seconds_by_fc_90d} />
