@@ -22,11 +22,10 @@ Medium Command Processor I
 Medium Command Processor I
 
 
-
-
 'Augmented' Ogre x5
 Federation Navy Garde x5
 Hammerhead II x5
+
 
 ECCM Script x3
 Optimal Range Script x3
