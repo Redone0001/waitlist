@@ -49,6 +49,7 @@ categories:
     - Breacher Pod Clone Efficacity
     - Breacher Pod Clone Longevity
     - Breacher Pod Launcher Operation
+    - Light Missiles
   Navigation:
     - Navigation
     - Spaceship Command
@@ -97,6 +98,7 @@ categories:
     - Remote Hull Repair Systems
     - Repair Systems
     - Shield Emission Systems
+    - Gravimetric Sensor Compensation
   Targeting:
     - Target Management
     - Advanced Target Management
@@ -104,6 +106,7 @@ categories:
     - Signature Analysis
     - Radar Sensor Compensation
     - Magnetometric Sensor Compensation
+    - Target Painting
   Neural Enhancement:
     - Biology
     - Cybernetics

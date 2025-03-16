@@ -1,4 +1,60 @@
 plans:
+  - name: NIGHTMARE BASIC PATH
+    description: >
+      This skill plan will train you to Nightmare fit.
+    plan:
+      - type: skills
+        from: Nightmare
+        tier: min
+  - name: NIGHTMARE ELITE PATH
+    description: >
+      This skill plan will train you to Nightmare fit.
+    plan:
+      - type: skills
+        from: Nightmare
+        tier: elite
+  - name: PALADIN BASIC PATH
+    description: >
+      This skill plan will train you to Paladin fit.
+    plan:
+      - type: skills
+        from: Paladin
+        tier: min
+  - name: PALADIN ELITE PATH
+    description: >
+      This skill plan will train you to Paladin fit.
+    plan:
+      - type: skills
+        from: Paladin
+        tier: elite
+  - name: KRONOS BASIC PATH
+    description: >
+      This skill plan will train you to Kronos fit.
+    plan:
+      - type: skills
+        from: Kronos
+        tier: min
+  - name: KRONOS ELITE PATH
+    description: >
+      This skill plan will train you to Kronos fit.
+    plan:
+      - type: skills
+        from: Kronos
+        tier: elite
+  - name: VINDICATOR BASIC PATH
+    description: >
+      This skill plan will train you to Vindicator fit.
+    plan:
+      - type: skills
+        from: Vindicator
+        tier: min
+  - name: VINDICATOR ELITE PATH
+    description: >
+      This skill plan will train you to Vindicator fit.
+    plan:
+      - type: skills
+        from: Vindicator
+        tier: elite
   - name: MEGATHRON BASIC PATH
     description: >
       This skill plan will train you to Megathron fit.
@@ -6,234 +62,206 @@ plans:
       - type: skills
         from: Megathron
         tier: min
-  - name: VINDICATOR BASIC PATH
-    description: >
-      This skill plan will train you to the basic Vindi fit.
-    plan:
-      - type: skills
-        from: Vindicator
-        tier: min
-  - name: KRONOS BASIC PATH
-    description: >
-      This skill plan will train you to standard Kronos.
-    plan:
-      - type: skills
-        from: Kronos
-        tier: min
-  - name: PALADIN BASIC PATH
-    description: >
-      This skill plan will train you to standard Paladin.
-    plan:
-      - type: skills
-        from: Paladin
-        tier: min
-  - name: NIGHTMARE BASIC PATH
-    description: >
-      This skill plan will train you to standard Nightmare.
-    plan:
-      - type: skills
-        from: Nightmare
-        tier: min
-  - name: GUARDIAN BASIC PATH
-    description: >
-      This skill plan will train you to standard Guardian.
-    plan:
-      - type: skills
-        from: Guardian
-        tier: min
-  - name: NESTOR BASIC PATH
-    description: >
-      This skill plan will train you to standard Nestor.
-    plan:
-      - type: skills
-        from: Nestor
-        tier: min
-  - name: ISHTAR BASIC PATH
-    description: >
-      This skill plan will train you to standard Ishtar.
-    plan:
-      - type: skills
-        from: Ishtar
-        tier: min
-  - name: EOS BASIC PATH
-    description: >
-      This skill plan will train you to standard Eos.
-    plan:
-      - type: skills
-        from: Eos
-        tier: min
-  - name: ONEIROS BASIC PATH
-    description: >
-      This skill plan will train you to standard Oneiros.
-    plan:
-      - type: skills
-        from: Oneiros
-        tier: min
-  - name: RATTLESNAKE BASIC PATH
-    description: >
-      This skill plan will train you to standard Rattlesnake.
-    plan:
-      - type: skills
-        from: Rattlesnake
-        tier: min
-  - name: LESHAK BASIC PATH
-    description: >
-      This skill plan will train you to the basic Leshak fit.
-    plan:
-      - type: skills
-        from: Leshak
-        tier: min
-  - name: GILA BASIC PATH
-    description: >
-      This skill plan will train you to standard Gila.
-    plan:
-      - type: skills
-        from: Gila
-        tier: min
-  - name: BASILISK BASIC PATH
-    description: >
-      This skill plan will train you to standard Basilisk.
-    plan:
-      - type: skills
-        from: Basilisk
-        tier: min
-  - name: STORMBRINGER BASIC PATH
-    description: >
-      This skill plan will train you to standard Stormbringer.
-    plan:
-      - type: skills
-        from: Stormbringer
-        tier: min
-  - name: GOLEM BASIC PATH
-    description: >
-      This skill plan will train you to standard Golem.
-    plan:
-      - type: skills
-        from: Golem
-        tier: min
-  - name: LOKI BASIC PATH
-    description: >
-      This skill plan will train you to standard Loki.
-    plan:
-      - type: skills
-        from: Loki
-        tier: min
   - name: MEGATHRON ELITE PATH
     description: >
-      This skill plan will train you to Megathron fit with elite skill level.
+      This skill plan will train you to Megathron fit.
     plan:
       - type: skills
         from: Megathron
         tier: elite
-  - name: VINDICATOR ELITE PATH
+  - name: GUARDIAN BASIC PATH
     description: >
-      This skill plan will train to the basic Vindi fit with elite skill level.
+      This skill plan will train you to Guardian fit.
     plan:
       - type: skills
-        from: Vindicator
-        tier: elite
-  - name: KRONOS ELITE PATH
-    description: >
-      This skill plan will train you to standard Kronos with elite skill level.
-    plan:
-      - type: skills
-        from: Kronos
-        tier: elite
-  - name: PALADIN ELITE PATH
-    description: >
-      This skill plan will train you to standard Paladin with elite skill level.
-    plan:
-      - type: skills
-        from: Paladin
-        tier: elite
-  - name: NIGHTMARE ELITE PATH
-    description: >
-      This skill plan will train you to standard Nightmare with elite skill level.
-    plan:
-      - type: skills
-        from: Nightmare
-        tier: elite
+        from: Guardian
+        tier: min
   - name: GUARDIAN ELITE PATH
     description: >
-      This skill plan will train you to standard Guardian with elite skill level.
+      This skill plan will train you to Guardian fit.
     plan:
       - type: skills
         from: Guardian
         tier: elite
-  - name: NESTOR ELITE PATH
+  - name: ONEIROS BASIC PATH
     description: >
-      This skill plan will train you to standard Nestor with elite skill level.
+      This skill plan will train you to Oneiros fit.
     plan:
       - type: skills
-        from: Nestor
-        tier: elite
-  - name: ISHTAR ELITE PATH
-    description: >
-      This skill plan will train you to standard Ishtar with elite skill level.
-    plan:
-      - type: skills
-        from: Ishtar
-        tier: elite
-  - name: EOS ELITE PATH
-    description: >
-      This skill plan will train you to standard Eos with elite skill level.
-    plan:
-      - type: skills
-        from: Eos
-        tier: elite
+        from: Oneiros
+        tier: min
   - name: ONEIROS ELITE PATH
     description: >
-      This skill plan will train you to standard Oneiros with elite skill level.
+      This skill plan will train you to Oneiros fit.
     plan:
       - type: skills
         from: Oneiros
         tier: elite
-  - name: RATTLESNAKE ELITE PATH
+  - name: BASILISK BASIC PATH
     description: >
-      This skill plan will train you to standard Rattlesnake with elite skill level.
+      This skill plan will train you to Basilisk fit.
     plan:
       - type: skills
-        from: Rattlesnake
-        tier: elite
-  - name: LESHAK ELITE PATH
-    description: >
-      This skill plan will train you to the basic Leshak fit.
-    plan:
-      - type: skills
-        from: Leshak
-        tier: elite
-  - name: GILA ELITE PATH
-    description: >
-      This skill plan will train you to standard Gila with elite skill level.
-    plan:
-      - type: skills
-        from: Gila
-        tier: elite
+        from: Basilisk
+        tier: min
   - name: BASILISK ELITE PATH
     description: >
-      This skill plan will train you to standard Basilisk with elite skill level.
+      This skill plan will train you to Basilisk fit.
     plan:
       - type: skills
         from: Basilisk
         tier: elite
+  - name: NESTOR BASIC PATH
+    description: >
+      This skill plan will train you to Nestor fit.
+    plan:
+      - type: skills
+        from: Nestor
+        tier: min
+  - name: NESTOR ELITE PATH
+    description: >
+      This skill plan will train you to Nestor fit.
+    plan:
+      - type: skills
+        from: Nestor
+        tier: elite
+  - name: EOS BASIC PATH
+    description: >
+      This skill plan will train you to Eos fit.
+    plan:
+      - type: skills
+        from: Eos
+        tier: min
+  - name: EOS ELITE PATH
+    description: >
+      This skill plan will train you to Eos fit.
+    plan:
+      - type: skills
+        from: Eos
+        tier: elite
+  - name: DAMNATION BASIC PATH
+    description: >
+      This skill plan will train you to Damnation fit.
+    plan:
+      - type: skills
+        from: Damnation
+        tier: min
+  - name: DAMNATION ELITE PATH
+    description: >
+      This skill plan will train you to Damnation fit.
+    plan:
+      - type: skills
+        from: Damnation
+        tier: elite
+  - name: ISHTAR BASIC PATH
+    description: >
+      This skill plan will train you to Ishtar fit.
+    plan:
+      - type: skills
+        from: Ishtar
+        tier: min
+  - name: ISHTAR ELITE PATH
+    description: >
+      This skill plan will train you to Ishtar fit.
+    plan:
+      - type: skills
+        from: Ishtar
+        tier: elite
+  - name: RATTLESNAKE BASIC PATH
+    description: >
+      This skill plan will train you to Rattlesnake fit.
+    plan:
+      - type: skills
+        from: Rattlesnake
+        tier: min
+  - name: RATTLESNAKE ELITE PATH
+    description: >
+      This skill plan will train you to Rattlesnake fit.
+    plan:
+      - type: skills
+        from: Rattlesnake
+        tier: elite
+  - name: GILA BASIC PATH
+    description: >
+      This skill plan will train you to Gila fit.
+    plan:
+      - type: skills
+        from: Gila
+        tier: min
+  - name: GILA ELITE PATH
+    description: >
+      This skill plan will train you to Gila fit.
+    plan:
+      - type: skills
+        from: Gila
+        tier: elite
+  - name: STORMBRINGER BASIC PATH
+    description: >
+      This skill plan will train you to Stormbringer fit.
+    plan:
+      - type: skills
+        from: Stormbringer
+        tier: min
   - name: STORMBRINGER ELITE PATH
     description: >
-      This skill plan will train you to standard Stormbringer with elite skill level.
+      This skill plan will train you to Stormbringer fit.
     plan:
       - type: skills
         from: Stormbringer
         tier: elite
+  - name: GOLEM BASIC PATH
+    description: >
+      This skill plan will train you to Golem fit.
+    plan:
+      - type: skills
+        from: Golem
+        tier: min
   - name: GOLEM ELITE PATH
     description: >
-      This skill plan will train you to standard Golem with elite skill level.
+      This skill plan will train you to Golem fit.
     plan:
       - type: skills
         from: Golem
         tier: elite
-  - name: LOKI ELITE PATH
+  - name: LOKI BASIC PATH
     description: >
-      This skill plan will train you to standard Loki with elite skill level.
+      This skill plan will train you to Loki fit.
     plan:
       - type: skills
         from: Loki
+        tier: min
+  - name: LOKI ELITE PATH
+    description: >
+      This skill plan will train you to Loki fit.
+    plan:
+      - type: skills
+        from: Loki
+        tier: elite
+  - name: LESHAK BASIC PATH
+    description: >
+      This skill plan will train you to Leshak fit.
+    plan:
+      - type: skills
+        from: Leshak
+        tier: min
+  - name: LESHAK ELITE PATH
+    description: >
+      This skill plan will train you to Leshak fit.
+    plan:
+      - type: skills
+        from: Leshak
+        tier: elite
+  - name: CENOTAPH BASIC PATH
+    description: >
+      This skill plan will train you to Cenotaph fit.
+    plan:
+      - type: skills
+        from: Cenotaph
+        tier: min
+  - name: CENOTAPH ELITE PATH
+    description: >
+      This skill plan will train you to Cenotaph fit.
+    plan:
+      - type: skills
+        from: Cenotaph
         tier: elite
