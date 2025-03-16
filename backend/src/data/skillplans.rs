@@ -9,6 +9,9 @@ pub enum SkillPlanError {
     #[error("fit not found")]
     FitNotFound,
 
+    #[error("hull not found")]
+    HullNotFound,
+
     #[error("type error")]
     TypeError(#[from] TypeError),
 
@@ -47,10 +50,34 @@ pub fn build_plan(plan: &SkillPlan) -> Result<Vec<LevelPair>, SkillPlanError> {
 
     for plan_level in &plan.plan {
         let skill_reqs = match plan_level {
-            SkillPlanLevel::Fit { hull, fit } => get_fit_plan(hull, fit)?,
-            SkillPlanLevel::Skills { from, tier } => get_skill_plan(from, tier)?,
-            SkillPlanLevel::Skill { from, level } => get_single_skill(from, *level)?,
-            SkillPlanLevel::Tank { from } => get_tank_plan(from)?,
+            SkillPlanLevel::Fit { hull, fit } => match get_fit_plan(hull, fit) {
+                Ok(reqs) => reqs,
+                Err(e) => {
+                    eprintln!("Warning: Failed to process fit plan for hull '{}' with fit '{}': {}", hull, fit, e);
+                    continue;
+                }
+            },
+            SkillPlanLevel::Skills { from, tier } => match get_skill_plan(from, tier) {
+                Ok(reqs) => reqs,
+                Err(e) => {
+                    eprintln!("Warning: Failed to process skill plan for '{}' with tier '{}': {}", from, tier, e);
+                    continue;
+                }
+            },
+            SkillPlanLevel::Skill { from, level } => match get_single_skill(from, *level) {
+                Ok(reqs) => reqs,
+                Err(e) => {
+                    eprintln!("Warning: Failed to process single skill '{}' at level {}: {}", from, level, e);
+                    continue;
+                }
+            },
+            SkillPlanLevel::Tank { from } => match get_tank_plan(from) {
+                Ok(reqs) => reqs,
+                Err(e) => {
+                    eprintln!("Warning: Failed to process tank plan for '{}': {}", from, e);
+                    continue;
+                }
+            },
         };
 
         for req in skill_reqs {
@@ -63,6 +90,7 @@ pub fn build_plan(plan: &SkillPlan) -> Result<Vec<LevelPair>, SkillPlanError> {
 
     Ok(skills)
 }
+
 
 pub fn load_plans_from_file() -> Vec<SkillPlan> {
     let file: SkillPlanFile = yamlhelper::from_file("./data/skillplan.yaml");
@@ -87,12 +115,16 @@ fn determine_value(
     }
 
     let value = {
-        let the_type = TypeDB::load_type(skill.0)?;
+        let the_type = TypeDB::load_type(skill.0).map_err(|e| {
+			eprintln!("Warning: Failed to load type {}: {}", skill.0, e);
+			SkillPlanError::TypeError(e)
+		})?;
+
         let sp_needed = 250.
             * (*the_type
                 .attributes
                 .get(&Attribute::TrainingTimeMultiplier)
-                .unwrap() as f64)
+                .unwrap_or(&1.0) as f64)
             * (f64::sqrt(32.).powi((skill.1 - 1) as i32));
         let mut value_per_sp = priority.get(&skill.0).copied().unwrap_or(1.) / sp_needed;
 
@@ -127,9 +159,16 @@ fn create_skill_graph(
             these_reqs.insert((skill_id, skill_level - 1)); // Level N needs level N-1 trained
         } else if skill_level == 1 {
             // Only check skill requirements for level 1, or we'd be generating a very complex graph
-            let the_type = TypeDB::load_type(skill_id)?;
-            for (&req_id, &req_level) in the_type.skill_requirements.iter() {
-                these_reqs.insert((req_id, req_level));
+            match TypeDB::load_type(skill_id) {
+                Ok(the_type) => {
+                    for (&req_id, &req_level) in the_type.skill_requirements.iter() {
+                        these_reqs.insert((req_id, req_level));
+                    }
+                }
+                Err(e) => {
+                    eprintln!("Warning: Failed to load skill {}: {}", skill_id, e);
+                    continue; // ✅ Skip this skill instead of panicking
+                }
             }
         }
 
@@ -150,12 +189,20 @@ fn create_skill_graph(
 
     let mut memo = BTreeMap::new();
     for pair in requirements.keys().copied().collect::<Vec<_>>() {
-        let value = determine_value(pair, &requirements, priority, &mut memo)?;
-        requirements.get_mut(&pair).unwrap().value = (value * 1000000000.) as i64;
+        match determine_value(pair, &requirements, priority, &mut memo) {
+            Ok(value) => {
+                requirements.get_mut(&pair).unwrap().value = (value * 1000000000.) as i64;
+            }
+            Err(e) => {
+                eprintln!("Warning: Failed to determine value for {:?}: {}", pair, e);
+                continue; // ✅ Skip value calculation failure instead of panicking
+            }
+        }
     }
 
     Ok(requirements)
 }
+
 
 #[derive(Debug, PartialEq, Eq, PartialOrd, Ord)]
 struct SkillGraphPriorityEntry {
@@ -181,7 +228,14 @@ fn flatten_skill_graph(mut graph: BTreeMap<LevelPair, DepEntry>) -> Vec<LevelPai
         let pair = (process_entry.skill, process_entry.level);
         order.push(pair);
 
-        let entry = graph.remove(&pair).unwrap();
+        let entry = match graph.remove(&pair) {
+            Some(e) => e,
+            None => {
+                eprintln!("Warning: Tried to remove missing skill graph entry {:?}", pair);
+                continue;
+            }
+        };
+
         for dependee in entry.dependees {
             let dependee_entry = graph.get_mut(&dependee).unwrap();
             dependee_entry.unsatisfied_requirements -= 1;
@@ -202,10 +256,13 @@ fn create_sorted_plan(
     for_hull: &str,
     requirements: &BTreeSet<LevelPair>,
 ) -> Result<Vec<LevelPair>, SkillPlanError> {
-    let hull_skills = crate::tdf::skills::skill_data()
-        .requirements
-        .get(for_hull)
-        .expect("Surely we checked this by now?");
+    let hull_skills = match crate::tdf::skills::skill_data().requirements.get(for_hull) {
+		Some(skills) => skills,
+		None => {
+			eprintln!("Warning: No skill requirements found for hull '{}'", for_hull);
+			return Err(SkillPlanError::InvalidTier);
+		}
+	};
 
     let skill_priority = hull_skills
         .iter()
@@ -237,8 +294,15 @@ fn get_fit_plan(hull: &str, fit_name: &str) -> Result<Vec<LevelPair>, SkillPlanE
             }
         }
 
-        let hull_name = TypeDB::name_of(fit.fit.hull)?;
+        let hull_name = match TypeDB::name_of(fit.fit.hull) {
+            Ok(name) => name,
+            Err(e) => {
+                eprintln!("Warning: Failed to retrieve hull name for fit {}: {}", fit_name, e);
+                return Err(SkillPlanError::TypeError(e));
+            }
+        };
         create_sorted_plan(&hull_name, &requirements)
+
     } else {
         Err(SkillPlanError::FitNotFound)
     }
@@ -252,17 +316,23 @@ fn get_skill_plan(hull_name: &str, level_name: &str) -> Result<Vec<LevelPair>, S
         _ => return Err(SkillPlanError::InvalidTier),
     };
 
-    create_sorted_plan(
-        hull_name,
-        &crate::tdf::skills::skill_data()
-            .requirements
-            .get(hull_name)
-            .expect("Expected known ship")
-            .iter()
-            .map(|(&skill_id, tiers)| (skill_id, tiers.get(tier).unwrap_or_default()))
-            .filter(|(_skill_id, skill_level)| *skill_level > 0)
-            .collect(),
-    )
+    let hull_skills = match crate::tdf::skills::skill_data().requirements.get(hull_name) {
+        Some(skills) => skills,
+        None => {
+            eprintln!("Warning: No skill requirements found for hull '{}'", hull_name);
+            return Err(SkillPlanError::HullNotFound); // New error variant
+        }
+    };
+
+	create_sorted_plan(
+		hull_name,
+		&hull_skills
+			.iter()
+			.map(|(&skill_id, tiers)| (skill_id, tiers.get(tier).unwrap_or_default()))
+			.filter(|(_skill_id, skill_level)| *skill_level > 0)
+			.collect(),
+	)
+
 }
 
 fn get_tank_plan(level_name: &str) -> Result<Vec<LevelPair>, SkillPlanError> {

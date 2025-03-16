@@ -25,33 +25,33 @@ fn load_fits() -> FitData {
     for entry in entries {
         let file_path = entry.unwrap().path();
         let fit_name = file_path.file_stem().unwrap().to_string_lossy();
-        let fit_data = std::fs::read_to_string(&file_path).unwrap();
-	// println!("{}", fit_data);
-        let fittings = Fitting::from_eft(fit_data.as_str()).unwrap();
-        let parsed: Fitting = fittings.into_iter().nth(0).unwrap();
-        fits.entry(parsed.hull)
-            .or_insert_with(Vec::new)
-            .push(DoctrineFit {
-                name: fit_name.to_string(),
-                fit: parsed,
-            });
-    }
-/* 
-    let fit_data = std::fs::read_to_string("./data/fits.dat").expect("Could not load fits.dat");
-    let fit_regex = Regex::new(r#"<a href="fitting:([0-9:;_]+)">([^<]+)</a>"#).unwrap();
+		let fit_data = match std::fs::read_to_string(&file_path) {
+            Ok(data) => data,
+            Err(e) => {
+                eprintln!("Warning: Failed to read fit file '{}': {}", file_path.display(), e);
+                continue;
+            }
+        };
 
-    for fit_match in fit_regex.captures_iter(&fit_data) {
-        let dna = fit_match.get(1).unwrap().as_str();
-        let fit_name = fit_match.get(2).unwrap().as_str();
-        let parsed = Fitting::from_dna(dna).unwrap();
-        fits.entry(parsed.hull)
-            .or_insert_with(Vec::new)
-            .push(DoctrineFit {
-                name: fit_name.to_string(),
-                fit: parsed,
-            });
+        match Fitting::from_eft(fit_data.as_str()) {
+            Ok(fittings) => {
+                if let Some(parsed) = fittings.into_iter().nth(0) {
+                    fits.entry(parsed.hull)
+                        .or_insert_with(Vec::new)
+                        .push(DoctrineFit {
+                            name: fit_name.to_string(),
+                            fit: parsed,
+                        });
+                } else {
+                    eprintln!("Warning: No valid fits found in file '{}'", file_path.display());
+                }
+            }
+            Err(e) => {
+                eprintln!("Warning: Failed to parse fit file '{}': {}", file_path.display(), e);
+            }
+        }
     }
-*/
+
     fits
 }
 
