@@ -45,6 +45,10 @@ categories:
     - Warhead Upgrades
     - Guided Missile Precision
     - Torpedo Specialization
+    - Breacher Pod Projection
+    - Breacher Pod Clone Efficacity
+    - Breacher Pod Clone Longevity
+    - Breacher Pod Launcher Operation
   Navigation:
     - Navigation
     - Spaceship Command
@@ -1299,3 +1303,18 @@ requirements:
       gold: 5
     Energy Grid Upgrades:
       min: 2
+
+  Cenotaph:   
+    <<: [*generic]
+    Breacher Pod Clone Efficacity:
+      min: 4
+      elite: 5
+    Breacher Pod Clone Longevity:
+      min: 4
+      elite: 5
+    Breacher Pod Launcher Operation:
+      min: 4
+      elite: 5
+    Breacher Pod Projection:
+      min: 4
+      gold: 5
