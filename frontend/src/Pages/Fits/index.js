@@ -45,9 +45,6 @@ function FitsDisplay({ tier, setTier = null }) {
             <Button active={tier === "Starter"} onClick={(evt) => setTier("Starter")} style={{ backgroundColor: theme.colors.success.color }}>
               Starter
             </Button>
-            <Button active={tier === "Golden"} onClick={(evt) => setTier("Golden")} style={{ backgroundColor: theme.colors.success.color }}>
-              Golden
-            </Button>
             <Button active={tier === "Standard"} onClick={(evt) => setTier("Standard")} style={{ backgroundColor: theme.colors.success.color }}>
               Standard
             </Button>
@@ -69,8 +66,6 @@ function FitsDisplay({ tier, setTier = null }) {
       )}
 	  {tier === "Starter" ? (
         <Fitout data={fitData} tier="Starter" />
-      ) : tier === "Golden" ? (
-        <Fitout data={fitData} tier="Golden" />
       ) : tier === "Standard" ? (
         <Fitout data={fitData} tier="Standard" />
       ) : tier === "Optimal" ? (
