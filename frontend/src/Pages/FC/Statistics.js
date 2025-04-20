@@ -234,8 +234,9 @@ function FleetTimeByHullMonthPercentage({ data, monthLimit }) {
 }
 
 
-function FleetTimeByFcMonth({ data }) {
-  const series = separateDataLabels2D(data);
+function FleetTimeByFcMonth({ data, monthLimit }) {
+  let series = separateDataLabels2D(data);
+  series = limitLabelsAndSeries(series, monthLimit);
   return (
     <ThemedLine
       data={{
@@ -288,8 +289,9 @@ function FleetTimeAllFcMonth({ data }) {
   )
 }
 
-function FleetTimeByFCMonthPercentage({ data }) {
-  const series = separateDataLabels2D(data);
+function FleetTimeByFCMonthPercentage({ data, monthLimit }) {
+  let series = separateDataLabels2D(data);
+  series = limitLabelsAndSeries(series, monthLimit);
 
   const datasets = _.map(series.series, (numbers, label) => {
     // Compute the total time for each time period (index) across all hulls
@@ -341,8 +343,9 @@ function FleetTimeByFCMonthPercentage({ data }) {
   );
 }
 
-function XByHullMonth({ data }) {
-  const series = separateDataLabels2D(data);
+function XByHullMonth({ data, monthLimit }) {
+  let series = separateDataLabels2D(data);
+  series = limitLabelsAndSeries(series, monthLimit);
 
   const datasets = _.map(series.series, (numbers, label) => {
     // Compute the total X'es for each month across all hulls
@@ -540,7 +543,7 @@ function TimeSpentByFC90d({ data }) {
 export function Statistics() {
   usePageTitle("Statistics");
   const [statsData] = useApi("/api/stats");
-  const [monthLimit, setMonthLimit] = useState(6); // Default to last 6 months
+  const [monthLimit, setMonthLimit] = useState(12);
 
   if (!statsData) {
     return <em>Loading statistics...</em>;
@@ -577,7 +580,7 @@ export function Statistics() {
         <FleetTimeByHullMonthPercentage data={statsData.fleet_seconds_by_hull_by_month} monthLimit={monthLimit} />
       </Graph>
       <Graph>
-        <XByHullMonth data={statsData.xes_by_hull_by_month} />
+        <XByHullMonth data={statsData.xes_by_hull_by_month} monthLimit={monthLimit} />
       </Graph>
       <Graph>
         <XByHull30d data={statsData.xes_by_hull_30d} />
@@ -586,10 +589,10 @@ export function Statistics() {
         <TimeSpentByHull30d data={statsData.fleet_seconds_by_hull_30d} />
       </Graph>
       <Graph>
-        <FleetTimeByFcMonth data={statsData.fleet_seconds_by_fc_by_month} />
+        <FleetTimeByFcMonth data={statsData.fleet_seconds_by_fc_by_month} monthLimit={monthLimit} />
       </Graph>
       <Graph>
-        <FleetTimeByFCMonthPercentage data={statsData.fleet_seconds_by_fc_by_month} />
+        <FleetTimeByFCMonthPercentage data={statsData.fleet_seconds_by_fc_by_month} monthLimit={monthLimit} />
       </Graph>
       <Graph>
         <TimeSpentByFC30d data={statsData.fleet_seconds_by_fc_30d} />
