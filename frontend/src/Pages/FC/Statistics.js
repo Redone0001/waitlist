@@ -553,18 +553,19 @@ export function Statistics() {
   const monthOptions = [3, 6, 12, 24, 36];
 
   return (
-	<div style={{ marginBottom: "1rem" }}>
-	<label>
-	  Show last&nbsp;
-	  <select value={monthLimit} onChange={handleMonthLimitChange}>
-		{monthOptions.map((opt) => (
-		  <option key={opt} value={opt}>
-			{opt} months
-		  </option>
-		))}
-	  </select>
-	</label>
-	</div>
+    <>
+      <div style={{ marginBottom: "1rem" }}>
+        <label>
+          Show last&nbsp;
+          <select value={monthLimit} onChange={handleMonthLimitChange}>
+            {monthOptions.map((opt) => (
+              <option key={opt} value={opt}>
+                {opt} months
+              </option>
+            ))}
+          </select>
+        </label>
+      </div>
     <Row>
       <Graph>
         <FleetTimeByMonth data={statsData.fleet_seconds_by_month} />
@@ -600,5 +601,6 @@ export function Statistics() {
         <FleetTimeAllFcMonth data={statsData.fleet_seconds_by_fc_by_month} />
       </Graph>
     </Row>
+	</>
   );
 }
