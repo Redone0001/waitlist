@@ -20,6 +20,8 @@ Bans include, but are not limited to:
 - Not upgrading within Policy requirements or attempting to bypass Policy (see Upgrading guide on website)
 - Actively downgrading
 - Sneaking alts in to fleet
+- Not following procedures as described in the guides (FC instructions always take priority)
+
 
 All questions and concerns can be mailed to Jakaja listed in Beancursion discord.
 If the issue concern Jakaja, reach out to Astral (Horde Sherif).
