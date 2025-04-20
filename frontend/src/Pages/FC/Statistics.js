@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import _ from "lodash";
 import { useApi } from "../../api";
 import { Bar, Line, Doughnut } from "react-chartjs-2";
@@ -42,6 +42,18 @@ function makeOptions(theme, options) {
     },
     options || {}
   );
+}
+
+function limitLabelsAndSeries({ labels, series }, monthLimit) {
+  const startIndex = Math.max(0, labels.length - monthLimit);
+  const limitedLabels = labels.slice(startIndex);
+  const limitedSeries = {};
+
+  for (const key of Object.keys(series)) {
+    limitedSeries[key] = series[key].slice(startIndex);
+  }
+
+  return { labels: limitedLabels, series: limitedSeries };
 }
 
 function makeData(theme, data, colorPerLabel) {
@@ -167,8 +179,9 @@ function PilotsByMonth({ data }) {
   );
 }
 
-function FleetTimeByHullMonthPercentage({ data }) {
-  const series = separateDataLabels2D(data);
+function FleetTimeByHullMonthPercentage({ data, monthLimit }) {
+  let series = separateDataLabels2D(data);
+  series = limitLabelsAndSeries(series, monthLimit);
 
   const datasets = _.map(series.series, (numbers, label) => {
     // Compute the total time for each time period (index) across all hulls
@@ -527,12 +540,32 @@ function TimeSpentByFC90d({ data }) {
 export function Statistics() {
   usePageTitle("Statistics");
   const [statsData] = useApi("/api/stats");
+  const [monthLimit, setMonthLimit] = useState(6); // Default to last 6 months
 
   if (!statsData) {
     return <em>Loading statistics...</em>;
   }
 
+  const handleMonthLimitChange = (e) => {
+    setMonthLimit(parseInt(e.target.value));
+  };
+
+  const monthOptions = [3, 6, 12, 24, 36];
+
   return (
+    <>
+      <div style={{ marginBottom: "1rem" }}>
+        <label>
+          Show last&nbsp;
+          <select value={monthLimit} onChange={handleMonthLimitChange}>
+            {monthOptions.map((opt) => (
+              <option key={opt} value={opt}>
+                {opt} months
+              </option>
+            ))}
+          </select>
+        </label>
+      </div>
     <Row>
       <Graph>
         <FleetTimeByMonth data={statsData.fleet_seconds_by_month} />
@@ -541,7 +574,7 @@ export function Statistics() {
         <PilotsByMonth data={statsData.pilots_by_month} />
       </Graph>
       <Graph>
-        <FleetTimeByHullMonthPercentage data={statsData.fleet_seconds_by_hull_by_month} />
+        <FleetTimeByHullMonthPercentage data={statsData.fleet_seconds_by_hull_by_month} monthLimit={monthLimit} />
       </Graph>
       <Graph>
         <XByHullMonth data={statsData.xes_by_hull_by_month} />

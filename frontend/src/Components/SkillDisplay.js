@@ -258,22 +258,6 @@ export function SkillDisplay({ characterId, ship, setShip = null, filterMin = fa
               Leshak
             </Button>
           </InputGroup>
-          <InputGroup>
-            <Button active={ship === "Gila"} onClick={(evt) => setShip("Gila")}>
-              Gila
-            </Button>
-            <Button active={ship === "Basilisk"} onClick={(evt) => setShip("Basilisk")}>
-              Basilisk
-            </Button>
-          </InputGroup>
-          <InputGroup>
-            <Button active={ship === "Stormbringer"} onClick={(evt) => setShip("Stormbringer")}>
-              Stormbringer
-            </Button>
-            <Button active={ship === "Loki"} onClick={(evt) => setShip("Loki")}>
-              Loki logi
-            </Button>
-          </InputGroup>
         </Buttons>
       )}
 
