@@ -416,13 +416,13 @@ impl Displayer {
     fn build_fleet_seconds_by_hull_by_month(
         source: &BTreeMap<YearMonth, BTreeMap<TypeID, f64>>,
     ) -> Result<BTreeMap<YearMonth, BTreeMap<String, f64>>, Madness> {
-        Ok(filter_into_other_2d(translate_hulls_2d(source)?, 0.001))
+        Ok(filter_into_other_2d(translate_hulls_2d(source)?, 0.005))
     }
 
     fn build_xes_by_hull_by_month(
         source: &BTreeMap<YearMonth, BTreeMap<TypeID, f64>>,
     ) -> Result<BTreeMap<YearMonth, BTreeMap<String, f64>>, Madness> {
-        Ok(filter_into_other_2d(translate_hulls_2d(source)?, 0.001))
+        Ok(filter_into_other_2d(translate_hulls_2d(source)?, 0.005))
     }
 
     fn build_fleet_seconds_by_month(
