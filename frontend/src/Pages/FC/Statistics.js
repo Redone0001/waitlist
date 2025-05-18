@@ -656,10 +656,10 @@ export function Statistics() {
         <PilotsByMonth data={statsData.pilots_by_month} />
       </Graph>
       <Graph>
-        <FleetTimeByHullMonthPercentage data={statsData.xes_by_hull_by_month} monthLimit={monthLimit} />
+        <FleetTimeByHullMonthPercentage data={statsData.fleet_seconds_by_hull_by_month} monthLimit={monthLimit} />
       </Graph>
       <Graph>
-        <XByHullMonth data={statsData.fleet_seconds_by_alliance_by_month} monthLimit={monthLimit} />
+        <XByHullMonth data={statsData.xes_by_hull_by_month} monthLimit={monthLimit} />
       </Graph>
       <Graph>
         <FleetTimeByAllianceMonthRaw data={statsData.fleet_seconds_by_alliance_by_month} monthLimit={monthLimit} />
