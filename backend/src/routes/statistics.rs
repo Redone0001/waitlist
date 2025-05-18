@@ -210,6 +210,45 @@ impl Queries {
         Ok(result)
     }
 
+    async fn fleet_seconds_by_alliance_by_month(
+        db: &crate::DB,
+    ) -> Result<BTreeMap<YearMonth, BTreeMap<String, f64>>, sqlx::Error> {
+        #[derive(sqlx::FromRow)]
+        struct Result {
+            yearmonth: String,
+            hull: i64,
+            time_in_fleet: i64,
+        }
+
+        let res: Vec<Result> = sqlx::query_as(concat!(
+            "
+            SELECT
+                ",
+            year_month!(from_unixtime!("first_seen")),
+            " yearmonth,
+                a.name AS alliance,
+                CAST(SUM(fa.last_seen - fa.first_seen) AS SIGNED) time_in_fleet
+            FROM fleet_activity fa
+			JOIN `character` c ON fa.character_id = c.id
+			JOIN corporation corp ON c.corporation_id = corp.id
+			JOIN allliance a ON a.alliance_id = alliance.id
+            GROUP BY 1, 2
+        "
+        ))
+        .fetch_all(db)
+        .await?;
+
+        let mut result = BTreeMap::new();
+        for row in res {
+            result
+                .entry(YearMonth::parse(&row.yearmonth))
+                .or_insert_with(BTreeMap::new)
+                .insert(row.hull as TypeID, row.time_in_fleet as f64);
+        }
+
+        Ok(result)
+    }
+
     async fn xes_by_hull_by_month(
         db: &crate::DB,
     ) -> Result<BTreeMap<YearMonth, BTreeMap<TypeID, f64>>, sqlx::Error> {
@@ -416,13 +455,18 @@ impl Displayer {
     fn build_fleet_seconds_by_hull_by_month(
         source: &BTreeMap<YearMonth, BTreeMap<TypeID, f64>>,
     ) -> Result<BTreeMap<YearMonth, BTreeMap<String, f64>>, Madness> {
-        Ok(filter_into_other_2d(translate_hulls_2d(source)?, 0.005))
+        Ok(filter_into_other_2d(translate_hulls_2d(source)?, 0.01))
+    }
+    fn build_fleet_seconds_by_alliance_by_month(
+        source: &BTreeMap<YearMonth, BTreeMap<String, f64>>,
+    ) -> Result<BTreeMap<YearMonth, BTreeMap<String, f64>>, Madness> {
+        Ok(filter_into_other_2d((source)?, 0.01))
     }
 
     fn build_xes_by_hull_by_month(
         source: &BTreeMap<YearMonth, BTreeMap<TypeID, f64>>,
     ) -> Result<BTreeMap<YearMonth, BTreeMap<String, f64>>, Madness> {
-        Ok(filter_into_other_2d(translate_hulls_2d(source)?, 0.005))
+        Ok(filter_into_other_2d(translate_hulls_2d(source)?, 0.01))
     }
 
     fn build_fleet_seconds_by_month(
@@ -523,6 +567,7 @@ impl Displayer {
 #[derive(Serialize)]
 struct StatsResponse {
     fleet_seconds_by_hull_by_month: BTreeMap<YearMonth, BTreeMap<String, f64>>,
+	fleet_seconds_by_alliance_by_month: BTreeMap<YearMonth, BTreeMap<String, f64>>,
     xes_by_hull_by_month: BTreeMap<YearMonth, BTreeMap<String, f64>>,
     fleet_seconds_by_month: BTreeMap<YearMonth, f64>,
     pilots_by_month: BTreeMap<YearMonth, f64>,
@@ -546,6 +591,7 @@ async fn statistics(
     let seconds_by_character_month =
         Queries::fleet_seconds_by_character_by_month(app.get_db()).await?;
     let seconds_by_hull_month = Queries::fleet_seconds_by_hull_by_month(app.get_db()).await?;
+    let seconds_by_hull_month = Queries::fleet_seconds_by_alliance_by_month(app.get_db()).await?;
     let xes_by_hull_month = Queries::xes_by_hull_by_month(app.get_db()).await?;
     let xes_by_hull_30d = Queries::xes_by_hull_30d(app.get_db()).await?;
     let seconds_by_hull_30d = Queries::fleet_seconds_by_hull_30d(app.get_db()).await?;
@@ -555,6 +601,9 @@ async fn statistics(
 
     Ok(Json(StatsResponse {
         fleet_seconds_by_hull_by_month: Displayer::build_fleet_seconds_by_hull_by_month(
+            &seconds_by_hull_month,
+        )?,
+        fleet_seconds_by_alliance_by_month: Displayer::build_fleet_seconds_by_hull_by_month(
             &seconds_by_hull_month,
         )?,
         xes_by_hull_by_month: Displayer::build_xes_by_hull_by_month(&xes_by_hull_month)?,
