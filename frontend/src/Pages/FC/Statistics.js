@@ -301,6 +301,20 @@ function FleetTimeByAllianceMonthRaw({ data, monthLimit }) {
         })),
       }}
       options={{
+        scales: {
+          y: {
+            type: "logarithmic",
+            title: {
+              display: true,
+              text: "Hours in Fleet (log scale)",
+            },
+            ticks: {
+              callback: function (value) {
+                return Number(value).toLocaleString(); // format tick labels
+              },
+            },
+          },
+        },
         plugins: {
           title: {
             display: true,
@@ -311,6 +325,7 @@ function FleetTimeByAllianceMonthRaw({ data, monthLimit }) {
     />
   );
 }
+
 
 
 function FleetTimeByFcMonth({ data, monthLimit }) {
