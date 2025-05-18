@@ -662,7 +662,7 @@ export function Statistics() {
         <XByHullMonth data={statsData.fleet_seconds_by_alliance_by_month} monthLimit={monthLimit} />
       </Graph>
       <Graph>
-        <FleetTimeByAllianceMonthraw data={statsData.fleet_seconds_by_alliance_by_month} monthLimit={monthLimit} />
+        <FleetTimeByAllianceMonthRaw data={statsData.fleet_seconds_by_alliance_by_month} monthLimit={monthLimit} />
       </Graph>
       <Graph>
         <FleetTimeByAllianceMonthPercentage data={statsData.fleet_seconds_by_fc_by_month} monthLimit={monthLimit} />
