@@ -604,7 +604,7 @@ async fn statistics(
         fleet_seconds_by_hull_by_month: Displayer::build_fleet_seconds_by_hull_by_month(
             &seconds_by_hull_month,
         )?,
-        fleet_seconds_by_alliance_by_month: Displayer::build_fleet_seconds_by_hull_by_month(
+        fleet_seconds_by_alliance_by_month: Displayer::build_fleet_seconds_by_alliance_by_month(
             &seconds_by_alliance_month,
         )?,
         xes_by_hull_by_month: Displayer::build_xes_by_hull_by_month(&xes_by_hull_month)?,
