@@ -276,6 +276,11 @@ function FleetTimeByAllianceMonthPercentage({ data, monthLimit }) {
         },
         scales: {
           y: {
+            type: "logarithmic",
+            title: {
+              display: true,
+              text: "Hours in Fleet (log scale)",
+            },
             ticks: {
               callback: (value) => `${value}%`, // Display percentage on y-axis
             },
