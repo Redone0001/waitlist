@@ -216,7 +216,7 @@ impl Queries {
         #[derive(sqlx::FromRow)]
         struct Result {
             yearmonth: String,
-            hull: i64,
+            alliance: String,
             time_in_fleet: i64,
         }
 
@@ -243,7 +243,7 @@ impl Queries {
             result
                 .entry(YearMonth::parse(&row.yearmonth))
                 .or_insert_with(BTreeMap::new)
-                .insert(row.hull as TypeID, row.time_in_fleet as f64);
+                .insert(row.alliance, row.time_in_fleet as f64);
         }
 
         Ok(result)
