@@ -592,7 +592,7 @@ async fn statistics(
     let seconds_by_character_month =
         Queries::fleet_seconds_by_character_by_month(app.get_db()).await?;
     let seconds_by_hull_month = Queries::fleet_seconds_by_hull_by_month(app.get_db()).await?;
-    let seconds_by_hull_month = Queries::fleet_seconds_by_alliance_by_month(app.get_db()).await?;
+    let seconds_by_alliance_month = Queries::fleet_seconds_by_alliance_by_month(app.get_db()).await?;
     let xes_by_hull_month = Queries::xes_by_hull_by_month(app.get_db()).await?;
     let xes_by_hull_30d = Queries::xes_by_hull_30d(app.get_db()).await?;
     let seconds_by_hull_30d = Queries::fleet_seconds_by_hull_30d(app.get_db()).await?;
@@ -605,7 +605,7 @@ async fn statistics(
             &seconds_by_hull_month,
         )?,
         fleet_seconds_by_alliance_by_month: Displayer::build_fleet_seconds_by_hull_by_month(
-            &seconds_by_hull_month,
+            &seconds_by_alliance_month,
         )?,
         xes_by_hull_by_month: Displayer::build_xes_by_hull_by_month(&xes_by_hull_month)?,
         fleet_seconds_by_month: Displayer::build_fleet_seconds_by_month(&seconds_by_hull_month),
