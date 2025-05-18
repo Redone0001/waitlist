@@ -231,7 +231,7 @@ impl Queries {
             FROM fleet_activity fa
 			JOIN `character` c ON fa.character_id = c.id
 			JOIN corporation corp ON c.corporation_id = corp.id
-			JOIN allliance a ON a.alliance_id = alliance.id
+			JOIN alliance a ON a.alliance_id = a.id
             GROUP BY 1, 2
         "
         ))
