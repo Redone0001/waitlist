@@ -457,10 +457,11 @@ impl Displayer {
     ) -> Result<BTreeMap<YearMonth, BTreeMap<String, f64>>, Madness> {
         Ok(filter_into_other_2d(translate_hulls_2d(source)?, 0.01))
     }
+
     fn build_fleet_seconds_by_alliance_by_month(
         source: &BTreeMap<YearMonth, BTreeMap<String, f64>>,
     ) -> Result<BTreeMap<YearMonth, BTreeMap<String, f64>>, Madness> {
-        Ok(filter_into_other_2d((source), 0.01))
+        Ok(filter_into_other_2d((source.clone()), 0.01))
     }
 
     fn build_xes_by_hull_by_month(
