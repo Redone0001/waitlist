@@ -233,6 +233,85 @@ function FleetTimeByHullMonthPercentage({ data, monthLimit }) {
   );
 }
 
+function FleetTimeByAllianceMonthPercentage({ data, monthLimit }) {
+  let series = separateDataLabels2D(data);
+  series = limitLabelsAndSeries(series, monthLimit);
+
+  const datasets = _.map(series.series, (numbers, label) => {
+    // Compute the total time for each time period (index) across all hulls
+    const totalPerLabel = series.labels.map((label, index) =>
+      _.sum(Object.values(series.series).map((seriesNumbers) => seriesNumbers[index] || 0))
+    );
+
+    return {
+      label: label,
+      data: numbers.map((seconds, index) => {
+        const total = totalPerLabel[index] || 1; // Prevent division by zero
+        return Math.round(((seconds || 0) / total) * 100); // Convert to percentage
+      }),
+    };
+  });
+
+  return (
+    <ThemedLine
+      data={{
+        labels: series.labels,
+        datasets: datasets,
+      }}
+      options={{
+        plugins: {
+          title: {
+            display: true,
+            text: "Time in fleet by Alliance (%)",
+          },
+          tooltip: {
+            callbacks: {
+              label: (context) => {
+                const label = context.dataset.label || '';
+                const percentage = context.raw; // Raw value represents the percentage
+                return `${label}: ${percentage}%`;
+              },
+            },
+          },
+        },
+        scales: {
+          y: {
+            ticks: {
+              callback: (value) => `${value}%`, // Display percentage on y-axis
+            },
+            beginAtZero: true
+          },
+        },
+      }}
+    />
+  );
+}
+
+
+function FleetTimeByAllianceMonthRaw({ data, monthLimit }) {
+  let series = separateDataLabels2D(data);
+  series = limitLabelsAndSeries(series, monthLimit);
+  return (
+    <ThemedLine
+      data={{
+        labels: series.labels,
+        datasets: _.map(series.series, (numbers, label) => ({
+          label: label,
+          data: numbers.map((seconds) => Math.round(seconds / 3600)),
+        })),
+      }}
+      options={{
+        plugins: {
+          title: {
+            display: true,
+            text: "Time in fleet by Alliance",
+          },
+        },
+      }}
+    />
+  );
+}
+
 
 function FleetTimeByFcMonth({ data, monthLimit }) {
   let series = separateDataLabels2D(data);
@@ -580,7 +659,13 @@ export function Statistics() {
         <FleetTimeByHullMonthPercentage data={statsData.fleet_seconds_by_hull_by_month} monthLimit={monthLimit} />
       </Graph>
       <Graph>
-        <XByHullMonth data={statsData.xes_by_hull_by_month} monthLimit={monthLimit} />
+        <XByHullMonth data={statsData.fleet_seconds_by_alliance_by_month} monthLimit={monthLimit} />
+      </Graph>
+      <Graph>
+        <FleetTimeByAllianceMonthraw data={statsData.fleet_seconds_by_alliance_by_month} monthLimit={monthLimit} />
+      </Graph>
+      <Graph>
+        <FleetTimeByAllianceMonthPercentage data={statsData.fleet_seconds_by_fc_by_month} monthLimit={monthLimit} />
       </Graph>
       <Graph>
         <XByHull30d data={statsData.xes_by_hull_30d} />
