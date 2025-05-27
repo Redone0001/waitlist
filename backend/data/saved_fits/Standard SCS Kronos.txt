@@ -1,26 +1,26 @@
-[Kronos, Standard Kronos]
+[Kronos, Kronos]
 
-Centii A-Type Multispectrum Coating
 Federation Navy Magnetic Field Stabilizer
 Federation Navy Magnetic Field Stabilizer
-Imperial Navy 1600mm Steel Plates
+Centii A-Type Multispectrum Coating
 Centii A-Type Multispectrum Coating
 Imperial Navy 1600mm Steel Plates
 Imperial Navy 1600mm Steel Plates
+Imperial Navy 1600mm Steel Plates
 
-Federation Navy 500MN Microwarpdrive
+Sensor Booster II
 Tracking Computer II
 Tracking Computer II
 Large Micro Jump Drive
-Sensor Booster II
+500MN Quad LiF Restrained Microwarpdrive
 
 Neutron Blaster Cannon II
 Neutron Blaster Cannon II
 Neutron Blaster Cannon II
 Neutron Blaster Cannon II
 Large Remote Armor Repairer II
-Bastion Module I
 Imperial Navy Large Remote Capacitor Transmitter
+Bastion Module I
 
 Large Trimark Armor Pump II
 Large Trimark Armor Pump II
@@ -38,6 +38,6 @@ ECCM Script x1
 Scan Resolution Script x1
 Optimal Range Script x2
 Tracking Speed Script x2
-Warp Core Stabilizer II x1
 Improved Cloaking Device II x1
 Inertial Stabilizers II x2
+Warp Core Stabilizer II x1
