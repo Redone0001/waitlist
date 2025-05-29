@@ -2,32 +2,33 @@
 
 Coreli A-Type Multispectrum Coating
 Coreli A-Type Multispectrum Coating
+Imperial Navy 1600mm Steel Plates
 Sentient Drone Damage Amplifier
 Sentient Drone Damage Amplifier
-Imperial Navy 1600mm Steel Plates
-Imperial Navy 1600mm Steel Plates
+Sentient Drone Damage Amplifier
 
+Large Micro Jump Drive
+500MN Cold-Gas Enduring Microwarpdrive
 Sentient Omnidirectional Tracking Link
 Sentient Omnidirectional Tracking Link
 Sentient Drone Navigation Computer
 Sentient Drone Navigation Computer
 Republic Fleet Large Cap Battery
-500MN Cold-Gas Enduring Microwarpdrive
-Large Micro Jump Drive
 
+Prototype 'Arbalest' Torpedo Launcher
+Prototype 'Arbalest' Torpedo Launcher
+Prototype 'Arbalest' Torpedo Launcher
+Prototype 'Arbalest' Torpedo Launcher
+Prototype 'Arbalest' Torpedo Launcher
 Drone Link Augmentor II
-Prototype 'Arbalest' Torpedo Launcher
-Prototype 'Arbalest' Torpedo Launcher
-Prototype 'Arbalest' Torpedo Launcher
-Prototype 'Arbalest' Torpedo Launcher
-Prototype 'Arbalest' Torpedo Launcher
 
 Large Explosive Armor Reinforcer II
-Large Explosive Armor Reinforcer II
-Large Kinetic Armor Reinforcer II
+Large Trimark Armor Pump II
+Large Trimark Armor Pump II
 
 
-Ogre II x4
+Ogre II x2
+Ogre II x2
 
 
 Caldari Navy Scourge Torpedo x8820
