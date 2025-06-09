@@ -251,6 +251,20 @@ plans:
       - type: skills
         from: Leshak
         tier: elite
+  - name: BABAROGA BASIC PATH
+    description: >
+      This skill plan will train you to Babaroga fit.
+    plan:
+      - type: skills
+        from: Babaroga
+        tier: min
+  - name: BABAROGA ELITE PATH
+    description: >
+      This skill plan will train you to Babaroga fit.
+    plan:
+      - type: skills
+        from: Babaroga
+        tier: elite
   - name: CENOTAPH BASIC PATH
     description: >
       This skill plan will train you to Cenotaph fit.

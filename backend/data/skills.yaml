@@ -1273,7 +1273,6 @@ requirements:
     Minmatar Propulsion Systems:
       min: 4
       elite: 5
-    
 
   Leshak:
     <<: [*generic, *gunnery]
@@ -1298,6 +1297,40 @@ requirements:
       min: 4
       elite: 5
     Heavy Drone Operation:
+      min: 3
+      elite: 5
+      priority: 5
+    Remote Armor Repair Systems:
+      min: 3
+      gold: 5
+    Energy Grid Upgrades:
+      min: 2
+    
+  Babaroga:
+    <<: [*generic, *gunnery]
+    Large Precursor Weapon:
+      min: 5
+      priority: 1
+    Large Disintegrator Specialization:
+      min: 1
+      gold: 5
+    Marauders:
+      min: 4
+      elite: 5
+    Precursor Battleship:
+      min: 5
+      priority: 1
+    Rapid Firing:
+      min: 5
+      priority: 2
+    Surgical Strike:
+      min: 4
+      elite: 5
+      priority: 2
+    Motion Prediction:
+      min: 4
+      elite: 5
+    Medium Drone Operation:
       min: 3
       elite: 5
       priority: 5
