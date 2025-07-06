@@ -172,7 +172,7 @@ function FleetMembers() {
         <BorderedBox>Logistics: {cats["Logi"]} </BorderedBox>
         <BorderedBox>Vindicators: {cats["Vindicator"]} </BorderedBox>
         <BorderedBox>Logistics: {cats["Leshak"]} </BorderedBox>
-        <BorderedBox>Vindicators: {cats["Drones"]} </BorderedBox>
+        <BorderedBox>Drones Boats: {cats["Drones"]} </BorderedBox>
         <BorderedBox>Megathron/Nightmare: {cats["Mega/Night"]} </BorderedBox>
       </InputGroup>
       <Table>
