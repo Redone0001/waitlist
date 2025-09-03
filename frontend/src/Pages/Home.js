@@ -26,7 +26,7 @@ export function Home() {
           Check out our <NavLink to="/guide">Guides</NavLink> section for all the information you
           need to get started, see <NavLink to="/guide/newbro">new-bro guide</NavLink>,{" "}
           <NavLink to="/guide/xup">first fleet guide</NavLink> etc, also join the in-game chat
-          channel <em>Sansha Containment Service</em>, where you will find the mailing lists for fits and other
+          channel <em>Beancursion SIG</em>, where you will find the mailing lists for fits and other
           usual information in the MOTD (message of the day), we look forward to flying with you!
         </p>
         <h3>What are Incursions?</h3>

@@ -27,9 +27,9 @@ More logi specific requirements and guidance can be found in the [Logi guide](/g
 
 ## Joining SCS's Channel
 
-To find us in-game; join the chat channel **Sansha Containment Service**.
+To find us in-game; join the chat channel **Beancursion SIG**.
 You can do this by clicking the little plus button where your chat window is at the top.
-Then in the channels box type Sansha Containment Service and then click join.
+Then in the channels box type Beancursion SIG and then click join.
 
 ![](joinchannel.png)
 

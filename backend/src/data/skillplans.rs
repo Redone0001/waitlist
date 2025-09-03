@@ -126,7 +126,7 @@ fn determine_value(
                 .get(&Attribute::TrainingTimeMultiplier)
                 .unwrap_or(&1.0) as f64)
             * (f64::sqrt(32.).powi((skill.1 - 1) as i32));
-        let mut value_per_sp = priority.get(&skill.0).copied().unwrap_or(1.) / sp_needed;
+        let mut value_per_sp = priority.get(&skill.0).copied().unwrap_or(1.) / (sp_needed).powf(0.1);
 
         let graph_entry = graph.get(&skill).unwrap();
         for &dependee in graph_entry.dependees.iter() {

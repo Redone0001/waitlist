@@ -6,8 +6,8 @@
 
 - Waitlist FC Trainee site access _(Reach out to Jakaja)_
 - Command-chat on discord _(Contact Jakaja)_
-- Sansha Containment Service _(its an ingame channel, join it)_
-- Sansha Containment Service MOTD _(Rights to edit MOTD)_
+- Beancursion SIG _(its an ingame channel, join it)_
+- Beancursion SIG MOTD _(Rights to edit MOTD)_
 - Standardized MOTD for running fleets. (see Useful Links below)
 - One alt in the SRP corp
 

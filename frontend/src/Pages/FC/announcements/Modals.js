@@ -20,7 +20,7 @@ const Small = styled.div`
 
 const TEMPLATES = {
   "Use ingame chat": {
-    content: 'Join the in-game channel "Sansha Containment Service" to x-up for the fleet.',
+    content: 'Join the in-game channel "Beancursion SIG" to x-up for the fleet.',
     alert: false,
   },
   "Gate camp in Focus": {
