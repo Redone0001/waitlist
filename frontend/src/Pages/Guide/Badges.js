@@ -217,7 +217,7 @@ export function BadgeData() {
               </ul>
               <br />The list of ship allowed for alt :<br />
               <ul>
-                <li>Ishtar or Eos</li>
+                <li>All alt ships</li>
                 <li>Any standard / Optimal fit</li>
               </ul>
             </Content>
