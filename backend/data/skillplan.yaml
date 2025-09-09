@@ -1,17 +1,17 @@
 plans:
-  - name: NIGHTMARE BASIC PATH
+  - name: APOCALYPSE BASIC PATH
     description: >
-      This skill plan will train you to Nightmare fit.
+      This skill plan will train you to Apocalypse fit.
     plan:
       - type: skills
-        from: Nightmare
+        from: Apocalypse
         tier: min
-  - name: NIGHTMARE ELITE PATH
+  - name: APOCALYPSE ELITE PATH
     description: >
-      This skill plan will train you to Nightmare fit.
+      This skill plan will train you to Apocalypse fit.
     plan:
       - type: skills
-        from: Nightmare
+        from: Apocalypse
         tier: elite
   - name: PALADIN BASIC PATH
     description: >
