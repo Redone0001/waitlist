@@ -27,9 +27,13 @@ Large Trimark Armor Pump II
 Large Trimark Armor Pump II
 
 
-Ogre II x2
+Gecko x1
 Ogre II x2
 
-
-Caldari Navy Scourge Torpedo x8820
+Scourge Rage Torpedo x8200
+Caldari Navy Scourge Torpedo x1000
+Scourge Javelin Torpedo x1000
 Tracking Speed Script x2
+Warp Core Stabilizer II x1
+Inertial Stabilizers II x3
+Improved Cloaking Device II x1
