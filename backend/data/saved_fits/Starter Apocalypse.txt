@@ -9,7 +9,7 @@ Imperial Navy Heat Sink
 Imperial Navy Heat Sink
 
 500MN Quad LiF Restrained Microwarpdrive
-Tracking Computer II, Tracking Speed Script
+Tracking Computer II
 Republic Fleet Large Cap Battery
 Large Micro Jump Drive
 
@@ -29,3 +29,11 @@ Large Processor Overclocking Unit II
 
 Hobgoblin II x5
 Hammerhead II x5
+
+
+Conflagration L x40
+Scorch L x40
+True Sanshas Multifrequency L x8
+True Sanshas Standard L x8
+Optimal Range Script x1
+Tracking Speed Script x1
