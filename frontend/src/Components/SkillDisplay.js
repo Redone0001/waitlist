@@ -226,8 +226,8 @@ export function SkillDisplay({ characterId, ship, setShip = null, filterMin = fa
             <Button active={ship === "Kronos"} onClick={(evt) => setShip("Kronos")}>
               Kronos
             </Button>
-            <Button active={ship === "Nightmare"} onClick={(evt) => setShip("Nightmare")}>
-              Nightmare
+            <Button active={ship === "Apocalypse"} onClick={(evt) => setShip("Apocalypse")}>
+              Apocalypse
             </Button>
             <Button active={ship === "Paladin"} onClick={(evt) => setShip("Paladin")}>
               Paladin
@@ -245,12 +245,6 @@ export function SkillDisplay({ characterId, ship, setShip = null, filterMin = fa
             </Button>
           </InputGroup>
           <InputGroup>
-            <Button active={ship === "Ishtar"} onClick={(evt) => setShip("Ishtar")}>
-              Ishtar
-            </Button>
-            <Button active={ship === "Eos"} onClick={(evt) => setShip("Eos")}>
-              Eos
-            </Button>
             <Button active={ship === "Rattlesnake"} onClick={(evt) => setShip("Rattlesnake")}>
               Rattlesnake
             </Button>

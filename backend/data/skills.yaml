@@ -635,15 +635,9 @@ requirements:
       Elite: 4
 
   # Start of per-ship skills
-  Nightmare:
+  Apocalypse:
     <<: [*generic, *gunnery, *sideeffects, *rigging]
     Amarr Battleship:
-      min: 3
-      elite: 4
-    Caldari Battleship:
-      min: 1
-      gold: 1
-    Capacitor Emission Systems:
       min: 3
       elite: 4
     Large Energy Turret:
@@ -651,12 +645,6 @@ requirements:
       gold: 5
     Large Pulse Laser Specialization:
       elite: 4
-    Remote Armor Repair Systems:
-      min: 3
-      elite: 4
-    Repair Systems:
-      min: 2
-      gold: 2
     Micro Jump Drive Operation:
       min: 3
       elite: 4
