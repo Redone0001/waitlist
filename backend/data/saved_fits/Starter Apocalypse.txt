@@ -33,7 +33,7 @@ Hammerhead II x5
 
 Conflagration L x40
 Scorch L x40
-True Sanshas Multifrequency L x8
-True Sanshas Standard L x8
+Imperial Navy Multifrequency L x8
+Imperial Navy Standard L x8
 Optimal Range Script x1
 Tracking Speed Script x1
