@@ -30,7 +30,6 @@ Large Trimark Armor Pump II
 Gecko x1
 Ogre II x2
 
-Scourge Rage Torpedo x8200
 Caldari Navy Scourge Torpedo x1000
 Scourge Javelin Torpedo x1000
 Tracking Speed Script x2
